@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import { siteMode } from './launch-status.mjs';
 
-const site = process.env.SITE_URL?.replace(/\/$/, '');
+const site = (process.env.SITE_URL || 'https://www.resortinwayanad.in').replace(/\/$/, '');
 const key = process.env.INDEXNOW_KEY || (fs.existsSync('seo/indexnow-key.txt') ? fs.readFileSync('seo/indexnow-key.txt', 'utf8').trim() : '');
 const dry = process.argv.includes('--dry-run');
 const all = process.argv.includes('--all');

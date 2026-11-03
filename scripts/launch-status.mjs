@@ -23,7 +23,6 @@ export function findPlaceholders(root = process.cwd()) {
         });
     }
   }
-  if (!process.env.SITE_URL) problems.push('SITE_URL env var not set; canonical URLs use the placeholder domain');
   return problems;
 }
 

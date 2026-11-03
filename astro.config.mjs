@@ -7,12 +7,9 @@ import { siteMode } from './scripts/launch-status.mjs';
 // 'staging' = noindex everywhere + preview banner (see scripts/launch-status.mjs)
 const staging = siteMode() === 'staging';
 
-// TODO(launch): set SITE_URL in Vercel to the real domain, e.g. https://www.yourresort.in
-// Real domain from SITE_URL; otherwise Vercel's production domain; otherwise the current deployment.
-const site =
-  process.env.SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
-  'https://wayattleresort-wqsb.vercel.app';
+// Live domain. SITE_URL (e.g. on Vercel) overrides it.
+const SITE_DOMAIN = 'https://www.resortinwayanad.in';
+const site = process.env.SITE_URL || SITE_DOMAIN;
 
 export default defineConfig({
   site,

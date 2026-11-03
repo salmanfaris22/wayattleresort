@@ -13,7 +13,7 @@ Updated 3 Nov 2026. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later
 | 7 | Data | Check-in/out times, languages, whole-resort booking + min nights | 🟠 | Owner | Placeholder |
 | 8 | Images | 20+ own photos (each room, pool, food, views, exterior) ≥ 2000 px | 🔴 | Owner | Stock "Sample photo" |
 | 9 | Data | Distances from the exact pin (`src/data/places.ts`) | 🟡 | Developer | Approximate |
-| 10 | Domain | Buy domain, add in Vercel, set `SITE_URL`, redirect www/apex | 🔴 | You | Canonical now uses the Vercel production domain ✅ |
+| 10 | Domain | www.resortinwayanad.in: add in Vercel, redirect apex → www | 🔴 | You | Canonical, sitemap and robots use www.resortinwayanad.in ✅ |
 | 11 | Launch | `pnpm check:launch` passes → staging/noindex switches off automatically | 🔴 | — | After 1–10 |
 | 12 | Local | Google Business Profile (category Resort hotel), verified | 🔴 | Owner | Text ready in owner-launch-kit.md |
 | 13 | Local | Google Hotel Center free booking links | 🟠 | Owner | — |
