@@ -15,6 +15,7 @@ const label = (file: string) =>
     .replace('.jpg', '')
     .replace(/-/g, ' ')
     .replace(/^./, (c) => c.toUpperCase());
+const ga4 = Boolean(import.meta.env.PUBLIC_GA4_ID);
 ---
 
 <Base
@@ -28,7 +29,7 @@ const label = (file: string) =>
     <div class="wrap narrow prose">
       <h2>Privacy</h2>
       <p>
-        This website does not use cookies, does not ask you to create an account and does not store the details you type into the
+        This website does not ask you to create an account and does not store the details you type into the
         enquiry form. When you press “Send on WhatsApp”, your dates and room choice are placed into a WhatsApp message on your
         own device. Nothing is sent to us until you choose to send that message.
       </p>
@@ -37,8 +38,16 @@ const label = (file: string) =>
         your booking. We do not sell or share them for marketing. Guest registration details required by Indian law are kept
         as the law requires.
       </p>
+      {
+        ga4 && (
+          <p>
+            This site uses Google Analytics to count visits and clicks on the WhatsApp and call buttons. Google Analytics sets cookies and
+            processes your IP address; we never send it your name, phone number or travel dates. You can block it with your browser settings.
+          </p>
+        )
+      }
       <p>
-        We may use privacy-friendly, cookie-free visit statistics (page views and country only) to see which pages are useful.
+        {ga4 ? 'Apart from Google Analytics, we' : 'We'} may use privacy-friendly, cookie-free visit statistics (page views and country only) to see which pages are useful.
         To ask about or delete your data, write to <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 

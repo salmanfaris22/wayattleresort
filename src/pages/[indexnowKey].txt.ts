@@ -2,8 +2,10 @@ import type { APIRoute } from 'astro';
 
 // IndexNow key file (https://www.indexnow.org). Only built when INDEXNOW_KEY is set at build time.
 // The key is meant to be public at /<key>.txt; it proves we own the host when we submit URLs.
+import fs from 'node:fs';
+
 export function getStaticPaths() {
-  const key = process.env.INDEXNOW_KEY;
+  const key = process.env.INDEXNOW_KEY || (fs.existsSync('seo/indexnow-key.txt') ? fs.readFileSync('seo/indexnow-key.txt', 'utf8').trim() : '');
   return key && /^[a-zA-Z0-9-]{8,128}$/.test(key) ? [{ params: { indexnowKey: key } }] : [];
 }
 
