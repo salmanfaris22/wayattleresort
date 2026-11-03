@@ -61,6 +61,17 @@ const chooseRows = [
     lede={`Four kinds of rooms on ${site.facts[1].value} of tea and coffee, 3 km from Pookode Lake. Book directly with us on WhatsApp and pay no agent commission.`}
   />
 
+  <section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
+    <div class="wrap">
+      <h2 id="rooms-title">Rooms and villas</h2>
+      <p class="lede">Every stay includes breakfast, Wi-Fi, parking and the pool. Send your dates on WhatsApp for availability and the rate.</p>
+      <div class="room-grid">
+        {rooms.map((room) => <RoomCard room={room} note={room.data.summary} />)}
+      </div>
+      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a></p>
+    </div>
+  </section>
+
   <section class="facts-strip" aria-label="Resort at a glance">
     <dl class="wrap facts">
       {
@@ -102,17 +113,6 @@ const chooseRows = [
         />
         <figcaption class="credit">Tea garden in Vythiri. {creditLine('about/vythiri-tea-garden-morning-mist')}</figcaption>
       </figure>
-    </div>
-  </section>
-
-  <section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
-    <div class="wrap">
-      <h2 id="rooms-title">Rooms and villas</h2>
-      <p class="lede">Every stay includes breakfast, Wi-Fi, parking and the pool. Send your dates on WhatsApp for availability and the rate.</p>
-      <div class="room-grid">
-        {rooms.map((room) => <RoomCard room={room} note={room.data.summary} />)}
-      </div>
-      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a></p>
     </div>
   </section>
 
