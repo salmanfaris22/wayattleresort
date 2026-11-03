@@ -1,0 +1,187 @@
+---
+import { site, nav } from '../data/site';
+import { waLink } from '../lib/whatsapp';
+import WaIcon from './WaIcon.astro';
+
+const path = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label={`${site.name} home`}>
+      <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"
+        ><path d="M3 30c6-8 11-16 17-16s10 8 17 16" fill="none" stroke="currentColor" stroke-width="2"></path><path
+          d="M9 30c4-5 7-10 11-10s7 5 11 10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"></path></svg
+      >
+      <span>{site.shortName}<small>Wayanad</small></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <a class="btn btn--wa header-cta" href={waLink()} target="_blank" rel="noopener">
+      <WaIcon /><span>Book on WhatsApp</span>
+    </a>
+
+    <details class="nav-mobile">
+      <summary aria-label="Menu"><span></span><span></span></summary>
+      <nav aria-label="Main mobile">
+        <ul>
+          {
+            nav.map((item) => (
+              <li>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))
+          }
+          <li><a href={waLink()} target="_blank" rel="noopener">WhatsApp {site.phone}</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in oklab, var(--mist) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 4.25rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+    color: var(--tea);
+    margin-right: auto;
+  }
+  .logo svg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .logo span {
+    font-family: var(--font-display-stack);
+    font-size: 1.45rem;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo small {
+    font-family: var(--font-body-stack);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    color: var(--monsoon-ink);
+    margin-top: 0.2rem;
+  }
+  .nav-desktop ul {
+    display: flex;
+    gap: 1.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-desktop a {
+    color: var(--pepper);
+    text-decoration: none;
+    font-weight: 500;
+    padding-block: 0.75rem;
+  }
+  .nav-desktop a:hover,
+  .nav-desktop a[aria-current='page'] {
+    color: var(--tea);
+    text-decoration: underline;
+  }
+  .header-cta {
+    min-height: 44px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.95rem;
+  }
+  .nav-mobile {
+    display: none;
+    position: relative;
+  }
+  .nav-mobile summary {
+    list-style: none;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-content: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .nav-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+  .nav-mobile summary span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--tea);
+    transition: transform 0.2s;
+  }
+  .nav-mobile[open] summary span:first-child {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .nav-mobile[open] summary span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+  .nav-mobile nav {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.6rem);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    min-width: 15rem;
+    box-shadow: 0 18px 40px -20px rgb(0 0 0 / 0.35);
+  }
+  .nav-mobile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-mobile a {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    color: var(--pepper);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-mobile li:last-child a {
+    color: var(--tea);
+    border-top: 1px solid var(--line);
+  }
+  @media (max-width: 900px) {
+    .nav-desktop,
+    .header-cta {
+      display: none;
+    }
+    .nav-mobile {
+      display: block;
+    }
+  }
+</style>

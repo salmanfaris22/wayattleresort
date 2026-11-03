@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import MapSchematic from '../components/MapSchematic.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site, fullAddress, fmtTime } from '../data/site';
+import { reach } from '../data/places';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Contact', href: '/contact/' },
+];
+---
+
+<Base
+  title={`Contact & How to Reach ${site.shortName} Resort, Wayanad`}
+  description={`Contact ${site.name} on WhatsApp ${site.phone}. Address, Google Maps location and how to reach Vythiri, Wayanad from Kozhikode, Kannur, Mysuru and Bengaluru.`}
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Contact and how to reach us"
+    lede="WhatsApp is the fastest way to reach us. We reply between 8 am and 10 pm, usually within an hour."
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>{site.name}</h2>
+        <address>
+          {fullAddress}<br />
+          WhatsApp and phone: <a href={`tel:${site.phoneE164}`}>{site.phone}</a><br />
+          Email: <a href={`mailto:${site.email}`}>{site.email}</a><br />
+          Check-in {fmtTime(site.checkIn)}, check-out {fmtTime(site.checkOut)}
+        </address>
+        <div class="actions">
+          <WhatsAppButton label="Chat on WhatsApp" />
+          <a class="btn btn--ghost" href={site.mapsUrl} target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+
+        <h2 class="reach-title">How to reach the resort</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">From</th><th scope="col">Distance</th><th scope="col">Time</th><th scope="col">Route</th></tr>
+            </thead>
+            <tbody>
+              {
+                reach.map((r) => (
+                  <tr>
+                    <th scope="row">{r.from}</th>
+                    <td>{r.km}</td>
+                    <td>{r.time}</td>
+                    <td>{r.note}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          Airport and railway pickups can be arranged by taxi; ask us for the current fare. Drive the Thamarassery Ghat in daylight
+          if you can, and expect slow traffic on weekends.
+        </p>
+      </div>
+      <MapSchematic />
+    </div>
+  </section>
+
+  <section class="section section--tea">
+    <div class="wrap">
+      <h2>Send an enquiry</h2>
+      <p class="lede">Pick your dates and we will reply on WhatsApp with available rooms and the total price.</p>
+      <EnquiryForm />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .split {
+    display: grid;
+    gap: var(--space-l);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .split {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+  address {
+    font-style: normal;
+    line-height: 1.9;
+    margin-bottom: 1.4rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .reach-title {
+    margin-top: var(--space-l);
+  }
+  table {
+    min-width: 36rem;
+    background: var(--paper);
+  }
+  .muted {
+    margin-top: 0.8rem;
+  }
+</style>

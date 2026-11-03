@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import ContourLines from '../components/ContourLines.astro';
+import { site } from '../data/site';
+---
+
+<Base title={`Page not found | ${site.name}`} description="This page could not be found. See our Wayanad resort rooms, the Wayanad travel guide, or message us on WhatsApp." noindex>
+  <section class="nf">
+    <ContourLines class="nf-lines" />
+    <div class="wrap">
+      <p class="code">404</p>
+      <h1>Lost in the mist</h1>
+      <p class="lede">This page does not exist, or it has moved. Try one of these instead.</p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/rooms/">Rooms and prices</a></li>
+        <li><a href="/things-to-do-in-wayanad/">Places to visit in Wayanad</a></li>
+        <li><a href="/contact/">Contact and directions</a></li>
+      </ul>
+      <WhatsAppButton />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding-block: var(--space-xl);
+    min-height: 60vh;
+  }
+  :global(.nf-lines) {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    color: rgb(36 73 58 / 0.12);
+  }
+  .code {
+    font-family: var(--font-display-stack);
+    font-size: var(--step-3);
+    color: var(--monsoon-ink);
+    margin: 0;
+  }
+  ul {
+    margin-bottom: 2rem;
+    line-height: 2.2;
+  }
+</style>

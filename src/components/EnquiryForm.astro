@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import { site } from '../data/site';
+import WaIcon from './WaIcon.astro';
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+const fallback = `Hi ${site.shortName}, I'd like to check availability.`;
+---
+
+<form class="enquiry" action="https://api.whatsapp.com/send" method="get" target="_blank" data-enquiry>
+  <input type="hidden" name="phone" value={site.whatsapp} />
+  <input type="hidden" name="text" value={fallback} />
+  <div class="field">
+    <label for="eq-in">Check-in</label>
+    <input id="eq-in" type="date" data-k="Check-in" required />
+  </div>
+  <div class="field">
+    <label for="eq-out">Check-out</label>
+    <input id="eq-out" type="date" data-k="Check-out" required />
+  </div>
+  <div class="field">
+    <label for="eq-guests">Guests</label>
+    <select id="eq-guests" data-k="Guests">
+      {['1', '2', '3', '4', '5', '6', '7–10', '10+'].map((g) => <option selected={g === '2'}>{g}</option>)}
+    </select>
+  </div>
+  <div class="field">
+    <label for="eq-room">Room</label>
+    <select id="eq-room" data-k="Room">
+      <option>Not sure yet</option>
+      {rooms.map((r) => <option>{r.data.name}</option>)}
+    </select>
+  </div>
+  <button class="btn btn--wa" type="submit"><WaIcon /><span>Send on WhatsApp</span></button>
+  <p class="note">Opens WhatsApp with your dates filled in. We usually reply within an hour, 8 am to 10 pm.</p>
+</form>
+
+<script is:inline>
+  (() => {
+    const f = document.querySelector('[data-enquiry]');
+    if (!f) return;
+    const today = new Date().toISOString().slice(0, 10);
+    const ci = f.querySelector('#eq-in'),
+      co = f.querySelector('#eq-out');
+    ci.min = co.min = today;
+    ci.addEventListener('change', () => (co.min = ci.value || today));
+    f.addEventListener('submit', () => {
+      const lines = [...f.querySelectorAll('[data-k]')].map((el) => el.dataset.k + ': ' + el.value);
+      f.elements.text.value = f.elements.text.defaultValue.replace('.', ':') + '\n' + lines.join('\n');
+    });
+  })();
+</script>
+
+<style>
+  .enquiry {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    align-items: end;
+    background: var(--paper);
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    color: var(--pepper);
+  }
+  .field {
+    display: grid;
+    gap: 0.35rem;
+  }
+  label {
+    font-weight: 600;
+    font-size: var(--step--1);
+  }
+  input,
+  select {
+    font: inherit;
+    min-height: 48px;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--monsoon);
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--pepper);
+    width: 100%;
+  }
+  .enquiry .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .note {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+  }
+</style>

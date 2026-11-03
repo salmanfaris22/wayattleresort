@@ -1,0 +1,132 @@
+---
+import { site, fullAddress } from '../data/site';
+import { waLink } from '../lib/whatsapp';
+import ContourLines from './ContourLines.astro';
+import WaIcon from './WaIcon.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <ContourLines class="footer-lines" />
+  <div class="wrap grid">
+    <div>
+      <p class="name">{site.name}</p>
+      <address>
+        {fullAddress}<br />
+        <a href={`tel:${site.phoneE164}`}>{site.phone}</a><br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </address>
+      <a class="btn btn--wa" href={waLink()} target="_blank" rel="noopener"><WaIcon /><span>WhatsApp us</span></a>
+    </div>
+    <nav aria-label="Rooms">
+      <p class="head">Stay</p>
+      <ul>
+        <li><a href="/rooms/pool-villa/">Private pool villa</a></li>
+        <li><a href="/rooms/tree-house/">Tree house</a></li>
+        <li><a href="/rooms/plantation-cottage/">Plantation cottage</a></li>
+        <li><a href="/rooms/family-suite/">Family suite</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Wayanad guides">
+      <p class="head">Plan your trip</p>
+      <ul>
+        <li><a href="/things-to-do-in-wayanad/">Places to visit in Wayanad</a></li>
+        <li><a href="/where-to-stay-in-wayanad/">Where to stay in Wayanad</a></li>
+        <li><a href="/best-time-to-visit-wayanad/">Best time to visit Wayanad</a></li>
+        <li><a href="/contact/">How to reach us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="head">Follow</p>
+      {
+        site.socials.length ? (
+          <ul>
+            {site.socials.map((s) => (
+              <li>
+                <a href={s.url} rel="me noopener" target="_blank">
+                  {s.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="soon">Instagram and Facebook links coming soon.</p>
+        )
+      }
+    </div>
+  </div>
+  <div class="wrap base">
+    <p>© {year} {site.legalName}</p>
+    <p><a href="/privacy/">Privacy and photo credits</a></p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--tea-2);
+    color: #d5e0db;
+    padding-block: var(--space-l) 6rem;
+    font-size: var(--step--1);
+  }
+  .site-footer :global(.footer-lines) {
+    position: absolute;
+    inset: 0;
+    color: rgb(255 255 255 / 0.06);
+  }
+  .grid {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+  .name {
+    font-family: var(--font-display-stack);
+    font-size: var(--step-2);
+    color: #fff;
+    margin-bottom: 0.6rem;
+  }
+  address {
+    font-style: normal;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+  }
+  .head {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li a {
+    display: inline-block;
+    padding-block: 0.4rem;
+  }
+  a {
+    color: #e9efe9;
+  }
+  .btn--wa {
+    color: var(--pepper);
+  }
+  .soon {
+    color: #b8c7c0;
+  }
+  .base {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: var(--space-l);
+    padding-top: 1.2rem;
+    border-top: 1px solid rgb(255 255 255 / 0.15);
+  }
+  .base p {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,135 @@
+---
+import { Picture, getImage } from 'astro:assets';
+import { img, creditLine } from '../lib/images';
+
+interface Props {
+  items: { key: string; alt: string; caption: string; size?: 'big' | 'tall' | 'wide' }[];
+}
+const { items } = Astro.props;
+const large = await Promise.all(items.map((i) => getImage({ src: img(i.key), width: 1600, format: 'webp', quality: 70 })));
+---
+
+<ul class="gallery" role="list">
+  {
+    items.map((item, i) => (
+      <li class={item.size}>
+        <a href={large[i].src} data-full={large[i].src} data-caption={`${item.caption}. ${creditLine(item.key)}`}>
+          <Picture
+            src={img(item.key)}
+            alt={item.alt}
+            formats={['avif', 'webp']}
+            widths={[400, 640, 960]}
+            sizes="(min-width: 900px) 33vw, 50vw"
+            quality={52}
+          />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <form method="dialog"><button class="close" aria-label="Close photo">×</button></form>
+  <img alt="" width="1600" height="1067" />
+  <p class="cap"></p>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const d = document.querySelector('.lightbox');
+    if (!d || !d.showModal) return;
+    const im = d.querySelector('img'),
+      cap = d.querySelector('.cap');
+    document.querySelectorAll('.gallery a').forEach((a) =>
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        im.src = a.dataset.full;
+        im.alt = a.querySelector('img').alt;
+        cap.textContent = a.dataset.caption;
+        d.showModal();
+      }),
+    );
+    d.addEventListener('click', (e) => e.target === d && d.close());
+  })();
+</script>
+
+<style>
+  .gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 9rem;
+    grid-auto-flow: dense;
+    gap: 0.6rem;
+  }
+  @media (min-width: 900px) {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 12rem;
+    }
+    .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .tall {
+      grid-row: span 2;
+    }
+    .wide {
+      grid-column: span 2;
+    }
+  }
+  .gallery a {
+    display: block;
+    height: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--mist-2);
+  }
+  .gallery :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .gallery a:hover :global(img) {
+    transform: scale(1.04);
+  }
+  .lightbox {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    max-width: min(94vw, 1600px);
+    max-height: 94vh;
+    overflow: visible;
+  }
+  .lightbox::backdrop {
+    background: rgb(12 20 16 / 0.88);
+  }
+  .lightbox img {
+    max-height: 82vh;
+    width: auto;
+    margin-inline: auto;
+    border-radius: var(--radius);
+  }
+  .cap {
+    color: #e5ece8;
+    font-size: var(--step--1);
+    text-align: center;
+    margin: 0.6rem 0 0;
+  }
+  .close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--paper);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+</style>

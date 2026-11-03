@@ -1,0 +1,150 @@
+---
+// Lightweight SVG map of Wayanad (schematic, not to scale). Replaces a heavy Maps iframe.
+import { places, towns } from '../data/places';
+import { site } from '../data/site';
+import ContourLines from './ContourLines.astro';
+
+const W = 600,
+  H = 600;
+const x = (lng: number) => Math.round(((lng - 75.76) / 0.68) * W);
+const y = (lat: number) => Math.round(((11.98 - lat) / 0.56) * H);
+
+// Label placement per point: [dx, dy, anchor]. Hand-tuned so labels never overlap or clip.
+type Label = [number, number, 'start' | 'end'];
+const placeLabel: Record<string, Label> = {
+  'pookode-lake': [-10, 5, 'end'],
+  'chembra-peak': [-10, 5, 'end'],
+  'banasura-sagar-dam': [-10, 5, 'end'],
+  'thirunelli-temple': [-10, 5, 'end'],
+  'edakkal-caves': [10, 20, 'start'],
+  'kuruva-island': [10, 5, 'start'],
+  'muthanga-wildlife-sanctuary': [-10, 22, 'end'],
+};
+const townLabel: Record<string, Label> = {
+  Vythiri: [12, -12, 'start'],
+  Meppadi: [-6, 20, 'start'],
+  Mananthavady: [-10, -8, 'end'],
+};
+const label = (table: Record<string, Label>, key: string): Label => table[key] ?? [10, 5, 'start'];
+const short: Record<string, string> = {
+  'banasura-sagar-dam': 'Banasura Dam',
+  'thirunelli-temple': 'Thirunelli',
+  'muthanga-wildlife-sanctuary': 'Muthanga',
+  'tholpetty-wildlife-sanctuary': 'Tholpetty',
+};
+---
+
+<figure class="map">
+  <div class="canvas">
+    <ContourLines class="map-lines" />
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="map-title map-desc">
+      <title id="map-title">Schematic map of Wayanad</title>
+      <desc id="map-desc">The resort in {site.baseTown} and the main places to visit in Wayanad, Kerala. Not to scale.</desc>
+      {
+        towns.map((t) => {
+          const [dx, dy, anchor] = label(townLabel, t.name);
+          return (
+            <g class:list={['town', { base: t.base }]}>
+              <rect x={x(t.lng) - 4} y={y(t.lat) - 4} width="8" height="8" />
+              <text x={x(t.lng) + dx} y={y(t.lat) + (t.base ? dy : dy === 5 ? -8 : dy)} text-anchor={anchor}>
+                {t.base ? `${site.shortName} (${t.name})` : t.name}
+              </text>
+            </g>
+          );
+        })
+      }
+      {
+        places.map((p) => {
+          const [dx, dy, anchor] = label(placeLabel, p.slug);
+          return (
+            <a href={`/things-to-do-in-wayanad/#${p.slug}`}>
+              <g class="place">
+                <circle cx={x(p.lng)} cy={y(p.lat)} r="6" />
+                <text x={x(p.lng) + dx} y={y(p.lat) + dy} text-anchor={anchor}>
+                  {short[p.slug] ?? p.name}
+                </text>
+              </g>
+            </a>
+          );
+        })
+      }
+    </svg>
+  </div>
+  <figcaption>
+    Schematic map, not to scale. <a href={site.mapsUrl} target="_blank" rel="noopener">Open the resort in Google Maps</a>
+  </figcaption>
+</figure>
+
+<style>
+  .map {
+    margin: 0;
+  }
+  .canvas {
+    position: relative;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  :global(.map-lines) {
+    position: absolute;
+    inset: 0;
+    color: rgb(94 122 134 / 0.25);
+  }
+  svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-body-stack);
+  }
+  text {
+    font-size: 17px;
+    fill: var(--pepper);
+    paint-order: stroke;
+    stroke: var(--paper);
+    stroke-width: 4px;
+  }
+  .town rect {
+    fill: var(--monsoon);
+  }
+  .town text {
+    fill: var(--monsoon-ink);
+    font-size: 14px;
+  }
+  .town.base rect {
+    fill: var(--turmeric);
+    stroke: var(--pepper);
+    stroke-width: 1.5;
+    width: 12px;
+    height: 12px;
+  }
+  .town.base text {
+    fill: var(--tea);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  @media (max-width: 600px) {
+    text,
+    .town.base text {
+      font-size: 21px;
+    }
+    .town text {
+      font-size: 17px;
+    }
+  }
+  .place circle {
+    fill: var(--tea);
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  a:hover .place text,
+  a:focus .place text {
+    text-decoration: underline;
+  }
+  figcaption {
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+    margin-top: 0.6rem;
+  }
+</style>

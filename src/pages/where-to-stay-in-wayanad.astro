@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site } from '../data/site';
+import { img } from '../lib/images';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Where to stay in Wayanad', href: '/where-to-stay-in-wayanad/' },
+];
+
+const areas = [
+  {
+    name: 'Vythiri and Lakkidi',
+    side: 'South, on the Kozhikode road',
+    for: 'First visits, couples, short trips',
+    pros: 'Closest to Kozhikode; Pookode Lake, Chembra, Soochipara and Banasura within an hour; many tea and forest views.',
+    cons: 'Weekend traffic on the ghat road; further from Muthanga and Tholpetty.',
+  },
+  {
+    name: 'Kalpetta',
+    side: 'Centre',
+    for: 'Budget stays, shopping, hospitals',
+    pros: 'The district town, with hotels, restaurants and fuel. Central for day trips in every direction.',
+    cons: 'A town, not a hill stay. Few views and more noise.',
+  },
+  {
+    name: 'Meppadi',
+    side: 'South-east',
+    for: 'Trekkers',
+    pros: 'Closest to Chembra Peak, Soochipara and Meenmutty; tea estates and homestays.',
+    cons: 'Narrow roads; fewer places to eat in the evening.',
+  },
+  {
+    name: 'Sulthan Bathery',
+    side: 'East, on the Mysuru road',
+    for: 'Drivers from Bengaluru, wildlife safaris',
+    pros: 'First town after the Bandipur forest; close to Edakkal Caves and Muthanga.',
+    cons: 'Hotter and flatter; less mist than the south.',
+  },
+  {
+    name: 'Mananthavady and Thirunelli',
+    side: 'North',
+    for: 'Wildlife, temples, quiet',
+    pros: 'Near Kuruva Island, Tholpetty and Thirunelli Temple; deep forest.',
+    cons: 'Far from the southern sights; patchy mobile signal.',
+  },
+];
+---
+
+<Base
+  title="Where to Stay in Wayanad: Best Areas Compared (2026)"
+  description="Where to stay in Wayanad: Vythiri, Kalpetta, Meppadi, Sulthan Bathery or Mananthavady? Compare each area for views, access and sights, and pick the best resort base."
+  ogImage={img('about/vythiri-tea-garden-morning-mist')}
+  ogAlt="Tea garden in Vythiri on a misty morning"
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Where to stay in Wayanad"
+    lede="Wayanad is about 2,100 sq km of hills, so the area you pick decides how much of your trip is spent driving. Here is how the five main areas compare."
+    image={img('about/vythiri-tea-garden-morning-mist')}
+    imageAlt="Tea bushes and silver oaks in Vythiri, Wayanad"
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow">
+        <h2>The short answer</h2>
+        <p class="lede">
+          For a first trip of two or three nights, stay in Vythiri or Lakkidi in the south. It is the closest part of Wayanad to
+          Kozhikode, has the most mist and tea-estate views, and puts Pookode Lake, Chembra Peak, Soochipara Falls and Banasura
+          Sagar Dam within an hour. Choose Sulthan Bathery or Mananthavady if wildlife safaris are your main plan.
+        </p>
+      </div>
+      <div class="table-scroll">
+        <table class="areas">
+          <thead>
+            <tr>
+              <th scope="col">Area</th>
+              <th scope="col">Best for</th>
+              <th scope="col">Good</th>
+              <th scope="col">Less good</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              areas.map((a) => (
+                <tr>
+                  <th scope="row">
+                    {a.name}
+                    <span class="side">{a.side}</span>
+                  </th>
+                  <td>{a.for}</td>
+                  <td>{a.pros}</td>
+                  <td>{a.cons}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap narrow prose">
+      <h2>What makes a resort in Wayanad worth it</h2>
+      <p>
+        Price and photos say little about the stay itself. Before you book any resort in Wayanad, ask these questions:
+      </p>
+      <ul>
+        <li><strong>How is the last kilometre?</strong> Some properties are reached only by a steep jeep track. Fine for an adventure, hard with elderly parents or a low car.</li>
+        <li><strong>What is the view in the monsoon?</strong> Valley views disappear into cloud from June to September. A room with a verandah over the plantation still feels open.</li>
+        <li><strong>Is food available on site?</strong> Outside the towns there are few restaurants open after 8 pm.</li>
+        <li><strong>Who answers the phone?</strong> Booking directly with the owner usually means faster replies and fewer surprises at check-in.</li>
+        <li><strong>Are the photos real?</strong> Ask for a short video of the room you are booking.</li>
+      </ul>
+      <h2>Why we chose Vythiri</h2>
+      <p>
+        {site.name} is in Vythiri because it is the easiest part of Wayanad to reach and the best placed for the southern sights.
+        The estate sits high enough for cool nights and morning mist, with tea above and coffee below. See
+        <a href="/rooms/">our rooms and prices</a> or <a href="/things-to-do-in-wayanad/">what to do nearby</a>.
+      </p>
+      <WhatsAppButton />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .areas {
+    min-width: 46rem;
+    background: var(--paper);
+  }
+  .side {
+    display: block;
+    font-weight: 400;
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+  }
+  .alt {
+    background: var(--paper);
+  }
+</style>

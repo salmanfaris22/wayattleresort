@@ -1,0 +1,98 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ContourLines from './ContourLines.astro';
+
+interface Props {
+  title: string;
+  lede: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  crumbs: { name: string; href: string }[];
+  stockPhoto?: boolean;
+}
+const { title, lede, image, imageAlt = '', crumbs, stockPhoto = false } = Astro.props;
+---
+
+<section class:list={['page-hero', { 'has-image': image }]}>
+  {
+    image && (
+      <Picture
+        src={image}
+        alt={imageAlt}
+        formats={['avif', 'webp']}
+        layout="full-width"
+        widths={[480, 768, 1080, 1440, 1920]}
+        quality={46}
+        priority
+        class="ph-img"
+      />
+    )
+  }
+  <ContourLines class="ph-lines" />
+  <div class="wrap inner">
+    <Breadcrumbs items={crumbs} />
+    <h1>{title}</h1>
+    <p class="lede">{lede}</p>
+    <slot />
+  </div>
+  {stockPhoto && <span class="tag">Sample photo</span>}
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--tea);
+    color: #fff;
+    padding-block: var(--space-xl) var(--space-l);
+  }
+  .has-image {
+    min-height: min(62svh, 34rem);
+    display: grid;
+    align-items: end;
+  }
+  .page-hero :global(.ph-img),
+  .page-hero :global(.ph-img img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    z-index: -3;
+  }
+  .has-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(0deg, rgb(15 34 26 / 0.9), rgb(15 34 26 / 0.35) 60%, rgb(15 34 26 / 0.1));
+  }
+  :global(.ph-lines) {
+    position: absolute;
+    inset: auto 0 0;
+    height: 60%;
+    z-index: -1;
+    color: rgb(255 255 255 / 0.09);
+  }
+  h1 {
+    color: #fff;
+    max-width: 20ch;
+  }
+  .lede {
+    color: #dfe8e3;
+  }
+  .tag {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: rgb(27 29 26 / 0.75);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+  }
+</style>

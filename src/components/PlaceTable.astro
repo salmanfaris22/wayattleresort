@@ -1,0 +1,68 @@
+---
+import { places } from '../data/places';
+import { site } from '../data/site';
+
+interface Props {
+  linkToGuide?: boolean;
+}
+const { linkToGuide = false } = Astro.props;
+---
+
+<div class="table-scroll">
+  <table class="places">
+    <caption class="visually-hidden">Approximate road distance and drive time from {site.baseTown} to places in Wayanad</caption>
+    <thead>
+      <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Distance</th>
+        <th scope="col">Drive</th>
+        <th scope="col">Good for</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        places.map((p) => (
+          <tr>
+            <th scope="row">{linkToGuide ? <a href={`/things-to-do-in-wayanad/#${p.slug}`}>{p.name}</a> : <a href={`#${p.slug}`}>{p.name}</a>}</th>
+            <td>{p.km} km</td>
+            <td>{p.drive}</td>
+            <td>{p.bestFor}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<p class="muted">Approximate road distances from {site.baseTown}. Ghat roads are slow after rain, so add time in the monsoon.</p>
+
+<style>
+  .places {
+    min-width: 34rem;
+    background: var(--paper);
+    border-radius: var(--radius);
+  }
+  .places thead th {
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+    font-weight: 600;
+  }
+  .places tbody th {
+    font-weight: 600;
+  }
+  .places td:nth-child(2),
+  .places td:nth-child(3) {
+    white-space: nowrap;
+  }
+  .muted {
+    margin-top: 0.8rem;
+  }
+  @media (max-width: 600px) {
+    .places {
+      min-width: 0;
+    }
+    .places th:nth-child(4),
+    .places td:nth-child(4) {
+      display: none;
+    }
+  }
+</style>

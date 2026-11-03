@@ -1,0 +1,16 @@
+---
+import WaIcon from './WaIcon.astro';
+import { waLink } from '../lib/whatsapp';
+
+interface Props {
+  message?: string;
+  label?: string;
+  class?: string;
+}
+const { message, label = 'Check availability on WhatsApp', class: cls = '' } = Astro.props;
+---
+
+<a class:list={['btn btn--wa', cls]} href={waLink(message)} rel="noopener" target="_blank" data-wa>
+  <WaIcon />
+  <span>{label}</span>
+</a>

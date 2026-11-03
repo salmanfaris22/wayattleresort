@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import RoomRow from '../../components/RoomRow.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { img } from '../../lib/images';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Rooms', href: '/rooms/' },
+];
+const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
+---
+
+<Base
+  title="Wayanad Resort Rooms: Pool Villa, Tree House & Cottages"
+  description="Compare our Wayanad resort rooms: private pool villa, tree house, plantation cottage and family suite. Sizes, beds, guests and prices from ₹6,500 with breakfast."
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Rooms and villas at our Wayanad resort"
+    lede="Four room types on one tea-and-coffee hillside. Every rate includes breakfast, Wi-Fi and parking."
+    image={img('hero/wayanad-tea-estate-misty-hills')}
+    imageAlt="Tea estates on the Wayanad hills under low cloud"
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Compare rooms</h2>
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col">Room</th>
+              <th scope="col">Guests</th>
+              <th scope="col">Size</th>
+              <th scope="col">Bed</th>
+              <th scope="col">View</th>
+              <th scope="col">From / night</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              rooms.map((r) => (
+                <tr>
+                  <th scope="row"><a href={`/rooms/${r.id}/`}>{r.data.name}</a></th>
+                  <td>{r.data.guestsNote}</td>
+                  <td>{r.data.sizeSqft} sq ft</td>
+                  <td>{r.data.bed}</td>
+                  <td>{r.data.view}</td>
+                  <td>{inr(r.data.priceFrom)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Prices are for two guests with breakfast and change with season and long weekends. Message us for an exact quote.</p>
+    </div>
+  </section>
+
+  <section class="section list">
+    <div class="wrap rooms">
+      {rooms.map((room, i) => <RoomRow room={room} flip={i % 2 === 1} headingLevel="h2" />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap cta">
+      <h2>Not sure which room fits?</h2>
+      <p class="lede">Tell us who is travelling and your dates. We will suggest the right room and send the total price.</p>
+      <WhatsAppButton message="Hi, we are ___ adults and ___ children, travelling on ___. Which room do you suggest?" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .compare {
+    min-width: 46rem;
+    background: var(--paper);
+  }
+  .list {
+    background: var(--paper);
+  }
+  .rooms {
+    display: grid;
+    gap: var(--space-xl);
+  }
+  .rooms :global(h2) {
+    font-size: var(--step-3);
+  }
+  .muted {
+    margin-top: 0.8rem;
+  }
+</style>

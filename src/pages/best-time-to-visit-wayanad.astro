@@ -1,0 +1,145 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { img } from '../lib/images';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Best time to visit Wayanad', href: '/best-time-to-visit-wayanad/' },
+];
+
+const seasons = [
+  {
+    months: 'October to November',
+    weather: 'Roughly 17–27 °C. Green hills, afternoon showers.',
+    good: 'Waterfalls still running, fewer crowds, good rates.',
+    watch: 'Some rainy afternoons; Diwali weekends book up.',
+  },
+  {
+    months: 'December to February',
+    weather: 'Roughly 12–26 °C. Dry, clear, cold mornings.',
+    good: 'Best views and every trek open. The coolest time of year.',
+    watch: 'Peak season: book early for Christmas and New Year.',
+  },
+  {
+    months: 'March to May',
+    weather: 'Roughly 18–31 °C. Warm days, cool nights, pre-monsoon showers in May.',
+    good: 'Coffee blossom in March and April. School-holiday family trips.',
+    watch: 'Hazier views; forest areas can close for fire season.',
+  },
+  {
+    months: 'June to September',
+    weather: 'Roughly 18–25 °C. Heavy south-west monsoon rain.',
+    good: 'Mist, full waterfalls, the greenest landscape, lowest rates.',
+    watch: 'Chembra and Kuruva usually close; follow district rain alerts.',
+  },
+];
+
+const qa = [
+  {
+    q: 'What is the best month to visit Wayanad?',
+    a: 'December and January are the best months for clear views, cool weather and open treks. October and November are a close second with fewer crowds and full waterfalls. Choose July or August only if you want monsoon rain and mist and are happy with slower days.',
+  },
+  {
+    q: 'Is Wayanad cold in December?',
+    a: 'Yes, by Kerala standards. Nights in the hills of Vythiri and Meppadi can drop to around 12 °C in December and January, with mist until mid-morning. Days are pleasant, around 25 °C. Pack a light jacket for early treks and evenings outdoors.',
+  },
+  {
+    q: 'Is it safe to visit Wayanad in the monsoon?',
+    a: 'Most monsoon trips are uneventful, but heavy rain can cause landslides and road closures in parts of the district. Watch the Kerala State Disaster Management Authority alerts, avoid driving at night in heavy rain and keep a flexible plan. We will tell you honestly if conditions near us are not good.',
+  },
+];
+---
+
+<Base
+  title="Best Time to Visit Wayanad: Month-by-Month Weather Guide"
+  description="The best time to visit Wayanad is October to May, with December and January coolest and clearest. Month-by-month weather, crowds, monsoon tips and what is open when."
+  ogImage={img('gallery/misty-valley-from-tea-estate')}
+  ogAlt="Morning cloud over a valley in Wayanad"
+  schema={[faqSchema(qa), breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Best time to visit Wayanad"
+    lede="Wayanad is worth a trip all year, but each season changes what you can do. Here is what to expect, month by month."
+    image={img('gallery/misty-valley-from-tea-estate')}
+    imageAlt="Cloud filling a valley below the Wayanad tea estates"
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow">
+        <h2>The short answer</h2>
+        <p class="lede">
+          The best time to visit Wayanad is October to May, when roads are dry and every trek and island is open. December and
+          January are the coolest and clearest months. The monsoon, June to September, brings mist, full waterfalls and the
+          lowest rates, but some sights close.
+        </p>
+      </div>
+      <div class="table-scroll">
+        <table class="seasons">
+          <thead>
+            <tr>
+              <th scope="col">Months</th>
+              <th scope="col">Weather</th>
+              <th scope="col">Why go</th>
+              <th scope="col">Keep in mind</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              seasons.map((s) => (
+                <tr>
+                  <th scope="row">{s.months}</th>
+                  <td>{s.weather}</td>
+                  <td>{s.good}</td>
+                  <td>{s.watch}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Temperatures are typical ranges for the southern hills around Vythiri and vary year to year.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap narrow">
+      {
+        qa.map((item) => (
+          <div class="qa">
+            <h2>{item.q}</h2>
+            <p>{item.a}</p>
+          </div>
+        ))
+      }
+      <p>
+        Planning around a season? See <a href="/things-to-do-in-wayanad/">places to visit in Wayanad</a> or
+        <a href="/rooms/">check rooms and prices</a>.
+      </p>
+      <WhatsAppButton message="Hi, we are planning a Wayanad trip. Are these dates good? Dates: " label="Ask about your dates" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .seasons {
+    min-width: 44rem;
+    background: var(--paper);
+  }
+  .muted {
+    margin-top: 0.8rem;
+  }
+  .alt {
+    background: var(--paper);
+  }
+  .qa h2 {
+    font-size: var(--step-2);
+  }
+  .qa + .qa {
+    margin-top: var(--space-l);
+  }
+</style>

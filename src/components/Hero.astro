@@ -1,0 +1,133 @@
+---
+import { Picture } from 'astro:assets';
+import ContourLines from './ContourLines.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import { img } from '../lib/images';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  lede: string;
+}
+const { eyebrow, title, lede } = Astro.props;
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <Picture
+    src={img('hero/wayanad-tea-estate-misty-hills')}
+    alt="Tea estates and forest on the Wayanad hills with low cloud over the valley"
+    formats={['avif', 'webp']}
+    layout="full-width"
+    widths={[480, 768, 1080, 1440, 1920, 2560]}
+    quality={50}
+    priority
+    class="hero-img"
+  />
+  <div class="mist" aria-hidden="true"></div>
+  <ContourLines class="hero-lines" />
+  <div class="wrap hero-inner">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1 id="hero-title">{title}</h1>
+    <p class="hero-lede">{lede}</p>
+    <div class="actions">
+      <WhatsAppButton />
+      <a class="btn btn--ghost" href="/rooms/">See rooms and prices</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    isolation: isolate;
+    min-height: min(88svh, 52rem);
+    display: grid;
+    align-items: end;
+    color: #fff;
+    overflow: hidden;
+    background: var(--tea-2);
+  }
+  .hero :global(.hero-img),
+  .hero :global(.hero-img img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: 50% 45%;
+    z-index: -3;
+  }
+  .mist {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+      linear-gradient(180deg, rgb(231 236 234 / 0.15) 0%, transparent 35%),
+      linear-gradient(0deg, rgb(15 34 26 / 0.86) 0%, rgb(15 34 26 / 0.45) 45%, rgb(15 34 26 / 0.05) 75%);
+  }
+  .mist::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 80% at 30% 70%, rgb(231 236 234 / 0.75), rgb(231 236 234 / 0.35) 60%, transparent);
+    opacity: 0;
+  }
+  :global(.hero-lines) {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 45%;
+    z-index: -1;
+    color: rgb(255 255 255 / 0.1);
+  }
+  .hero-inner {
+    padding-block: 7rem var(--space-l);
+  }
+  .eyebrow {
+    font-weight: 600;
+    color: var(--turmeric-light);
+    margin-bottom: 0.8rem;
+  }
+  h1 {
+    color: #fff;
+    max-width: 16ch;
+  }
+  .hero-lede {
+    font-size: var(--step-1);
+    max-width: 46ch;
+    color: #e8efeb;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .mist::after {
+      animation: mist-clear 1.6s ease-out both;
+    }
+    h1,
+    .hero-lede {
+      animation: rise 1.2s ease-out both;
+    }
+    @keyframes mist-clear {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    @keyframes rise {
+      from {
+        transform: translateY(12px);
+        filter: blur(3px);
+      }
+      to {
+        transform: none;
+        filter: none;
+      }
+    }
+  }
+</style>

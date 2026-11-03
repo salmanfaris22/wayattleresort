@@ -1,0 +1,366 @@
+---
+import { Picture } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import RoomRow from '../components/RoomRow.astro';
+import Experiences from '../components/Experiences.astro';
+import PlaceTable from '../components/PlaceTable.astro';
+import Gallery from '../components/Gallery.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import MapSchematic from '../components/MapSchematic.astro';
+import Faq from '../components/Faq.astro';
+import ContourLines from '../components/ContourLines.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site } from '../data/site';
+import { reach } from '../data/places';
+import { faq } from '../data/faq';
+import { img, creditLine } from '../lib/images';
+import { faqSchema } from '../lib/schema';
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+const minPrice = Math.min(...rooms.map((r) => r.data.priceFrom)).toLocaleString('en-IN');
+
+const gallery = [
+  { key: 'gallery/misty-valley-from-tea-estate', alt: 'Low cloud filling a valley below a Wayanad tea estate', caption: 'Morning cloud in the valley below the tea estates', size: 'big' },
+  { key: 'gallery/chembra-grassland', alt: 'Green grassland and a lone tree on the slopes of Chembra Peak', caption: 'Grassland on the Chembra Peak trail' },
+  { key: 'gallery/peacock-tholpetty', alt: 'A peacock walking through grass in Tholpetty Wildlife Sanctuary', caption: 'Peacock in Tholpetty Wildlife Sanctuary' },
+  { key: 'gallery/coffee-plants-wayanad', alt: 'Coffee bushes growing under tall shade trees in Wayanad', caption: 'Coffee growing under shade trees', size: 'tall' },
+  { key: 'gallery/kuruva-island-river', alt: 'Trees leaning over the Kabini river at Kuruva Island', caption: 'The Kabini river at Kuruva Island' },
+  { key: 'gallery/banasura-hills-and-fields', alt: 'Banasura hills rising behind farmland and the reservoir edge', caption: 'Banasura hills from the dam road', size: 'wide' },
+  { key: 'gallery/tea-bushes-under-silver-oak', alt: 'Rows of tea bushes under tall silver oak trees in Vythiri', caption: 'Tea and silver oaks in Vythiri' },
+  { key: 'gallery/pookode-lake-shore', alt: 'Forest-lined shore of Pookode Lake under a blue sky', caption: 'Pookode Lake, 3 km from Vythiri' },
+  { key: 'gallery/sulthan-bathery-paddy-fields', alt: 'Paddy fields near Sulthan Bathery with forest behind', caption: 'Paddy fields near Sulthan Bathery', size: 'wide' },
+  { key: 'gallery/chembra-from-en-ooru', alt: 'Wide view of the Chembra range from En Ooru tribal heritage village', caption: 'The Chembra range from En Ooru' },
+];
+
+const chooseRows = [
+  ['Location', 'Wayanad is large; a central base saves hours of driving.', `${site.baseTown}, 3 km from Pookode Lake and under an hour from Chembra, Soochipara and Banasura.`],
+  ['Road access', 'Some hill resorts are reached only by jeep track.', 'Paved road to the gate and free parking inside; a short plantation road at the end.'],
+  ['Views and altitude', 'Higher ground means cooler nights and more mist.', `About ${site.facts[0].value} up, facing the tea valley.`],
+  ['Room choice', 'Couples, families and groups need different rooms.', 'A private pool villa, a tree house, plantation cottages and a family suite.'],
+  ['Food', 'Many places outside towns have limited menus.', 'A Kerala kitchen with breakfast included and a banana-leaf meal on request.'],
+  ['Booking', 'Agent sites add commission and slow replies.', 'Book directly with the owner on WhatsApp.'],
+];
+---
+
+<Base
+  title="Best Resort in Wayanad – Pool Villas & Tree Houses | Mistvale"
+  description={`A hillside resort in Vythiri, Wayanad with a private pool villa, tree house and plantation cottages on a tea estate. Rooms from ₹${minPrice}. Book on WhatsApp.`}
+  schema={[faqSchema(faq)]}
+>
+  <Hero
+    eyebrow="In the tea hills of Vythiri, Wayanad"
+    title="Best resort in Wayanad for misty tea-hill mornings"
+    lede={`Four kinds of rooms on ${site.facts[1].value} of tea and coffee, 3 km from Pookode Lake. Book directly with us on WhatsApp and pay no agent commission.`}
+  />
+
+  <section class="facts-strip" aria-label="Resort at a glance">
+    <dl class="wrap facts">
+      {
+        site.facts.map((f) => (
+          <div>
+            <dt>{f.value}</dt>
+            <dd>{f.label}</dd>
+          </div>
+        ))
+      }
+      <div><dt>₹{minPrice}</dt><dd>a night, with breakfast</dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div>
+        <h2 id="about-title">A working tea and coffee estate in Vythiri</h2>
+        <p class="lede">
+          {site.name} is a small resort on a hillside estate in Vythiri, in the south of Wayanad, Kerala. Tea grows on the upper
+          slope and coffee and pepper below. There are only a handful of rooms, so mornings are quiet: mist in the valley,
+          birds in the silver oaks and breakfast on your verandah.
+        </p>
+        <p>
+          We are on the main Kozhikode–Wayanad route, so you skip the long inner roads, yet far enough up the hill that the only
+          sound at night is the stream. Most of our guests come from Bengaluru, Kochi and Kozhikode for two or three nights.
+        </p>
+        <p><a href="/where-to-stay-in-wayanad/">Not sure which part of Wayanad to stay in? Read our area guide.</a></p>
+      </div>
+      <figure>
+        <Picture
+          src={img('about/vythiri-tea-garden-morning-mist')}
+          alt="Tea bushes and tall silver oaks in a Vythiri estate on a misty morning"
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1200]}
+          sizes="(min-width: 900px) 45vw, 100vw"
+          quality={52}
+          class="rounded"
+        />
+        <figcaption class="credit">Tea garden in Vythiri. {creditLine('about/vythiri-tea-garden-morning-mist')}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
+    <div class="wrap">
+      <h2 id="rooms-title">Rooms and villas</h2>
+      <p class="lede">Every rate includes breakfast, Wi-Fi and parking. Prices are per night for two guests; tell us your dates for an exact quote.</p>
+      <div class="room-list">
+        {rooms.map((room, i) => <RoomRow room={room} flip={i % 2 === 1} />)}
+      </div>
+      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a></p>
+    </div>
+  </section>
+
+  <section class="section section--tea choose" aria-labelledby="choose-title">
+    <ContourLines class="choose-lines" />
+    <div class="wrap">
+      <h2 id="choose-title">How to choose the best resort in Wayanad</h2>
+      <p class="lede">
+        The best resort in Wayanad for you depends on where you stay, how easy the road is and the kind of room you need. These
+        are the six things we would check before booking anywhere, and how we measure up.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">What to check</th><th scope="col">Why it matters</th><th scope="col">At {site.shortName}</th></tr>
+          </thead>
+          <tbody>
+            {
+              chooseRows.map(([what, why, us]) => (
+                <tr>
+                  <th scope="row">{what}</th>
+                  <td data-label="Why it matters">{why}</td>
+                  <td data-label={`At ${site.shortName}`}>{us}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experiences" aria-labelledby="exp-title">
+    <div class="wrap">
+      <h2 id="exp-title">Things to do at the resort</h2>
+      <p class="lede">Slow days on the estate, or a packed itinerary around Wayanad. We help with both.</p>
+      <Experiences />
+    </div>
+  </section>
+
+  <section class="section explore" id="explore" aria-labelledby="explore-title">
+    <div class="wrap">
+      <h2 id="explore-title">Places to visit near the resort</h2>
+      <p class="lede">
+        {site.baseTown} is in the south of Wayanad, so Pookode Lake, Chembra Peak, Soochipara Falls and Banasura Sagar Dam are
+        all within an hour. The wildlife sanctuaries and Thirunelli make good full-day trips.
+      </p>
+      <PlaceTable linkToGuide />
+      <p><a href="/things-to-do-in-wayanad/">Read the full guide to places to visit in Wayanad</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <h2 id="gallery-title">Wayanad in pictures</h2>
+      <p class="lede">The hills, lakes and wildlife around us. Tap a photo to see it larger.</p>
+      <Gallery items={gallery} />
+    </div>
+  </section>
+
+  <section class="section section--tea" id="enquire" aria-labelledby="enquire-title">
+    <div class="wrap">
+      <h2 id="enquire-title">Check availability</h2>
+      <p class="lede">Pick your dates and we will reply on WhatsApp with free rooms and the total price.</p>
+      <EnquiryForm />
+    </div>
+  </section>
+
+  <section class="section" id="reach" aria-labelledby="reach-title">
+    <div class="wrap split">
+      <div>
+        <h2 id="reach-title">How to reach Wayanad</h2>
+        <p class="lede">
+          The nearest airport is Kozhikode (Calicut), about 90 km or 2.5 to 3 hours away. Wayanad has no railway; Kozhikode
+          station is the closest. From Bengaluru it is a 6.5 to 7 hour drive through Mysuru.
+        </p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">From</th><th scope="col">Distance</th><th scope="col">Time</th></tr>
+            </thead>
+            <tbody>
+              {
+                reach.map((r) => (
+                  <tr>
+                    <th scope="row">
+                      {r.from}
+                      <span class="note">{r.note}</span>
+                    </th>
+                    <td>{r.km}</td>
+                    <td>{r.time}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <p><a href="/contact/">Directions, pickup and contact details</a></p>
+      </div>
+      <MapSchematic />
+    </div>
+  </section>
+
+  <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap narrow-wrap">
+      <h2 id="faq-title">Questions guests ask</h2>
+      <Faq items={faq} />
+    </div>
+  </section>
+
+  <section class="final section section--tea" aria-labelledby="final-title">
+    <ContourLines class="final-lines" />
+    <div class="wrap">
+      <h2 id="final-title">Mist, tea hills and a quiet room are a message away</h2>
+      <p class="lede">Send your dates on WhatsApp. You talk to the people who run the resort, not a call centre.</p>
+      <WhatsAppButton label={`WhatsApp ${site.phone}`} />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .facts-strip {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    margin-block: 0;
+    padding-block: 1.4rem;
+  }
+  .facts dt {
+    font-family: var(--font-display-stack);
+    font-size: var(--step-2);
+    color: var(--tea);
+    line-height: 1.1;
+  }
+  .facts dd {
+    margin: 0;
+    color: var(--monsoon-ink);
+    font-size: var(--step--1);
+  }
+  .split {
+    display: grid;
+    gap: var(--space-l);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .split {
+      grid-template-columns: 1.1fr 1fr;
+    }
+  }
+  figure {
+    margin: 0;
+  }
+  :global(.rounded img),
+  :global(img.rounded) {
+    border-radius: var(--radius);
+  }
+  .rooms-section {
+    background: var(--paper);
+  }
+  .room-list {
+    display: grid;
+    gap: var(--space-xl);
+    margin-top: var(--space-l);
+  }
+  .all-rooms {
+    margin-top: var(--space-l);
+    font-weight: 600;
+  }
+  .choose,
+  .final {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  :global(.choose-lines),
+  :global(.final-lines) {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    color: rgb(255 255 255 / 0.07);
+  }
+  .choose th,
+  .choose td {
+    border-color: rgb(255 255 255 / 0.18);
+  }
+  .choose th {
+    color: #fff;
+  }
+  .choose thead th {
+    color: var(--turmeric-light);
+    font-size: var(--step--1);
+  }
+  .choose table {
+    min-width: 38rem;
+  }
+  @media (max-width: 700px) {
+    .choose table,
+    .choose tbody,
+    .choose tr,
+    .choose th,
+    .choose td {
+      display: block;
+      min-width: 0;
+    }
+    .choose thead {
+      display: none;
+    }
+    .choose tr {
+      padding-block: 1rem;
+      border-bottom: 1px solid rgb(255 255 255 / 0.18);
+    }
+    .choose th,
+    .choose td {
+      border: 0;
+      padding: 0.25rem 0;
+    }
+    .choose th {
+      font-family: var(--font-display-stack);
+      font-weight: 400;
+      font-size: var(--step-1);
+    }
+    .choose td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: var(--step--1);
+      font-weight: 600;
+      color: var(--turmeric-light);
+    }
+  }
+  .explore {
+    background: var(--mist-2);
+  }
+  .note {
+    display: block;
+    font-weight: 400;
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+  }
+  .narrow-wrap {
+    max-width: 52rem;
+  }
+  .final {
+    text-align: center;
+  }
+  .final h2 {
+    max-width: 22ch;
+    margin-inline: auto;
+  }
+  .final .lede {
+    margin-inline: auto;
+    margin-bottom: 1.6rem;
+  }
+</style>

@@ -1,0 +1,197 @@
+---
+import { Picture, getImage } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import PlaceTable from '../components/PlaceTable.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { places } from '../data/places';
+import { site } from '../data/site';
+import { img, creditLine } from '../lib/images';
+import { breadcrumbSchema, placesSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Places to visit in Wayanad', href: '/things-to-do-in-wayanad/' },
+];
+const pageUrl = new URL('/things-to-do-in-wayanad/', Astro.site).href;
+const imageUrls = await Promise.all(
+  places.map(async (p) => new URL((await getImage({ src: img(p.image), width: 1200, format: 'jpg', quality: 75 })).src, Astro.site).href),
+);
+
+const plans = [
+  {
+    title: '2 days in Wayanad',
+    days: [
+      'Day 1: Pookode Lake in the morning, Lakkidi viewpoint, sunset at Banasura Sagar Dam.',
+      'Day 2: Chembra Peak trek at dawn (or Soochipara Falls if the trek is closed), then Meenmutty Falls.',
+    ],
+  },
+  {
+    title: '3 days in Wayanad',
+    days: [
+      'Day 1: Pookode Lake and a plantation walk; evening at Banasura Sagar Dam.',
+      'Day 2: Edakkal Caves early, lunch in Sulthan Bathery, afternoon jeep safari at Muthanga.',
+      'Day 3: Chembra Peak or Soochipara and Meenmutty Falls.',
+    ],
+  },
+  {
+    title: '4 days in Wayanad',
+    days: [
+      'Add a long day north: Kuruva Island in the morning, Tholpetty safari in the afternoon, Thirunelli Temple at dusk.',
+    ],
+  },
+];
+---
+
+<Base
+  title="Places to Visit in Wayanad: 10 Spots, Distances & Tips"
+  description="Wayanad tourist places with distances from Vythiri: Chembra Peak, Banasura Sagar Dam, Edakkal Caves, Soochipara Falls, Kuruva Island and more, plus itineraries."
+  ogImage={img('places/chembra-peak')}
+  ogAlt="Chembra Peak, the highest point in Wayanad"
+  schema={[placesSchema(places, imageUrls, pageUrl), breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Places to visit in Wayanad"
+    lede="Ten places worth the drive, with honest distances from Vythiri, the best time of day to go and what to know before you set out."
+    image={img('places/chembra-peak')}
+    imageAlt="Grass-covered slopes of Chembra Peak, Wayanad"
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow">
+        <h2>The short answer</h2>
+        <p class="lede">
+          The most popular places to visit in Wayanad are Chembra Peak, Banasura Sagar Dam, Edakkal Caves, Soochipara Falls,
+          Pookode Lake and Kuruva Island. From a base in {site.baseTown}, the lake, the peak, the falls and the dam are all
+          within an hour. Keep a full day for the wildlife sanctuaries or the north.
+        </p>
+      </div>
+      <PlaceTable />
+    </div>
+  </section>
+
+  <section class="section places-list" aria-label="Places in detail">
+    <div class="wrap">
+      {
+        places.map((p, i) => (
+          <article class:list={['place', { flip: i % 2 === 1 }]} id={p.slug}>
+            <figure>
+              <Picture
+                src={img(p.image)}
+                alt={`${p.name}, Wayanad`}
+                formats={['avif', 'webp']}
+                widths={[480, 720, 960, 1200]}
+                sizes="(min-width: 900px) 50vw, 100vw"
+                quality={52}
+              />
+              <figcaption class="credit">{creditLine(p.image)}</figcaption>
+            </figure>
+            <div>
+              <p class="meta">
+                {p.type}, {p.km} km from {site.baseTown}, about {p.drive}
+              </p>
+              <h2>{p.name}</h2>
+              <p>{p.summary}</p>
+              <p class="tip">
+                <strong>Tip:</strong> {p.tip}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section--tea">
+    <div class="wrap">
+      <h2>Wayanad itineraries</h2>
+      <p class="lede">Simple plans that keep driving under three hours a day. We can book jeeps, guides and safari tickets for you.</p>
+      <div class="plans">
+        {
+          plans.map((plan) => (
+            <div class="plan">
+              <h3>{plan.title}</h3>
+              <ul>
+                {plan.days.map((d) => (
+                  <li>{d}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+      <WhatsAppButton message="Hi, can you help me plan my days in Wayanad? Dates: " label="Ask us to plan your trip" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>Before you go</h2>
+      <ul class="prose">
+        <li>Many spots are run by the forest department and close on some weekdays, in heavy rain or in fire season. Ask us the night before and we will check.</li>
+        <li>Treks and safaris start early. Breakfast can be packed from 6 am.</li>
+        <li>Carry cash. Mobile networks drop in the forest areas around Tholpetty, Thirunelli and Muthanga.</li>
+        <li>Plastic is banned in many eco-tourism areas; bring a steel bottle.</li>
+        <li>Read <a href="/best-time-to-visit-wayanad/">the best time to visit Wayanad</a> before you pick dates.</li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .places-list {
+    background: var(--paper);
+  }
+  .places-list .wrap {
+    display: grid;
+    gap: var(--space-xl);
+  }
+  .place {
+    display: grid;
+    gap: var(--space-m) var(--space-l);
+    align-items: center;
+    scroll-margin-top: 5.5rem;
+  }
+  @media (min-width: 900px) {
+    .place {
+      grid-template-columns: 1fr 1fr;
+    }
+    .place.flip figure {
+      order: 2;
+    }
+  }
+  figure {
+    margin: 0;
+  }
+  figure :global(img) {
+    border-radius: var(--radius);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    width: 100%;
+  }
+  .meta {
+    color: var(--monsoon-ink);
+    font-size: var(--step--1);
+    margin-bottom: 0.4rem;
+  }
+  .tip {
+    background: var(--mist);
+    border-left: 3px solid var(--turmeric);
+    padding: 0.8rem 1rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .plans {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    margin-block: var(--space-m) var(--space-l);
+  }
+  .plan h3 {
+    font-size: var(--step-1);
+  }
+  .plan li + li {
+    margin-top: 0.5rem;
+  }
+</style>

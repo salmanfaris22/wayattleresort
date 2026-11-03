@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+import credits from '../data/credits.json';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Privacy and photo credits', href: '/privacy/' },
+];
+const label = (file: string) =>
+  file
+    .replace(/^\w+\//, '')
+    .replace('.jpg', '')
+    .replace(/-/g, ' ')
+    .replace(/^./, (c) => c.toUpperCase());
+---
+
+<Base
+  title={`Privacy Policy and Photo Credits | ${site.name}`}
+  description={`How ${site.name} handles your enquiry details, and credits for the Wayanad photographs used on this website under Creative Commons licences.`}
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero title="Privacy and photo credits" lede="What we do with your details, and who took the photographs on this site." crumbs={crumbs} />
+
+  <section class="section">
+    <div class="wrap narrow prose">
+      <h2>Privacy</h2>
+      <p>
+        This website does not use cookies, does not ask you to create an account and does not store the details you type into the
+        enquiry form. When you press “Send on WhatsApp”, your dates and room choice are placed into a WhatsApp message on your
+        own device. Nothing is sent to us until you choose to send that message.
+      </p>
+      <p>
+        When you message or call us, we use your name, phone number and travel details only to answer your enquiry and manage
+        your booking. We do not sell or share them for marketing. Guest registration details required by Indian law are kept
+        as the law requires.
+      </p>
+      <p>
+        We may use privacy-friendly, cookie-free visit statistics (page views and country only) to see which pages are useful.
+        To ask about or delete your data, write to <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+
+      <h2>Photo credits</h2>
+      <p>
+        Photographs of Wayanad on this site come from Wikimedia Commons and are used under the licences below. Room photos marked
+        “Sample photo” are not of our rooms and will be replaced with our own photographs.
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="table-scroll">
+        <table class="credits">
+          <thead>
+            <tr><th scope="col">Photo</th><th scope="col">Author</th><th scope="col">Licence</th><th scope="col">Source</th></tr>
+          </thead>
+          <tbody>
+            {
+              credits.map((c) => (
+                <tr>
+                  <td>{label(c.file)}</td>
+                  <td>{c.author}</td>
+                  <td>{c.licenseUrl ? <a href={c.licenseUrl} rel="license noopener" target="_blank">{c.license}</a> : c.license}</td>
+                  <td>
+                    <a href={c.source} rel="noopener" target="_blank">
+                      Wikimedia Commons<span class="visually-hidden">: {c.title}</span>
+                    </a>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Photos were resized and cropped for the web. No other changes were made.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .credits {
+    min-width: 40rem;
+    font-size: var(--step--1);
+    background: var(--paper);
+  }
+  .muted {
+    margin-top: 0.8rem;
+  }
+</style>
