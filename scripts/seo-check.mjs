@@ -14,7 +14,8 @@ const warn = (page, msg) => warnings.push(`${page}: ${msg}`);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) => (d.isDirectory() ? walk(path.join(dir, d.name)) : [path.join(dir, d.name)]));
 const files = walk(DIST);
-const htmlFiles = files.filter((f) => f.endsWith('.html'));
+// Skip search-engine verification files (e.g. google<id>.html): they are not pages.
+const htmlFiles = files.filter((f) => f.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(path.basename(f)));
 const routeOf = (f) => '/' + path.relative(DIST, f).replace(/index\.html$/, '').replace(/\.html$/, '');
 const attr = (tag, name) => tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
