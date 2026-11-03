@@ -31,4 +31,5 @@ Updated 3 Nov 2026. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later
 | 25 | Content | Malayalam page proofread; more `/ml/` pages only after impressions | 🟢 | Owner | Draft |
 | 26 | Content | First-hand guides with real photos (monsoon stay, kids, Chembra trek) | 🟢 | Owner + dev | After photos |
 | 27 | GEO | Monthly AI-answer check (docs/ai-visibility-log.md) | 🟢 | You | After launch |
+| 29 | Crawl/GEO | Vercel Firewall shows a "Security Checkpoint" challenge to non-browser clients. Check Vercel → Firewall → Bot Protection / Attack Challenge Mode: keep verified search bots allowed, and allow AI search bots (OAI-SearchBot, PerplexityBot, Claude-SearchBot) if you want AI answers to cite the site | 🟠 | You | Found 3 Nov |
 | 28 | SEO | Month 1–3: rewrite titles for pages ranking 8–20 in Search Console | 🟢 | Developer | After data |
