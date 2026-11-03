@@ -275,3 +275,12 @@ ul {
 .prose li + li {
   margin-top: 0.35em;
 }
+
+/* Malayalam text needs taller lines; display serif has no Malayalam glyphs */
+:lang(ml) h1,
+:lang(ml) h2,
+:lang(ml) h3 {
+  line-height: 1.4;
+  font-family: var(--font-body-stack);
+  font-weight: 700;
+}

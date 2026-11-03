@@ -1,0 +1,244 @@
+---
+// Programmatic SEO landing pages: one page per real search intent, built from
+// src/content/landing/*.md + live room data. Pages that fail the quality gate
+// (src/lib/landing.ts) are not built, so they never reach the sitemap.
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import AnswerBox from '../components/AnswerBox.astro';
+import RoomCard from '../components/RoomCard.astro';
+import PlanTable from '../components/PlanTable.astro';
+import PriceTable from '../components/PriceTable.astro';
+import PolicyList from '../components/PolicyList.astro';
+import FacilityList from '../components/FacilityList.astro';
+import PlaceTable from '../components/PlaceTable.astro';
+import Faq from '../components/Faq.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import RelatedPages from '../components/RelatedPages.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { getLandingPages, makeFiller, type Landing } from '../lib/landing';
+import { getRooms, planFor, totals } from '../lib/inventory';
+import { img } from '../lib/images';
+import { site } from '../data/site';
+import { breadcrumbSchema, faqSchema, roomListSchema, webPageSchema } from '../lib/schema';
+
+export async function getStaticPaths() {
+  const { published } = await getLandingPages();
+  return published.map((page) => ({ params: { landing: page.id }, props: { page } }));
+}
+
+interface Props {
+  page: Landing;
+}
+const { page } = Astro.props;
+const d = page.data;
+const rooms = await getRooms();
+const fill = makeFiller(rooms);
+const { Content } = await render(page);
+
+const url = new URL(`/${page.id}/`, Astro.site).href;
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: d.breadcrumb, href: `/${page.id}/` },
+];
+const matched = d.rooms
+  .map((r) => ({ room: rooms.find((x) => x.id === r.id)!, note: fill(r.note) }))
+  .filter((r) => r.room);
+
+const planRows = d.plans
+  .map((n) => ({ label: `${n} ${n === 1 ? 'guest' : 'guests'}`, plan: planFor(n, rooms) }))
+  .filter((r): r is { label: string; plan: NonNullable<typeof r.plan> } => !!r.plan);
+if (d.planWithPrivatePool) {
+  for (const n of d.plans) {
+    const p = planFor(n, rooms, { require: (r) => r.data.flags.includes('privatePool') });
+    if (p && !planRows.some((row) => row.plan.nightly === p.nightly)) planRows.push({ label: `${n} guests, with the pool villa`, plan: p });
+  }
+}
+const whole = d.wholeResort ? totals(rooms) : undefined;
+const wholePlan = whole ? planFor(whole.max, rooms) : undefined;
+
+const faqs = d.faqs.map((f) => ({ q: fill(f.q), a: fill(f.a) }));
+const answer = { q: fill(d.answer.q), a: fill(d.answer.a) };
+const title = fill(d.seoTitle);
+const description = fill(d.description);
+const listId = `${url}#rooms`;
+const schema = [
+  webPageSchema({ url, name: fill(d.h1), description, updated: d.updated, mainEntityId: matched.length ? listId : undefined }, Astro.site!),
+  breadcrumbSchema(crumbs, Astro.site!),
+  ...(matched.length ? [roomListSchema(matched.map((m) => ({ id: m.room.id, name: m.room.data.name })), listId, `Rooms for: ${d.breadcrumb}`, Astro.site!)] : []),
+  faqSchema(faqs),
+];
+---
+
+<Base title={title} description={description} ogImage={img(d.heroImage)} ogAlt={d.heroAlt} schema={schema}>
+  <PageHero title={fill(d.h1)} lede={fill(d.lede)} image={img(d.heroImage)} imageAlt={d.heroAlt} crumbs={crumbs}>
+    <div class="hero-cta">
+      <WhatsAppButton message={`Hi ${site.shortName}, I'm interested in a ${d.enquiry}. Dates: `} />
+      <a class="btn btn--ghost" href={`tel:${site.phoneE164}`}>Call {site.phone}</a>
+    </div>
+  </PageHero>
+
+  <div class="wrap stack">
+    <AnswerBox q={answer.q} a={answer.a} updated={d.updated} />
+
+    {
+      matched.length > 0 && (
+        <section aria-labelledby="rooms-title">
+          <h2 id="rooms-title">Rooms that fit</h2>
+          <div class="cards">
+            {matched.map((m) => (
+              <RoomCard room={m.room} note={m.note} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.priceTable && (
+        <section aria-label="Room rates">
+          <PriceTable rooms={rooms} />
+        </section>
+      )
+    }
+
+    {
+      planRows.length > 0 && (
+        <section aria-label="Group room plans">
+          <PlanTable rows={planRows} caption={d.priceTable ? 'Cost by group size' : 'Room plans for your group'} />
+        </section>
+      )
+    }
+
+    {
+      whole && wholePlan && (
+        <section class="whole" aria-labelledby="whole-title">
+          <h2 id="whole-title">Book the whole resort</h2>
+          <dl>
+            <div><dt>Rooms</dt><dd>{whole.units}</dd></div>
+            <div><dt>Guests</dt><dd>{whole.standard} in beds, {whole.max} with extra mattresses</dd></div>
+            <div><dt>From / night</dt><dd>{`₹${wholePlan.nightly.toLocaleString('en-IN')}`} for {whole.max} guests, with breakfast</dd></div>
+            <div><dt>Minimum stay</dt><dd>{site.wholeProperty.minNights} nights</dd></div>
+          </dl>
+          <p class="muted">{site.wholeProperty.note}</p>
+        </section>
+      )
+    }
+
+    <section class="prose body">
+      <Content />
+    </section>
+
+    {
+      d.facilities.length > 0 && (
+        <section aria-labelledby="fac-title">
+          <h2 id="fac-title">Facilities</h2>
+          <FacilityList keys={d.facilities} />
+        </section>
+      )
+    }
+
+    {
+      d.policies && (
+        <section id="policies" aria-labelledby="pol-title">
+          <h2 id="pol-title">Booking policies</h2>
+          <PolicyList />
+        </section>
+      )
+    }
+
+    {
+      d.places.length > 0 && (
+        <section aria-labelledby="near-title">
+          <h2 id="near-title">Places nearby</h2>
+          <PlaceTable only={d.places} linkToGuide />
+        </section>
+      )
+    }
+
+    <section aria-labelledby="faq-title" class="faq-wrap">
+      <h2 id="faq-title">Questions</h2>
+      <Faq items={faqs} />
+    </section>
+  </div>
+
+  <section class="section section--tea" aria-labelledby="enq-title">
+    <div class="wrap">
+      <h2 id="enq-title">Send your dates on WhatsApp</h2>
+      <p class="lede">Fill in your name and number, pick dates if you know them, and WhatsApp opens with everything typed in.</p>
+      <EnquiryForm context={d.enquiry} />
+    </div>
+  </section>
+
+  <div class="wrap stack">
+    <RelatedPages slugs={d.related} />
+    <TrustBlock updated={d.updated} />
+  </div>
+</Base>
+
+<style>
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+  .hero-cta .btn--ghost {
+    color: #fff;
+  }
+  .stack {
+    display: grid;
+    gap: var(--space-l);
+    padding-block: var(--space-l);
+  }
+  .stack > * {
+    min-width: 0;
+  }
+  .cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+  .whole {
+    background: var(--tea);
+    color: #edf2ef;
+    border-radius: var(--radius);
+    padding: var(--space-m);
+  }
+  .whole h2 {
+    color: #fff;
+    font-size: var(--step-2);
+  }
+  .whole dl {
+    display: grid;
+    gap: 0.8rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    margin: 0 0 1rem;
+  }
+  .whole dt {
+    font-size: var(--step--1);
+    color: var(--turmeric-light);
+  }
+  .whole dd {
+    margin: 0;
+  }
+  .whole .muted {
+    color: #c9d6d0;
+    margin: 0;
+  }
+  .body {
+    max-width: 68ch;
+    font-size: var(--step-1);
+    line-height: 1.65;
+  }
+  .body :global(table) {
+    font-size: var(--step-0);
+    background: var(--paper);
+    display: block;
+    overflow-x: auto;
+  }
+  .faq-wrap {
+    max-width: 52rem;
+  }
+</style>

@@ -1,0 +1,177 @@
+---
+// Malayalam landing page (ml-IN), paired with the English home page via hreflang.
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Faq from '../../components/Faq.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { site } from '../../data/site';
+import { getRooms, planFor, totals, inr } from '../../lib/inventory';
+import { img } from '../../lib/images';
+import { faqSchema, webPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+const rooms = await getRooms();
+const t = totals(rooms);
+const p10 = planFor(10, rooms);
+const ml: Record<string, string> = {
+  'pool-villa': 'പ്രൈവറ്റ് പൂൾ വില്ല',
+  'tree-house': 'ട്രീ ഹൗസ്',
+  'plantation-cottage': 'പ്ലാന്റേഷൻ കോട്ടേജ്',
+  'family-suite': 'ഫാമിലി സ്യൂട്ട്',
+};
+const minPrice = Math.min(...rooms.map((r) => r.data.priceFrom));
+const faqs = [
+  {
+    q: 'വയനാട്ടിൽ കുടുംബമായി താമസിക്കാൻ ഏത് റിസോർട്ടാണ് നല്ലത്?',
+    a: `ആദ്യമായി വരുന്നവർക്ക് വൈത്തിരി, ലക്കിടി ഭാഗമാണ് സൗകര്യം. കോഴിക്കോട് നിന്ന് അടുത്താണ്; പൂക്കോട് തടാകം, ചെമ്പ്ര പീക്ക്, ബാണാസുര സാഗർ ഡാം എന്നിവ ഒരു മണിക്കൂറിനുള്ളിൽ എത്താം. ഞങ്ങളുടെ ഫാമിലി സ്യൂട്ടിൽ നാലുപേർക്കും അധിക മെത്തയോടെ അഞ്ചുപേർക്കും താമസിക്കാം.`,
+  },
+  {
+    q: 'റിസോർട്ടിൽ സ്വിമ്മിംഗ് പൂൾ ഉണ്ടോ?',
+    a: 'ഉണ്ട്. 0.9 മീറ്റർ ആഴം കുറഞ്ഞ ഭാഗമുള്ള ഔട്ട്ഡോർ പൂൾ രാവിലെ 7 മുതൽ വൈകിട്ട് 7 വരെ തുറന്നിരിക്കും. പ്രൈവറ്റ് പൂൾ വില്ലയ്ക്ക് സ്വന്തമായി ഒരു പ്ലഞ്ച് പൂളുമുണ്ട്. കുട്ടികൾ വെള്ളത്തിലിറങ്ങുമ്പോൾ മുതിർന്നവർ കൂടെ വേണം.',
+  },
+  {
+    q: '10 പേരുള്ള ഗ്രൂപ്പിന് താമസിക്കാമോ?',
+    a: p10
+      ? `താമസിക്കാം. 10 പേർക്ക് ${p10.rooms} റൂമുകൾ മതി; പ്രഭാതഭക്ഷണം ഉൾപ്പെടെ ഒരു രാത്രിക്ക് ${inr(p10.nightly)} മുതൽ, ഒരാൾക്ക് ഏകദേശം ${inr(p10.perPerson)}. ${t.max} പേർ വരെയുള്ള ഗ്രൂപ്പിന് മുഴുവൻ റിസോർട്ടും ബുക്ക് ചെയ്യാം.`
+      : `${t.max} പേർ വരെയുള്ള ഗ്രൂപ്പുകൾക്ക് മുഴുവൻ റിസോർട്ടും ബുക്ക് ചെയ്യാം.`,
+  },
+  {
+    q: 'എങ്ങനെ ബുക്ക് ചെയ്യാം?',
+    a: `${site.phone} എന്ന നമ്പറിൽ വാട്സ്ആപ്പ് ചെയ്യുക. തീയതി, എത്ര പേർ, ഏത് റൂം എന്നിവ അയച്ചാൽ ലഭ്യതയും ആകെ നിരക്കും ഞങ്ങൾ അറിയിക്കും. ബുക്കിംഗ് ഫീസ് ഇല്ല.`,
+  },
+  {
+    q: 'വയനാട് സന്ദർശിക്കാൻ ഏറ്റവും നല്ല സമയം ഏതാണ്?',
+    a: 'ഒക്ടോബർ മുതൽ മെയ് വരെ. ഡിസംബർ, ജനുവരി മാസങ്ങളിൽ നല്ല തണുപ്പും തെളിഞ്ഞ കാഴ്ചകളും. ജൂൺ മുതൽ സെപ്റ്റംബർ വരെയുള്ള മഴക്കാലത്ത് കോടമഞ്ഞും നിറഞ്ഞൊഴുകുന്ന വെള്ളച്ചാട്ടങ്ങളും കാണാം, പക്ഷേ ചില ട്രെക്കിംഗുകൾ അടച്ചിരിക്കും.',
+  },
+];
+const url = new URL('/ml/', Astro.site).href;
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'മലയാളം', href: '/ml/' },
+];
+const description = `വയനാട് വൈത്തിരിയിലെ തേയിലത്തോട്ടത്തിലുള്ള റിസോർട്ട്. പൂൾ വില്ല, ട്രീ ഹൗസ്, ഫാമിലി സ്യൂട്ട്, സ്വിമ്മിംഗ് പൂൾ, ക്യാമ്പ്ഫയർ. ${inr(minPrice)} മുതൽ. വാട്സ്ആപ്പിൽ ബുക്ക് ചെയ്യാം.`;
+---
+
+<Base
+  lang="ml-IN"
+  title="വയനാട് റിസോർട്ട്: പൂൾ വില്ല, ട്രീ ഹൗസ്, ഫാമിലി സ്യൂട്ട് | Mistvale"
+  description={description}
+  alternates={[
+    { lang: 'en-IN', href: '/' },
+    { lang: 'ml-IN', href: '/ml/' },
+  ]}
+  schema={[webPageSchema({ url, name: 'വയനാട്ടിലെ റിസോർട്ട്', description, lang: 'ml-IN' }, Astro.site!), breadcrumbSchema(crumbs, Astro.site!), { ...faqSchema(faqs), inLanguage: 'ml-IN' }]}
+>
+  <PageHero
+    title="വയനാട്ടിലെ റിസോർട്ട്: കുടുംബത്തിനും കൂട്ടുകാർക്കും ദമ്പതികൾക്കും"
+    lede="വൈത്തിരിയിൽ തേയിലയും കാപ്പിയും നിറഞ്ഞ ഒരു കുന്നിൻചെരുവിലാണ് ഞങ്ങളുടെ റിസോർട്ട്. പൂക്കോട് തടാകത്തിൽ നിന്ന് 3 കിലോമീറ്റർ മാത്രം. എല്ലാ നിരക്കിലും പ്രഭാതഭക്ഷണം ഉൾപ്പെടും."
+    image={img('hero/wayanad-tea-estate-misty-hills')}
+    imageAlt="വയനാട്ടിലെ തേയിലത്തോട്ടങ്ങളും കോടമഞ്ഞ് മൂടിയ മലകളും"
+    crumbs={crumbs}
+  >
+    <div class="cta">
+      <WhatsAppButton message="നമസ്കാരം, റൂം ലഭ്യത അറിയാൻ താല്പര്യമുണ്ട്. തീയതി: " label="വാട്സ്ആപ്പിൽ ചോദിക്കാം" />
+      <a class="btn btn--ghost" href={`tel:${site.phoneE164}`}>വിളിക്കാം: {site.phone}</a>
+    </div>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>റൂമുകളും നിരക്കും</h2>
+      <div class="table-scroll">
+        <table class="rates">
+          <thead>
+            <tr><th scope="col">റൂം</th><th scope="col">എത്ര പേർക്ക്</th><th scope="col">ഒരു രാത്രിക്ക്</th></tr>
+          </thead>
+          <tbody>
+            {
+              rooms.map((r) => (
+                <tr>
+                  <th scope="row">
+                    <a href={`/rooms/${r.id}/`} lang="en">
+                      {ml[r.id] ?? r.data.name}
+                    </a>
+                  </th>
+                  <td>
+                    {r.data.guests} പേർ{r.data.sleeps > r.data.guests ? ` (അധിക മെത്തയോടെ ${r.data.sleeps})` : ''}
+                    {r.data.units > 1 ? `, ${r.data.units} റൂമുകൾ` : ''}
+                  </td>
+                  <td>{inr(r.data.priceFrom)} മുതൽ</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">പ്രഭാതഭക്ഷണം ഉൾപ്പെടെയുള്ള നിരക്കുകൾ, GST ഒഴികെ. വാരാന്ത്യങ്ങളിലും അവധി ദിവസങ്ങളിലും നിരക്ക് കൂടും.</p>
+
+      <h2 class="gap">സൗകര്യങ്ങൾ</h2>
+      <ul class="list">
+        <li>സ്വിമ്മിംഗ് പൂൾ (0.9 മീ. ആഴം കുറഞ്ഞ ഭാഗം), പൂൾ വില്ലയ്ക്ക് പ്രൈവറ്റ് പ്ലഞ്ച് പൂൾ</li>
+        <li>രാത്രിയിൽ ക്യാമ്പ്ഫയർ, മുൻകൂട്ടി പറഞ്ഞാൽ ബാർബിക്യൂ</li>
+        <li>രാവിലെ തോട്ടത്തിലൂടെ സൗജന്യ നടത്തം</li>
+        <li>കേരള ഭക്ഷണം: അപ്പവും സ്റ്റൂവും, പുട്ടും കടലയും, ഇലയിൽ ഊണ്</li>
+        <li>സൗജന്യ പാർക്കിംഗ്, വൈഫൈ</li>
+      </ul>
+
+      <h2 class="gap">ഗ്രൂപ്പുകൾക്ക്</h2>
+      <p>
+        {t.units} റൂമുകളിലായി {t.max} പേർ വരെ താമസിക്കാം. കൂട്ടുകാരുടെ യാത്രയ്ക്കും കുടുംബ സംഗമങ്ങൾക്കും മുഴുവൻ റിസോർട്ടും ബുക്ക് ചെയ്താൽ പൂളും
+        ക്യാമ്പ്ഫയറും നിങ്ങളുടെ ഗ്രൂപ്പിന് മാത്രം. വിശദാംശങ്ങൾ: <a href="/group-stays-in-wayanad/" lang="en">Group stays</a>,
+        <a href="/resort-in-wayanad-for-10-people/" lang="en">10 people</a>.
+      </p>
+
+      <h2 class="gap">എങ്ങനെ എത്താം</h2>
+      <ul class="list">
+        <li>കോഴിക്കോട് അന്താരാഷ്ട്ര വിമാനത്താവളം: ഏകദേശം 90 കി.മീ., 2.5–3 മണിക്കൂർ (താമരശ്ശേരി ചുരം വഴി)</li>
+        <li>കോഴിക്കോട് റെയിൽവേ സ്റ്റേഷൻ: ഏകദേശം 65 കി.മീ., 2 മണിക്കൂർ</li>
+        <li>ബെംഗളൂരു: ഏകദേശം 290 കി.മീ., മൈസൂരു വഴി 6.5–7 മണിക്കൂർ (ബന്ദിപ്പൂർ വനപാത രാത്രി 9 മുതൽ രാവിലെ 6 വരെ അടച്ചിരിക്കും)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap narrow-wrap">
+      <h2>പതിവ് ചോദ്യങ്ങൾ</h2>
+      <Faq items={faqs} />
+      <p class="en"><a href="/" hreflang="en" lang="en">Read this page in English</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+  .cta .btn--ghost {
+    color: #fff;
+  }
+  .rates {
+    min-width: 30rem;
+    background: var(--paper);
+  }
+  .gap {
+    margin-top: var(--space-l);
+  }
+  .list li + li {
+    margin-top: 0.4rem;
+  }
+  .muted {
+    margin-top: 0.6rem;
+  }
+  .alt {
+    background: var(--paper);
+  }
+  .narrow-wrap {
+    max-width: 52rem;
+  }
+  .en {
+    margin-top: 1.5rem;
+  }
+  h1,
+  h2 {
+    line-height: 1.35;
+  }
+</style>

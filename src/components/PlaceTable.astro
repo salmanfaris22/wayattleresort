@@ -4,8 +4,11 @@ import { site } from '../data/site';
 
 interface Props {
   linkToGuide?: boolean;
+  /** limit to these place slugs */
+  only?: string[];
 }
-const { linkToGuide = false } = Astro.props;
+const { linkToGuide = false, only } = Astro.props;
+const list = only?.length ? places.filter((p) => only.includes(p.slug)) : places;
 ---
 
 <div class="table-scroll">
@@ -21,7 +24,7 @@ const { linkToGuide = false } = Astro.props;
     </thead>
     <tbody>
       {
-        places.map((p) => (
+        list.map((p) => (
           <tr>
             <th scope="row">{linkToGuide ? <a href={`/things-to-do-in-wayanad/#${p.slug}`}>{p.name}</a> : <a href={`#${p.slug}`}>{p.name}</a>}</th>
             <td>{p.km} km</td>

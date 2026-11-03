@@ -1,0 +1,97 @@
+---
+import { Picture } from 'astro:assets';
+import type { Room } from '../lib/inventory';
+import { inr } from '../lib/inventory';
+import { roomMessage, waLink } from '../lib/whatsapp';
+
+interface Props {
+  room: Room;
+  note?: string;
+}
+const { room, note } = Astro.props;
+const r = room.data;
+---
+
+<article class="card">
+  <a class="media" href={`/rooms/${room.id}/`} tabindex="-1" aria-hidden="true">
+    <Picture src={r.image} alt="" formats={['avif', 'webp']} widths={[400, 640, 900]} sizes="(min-width: 900px) 33vw, 100vw" quality={52} />
+    {r.stockPhoto && <span class="tag">Sample photo</span>}
+  </a>
+  <div class="body">
+    <h3><a href={`/rooms/${room.id}/`}>{r.name}</a></h3>
+    {note && <p class="note">{note}</p>}
+    <p class="meta">{r.guestsNote} · {r.bed}</p>
+    <p class="price">From <strong>{inr(r.priceFrom)}</strong> a night with breakfast</p>
+    <p class="links">
+      <a href={waLink(roomMessage(r.name))} target="_blank" rel="noopener">Ask on WhatsApp</a>
+      <a href={`/rooms/${room.id}/`}>Room details<span class="visually-hidden">: {r.name}</span></a>
+    </p>
+  </div>
+</article>
+
+<style>
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .media {
+    position: relative;
+    display: block;
+    aspect-ratio: 3 / 2;
+    background: var(--mist-2);
+  }
+  .media :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .tag {
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.6rem;
+    background: rgb(27 29 26 / 0.75);
+    color: #fff;
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+  }
+  .body {
+    padding: 1rem 1.15rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.35rem;
+  }
+  h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .note {
+    margin-bottom: 0.5rem;
+  }
+  .meta {
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+    margin-bottom: 0.3rem;
+  }
+  .price {
+    margin-bottom: 0.8rem;
+  }
+  .links {
+    margin: auto 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    font-weight: 600;
+  }
+  .links a {
+    padding-block: 0.4rem;
+  }
+</style>

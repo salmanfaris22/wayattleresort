@@ -1,0 +1,75 @@
+---
+import { describePlan, inr, type Plan } from '../lib/inventory';
+import { site } from '../data/site';
+
+interface Props {
+  rows: { label: string; plan: Plan }[];
+  caption?: string;
+}
+const { rows, caption = 'Room plans for your group' } = Astro.props;
+---
+
+<div class="table-scroll">
+  <table class="plans">
+    <caption>{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col">Group</th>
+        <th scope="col">Rooms</th>
+        <th scope="col">From / night</th>
+        <th scope="col">Per person</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map(({ label, plan }) => (
+          <tr>
+            <th scope="row">{label}</th>
+            <td>
+              {describePlan(plan)}
+              {plan.wholeResort && <span class="whole">Whole resort, private</span>}
+            </td>
+            <td>{inr(plan.nightly)}</td>
+            <td>{inr(plan.perPerson)}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<p class="muted">
+  Worked out from our real rooms: the fewest rooms at the lowest total, breakfast included. Extra mattresses are {inr(site.extraMattressPrice)} a night.
+  Weekend and holiday rates are higher.
+</p>
+
+<style>
+  .plans {
+    min-width: 36rem;
+    background: var(--paper);
+  }
+  caption {
+    text-align: left;
+    font-family: var(--font-display-stack);
+    font-size: var(--step-2);
+    color: var(--tea);
+    padding-bottom: 0.6rem;
+  }
+  td:nth-child(3),
+  td:nth-child(4) {
+    white-space: nowrap;
+  }
+  .whole {
+    display: block;
+    font-size: var(--step--1);
+    color: var(--tea);
+    font-weight: 600;
+  }
+  .muted {
+    margin-top: 0.6rem;
+  }
+  @media (max-width: 600px) {
+    .plans {
+      min-width: 0;
+    }
+  }
+</style>

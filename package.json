@@ -9,10 +9,13 @@
     "dev": "astro dev",
     "prebuild": "node scripts/check-launch.mjs",
     "build": "astro build",
+    "postbuild": "node scripts/seo-check.mjs",
     "preview": "astro preview",
     "check": "astro check",
-    "images": "node scripts/prepare-images.mjs raw-images",
+    "check:seo": "node scripts/seo-check.mjs",
     "check:launch": "node scripts/check-launch.mjs --strict",
+    "images": "node scripts/prepare-images.mjs raw-images",
+    "indexnow": "node scripts/indexnow.mjs",
     "astro": "astro"
   },
   "dependencies": {

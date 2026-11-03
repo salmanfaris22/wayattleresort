@@ -8,6 +8,7 @@ import { roomMessage } from '../../lib/whatsapp';
 import { breadcrumbSchema, roomSchema } from '../../lib/schema';
 import { creditLine } from '../../lib/images';
 import { site, fmtTime } from '../../data/site';
+import RelatedPages from '../../components/RelatedPages.astro';
 
 export async function getStaticPaths() {
   const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
@@ -91,7 +92,7 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
           ))
         }
       </ul>
-      <p><a href="/things-to-do-in-wayanad/">Plan your days: places to visit in Wayanad</a></p>
+      <RelatedPages slugs={[...r.related, 'things-to-do-in-wayanad']} title="Also useful" />
       {r.stockPhoto && <p class="credit">The photo on this page is a sample, not this room. {creditLine(r.imageCredit)}</p>}
     </div>
   </section>

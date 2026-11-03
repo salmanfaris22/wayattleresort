@@ -1,38 +1,57 @@
 ---
-import { getCollection } from 'astro:content';
 import { site } from '../data/site';
+import { getRooms } from '../lib/inventory';
 import WaIcon from './WaIcon.astro';
 
-const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
-const fallback = `Hi ${site.shortName}, I'd like to check availability.`;
+interface Props {
+  /** What the guest is asking about, e.g. "family stay" — added to the WhatsApp message */
+  context?: string;
+  /** Pre-select a room by name */
+  room?: string;
+}
+const { context, room } = Astro.props;
+const rooms = await getRooms();
+const greeting = `Hi ${site.shortName}, I'd like to check availability${context ? ` for a ${context}` : ''}.`;
 ---
 
 <form class="enquiry" action="https://api.whatsapp.com/send" method="get" target="_blank" data-enquiry>
   <input type="hidden" name="phone" value={site.whatsapp} />
-  <input type="hidden" name="text" value={fallback} />
+  <input type="hidden" name="text" value={greeting} />
+  <div class="field">
+    <label for="eq-name">Your name</label>
+    <input id="eq-name" type="text" data-k="Name" autocomplete="name" required maxlength="60" />
+  </div>
+  <div class="field">
+    <label for="eq-phone">Phone / WhatsApp</label>
+    <input id="eq-phone" type="tel" data-k="Phone" autocomplete="tel" inputmode="tel" required pattern="[0-9+()\- ]{10,16}" placeholder="+91 98765 43210" />
+  </div>
   <div class="field">
     <label for="eq-in">Check-in</label>
-    <input id="eq-in" type="date" data-k="Check-in" required />
+    <input id="eq-in" type="date" data-k="Check-in" />
   </div>
   <div class="field">
     <label for="eq-out">Check-out</label>
-    <input id="eq-out" type="date" data-k="Check-out" required />
+    <input id="eq-out" type="date" data-k="Check-out" />
   </div>
   <div class="field">
     <label for="eq-guests">Guests</label>
     <select id="eq-guests" data-k="Guests">
-      {['1', '2', '3', '4', '5', '6', '7–10', '10+'].map((g) => <option selected={g === '2'}>{g}</option>)}
+      {['1', '2', '3', '4', '5', '6', '7–10', '11–16'].map((g) => <option selected={g === '2'}>{g}</option>)}
     </select>
   </div>
   <div class="field">
     <label for="eq-room">Room</label>
     <select id="eq-room" data-k="Room">
       <option>Not sure yet</option>
-      {rooms.map((r) => <option>{r.data.name}</option>)}
+      {rooms.map((r) => <option selected={r.data.name === room}>{r.data.name}</option>)}
+      {site.wholeProperty.available && <option>Whole resort (private group)</option>}
     </select>
   </div>
   <button class="btn btn--wa" type="submit"><WaIcon /><span>Send on WhatsApp</span></button>
-  <p class="note">Opens WhatsApp with your dates filled in. We usually reply within an hour, 8 am to 10 pm.</p>
+  <p class="note">
+    Opens WhatsApp with your details filled in. Nothing is stored on this website. We usually reply within an hour, 8 am to 10 pm, or call
+    <a href={`tel:${site.phoneE164}`}>{site.phone}</a>.
+  </p>
 </form>
 
 <script is:inline>
@@ -44,9 +63,21 @@ const fallback = `Hi ${site.shortName}, I'd like to check availability.`;
       co = f.querySelector('#eq-out');
     ci.min = co.min = today;
     ci.addEventListener('change', () => (co.min = ci.value || today));
+    const nice = (v) => new Date(v + 'T00:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
     f.addEventListener('submit', () => {
-      const lines = [...f.querySelectorAll('[data-k]')].map((el) => el.dataset.k + ': ' + el.value);
-      f.elements.text.value = f.elements.text.defaultValue.replace('.', ':') + '\n' + lines.join('\n');
+      const lines = [];
+      f.querySelectorAll('[data-k]').forEach((el) => {
+        let v = el.value.trim();
+        if (!v) v = el.type === 'date' ? 'not decided' : '-';
+        else if (el.type === 'date') v = nice(v);
+        lines.push(el.dataset.k + ': ' + v);
+      });
+      if (ci.value && co.value) {
+        const n = Math.round((new Date(co.value) - new Date(ci.value)) / 864e5);
+        if (n > 0) lines.push('Nights: ' + n);
+      }
+      lines.push('Page: ' + location.pathname);
+      f.elements.text.value = f.elements.text.defaultValue + '\n' + lines.join('\n');
     });
   })();
 </script>
@@ -82,6 +113,9 @@ const fallback = `Hi ${site.shortName}, I'd like to check availability.`;
     color: var(--pepper);
     width: 100%;
   }
+  input:user-invalid {
+    border-color: #a3341f;
+  }
   .enquiry .btn {
     grid-column: 1 / -1;
     justify-self: start;
@@ -91,5 +125,8 @@ const fallback = `Hi ${site.shortName}, I'd like to check availability.`;
     margin: 0;
     font-size: var(--step--1);
     color: var(--monsoon-ink);
+  }
+  .note a {
+    color: var(--tea);
   }
 </style>

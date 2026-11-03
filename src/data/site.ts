@@ -80,7 +80,8 @@ export const fullAddress = [
 
 export const nav = [
   { href: '/rooms/', label: 'Rooms' },
-  { href: '/#experiences', label: 'Experiences' },
+  { href: '/wayanad-resort-prices/', label: 'Prices' },
+  { href: '/group-stays-in-wayanad/', label: 'Groups' },
   { href: '/things-to-do-in-wayanad/', label: 'Wayanad guide' },
   { href: '/contact/', label: 'Contact' },
 ];

@@ -17,11 +17,14 @@ import { reach } from '../data/places';
 import { faq } from '../data/faq';
 import { img, creditLine } from '../lib/images';
 import { faqSchema } from '../lib/schema';
+import RelatedPages from '../components/RelatedPages.astro';
+import { getLandingPages } from '../lib/landing';
 
 const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+const { published: landingPages } = await getLandingPages();
 const minPrice = Math.min(...rooms.map((r) => r.data.priceFrom)).toLocaleString('en-IN');
 
-const gallery = [
+const gallery: { key: string; alt: string; caption: string; size?: 'big' | 'tall' | 'wide' }[] = [
   { key: 'gallery/misty-valley-from-tea-estate', alt: 'Low cloud filling a valley below a Wayanad tea estate', caption: 'Morning cloud in the valley below the tea estates', size: 'big' },
   { key: 'gallery/chembra-grassland', alt: 'Green grassland and a lone tree on the slopes of Chembra Peak', caption: 'Grassland on the Chembra Peak trail' },
   { key: 'gallery/peacock-tholpetty', alt: 'A peacock walking through grass in Tholpetty Wildlife Sanctuary', caption: 'Peacock in Tholpetty Wildlife Sanctuary' },
@@ -45,6 +48,10 @@ const chooseRows = [
 ---
 
 <Base
+  alternates={[
+    { lang: 'en-IN', href: '/' },
+    { lang: 'ml-IN', href: '/ml/' },
+  ]}
   title="Best Resort in Wayanad – Pool Villas & Tree Houses | Mistvale"
   description={`A hillside resort in Vythiri, Wayanad with a private pool villa, tree house and plantation cottages on a tea estate. Rooms from ₹${minPrice}. Book on WhatsApp.`}
   schema={[faqSchema(faq)]}
@@ -106,7 +113,13 @@ const chooseRows = [
       <div class="room-list">
         {rooms.map((room, i) => <RoomRow room={room} flip={i % 2 === 1} />)}
       </div>
-      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a></p>
+      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a> · <a href="/wayanad-resort-prices/">See every price</a></p>
+    </div>
+  </section>
+
+  <section class="section find" aria-label="Find the right stay">
+    <div class="wrap">
+      <RelatedPages slugs={landingPages.map((p) => p.id)} title="Find the right stay" />
     </div>
   </section>
 

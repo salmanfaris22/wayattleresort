@@ -26,3 +26,6 @@ pnpm-debug.log*
 # downloaded originals (regenerate with scripts/prepare-images.mjs)
 raw-images/
 .vercel/
+
+# IndexNow submission log (local)
+seo/indexnow.log

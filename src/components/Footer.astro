@@ -3,6 +3,9 @@ import { site, fullAddress } from '../data/site';
 import { waLink } from '../lib/whatsapp';
 import ContourLines from './ContourLines.astro';
 import WaIcon from './WaIcon.astro';
+import { getLandingPages } from '../lib/landing';
+
+const { published } = await getLandingPages();
 
 const year = new Date().getFullYear();
 ---
@@ -37,6 +40,18 @@ const year = new Date().getFullYear();
         <li><a href="/contact/">How to reach us</a></li>
       </ul>
     </nav>
+    <nav aria-label="Find your stay">
+      <p class="head">Find your stay</p>
+      <ul>
+        {
+          published.map((p) => (
+            <li>
+              <a href={`/${p.id}/`}>{p.data.breadcrumb}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
     <div>
       <p class="head">Follow</p>
       {
@@ -58,7 +73,7 @@ const year = new Date().getFullYear();
   </div>
   <div class="wrap base">
     <p>© {year} {site.legalName}</p>
-    <p><a href="/privacy/">Privacy and photo credits</a></p>
+    <p><a href="/ml/" hreflang="ml" lang="ml">മലയാളം</a> · <a href="/privacy/">Privacy and photo credits</a></p>
   </div>
 </footer>
 

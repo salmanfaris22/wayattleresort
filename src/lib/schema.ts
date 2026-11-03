@@ -149,3 +149,43 @@ export const graph = (...nodes: (Thing | Thing[])[]) => ({
 });
 
 export { fullAddress };
+
+/** WebPage node for a landing page; ties the page to the resort entity instead of inventing a new business. */
+export function webPageSchema(
+  page: { url: string; name: string; description: string; updated?: Date; breadcrumbId?: string; mainEntityId?: string; lang?: string },
+  siteUrl: URL | string,
+): Thing {
+  return {
+    '@type': 'WebPage',
+    '@id': `${page.url}#webpage`,
+    url: page.url,
+    name: page.name,
+    description: page.description,
+    inLanguage: page.lang ?? 'en-IN',
+    isPartOf: { '@id': abs('/#website', siteUrl) },
+    about: { '@id': abs('/#resort', siteUrl) },
+    ...(page.updated ? { dateModified: page.updated.toISOString().slice(0, 10) } : {}),
+    ...(page.mainEntityId ? { mainEntity: { '@id': page.mainEntityId } } : {}),
+  };
+}
+
+/** ItemList pointing at the real room entities (defined on each room page). */
+export function roomListSchema(
+  rooms: { id: string; name: string }[],
+  listId: string,
+  name: string,
+  siteUrl: URL | string,
+): Thing {
+  return {
+    '@type': 'ItemList',
+    '@id': listId,
+    name,
+    numberOfItems: rooms.length,
+    itemListElement: rooms.map((r, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: abs(`/rooms/${r.id}/`, siteUrl),
+      item: { '@type': 'HotelRoom', '@id': abs(`/rooms/${r.id}/#room`, siteUrl), name: r.name, url: abs(`/rooms/${r.id}/`, siteUrl) },
+    })),
+  };
+}

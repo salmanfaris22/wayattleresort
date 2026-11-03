@@ -1,0 +1,67 @@
+---
+import { getLandingPages, makeFiller } from '../lib/landing';
+import { getRooms } from '../lib/inventory';
+import { staticPages } from '../data/pages';
+
+interface Props {
+  slugs: string[];
+  title?: string;
+}
+const { slugs, title = 'Plan your stay' } = Astro.props;
+const { published } = await getLandingPages();
+const fill = makeFiller(await getRooms());
+const links = slugs
+  .map((slug) => {
+    const page = published.find((p) => p.id === slug);
+    if (page) return { href: `/${slug}/`, title: page.data.breadcrumb, blurb: fill(page.data.answer.q) };
+    const s = staticPages[slug];
+    return s ? { href: `/${slug}/`, title: s.title, blurb: s.blurb } : undefined;
+  })
+  .filter((l): l is { href: string; title: string; blurb: string } => !!l);
+---
+
+{
+  links.length > 0 && (
+    <nav class="related" aria-label={title}>
+      <h2>{title}</h2>
+      <ul role="list">
+        {links.map((l) => (
+          <li>
+            <a href={l.href}>{l.title}</a>
+            <span>{l.blurb}</span>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  h2 {
+    font-size: var(--step-2);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  li {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1rem 1.15rem;
+    display: grid;
+    gap: 0.3rem;
+  }
+  a {
+    font-family: var(--font-display-stack);
+    font-size: var(--step-1);
+  }
+  span {
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+  }
+</style>
