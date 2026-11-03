@@ -18,6 +18,7 @@ const listId = new URL('/rooms/#stays', Astro.site).href;
 ---
 
 <Base
+  keywords={['Wayanad resort rooms', 'pool villa Wayanad', 'tree house Wayanad', 'plantation stay Wayanad', 'family room Wayanad', 'couple friendly resorts Wayanad']}
   title="Wayanad Resorts by Type: Pool Villas, Tree Houses & More"
   description="Pool villas, tree houses, plantation cottages, family suites and couple stays across Wayanad, from luxury to budget. Tell us your dates and we book one for you."
   schema={[breadcrumbSchema(crumbs, Astro.site!), stayListSchema(rooms.map((r) => ({ id: r.id, name: r.data.name })), listId, 'Stay types we book in Wayanad', Astro.site!)]}

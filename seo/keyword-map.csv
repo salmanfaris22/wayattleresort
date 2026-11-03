@@ -1,0 +1,214 @@
+cluster,keyword,geo,geo_tier,intent,priority,target_url,page_status,action,source
+Main,best resort in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Main,resort in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Main,resorts in wayanad,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,wayanad resorts,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,top resorts in wayanad,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,best place to stay in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,Brief cluster
+Main,wayanad holiday resorts,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,wayanad resort booking,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,nature resorts in wayanad,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,which is the best resort in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,Brief cluster
+Main / activities,best resort in wayanad with activities,Wayanad,district,Commercial,P1,/wayanad-resort-activities/,live,optimise the existing page,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03"
+Main / price,best resort in wayanad with price,Wayanad,district,Commercial,P1,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"User list (Google related searches, 2026-11-03)"
+Price,wayanad resort low price list,Wayanad,district,Transactional,P2,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"User list (Google related searches, 2026-11-03)"
+Price,wayanad resort rates,Wayanad,district,Transactional,P2,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Brief cluster
+Price,low rate resort in wayanad,Wayanad,district,Commercial,P2,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"User list (Google related searches, 2026-11-03); screenshot query"
+Price,best low rate resort in wayanad,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"User list (Google related searches, 2026-11-03)"
+Price / family,low rate resort in wayanad for family,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Price / couples,low rate resort in wayanad for couples,Wayanad,district,Commercial,P3,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Price,affordable resorts in wayanad,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Brief cluster
+Price,budget resorts in wayanad,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Brief cluster
+Price,resort in wayanad budget friendly,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"Google autocomplete (user screenshot, 2026-11-03)"
+Price / pool,wayanad low budget resorts with pool under 1000,Wayanad,district,Commercial,-,-,do not build,No such rate here; targeting it would mislead. Pool page FAQ answers 'cheaper resorts with a pool' honestly,"User list (Google related searches, 2026-11-03)"
+Family,best resort in wayanad for family,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family,best resorts in wayanad for family,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family,family resort in wayanad with swimming pool,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family,best resort in wayanad for family with swimming pool,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03"
+Family,resort in wayanad for family with swimming pool,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Family,best resort in wayanad for family with price,Wayanad,district,Commercial,P2,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family,budget friendly resorts in wayanad for family,Wayanad,district,Commercial,P2,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family,family resorts in wayanad,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,family-friendly resorts in wayanad,Wayanad,district,Commercial,P2,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,wayanad family vacation resorts,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,resorts for family gatherings wayanad,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,where can i stay in wayanad with family,Wayanad,district,Commercial,P2,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,resort in wayanad for 5 people,Wayanad,district,Commercial,P2,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family,wayanad stay for 5 adults,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,Brief cluster
+Family / luxury,luxury resorts in wayanad for family,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Family / couples,best resort in wayanad for family for couples,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,best resort in wayanad for couples,Wayanad,district,Commercial,P1,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,resort in wayanad for couples,Wayanad,district,Commercial,P1,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Couples,best resort in wayanad for couples with swimming pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,best resorts in wayanad for couples with private pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03"
+Couples,resorts in wayanad with private pool for couples,Wayanad,district,Commercial,P1,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,budget friendly resorts in wayanad for couples,Wayanad,district,Commercial,P2,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,private resorts in wayanad for couples,Wayanad,district,Commercial,P2,/resorts-in-wayanad-for-couples/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Couples,honeymoon resort in wayanad,Wayanad,district,Commercial,P2,/resorts-in-wayanad-for-couples/,live,optimise the existing page,Brief cluster
+Couples,couple friendly resort wayanad,Wayanad,district,Commercial,P2,/resorts-in-wayanad-for-couples/,live,optimise the existing page,Brief cluster
+Pool,resort in wayanad with swimming pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Pool,resort in wayanad with pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Pool,wayanad best resorts with pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Pool,best resort in wayanad with swimming pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Pool,wayanad resorts with pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Brief cluster
+Pool,best pool resorts in wayanad,Wayanad,district,Commercial,P2,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Brief cluster
+Pool,low rate resort in wayanad with swimming pool,Wayanad,district,Commercial,P2,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03"
+Pool,resorts with kids pool wayanad,Wayanad,district,Commercial,P3,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Brief cluster
+Pool,resorts with infinity pool in wayanad,Wayanad,district,Commercial,P3,/resorts-in-wayanad-with-swimming-pool/,live,Pool page covers infinity / view pools,Brief cluster
+Pool,resorts with indoor pool wayanad,Wayanad,district,Commercial,P3,-,GAP - no page,Only if a partner resort really has one,Brief cluster
+Private,private resorts in wayanad,Wayanad,district,Commercial,P1,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,private resort in wayanad,Wayanad,district,Commercial,P1,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,private resorts in wayanad with swimming pool,Wayanad,district,Commercial,P1,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,private resorts in wayanad with price,Wayanad,district,Commercial,P2,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,private pool resorts in wayanad for family,Wayanad,district,Commercial,P2,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,luxury private resorts in wayanad,Wayanad,district,Commercial,P2,/private-resort-in-wayanad/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Private,private group stay in wayanad,Wayanad,district,Commercial,P2,/private-resort-in-wayanad/,live,optimise the existing page,Brief cluster
+Private / villa,best private pool villa in wayanad,Wayanad,district,Commercial,P1,/rooms/pool-villa/,live,optimise the existing page,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03"
+Private / villa,private pool villa wayanad,Wayanad,district,Commercial,P1,/rooms/pool-villa/,live,optimise the existing page,SERP checked 2026-11-03
+Private / villa,wayanad private pool villa with waterfall,Wayanad,district,Commercial,P3,-,GAP - no page,Only if a partner villa really has one,"User list (Google related searches, 2026-11-03)"
+Views,wayanad resort with waterfall view,Wayanad,district,Commercial,P3,-,GAP - no page,Only if a partner resort really has one,"User list (Google related searches, 2026-11-03)"
+Group / capacity,group stay in wayanad,Wayanad,district,Commercial,P1,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,best group resorts in wayanad,Wayanad,district,Commercial,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,resorts in wayanad for friends,Wayanad,district,Commercial,P1,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,friends trip resort in wayanad,Wayanad,district,Commercial,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,best place for friends trip in wayanad,Wayanad,district,Commercial,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,large group accommodation in wayanad,Wayanad,district,Commercial,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,resort in wayanad for 15 people,Wayanad,district,Commercial,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,private resort for 15 people wayanad,Wayanad,district,Commercial,P3,/private-resort-in-wayanad/,live,optimise the existing page,Brief cluster
+Group / capacity,best 10 person resort wayanad,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,10 person resort wayanad,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,10 person resort wayanad for family,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,10 person resort wayanad with price,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,10 person resort wayanad with pool,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,10 person resort wayanad for couples,Wayanad,district,Transactional,P2,/resort-in-wayanad-for-10-people/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Group / capacity,resorts in wayanad for 10 people,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,SERP checked 2026-11-03
+Group / capacity,wayanad group stay for 10 people,Wayanad,district,Transactional,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Brief cluster
+Group / capacity,where can 10 people stay in wayanad,Wayanad,district,Transactional,P2,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Brief cluster
+Group / capacity,resorts in wayanad for 20 people,Wayanad,district,Transactional,P3,/group-stays-in-wayanad/,live,Group page: private villas and big resorts,Brief cluster
+Group / capacity,group accommodation for 20 people wayanad,Wayanad,district,Transactional,P3,/group-stays-in-wayanad/,live,Group page,Brief cluster
+Activities / campfire,campfire resorts in wayanad,Wayanad,district,Commercial,P1,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Activities / campfire,resorts with campfire in wayanad,Wayanad,district,Commercial,P1,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Activities / campfire,wayanad resort with campfire and activities for friends,Wayanad,district,Commercial,P2,/wayanad-resort-activities/,live,optimise the existing page,SERP checked 2026-11-03
+Activities / campfire,wayanad resorts with barbecue,Wayanad,district,Commercial,P2,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Activities / campfire,resorts for friends with campfire wayanad,Wayanad,district,Commercial,P2,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Activities / campfire,adventure stays in wayanad,Wayanad,district,Commercial,P3,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Activities / campfire,things to do at wayanad resort,Wayanad,district,Commercial,P3,/wayanad-resort-activities/,live,optimise the existing page,Brief cluster
+Room type,treehouse resorts in wayanad,Wayanad,district,Commercial,P1,/rooms/tree-house/,live,optimise the existing page,Brief cluster
+Room type,tree house in wayanad,Wayanad,district,Commercial,P1,/rooms/tree-house/,live,optimise the existing page,Brief cluster
+Room type,best cottages in wayanad,Wayanad,district,Commercial,P2,/rooms/plantation-cottage/,live,optimise the existing page,Brief cluster
+Room type,plantation stay in wayanad,Wayanad,district,Commercial,P2,/rooms/plantation-cottage/,live,optimise the existing page,Brief cluster
+Room type,family suite wayanad,Wayanad,district,Commercial,P3,/rooms/family-suite/,live,optimise the existing page,Brief cluster
+Setting,forest resorts in wayanad,Wayanad,district,Commercial,P3,-,GAP - no page,Possible page once partner forest resorts are confirmed,Brief cluster
+Setting,riverside resorts in wayanad,Wayanad,district,Commercial,P3,-,GAP - no page,Possible page once partner riverside resorts are confirmed,Brief cluster
+Setting,mountain view resorts in wayanad,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Brief cluster
+Luxury,luxury resorts in wayanad,Wayanad,district,Commercial,P3,/rooms/pool-villa/,live,optimise the existing page,Brief cluster
+Luxury,5 star resorts in wayanad,Wayanad,district,Commercial,-,-,do not build,No official star rating; claiming it would be false,"User list (Google related searches, 2026-11-03)"
+Luxury listicle,top 10 luxury resorts in wayanad,Wayanad,district,Informational,-,-,do not build,List intent served by OTAs/publishers; would mean ranking competitors,"User list (Google related searches, 2026-11-03)"
+Location,resort in vythiri wayanad,Vythiri,town,Commercial,P1,/resorts-in-vythiri/,live,optimise the existing page,SERP checked 2026-11-03
+Location,vythiri resort in wayanad,Vythiri,town,Commercial,P1,/resorts-in-vythiri/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
+Location,vythiri wayanad,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort price,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort rates,Vythiri,town,Commercial,P2,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort in wayanad contact number,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort wayanad photos,Vythiri,town,Commercial,P3,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort in wayanad reviews,Vythiri,town,Commercial,-,-,do not build,Needs genuine reviews (GBP) first,"User list (Google related searches, 2026-11-03)"
+Location,vythiri resort wayanad by owner,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,budget friendly resorts in wayanad vythiri,Vythiri,town,Commercial,P3,/resorts-in-vythiri/,live,optimise the existing page,"User list (Google related searches, 2026-11-03)"
+Location,resorts near pookode lake,Pookode,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,Brief cluster
+Location,lakkidi resorts,Lakkidi,town,Commercial,P3,/resorts-in-vythiri/,live,optimise the existing page,Brief cluster
+Location,kalpetta resorts,Kalpetta,town,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location,meppadi resorts,Meppadi,town,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location,sulthan bathery resorts,Sulthan Bathery,town,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location,mananthavady resorts,Mananthavady,town,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location,padinjarathara resorts,Wayanad,district,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location,resorts near banasura sagar dam,Wayanad,district,Commercial,P3,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location / guide,where to stay in wayanad,Wayanad,district,Informational,P1,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Location / guide,best area to stay in wayanad,Wayanad,district,Informational,P1,/where-to-stay-in-wayanad/,live,optimise the existing page,Brief cluster
+Competitor brand,vythiri village resort,Vythiri,town,Navigational,-,-,do not build,Another business's brand: never target unless this IS the owner's resort,"User list (Google related searches, 2026-11-03)"
+Competitor brand,vythiri village resort wayanad price,Vythiri,town,Navigational,-,-,do not build,Another business's brand: never target unless this IS the owner's resort,"User list (Google related searches, 2026-11-03)"
+Competitor brand,mountain shadow resort in wayanad,Wayanad,district,Navigational,-,-,do not build,Another business's brand: never target unless this IS the owner's resort,"Google autocomplete (user screenshot, 2026-11-03)"
+Competitor brand,taj resort in wayanad,Wayanad,district,Navigational,-,-,do not build,Another business's brand: never target unless this IS the owner's resort,"Google autocomplete (user screenshot, 2026-11-03)"
+Competitor brand,vythiri resort (brand),Vythiri,town,Navigational,-,-,do not build,Another business's brand: never target unless this IS the owner's resort,"Google autocomplete (user screenshot, 2026-11-03)"
+Guide / AEO,places to visit in wayanad,Wayanad,district,Informational,P1,/things-to-do-in-wayanad/,live,optimise the existing page,Brief cluster
+Guide / AEO,wayanad tourist places,Wayanad,district,Informational,P1,/things-to-do-in-wayanad/,live,optimise the existing page,Brief cluster
+Guide / AEO,best time to visit wayanad,Wayanad,district,Informational,P1,/best-time-to-visit-wayanad/,live,optimise the existing page,Brief cluster
+Guide / AEO,is wayanad good in monsoon,Wayanad,district,Informational,P2,/best-time-to-visit-wayanad/,live,optimise the existing page,Brief cluster
+Guide / AEO,how to reach wayanad,Wayanad,district,Informational,P2,/contact/,live,optimise the existing page,Brief cluster
+Guide / AEO,wayanad from bangalore distance,Bengaluru,travel-in,Informational,P2,/contact/,live,optimise the existing page,Brief cluster
+Guide / AEO,kozhikode airport to wayanad distance,Kozhikode,travel-in,Informational,P2,/contact/,live,optimise the existing page,Brief cluster
+Guide / AEO,what is the average cost of a wayanad resort,Wayanad,district,Informational,P2,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Brief cluster
+Guide / AEO,how to book a group stay in wayanad,Wayanad,district,Informational,P2,/group-stays-in-wayanad/,live,optimise the existing page,Brief cluster
+Malayalam,വയനാട് റിസോർട്ട്,Wayanad,district,Commercial,P2,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Malayalam,വയനാട്ടിലെ മികച്ച റിസോർട്ട്,Wayanad,district,Commercial,P2,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Malayalam,വയനാട് റിസോർട്ട് സ്വിമ്മിംഗ് പൂൾ,Wayanad,district,Commercial,P3,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Malayalam,വയനാട് റിസോർട്ട് ഫാമിലി,Wayanad,district,Commercial,P3,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Malayalam,വൈത്തിരി റിസോർട്ട്,Wayanad,district,Commercial,P3,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Malayalam,വയനാട് ഗ്രൂപ്പ് സ്റ്റേ,Wayanad,district,Commercial,P3,/ml/,live,optimise the existing page,Not verified (Malayalam-script research term)
+Manglish,wayanad resort rate,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Not verified (Manglish research term)
+Manglish,wayanad resort kuranja rate,Wayanad,district,Commercial,P3,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Not verified (Manglish research term)
+Manglish,wayanad family resort pool undo,Wayanad,district,Commercial,P3,/family-resorts-in-wayanad/,live,optimise the existing page,Not verified (Manglish research term)
+Manglish,wayanad 10 perkku resort,Wayanad,district,Commercial,P3,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Not verified (Manglish research term)
+Spelling variant,wayanadu resort,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,vayanad resort,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,wyanad resort,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,wayand resort,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,resorts in wayanadu,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,vythri resort,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Spelling variant,wayattile resorts,Wayanad,district,Commercial,P3,/,live,optimise the existing page,Not verified (spelling variant)
+Route,bangalore to wayanad distance,Bengaluru,travel-in,Informational,P1,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,bangalore to wayanad by road,Bengaluru,travel-in,Informational,P1,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,bangalore to wayanad night travel ban,Bengaluru,travel-in,Informational,P2,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,mysore to wayanad distance,Mysuru,travel-in,Informational,P2,/mysore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,kozhikode to wayanad distance,Kozhikode,travel-in,Informational,P1,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,calicut airport to wayanad,Kozhikode,travel-in,Informational,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,thamarassery churam,Wayanad,district,Informational,P3,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,kochi to wayanad distance,Kochi,travel-in,Informational,P2,/kochi-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Season,wayanad in monsoon,Wayanad,district,Informational,P1,/wayanad-in-monsoon/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Season,wayanad in july,Wayanad,district,Informational,P3,/wayanad-in-monsoon/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,chembra peak trek,Wayanad,district,Informational,P1,/chembra-peak-trek/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,chembra peak heart lake,Wayanad,district,Informational,P2,/chembra-peak-trek/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,banasura sagar dam,Wayanad,district,Informational,P1,/banasura-sagar-dam/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,banasura sagar dam timings,Wayanad,district,Informational,P2,/banasura-sagar-dam/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,edakkal caves,Wayanad,district,Informational,P1,/edakkal-caves/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Sight,edakkal caves timings,Wayanad,district,Informational,P2,/edakkal-caves/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Main,resort booking in wayanad,Wayanad,district,Transactional,P1,/,live,Core broker query,Broker repositioning 2026-11-03
+Main,wayanad resort booking whatsapp,Wayanad,district,Transactional,P1,/contact/,live,optimise the existing page,Broker repositioning 2026-11-03
+Brand,resortinwayanad,Wayanad,district,Navigational,P1,/,live,Domain name search,Broker repositioning 2026-11-03
+Brand,mistvale wayanad,Wayanad,district,Navigational,P1,/,live,Brand search,Broker repositioning 2026-11-03
+Budget tier,cheap resorts in wayanad,Wayanad,district,Commercial,P2,/,live,Home #budget card,Broker repositioning 2026-11-03
+Private,private villa in wayanad,Wayanad,district,Commercial,P1,/private-resort-in-wayanad/,live,optimise the existing page,Broker repositioning 2026-11-03
+Couples,couple friendly resorts in wayanad,Wayanad,district,Commercial,P1,/rooms/couple-stay/,live,optimise the existing page,Broker repositioning 2026-11-03
+Room type,family room in wayanad,Wayanad,district,Commercial,P2,/rooms/family-suite/,live,optimise the existing page,Broker repositioning 2026-11-03
+Landing: banasura-sagar-dam,banasura sagar dam boating,Wayanad,district,Commercial,P2,/banasura-sagar-dam/,live,optimise the existing page,Page frontmatter
+Landing: banasura-sagar-dam,banasura hill trek,Wayanad,district,Commercial,P2,/banasura-sagar-dam/,live,optimise the existing page,Page frontmatter
+Landing: banasura-sagar-dam,banasura sagar dam distance,Wayanad,district,Commercial,P2,/banasura-sagar-dam/,live,optimise the existing page,Page frontmatter
+Landing: bangalore-to-wayanad,bangalore to wayanad route,Bengaluru,travel-in,Commercial,P2,/bangalore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: bangalore-to-wayanad,bengaluru to vythiri,Bengaluru,travel-in,Commercial,P2,/bangalore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: bangalore-to-wayanad,best route bangalore to wayanad,Bengaluru,travel-in,Commercial,P2,/bangalore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: chembra-peak-trek,chembra peak wayanad,Wayanad,district,Commercial,P2,/chembra-peak-trek/,live,optimise the existing page,Page frontmatter
+Landing: chembra-peak-trek,chembra peak trek permit,Wayanad,district,Commercial,P2,/chembra-peak-trek/,live,optimise the existing page,Page frontmatter
+Landing: chembra-peak-trek,chembra peak timings,Wayanad,district,Commercial,P2,/chembra-peak-trek/,live,optimise the existing page,Page frontmatter
+Landing: chembra-peak-trek,chembra peak trekking difficulty,Wayanad,district,Commercial,P2,/chembra-peak-trek/,live,optimise the existing page,Page frontmatter
+Landing: edakkal-caves,edakkal caves history,Wayanad,district,Commercial,P2,/edakkal-caves/,live,optimise the existing page,Page frontmatter
+Landing: edakkal-caves,edakkal caves climb,Wayanad,district,Commercial,P2,/edakkal-caves/,live,optimise the existing page,Page frontmatter
+Landing: edakkal-caves,edakkal caves wayanad distance,Wayanad,district,Commercial,P2,/edakkal-caves/,live,optimise the existing page,Page frontmatter
+Landing: kochi-to-wayanad,cochin to wayanad,Wayanad,district,Commercial,P2,/kochi-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kochi-to-wayanad,ernakulam to wayanad,Wayanad,district,Commercial,P2,/kochi-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kochi-to-wayanad,kochi to wayanad by road,Kochi,travel-in,Commercial,P2,/kochi-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kochi-to-wayanad,kochi to wayanad train,Kochi,travel-in,Commercial,P2,/kochi-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kozhikode-to-wayanad,calicut to wayanad,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kozhikode-to-wayanad,kozhikode to vythiri,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: kozhikode-to-wayanad,calicut railway station to wayanad,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysore to wayanad route,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysuru to wayanad by road,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysore to wayanad bus,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysore to vythiri,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: resort-in-wayanad-for-10-people,resort in Wayanad for 10 people,Wayanad,district,Commercial,P2,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Page frontmatter
+Landing: resorts-in-vythiri,Vythiri resort contact number,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,Page frontmatter
+Landing: resorts-in-wayanad-with-swimming-pool,private swimming pool resort in Wayanad,Wayanad,district,Commercial,P2,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-in-monsoon,wayanad rainy season,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-in-monsoon,wayanad in august,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-in-monsoon,monsoon resort wayanad,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-resort-activities,Wayanad resort with barbecue,Wayanad,district,Commercial,P2,/wayanad-resort-activities/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-resort-activities,things to do at a Wayanad resort,Wayanad,district,Commercial,P2,/wayanad-resort-activities/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-resort-prices,Wayanad resort price list,Wayanad,district,Commercial,P1,/wayanad-resort-prices/,draft,publish when real rate ranges per budget are supplied,Page frontmatter

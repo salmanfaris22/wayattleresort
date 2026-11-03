@@ -56,7 +56,7 @@ const schema = [
 ];
 ---
 
-<Base title={title} description={description} ogImage={img(d.heroImage)} ogAlt={d.heroAlt} schema={schema}>
+<Base title={title} description={description} keywords={[d.primaryKeyword, ...d.secondaryKeywords]} ogImage={img(d.heroImage)} ogAlt={d.heroAlt} schema={schema}>
   <PageHero title={fill(d.h1)} lede={fill(d.lede)} image={img(d.heroImage)} imageAlt={d.heroAlt} crumbs={crumbs}>
     <div class="hero-cta">
       <WhatsAppButton message={`Hi ${site.shortName}, I'm looking for a ${d.enquiry} in Wayanad. Dates: ___, guests: ___`} />

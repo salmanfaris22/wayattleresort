@@ -1,55 +1,53 @@
 ---
-# DRAFT: written for a single resort; rewrite for the booking service before publishing
-status: draft
+status: published
 updated: 2026-11-03
-seoTitle: "Resort in Wayanad for 10 People: Room Plan | Mistvale"
-description: "Staying in Wayanad with 10 people? See the exact room plan with breakfast, plus the pool, campfire, Kerala meals and day trips we arrange for your group."
-h1: "Resort in Wayanad for 10 people"
-breadcrumb: "Stay for 10 people"
-lede: "Ten guests fit into {{planRooms:10}} rooms here, with breakfast, a pool and a campfire lawn. This is exactly how we would put your group up."
+seoTitle: "Resort in Wayanad for 10 People – Villas & Group Stays"
+description: "Resorts and private villas in Wayanad for a group of 10, with pools, campfire lawns and food on site. Tell us your dates and we send stays that fit all ten of you."
+h1: "Resorts in Wayanad for a group of 10"
+breadcrumb: "Resort for 10 people"
+lede: "Ten guests fit best in a private villa or three to four rooms close together. We find Wayanad stays for ten that are free for your dates and inside your budget."
 heroImage: "gallery/banasura-hills-and-fields"
-heroAlt: "Banasura hills above farmland near the reservoir in Wayanad"
+heroAlt: "Banasura hills rising behind farmland in Wayanad"
 primaryKeyword: "10 person resort Wayanad"
-secondaryKeywords: ["best 10 person resort Wayanad", "10 person resort Wayanad with price", "10 person resort Wayanad with pool", "10 person resort Wayanad for family", "Wayanad group stay for 10 people"]
+secondaryKeywords: ["best 10 person resort Wayanad", "10 person resort Wayanad with pool", "10 person resort Wayanad for family", "Wayanad group stay for 10 people", "resort in Wayanad for 10 people"]
 intent: transactional
 answer:
-  q: "Where can 10 people stay together in Wayanad?"
-  a: "Ten people can stay together in a large villa, a homestay with several rooms or a small resort. At Mistvale in Vythiri a group of ten takes {{planRooms:10}} rooms ({{planDesc:10}}), with breakfast, a pool and a campfire lawn, and every room has its own bathroom."
+  q: "What is the best resort in Wayanad for 10 people?"
+  a: "For ten people, look at private villas with four or five bedrooms, or resorts that can give you three or four rooms side by side. A villa with a pool and a cook is often cheaper per person than separate rooms. Send us your dates, how many are adults and children, and your budget, and we suggest stays for ten that are free."
+rooms:
+  - id: pool-villa
+    note: "Four- and five-bedroom private villas with a pool, for ten guests together."
+  - id: family-suite
+    note: "Two or three family suites side by side, with extra mattresses where allowed."
+  - id: plantation-cottage
+    note: "A row of estate cottages for groups who want a lower budget."
 places: [banasura-sagar-dam, chembra-peak, soochipara-falls, pookode-lake]
 faqs:
-  - q: "How is a stay for 10 people priced?"
-    a: "Per room, with breakfast included. Ten people take {{planRooms:10}} rooms, so the cost per head is lower than in a hotel. Send your dates on WhatsApp for the total; weekends and late December cost more, and lunch, dinner and transport are extra."
-  - q: "Can 10 people stay in one room?"
-    a: "No. Our largest room, the family suite, sleeps five with an extra mattress. For ten we use {{planRooms:10}} rooms, so everyone has a real bed and a bathroom close by."
-  - q: "Is the plan different for 10 friends and for two families?"
-    a: "Usually a little. Two families of four or five fit well in the family suite and the cottages near the pool. Friends often swap a cottage for the tree house or the pool villa, so the table shows a plan with the villa too."
-  - q: "Can five couples stay, each in their own bedroom?"
-    a: "Yes, by booking the whole resort. The family suite has two separate bedrooms, so together with the other rooms there is a bedroom for each couple."
-  - q: "Is there a pool for a group of ten?"
-    a: "Yes, the shared outdoor pool on the lawn, open from 7 am to 7 pm. With only {{units}} rooms on the estate, it never gets crowded."
+  - q: "How many rooms do 10 people need?"
+    a: "Usually three to five, depending on how many are couples, children or friends sharing. A private villa with four bedrooms and extra mattresses also works. Tell us who is in the group and we suggest the right mix."
+  - q: "Can 10 people get a resort with a swimming pool?"
+    a: "Yes. Many private villas and group resorts in Wayanad have a pool. We tell you whether it is shared with other guests or only for your group."
+  - q: "Is a tempo traveller fine for the road?"
+    a: "A 12-seat tempo traveller reaches most resorts. Some hill villas need a short jeep ride from the main road. We tell you before you book."
+  - q: "Can we have a campfire and barbecue?"
+    a: "Many group resorts and villas offer both on request. Rules on time and music differ, so we confirm them for the place you choose."
 related: [group-stays-in-wayanad, private-resort-in-wayanad, family-resorts-in-wayanad, wayanad-resort-activities]
 enquiry: "group of 10"
 ---
 
-## How we would host ten guests
+## Planning a Wayanad trip for ten
 
-The plan above uses the fewest rooms for ten people, and it is worked out from our actual rooms and prices. Every room has its own bathroom. If someone in the group cannot climb stairs, we keep them on the level path between the car park, the cottages, the family suite and the restaurant.
+Ten is a good group size for Wayanad: big enough for a private villa, small enough to fit one tempo traveller. A few things decide whether the trip goes smoothly:
 
-The second plan includes the Private Pool Villa. Many groups of ten book it for a couple celebrating a birthday or anniversary.
+- **One place, together.** A villa or rooms around one lawn keep the group together in the evenings.
+- **Beds for everyone.** Ask how many sleep in beds and how many on extra mattresses.
+- **Food at the resort.** Ten people driving out for dinner on hill roads at night is tiring. A cook or restaurant on site helps.
+- **Two nights at least.** Many villas need two nights on weekends, and the drive up takes most of the first day.
 
-## A two-day plan for a group of ten
+## How we book stays for ten
 
-**Day one.** Drive up the Thamarassery Ghat in the morning and arrive for lunch. Spend the afternoon at the pool, then walk ten minutes to the Lakkidi viewpoint for sunset over the ghat. Campfire and barbecue on the lawn after dark.
+Send us your dates, the number of adults and children, your budget and your vehicle. We reply on WhatsApp with villas and resorts that can take all ten of you, with photos, rates and rules. Pick one and we book it.
 
-**Day two.** Choose by energy level. Fit groups can take the dawn trek up Chembra Peak; others can drive to Banasura Sagar Dam for the speedboats, then Soochipara Falls on the way back. We book a tempo traveller for the day, which seats the whole group.
+## A two-day plan for ten
 
-## Food for ten
-
-Breakfast is included for everyone. For ten, a set menu is easier and cheaper than ordering from the card: a Kerala lunch on banana leaves, and a dinner of chicken or fish curry with appam or parotta. Order a day ahead so the kitchen can buy fresh.
-
-## Before you book for ten
-
-- Count adults and children separately; children under five usually share existing beds.
-- Tell us how many vehicles are coming; parking inside the estate takes cars and one tempo traveller.
-- Agree on an arrival time, since group check-in is quicker when everyone arrives together.
-- Bring a government photo ID for every adult.
+Day one: arrive, settle in, then sunset at Pookode Lake or the Lakkidi viewpoint, and a campfire at night. Day two: Banasura Sagar Dam in the morning, Soochipara Falls after lunch, or the Chembra Peak trek for the fit members of the group if it is open.

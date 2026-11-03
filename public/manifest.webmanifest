@@ -1,0 +1,14 @@
+{
+  "name": "Mistvale Wayanad – Resort booking",
+  "short_name": "Mistvale",
+  "description": "Find and book resorts across Wayanad, Kerala on WhatsApp.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4f1ea",
+  "theme_color": "#24493a",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ]
+}

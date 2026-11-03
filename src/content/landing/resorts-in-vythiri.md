@@ -1,60 +1,60 @@
 ---
-# DRAFT: written for a single resort; rewrite for the booking service before publishing
-status: draft
+status: published
 updated: 2026-11-03
-seoTitle: "Resort in Vythiri, Wayanad: Rooms, Contact & How to Reach"
-description: "Mistvale is a small resort in Vythiri, Wayanad, near Pookode Lake and the Lakkidi viewpoint. Rooms, contact, directions from Kozhikode and things to do nearby."
-h1: "Resort in Vythiri, Wayanad"
-breadcrumb: "Resort in Vythiri"
-lede: "Vythiri is the first part of Wayanad you reach after the Thamarassery Ghat: cooler air, tea estates and Pookode Lake down the road. Our estate is here, {{km:pookode-lake}} from the lake."
+seoTitle: "Resorts in Vythiri, Wayanad – Pool Villas & Tree Houses"
+description: "Resorts in Vythiri and Lakkidi, Wayanad, near Pookode Lake: pool villas, tree houses and plantation cottages at every budget. Send your dates and we find one free."
+h1: "Resorts in Vythiri, Wayanad"
+breadcrumb: "Resorts in Vythiri"
+lede: "Vythiri is the first part of Wayanad you reach from Kozhikode, with tea estates, forest and Pookode Lake close by. We find Vythiri resorts that are free for your dates."
 heroImage: "gallery/chembra-from-en-ooru"
-heroAlt: "The Chembra range seen from En Ooru heritage village near Vythiri"
+heroAlt: "The Chembra range seen from En Ooru in Wayanad"
 primaryKeyword: "resort in Vythiri Wayanad"
 secondaryKeywords: ["Vythiri Wayanad", "Vythiri resort price", "Vythiri resort contact number", "budget friendly resorts in Wayanad Vythiri", "resorts near Pookode Lake", "Lakkidi resorts"]
 intent: commercial
 answer:
-  q: "Is Vythiri a good place to stay in Wayanad?"
-  a: "Yes, especially for a first trip. Vythiri is about two and a half hours from Kozhikode airport, sits higher and cooler than Kalpetta, and has Pookode Lake, the Lakkidi viewpoint and En Ooru heritage village close by. Chembra Peak, Soochipara Falls and Banasura Sagar Dam are each under an hour away."
+  q: "Why stay in Vythiri, Wayanad?"
+  a: "Vythiri is just past the top of the Thamarassery Ghat, so it is the quickest part of Wayanad to reach from Kozhikode and Kochi. Pookode Lake is a few minutes away, and Chembra Peak, Soochipara Falls and Banasura Sagar Dam are under an hour. It has resorts at every budget, from tree houses to luxury pool villas."
 rooms:
-  - id: pool-villa
-    note: "Plunge pool facing the tea valley."
   - id: tree-house
-    note: "Among silver oaks, six metres up."
+    note: "Vythiri's forest edge has many of Wayanad's tree houses."
+  - id: pool-villa
+    note: "Luxury and private pool villas on the hills around Vythiri and Lakkidi."
   - id: plantation-cottage
-    note: "Our lowest rate, on a level path."
-  - id: family-suite
-    note: "Two bedrooms beside the pool lawn."
+    note: "Tea and coffee estate cottages a short drive off the main road."
+  - id: couple-stay
+    note: "Quiet rooms with a view for couples, close to Pookode Lake."
 places: [pookode-lake, chembra-peak, banasura-sagar-dam, soochipara-falls, meenmutty-falls]
 faqs:
-  - q: "How far is Vythiri from Kalpetta?"
-    a: "About 15 km, or around half an hour on NH 766. Kalpetta is the district town, with hospitals, banks and larger shops; Vythiri has a small market, fuel and ATMs."
-  - q: "What is the weather like in Vythiri?"
-    a: "Cooler than most of Kerala. Expect roughly 12 to 26 °C from December to February, warm afternoons from March to May, and very heavy rain from June to September, when mist sits on the tea for days."
-  - q: "What is there to see in and around Vythiri?"
-    a: "Pookode Lake for boating, the Lakkidi viewpoint over the ghat hairpins, the Chain Tree beside the highway, En Ooru tribal heritage village and the tea estates themselves. All are within about 15 minutes of the resort."
-  - q: "Can I reach Vythiri by bus?"
-    a: "Yes. KSRTC buses between Kozhikode and Kalpetta, Sulthan Bathery or Mysuru run through Vythiri on NH 766. Get off at Vythiri town and message us; we can arrange a taxi for the last stretch."
-  - q: "How do I contact the resort directly?"
-    a: "Call or WhatsApp {{phone}}. You will talk to the people who run the resort, and there is no booking fee."
+  - q: "How far is Vythiri from Kozhikode?"
+    a: "About 60 to 65 km, roughly two hours by road via the Thamarassery Ghat. Vythiri is a few minutes past the top of the ghat, before Kalpetta."
+  - q: "What is the price of a resort in Vythiri?"
+    a: "Rates depend on the season, the day of the week and the kind of stay, from budget cottages to luxury pool villas. Send us your dates and budget on WhatsApp and we send current rates for resorts that are free."
+  - q: "How do I contact a resort in Vythiri?"
+    a: "You can message us on WhatsApp at {{phone}}. We check availability at several Vythiri resorts at once and book the one you choose, so you do not have to call each resort."
+  - q: "Is Vythiri good in the monsoon?"
+    a: "Yes, if you like rain and mist. Vythiri is one of the wettest parts of Wayanad, so the forest is very green from June to September. Roads can be slippery and some treks close."
 related: [where-to-stay-in-wayanad, resorts-in-wayanad-for-couples, things-to-do-in-wayanad, family-resorts-in-wayanad]
 enquiry: "stay in Vythiri"
 ---
 
-## Where Vythiri is
+## Vythiri and Lakkidi at a glance
 
-Vythiri is a small town in the south of Wayanad district, on the Kozhikode to Mysuru highway (NH 766), just above the Thamarassery Ghat. Coming up from Kozhikode, you pass the Lakkidi viewpoint at the top of the ghat, then enter Vythiri's tea and cardamom estates a few minutes later. The town sits at roughly 700 to 800 m, which keeps it cooler than the plains and often misty in the mornings.
+Vythiri and Lakkidi sit on the main road from Kozhikode, at the southern edge of Wayanad. The area is wetter and greener than the rest of the district, with tea and coffee estates, forest and small streams. Lakkidi viewpoint, at the top of the ghat, looks down over the hairpin bends.
 
-## Getting to Vythiri
+## What is close by
 
-- **By air.** Kozhikode International Airport (CCJ) is about 90 km away, 2.5 to 3 hours by road. Kannur airport is about 3 hours.
-- **By train.** Kozhikode railway station is about 65 km away, around 2 hours. Wayanad has no railway.
-- **By road from Bengaluru or Mysuru.** Come through Gundlupet and Sulthan Bathery, then Kalpetta. The Bandipur forest stretch is closed to traffic at night, from 9 pm to 6 am.
-- **By bus.** KSRTC buses on the Kozhikode–Kalpetta route stop in Vythiri town.
+| Place | Approx. distance from Vythiri |
+|---|---|
+| Pookode Lake | {{km:pookode-lake}} |
+| Chembra Peak trailhead | {{km:chembra-peak}} |
+| Soochipara Falls | {{km:soochipara-falls}} |
+| Banasura Sagar Dam | {{km:banasura-sagar-dam}} |
+| Meenmutty Falls | {{km:meenmutty-falls}} |
 
-## Things to do around Vythiri
+## Kinds of stay in Vythiri
 
-Pookode Lake is the closest outing, ten minutes away, with boats and a walking path through forest. The Lakkidi viewpoint looks down the ghat's hairpin bends, and the Chain Tree beside the highway has a local legend attached to it. En Ooru, a tribal heritage village near Pookode, sells local crafts and food. For longer trips, see our guide to [places to visit in Wayanad](/things-to-do-in-wayanad/).
+Vythiri has the widest choice of stay types in Wayanad: tree houses on the forest edge, luxury resorts with pool villas, plantation cottages on working estates and budget homestays near the town. Couples like the tree houses and pool villas; families usually prefer resorts with a pool and food on site.
 
-## Booking direct with us
+## How we book Vythiri resorts
 
-Mistvale is a small, owner-run resort in Vythiri. You can see every room and policy on this site, and book by WhatsApp or phone with no booking fee. For directions and our map pin, see the [contact page](/contact/).
+Tell us your dates, who is travelling and your budget. We check which Vythiri and Lakkidi resorts are free and send you options with photos and rates on WhatsApp, then book the one you pick.

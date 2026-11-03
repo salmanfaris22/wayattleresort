@@ -1,6 +1,6 @@
 # Pending tracker (SEO · performance · local · AEO/GEO)
 
-Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Mistvale Wayanad, no office, no email.** Rows 1–8 about one resort's own data no longer apply. Next: rewrite the 9 drafted sales pages in src/content/landing (status: draft) for the booking service. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
+Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Mistvale Wayanad, no office, no email.** Rows 1–8 about one resort's own data no longer apply. 8 sales pages rewritten and live; the prices page stays draft until real rate ranges exist. SEO plan and keyword files: seo/ROADMAP.md. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
 
 | # | Area | Item | Impact | Owner | Status |
 |---|---|---|---|---|---|

@@ -1,70 +1,58 @@
 ---
-# DRAFT: written for a single resort; rewrite for the booking service before publishing
-status: draft
+status: published
 updated: 2026-11-03
-seoTitle: "Resort in Wayanad with Swimming Pool | Mistvale, Vythiri"
-description: "Outdoor pool with a shallow end, plus a private plunge pool villa, on a tea estate in Vythiri, Wayanad. Pool timings, depth and rooms. Book on WhatsApp."
-h1: "Resort in Wayanad with a swimming pool, on a tea estate in Vythiri"
-breadcrumb: "Resort with swimming pool"
-lede: "An outdoor pool on the lawn below the tea, with a shallow end for children, and a private plunge pool at the villa. Every room has pool access, and breakfast is included."
+seoTitle: "Resorts in Wayanad with Swimming Pool – Book on WhatsApp"
+description: "Wayanad resorts with a swimming pool: family pools, infinity pools and private pool villas, from budget to luxury. Send your dates and we find one free for you."
+h1: "Resorts in Wayanad with a swimming pool"
+breadcrumb: "Resorts with swimming pool"
+lede: "Family pools with a shallow end, valley-view infinity pools and villas with a private pool. We find Wayanad resorts with the pool you want, free for your dates."
 heroImage: "gallery/tea-bushes-under-silver-oak"
-heroAlt: "Tea bushes under silver oak trees on a Vythiri estate"
+heroAlt: "Rows of tea bushes under tall silver oak trees in Vythiri"
 primaryKeyword: "resort in Wayanad with swimming pool"
 secondaryKeywords: ["Wayanad resorts with pool", "best resort in Wayanad with swimming pool", "low rate resort in Wayanad with swimming pool", "family resort in Wayanad with swimming pool", "private swimming pool resort in Wayanad"]
 intent: commercial
 answer:
-  q: "What should I check before booking a Wayanad resort with a pool?"
-  a: "Ask four things: is the pool indoor or outdoor, how deep is the shallow end, what are the timings, and is it shared or private. At Mistvale the shared outdoor pool has a 0.9 m shallow end and is open from 7 am to 7 pm, and the Private Pool Villa also has its own unheated plunge pool."
+  q: "Which resorts in Wayanad have a swimming pool?"
+  a: "Most mid-range and luxury resorts in Wayanad have a pool, and many budget resorts do too. They range from small plunge pools in couple villas to large family pools and valley-view infinity pools. Tell us who is swimming, your budget and your dates, and we send resorts with a suitable pool that are free."
 rooms:
   - id: pool-villa
-    note: "Its own plunge pool on the deck, plus the shared pool."
+    note: "A pool only for your group, in a couple villa or a private family villa."
   - id: family-suite
-    note: "Faces the pool lawn; you can watch children from the verandah."
-  - id: plantation-cottage
-    note: "About 40 m from the pool on a level path."
-  - id: tree-house
-    note: "Shared pool access, a short walk down through the coffee."
+    note: "Family rooms in resorts with a shared pool and a shallow end."
+  - id: couple-stay
+    note: "Couple rooms in resorts with a view pool."
 places: [pookode-lake, banasura-sagar-dam, soochipara-falls, meenmutty-falls]
 faqs:
-  - q: "Is the pool open during the monsoon?"
-    a: "Yes, except during thunderstorms or very heavy rain, when we close it for safety. Swimming in light rain is allowed. From June to September the water is cooler, and the hills around it are at their greenest."
-  - q: "Is there a separate kids pool?"
-    a: "No. The main pool has a 0.9 m shallow end, which most children under ten use. Children must have an adult with them in the water, as there is no lifeguard."
-  - q: "Can day visitors use the pool?"
-    a: "No. The pool is only for guests staying at the resort, which is one reason it stays quiet. With only {{units}} rooms on the estate, it is rarely shared by more than a few families at once."
-  - q: "What should we wear in the pool?"
-    a: "Proper swimwear, please; cotton clothes shed fibres and cloud the filter. Pool towels are provided, so you only need to bring your swimwear and sunscreen."
-  - q: "Are there cheaper resorts in Wayanad with a pool?"
-    a: "Yes. Many smaller resorts and homestays around Kalpetta and Vythiri have pools at lower prices than ours. Here you pay for the estate setting, a pool shared by only a few rooms, and food cooked on site. Every room includes pool access and breakfast; ask us on WhatsApp for rates on your dates."
+  - q: "Is there a low-rate resort in Wayanad with a swimming pool?"
+    a: "Yes. Several budget and affordable resorts have a pool, usually shared and smaller than at luxury resorts. Tell us your budget per night and we send options with a pool inside it."
+  - q: "Are the pools in Wayanad heated?"
+    a: "Very few are. Wayanad nights are cool, especially from November to February, so pool water is cold in the early morning and pleasant from late morning."
+  - q: "Is the pool safe for children?"
+    a: "Ask for a pool with a shallow end or a separate kids pool. Most resorts have no lifeguard, so children need an adult with them. We tell you the pool depth for each option."
+  - q: "Can we get a private swimming pool?"
+    a: "Yes. Pool villas have a pool only for you, from small plunge pools for couples to full-size pools in private family villas."
+  - q: "Are pools open in the monsoon?"
+    a: "Most stay open between showers and close during thunderstorms. In heavy rain, a covered sit-out matters more than the pool."
 related: [family-resorts-in-wayanad, private-resort-in-wayanad, resorts-in-wayanad-for-couples, group-stays-in-wayanad]
-enquiry: "pool stay"
+enquiry: "resort with swimming pool"
 ---
 
-## The pools at Mistvale
+## Kinds of pool in Wayanad resorts
 
-There are two. The shared pool sits on the lawn below the tea slope, beside the family suite and a short walk from the cottages and restaurant. The second is a plunge pool on the deck of the Private Pool Villa, used only by the villa's guests.
-
-| | Shared outdoor pool | Private plunge pool |
+| Pool | Where you find it | Best for |
 |---|---|---|
-| Who can use it | Every staying guest | Private Pool Villa guests only |
-| Depth | Shallow end of 0.9 m | Even depth, adults |
-| Heated | No | No |
-| Timings | 7 am to 7 pm | Any time |
-| Best for | Families, groups, afternoon swims | Couples, early-morning dips |
+| Plunge pool on a villa deck | Luxury couple villas | Honeymoons, anniversaries |
+| Private pool | Private villas booked for one group | Families, friends, celebrations |
+| Shared family pool with shallow end | Affordable and luxury resorts | Families with children |
+| Infinity or view pool | Hillside resorts | Couples, photos |
 
-Neither pool is heated. In December and January the mornings are cold, so most guests swim after 11 am. March to May has the warmest water.
+## What to ask about the pool
 
-## Which room to book for the pool
+- **Size and depth.** A plunge pool is for sitting in, not swimming laps. For children, ask about a shallow end.
+- **Shared or private.** At busy resorts on weekends, a shared pool can be crowded.
+- **Timings.** Many pools close at sunset; some open late.
+- **Cleanliness and rules.** Most resorts ask for proper swimwear and a shower before entering.
 
-Families who want to be near the water should book the family suite, which opens straight onto the pool lawn. The plantation cottages are a level 40 m walk away. If you want a pool with no one else in it, book the Private Pool Villa; it has the shared pool too.
+## How we book pool resorts
 
-## Pool rules
-
-- Children swim only with an adult; there is no lifeguard.
-- Swimwear only, and a shower before you get in.
-- No glass bottles or food in the water.
-- The pool closes in thunderstorms and from 7 pm, so the lawn stays quiet for the campfire.
-
-## Swimming through the seasons
-
-From October to February the air is cool and the water cold first thing, but the sun is strong by noon. March to May brings the best swimming, with warm afternoons and pre-monsoon showers in May. During the monsoon, from June to September, rain comes and goes; a swim between showers, with mist on the tea above you, is one of the nicer things to do here.
+Tell us your dates, budget, who is swimming and whether you want a private pool. We check which resorts are free and send options with photos of the pool and the rate on WhatsApp, then book the one you choose.

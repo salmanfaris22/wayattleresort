@@ -1,0 +1,47 @@
+cluster,target_url,page_status,keywords,P1,P2,P3,do_not_build
+Group / capacity,/group-stays-in-wayanad/,live,19,9,7,3,0
+Location,/resorts-in-vythiri/,live,18,2,6,9,1
+Family,/family-resorts-in-wayanad/,live,14,6,5,3,0
+Main,/,live,12,6,6,0,0
+Couples,/resorts-in-wayanad-for-couples/,live,10,6,4,0,0
+Pool,/resorts-in-wayanad-with-swimming-pool/,live,10,5,2,3,0
+Guide / AEO,/contact/,live,9,3,6,0,0
+Private,/private-resort-in-wayanad/,live,8,4,4,0,0
+Route,/bangalore-to-wayanad/,live,8,3,4,1,0
+Price,/wayanad-resort-prices/,draft,7,0,3,4,0
+Activities / campfire,/wayanad-resort-activities/,live,7,2,3,2,0
+Spelling variant,/,live,7,0,0,7,0
+Room type,/rooms/tree-house/,live,6,2,3,1,0
+Malayalam,/ml/,live,6,0,2,4,0
+Sight,/chembra-peak-trek/,live,6,3,3,0,0
+Competitor brand,-,do not build,5,0,0,0,5
+Manglish,/wayanad-resort-prices/,draft,4,0,0,4,0
+Landing: chembra-peak-trek,/chembra-peak-trek/,live,4,0,4,0,0
+Landing: kochi-to-wayanad,/kochi-to-wayanad/,live,4,0,4,0,0
+Landing: mysore-to-wayanad,/mysore-to-wayanad/,live,4,0,4,0,0
+Private / villa,/rooms/pool-villa/,live,3,2,0,1,0
+Setting,-,GAP - no page,3,0,0,3,0
+Landing: banasura-sagar-dam,/banasura-sagar-dam/,live,3,0,3,0,0
+Landing: bangalore-to-wayanad,/bangalore-to-wayanad/,live,3,0,3,0,0
+Landing: edakkal-caves,/edakkal-caves/,live,3,0,3,0,0
+Landing: kozhikode-to-wayanad,/kozhikode-to-wayanad/,live,3,0,3,0,0
+Landing: wayanad-in-monsoon,/wayanad-in-monsoon/,live,3,0,3,0,0
+Luxury,/rooms/pool-villa/,live,2,0,0,1,1
+Location / guide,/where-to-stay-in-wayanad/,live,2,2,0,0,0
+Season,/wayanad-in-monsoon/,live,2,1,0,1,0
+Brand,/,live,2,2,0,0,0
+Landing: wayanad-resort-activities,/wayanad-resort-activities/,live,2,0,2,0,0
+Main / activities,/wayanad-resort-activities/,live,1,1,0,0,0
+Main / price,/wayanad-resort-prices/,draft,1,1,0,0,0
+Price / family,/family-resorts-in-wayanad/,live,1,0,0,1,0
+Price / couples,/resorts-in-wayanad-for-couples/,live,1,0,0,1,0
+Price / pool,-,do not build,1,0,0,0,1
+Family / luxury,/family-resorts-in-wayanad/,live,1,0,0,1,0
+Family / couples,/family-resorts-in-wayanad/,live,1,0,0,1,0
+Views,-,GAP - no page,1,0,0,1,0
+Luxury listicle,-,do not build,1,0,0,0,1
+Budget tier,/,live,1,0,1,0,0
+Landing: resort-in-wayanad-for-10-people,/resort-in-wayanad-for-10-people/,live,1,0,1,0,0
+Landing: resorts-in-vythiri,/resorts-in-vythiri/,live,1,0,1,0,0
+Landing: resorts-in-wayanad-with-swimming-pool,/resorts-in-wayanad-with-swimming-pool/,live,1,0,1,0,0
+Landing: wayanad-resort-prices,/wayanad-resort-prices/,draft,1,1,0,0,0

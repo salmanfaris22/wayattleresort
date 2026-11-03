@@ -1,0 +1,19 @@
+QUERY,SEARCH_INTENT,PRIMARY_PAGE,SECONDARY_PAGE,NOTES
+best resort in wayanad / resort in wayanad,Commercial: compare & book,/,/where-to-stay-in-wayanad/,"Home answers ""best"" with what to compare; no bare claim"
+resort booking in wayanad / wayanad resort booking whatsapp,Transactional,/,/contact/,WhatsApp CTA + how booking works
+luxury / budget / affordable / private resorts in wayanad,Commercial by budget,/ (#luxury #budget #affordable #private),/rooms/,Tier cards on home; split into own pages when partner data allows
+family resorts in wayanad,Commercial,/family-resorts-in-wayanad/,/rooms/family-suite/,Room page = stay type; landing = choose & book
+resorts in wayanad for couples / honeymoon,Commercial,/resorts-in-wayanad-for-couples/,/rooms/couple-stay/,Same split
+private resort / private villa in wayanad,Commercial,/private-resort-in-wayanad/,/rooms/pool-villa/,Same split
+resort in wayanad with swimming pool,Commercial,/resorts-in-wayanad-with-swimming-pool/,/rooms/pool-villa/,
+group stay / resorts for friends in wayanad,Commercial,/group-stays-in-wayanad/,/resort-in-wayanad-for-10-people/,10-people page owns the exact-number queries
+resort in wayanad for 10 people,Transactional,/resort-in-wayanad-for-10-people/,/group-stays-in-wayanad/,
+resort in vythiri / lakkidi resorts,Local commercial,/resorts-in-vythiri/,/where-to-stay-in-wayanad/,
+campfire / activities resorts in wayanad,Commercial,/wayanad-resort-activities/,/things-to-do-in-wayanad/,
+wayanad resort price list,Transactional,/wayanad-resort-prices/ (draft),/,Publish only with real rate ranges
+tree house in wayanad,Commercial,/rooms/tree-house/,/resorts-in-vythiri/,
+places to visit / things to do in wayanad,Informational,/things-to-do-in-wayanad/,sight guides,
+where to stay in wayanad,Informational,/where-to-stay-in-wayanad/,/resorts-in-vythiri/,
+best time to visit wayanad,Informational,/best-time-to-visit-wayanad/,/wayanad-in-monsoon/,
+<city> to wayanad,Informational: route,/<city>-to-wayanad/,/contact/,One page per origin city
+vythiri village resort / taj / other resort brands,Navigational (other business),none,-,Never target another business brand
