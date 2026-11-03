@@ -166,10 +166,11 @@ export const towns = [
   { name: 'Meppadi', lat: 11.553, lng: 76.135 },
 ];
 
-export const reach = [
-  { from: 'Kozhikode International Airport (CCJ)', km: '90 km', time: '2.5–3 hr', note: 'Nearest airport; via Thamarassery Ghat' },
-  { from: 'Kozhikode railway station', km: '65 km', time: '2 hr', note: 'Nearest major railway station; Wayanad has no railway' },
+export const reach: { from: string; km: string; time: string; note: string; href?: string }[] = [
+  { from: 'Kozhikode International Airport (CCJ)', km: '90 km', time: '2.5–3 hr', note: 'Nearest airport; via Thamarassery Ghat', href: '/kozhikode-to-wayanad/' },
+  { from: 'Kozhikode railway station', km: '65 km', time: '2 hr', note: 'Nearest major railway station; Wayanad has no railway', href: '/kozhikode-to-wayanad/' },
   { from: 'Kannur International Airport (CNN)', km: '100 km', time: '3 hr', note: 'Via Nedumpoyil Ghat and Mananthavady' },
-  { from: 'Mysuru', km: '150 km', time: '3.5–4 hr', note: 'Via Gundlupet and Sulthan Bathery' },
-  { from: 'Bengaluru', km: '290 km', time: '6.5–7 hr', note: 'Via Mysuru; the Bandipur forest stretch is closed to traffic from 9 pm to 6 am' },
+  { from: 'Mysuru', km: '150 km', time: '3.5–4 hr', note: 'Via Gundlupet and Sulthan Bathery', href: '/mysore-to-wayanad/' },
+  { from: 'Bengaluru', km: '290 km', time: '6.5–7 hr', note: 'Via Mysuru; the Bandipur forest stretch is closed to traffic from 9 pm to 6 am', href: '/bangalore-to-wayanad/' },
+  { from: 'Kochi', km: '260 km', time: '6–7 hr', note: 'Via Thrissur and Kozhikode, or train to Kozhikode', href: '/kochi-to-wayanad/' },
 ];

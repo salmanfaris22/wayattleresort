@@ -58,7 +58,7 @@ export function problems(page: Landing, rooms: Room[], all: Landing[]): string[]
   if (d.requires.location && d.requires.location !== site.address.locality) out.push(`resort is not in ${d.requires.location}`);
   if (d.requires.minGuests && !planFor(d.requires.minGuests, rooms)) out.push(`cannot host ${d.requires.minGuests} guests`);
   for (const r of d.rooms) if (!rooms.some((x) => x.id === r.id)) out.push(`unknown room "${r.id}"`);
-  if (!d.rooms.length && !d.plans.length && !d.priceTable) out.push('no matching rooms to show');
+  if (d.intent !== 'informational' && !d.rooms.length && !d.plans.length && !d.priceTable) out.push('no matching rooms to show');
   const total = words(page.body ?? '') + words(d.lede) + words(d.answer.a) + d.faqs.reduce((n, f) => n + words(f.a), 0);
   if (total < MIN_WORDS) out.push(`thin content: ${total} words (min ${MIN_WORDS})`);
   for (const other of all) {

@@ -8,6 +8,9 @@ import { places } from '../data/places';
 import { site } from '../data/site';
 import { img, creditLine, credit } from '../lib/images';
 import { breadcrumbSchema, placesSchema, imageObject } from '../lib/schema';
+import { getLandingPages } from '../lib/landing';
+const { published } = await getLandingPages();
+const guide = (slug: string) => published.find((p) => p.id === slug || p.id === `${slug}-trek`);
 
 const crumbs = [
   { name: 'Home', href: '/' },
@@ -97,6 +100,11 @@ const plans = [
               <p class="tip">
                 <strong>Tip:</strong> {p.tip}
               </p>
+              {guide(p.slug) && (
+                <p>
+                  <a href={`/${guide(p.slug)!.id}/`}>Full guide: {guide(p.slug)!.data.breadcrumb}</a>
+                </p>
+              )}
             </div>
           </article>
         ))

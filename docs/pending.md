@@ -33,3 +33,15 @@ Updated 3 Nov 2026. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later
 | 27 | GEO | Monthly AI-answer check (docs/ai-visibility-log.md) | 🟢 | You | After launch |
 | 29 | Crawl/GEO | Vercel Firewall shows a "Security Checkpoint" challenge to non-browser clients. Check Vercel → Firewall → Bot Protection / Attack Challenge Mode: keep verified search bots allowed, and allow AI search bots (OAI-SearchBot, PerplexityBot, Claude-SearchBot) if you want AI answers to cite the site | 🟠 | You | Found 3 Nov |
 | 28 | SEO | Month 1–3: rewrite titles for pages ranking 8–20 in Search Console | 🟢 | Developer | After data |
+
+## Advanced items done (3 Nov 2026)
+
+| Item | Result |
+|---|---|
+| Popup as a bottom sheet on mobile | ✅ smaller, safer for Google's intrusive-interstitial rules |
+| Route pages | ✅ Bangalore, Mysore, Kozhikode, Kochi → Wayanad |
+| Sight guides | ✅ Chembra Peak trek, Banasura Sagar Dam, Edakkal Caves |
+| Monsoon page | ✅ /wayanad-in-monsoon/ |
+| Body font preload, tighter image sizes | ✅ |
+| Internal links | ✅ footer split (stays / plan your trip), places → guides, reach tables → route pages, best time → monsoon |
+| Live PageSpeed (mobile, 3 Nov) | Performance 100, Accessibility 100, Best Practices 100, SEO 69 (staging noindex, expected) |

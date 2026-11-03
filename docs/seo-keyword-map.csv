@@ -10,16 +10,16 @@ wayanad resort booking,Commercial,Main,/,Medium,Not verified,Not verified,Brief 
 nature resorts in wayanad,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
 which is the best resort in wayanad,Commercial,Main,/,High,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
 best resort in wayanad with activities,Commercial,Main / activities,/wayanad-resort-activities/,High,Not verified,Not verified,"User list (Google related searches, 2026-11-03); SERP checked 2026-11-03",
-best resort in wayanad with price,Commercial,Main / price,/wayanad-resort-prices/,High,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
-wayanad resort low price list,Transactional,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
-wayanad resort rates,Transactional,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,Brief cluster,
-low rate resort in wayanad,Commercial,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03); screenshot query",Honest framing: our rates are mid-range; page explains market range
-best low rate resort in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
+best resort in wayanad with price,Commercial,Main / price,/wayanad-resort-prices/,High,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Page off while site.showPrices=false
+wayanad resort low price list,Transactional,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Page off while site.showPrices=false
+wayanad resort rates,Transactional,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,Brief cluster,Page off while site.showPrices=false
+low rate resort in wayanad,Commercial,Price,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03); screenshot query",Honest framing: our rates are mid-range; page explains market range; Page off while site.showPrices=false
+best low rate resort in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Page off while site.showPrices=false
 low rate resort in wayanad for family,Commercial,Price / family,/family-resorts-in-wayanad/,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
 low rate resort in wayanad for couples,Commercial,Price / couples,/resorts-in-wayanad-for-couples/,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
-affordable resorts in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,Brief cluster,
-budget resorts in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,Brief cluster,"No dedicated 'budget' page: rates start at ₹6,500, so a budget page would mislead"
-resort in wayanad budget friendly,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",
+affordable resorts in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,Brief cluster,Page off while site.showPrices=false
+budget resorts in wayanad,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,Brief cluster,"No dedicated 'budget' page: rates start at ₹6,500, so a budget page would mislead; Page off while site.showPrices=false"
+resort in wayanad budget friendly,Commercial,Price,/wayanad-resort-prices/,Low,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",Page off while site.showPrices=false
 wayanad low budget resorts with pool under 1000,Commercial,Price / pool,Not targeted,None,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",No such rate here; targeting it would mislead. Pool page FAQ answers 'cheaper resorts with a pool' honestly
 best resort in wayanad for family,Commercial,Family,/family-resorts-in-wayanad/,High,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
 best resorts in wayanad for family,Commercial,Family,/family-resorts-in-wayanad/,High,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
@@ -108,7 +108,7 @@ resort in vythiri wayanad,Commercial,Location,/resorts-in-vythiri/,High,Not veri
 vythiri resort in wayanad,Commercial,Location,/resorts-in-vythiri/,High,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",Generic 'resort in Vythiri' intent only
 vythiri wayanad,Commercial,Location,/resorts-in-vythiri/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
 vythiri resort price,Commercial,Location,/resorts-in-vythiri/ + /wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Our own prices; not the business called 'Vythiri Resort'
-vythiri resort rates,Commercial,Location,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",
+vythiri resort rates,Commercial,Location,/wayanad-resort-prices/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Page off while site.showPrices=false
 vythiri resort in wayanad contact number,Commercial,Location,/resorts-in-vythiri/ + /contact/,Medium,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Our contact number only
 vythiri resort wayanad photos,Commercial,Location,/resorts-in-vythiri/,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Needs the resort's own photos
 vythiri resort in wayanad reviews,Commercial,Location,Not targeted yet,Low,Not verified,Not verified,"User list (Google related searches, 2026-11-03)",Needs genuine reviews (GBP) first
@@ -136,7 +136,7 @@ is wayanad good in monsoon,Informational,Guide / AEO,/best-time-to-visit-wayanad
 how to reach wayanad,Informational,Guide / AEO,/contact/,Medium,Not verified,Not verified,Brief cluster,
 wayanad from bangalore distance,Informational,Guide / AEO,/contact/,Medium,Not verified,Not verified,Brief cluster,
 kozhikode airport to wayanad distance,Informational,Guide / AEO,/contact/,Medium,Not verified,Not verified,Brief cluster,
-what is the average cost of a wayanad resort,Informational,Guide / AEO,/wayanad-resort-prices/,Medium,Not verified,Not verified,Brief cluster,
+what is the average cost of a wayanad resort,Informational,Guide / AEO,/wayanad-resort-prices/,Medium,Not verified,Not verified,Brief cluster,Page off while site.showPrices=false
 how to book a group stay in wayanad,Informational,Guide / AEO,/group-stays-in-wayanad/,Medium,Not verified,Not verified,Brief cluster,
 വയനാട് റിസോർട്ട്,Commercial,Malayalam,/ml/,Medium,Not verified,Not verified,Not verified (Malayalam-script research term),
 വയനാട്ടിലെ മികച്ച റിസോർട്ട്,Commercial,Malayalam,/ml/,Medium,Not verified,Not verified,Not verified (Malayalam-script research term),
@@ -144,8 +144,8 @@ how to book a group stay in wayanad,Informational,Guide / AEO,/group-stays-in-wa
 വയനാട് റിസോർട്ട് ഫാമിലി,Commercial,Malayalam,/ml/,Low,Not verified,Not verified,Not verified (Malayalam-script research term),
 വൈത്തിരി റിസോർട്ട്,Commercial,Malayalam,/ml/,Low,Not verified,Not verified,Not verified (Malayalam-script research term),
 വയനാട് ഗ്രൂപ്പ് സ്റ്റേ,Commercial,Malayalam,/ml/,Low,Not verified,Not verified,Not verified (Malayalam-script research term),
-wayanad resort rate,Commercial,Manglish,/wayanad-resort-prices/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL
-wayanad resort kuranja rate,Commercial,Manglish,/wayanad-resort-prices/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL
+wayanad resort rate,Commercial,Manglish,/wayanad-resort-prices/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL; Page off while site.showPrices=false
+wayanad resort kuranja rate,Commercial,Manglish,/wayanad-resort-prices/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL; Page off while site.showPrices=false
 wayanad family resort pool undo,Commercial,Manglish,/family-resorts-in-wayanad/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL
 wayanad 10 perkku resort,Commercial,Manglish,/resort-in-wayanad-for-10-people/,Low,Not verified,Not verified,Not verified (Manglish research term),Covered by the English page; no separate URL
 wayanadu resort,Commercial,Spelling variant,/ (no separate page),Low,Not verified,Not verified,Not verified (spelling variant),Search engines map variants to 'Wayanad'; never create misspelled URLs
@@ -155,3 +155,19 @@ wayand resort,Commercial,Spelling variant,/ (no separate page),Low,Not verified,
 resorts in wayanadu,Commercial,Spelling variant,/ (no separate page),Low,Not verified,Not verified,Not verified (spelling variant),Search engines map variants to 'Wayanad'; never create misspelled URLs
 vythri resort,Commercial,Spelling variant,/ (no separate page),Low,Not verified,Not verified,Not verified (spelling variant),Search engines map variants to 'Wayanad'; never create misspelled URLs
 wayattile resorts,Commercial,Spelling variant,/ (no separate page),Low,Not verified,Not verified,Not verified (spelling variant),Search engines map variants to 'Wayanad'; never create misspelled URLs
+bangalore to wayanad distance,Informational,Route,/bangalore-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+bangalore to wayanad by road,Informational,Route,/bangalore-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+bangalore to wayanad night travel ban,Informational,Route,/bangalore-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+mysore to wayanad distance,Informational,Route,/mysore-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+kozhikode to wayanad distance,Informational,Route,/kozhikode-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+calicut airport to wayanad,Informational,Route,/kozhikode-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+thamarassery churam,Informational,Route,/kozhikode-to-wayanad/,Low,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+kochi to wayanad distance,Informational,Route,/kochi-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+wayanad in monsoon,Informational,Season,/wayanad-in-monsoon/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+wayanad in july,Informational,Season,/wayanad-in-monsoon/,Low,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+chembra peak trek,Informational,Sight,/chembra-peak-trek/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+chembra peak heart lake,Informational,Sight,/chembra-peak-trek/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+banasura sagar dam,Informational,Sight,/banasura-sagar-dam/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+banasura sagar dam timings,Informational,Sight,/banasura-sagar-dam/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+edakkal caves,Informational,Sight,/edakkal-caves/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+edakkal caves timings,Informational,Sight,/edakkal-caves/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,

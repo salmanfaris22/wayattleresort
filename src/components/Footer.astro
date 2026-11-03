@@ -37,6 +37,15 @@ const year = new Date().getFullYear();
         <li><a href="/things-to-do-in-wayanad/">Places to visit in Wayanad</a></li>
         <li><a href="/where-to-stay-in-wayanad/">Where to stay in Wayanad</a></li>
         <li><a href="/best-time-to-visit-wayanad/">Best time to visit Wayanad</a></li>
+        {
+          published
+            .filter((p) => p.data.intent === 'informational')
+            .map((p) => (
+              <li>
+                <a href={`/${p.id}/`}>{p.data.breadcrumb}</a>
+              </li>
+            ))
+        }
         <li><a href="/contact/">How to reach us</a></li>
       </ul>
     </nav>
@@ -44,7 +53,7 @@ const year = new Date().getFullYear();
       <p class="head">Find your stay</p>
       <ul>
         {
-          published.map((p) => (
+          published.filter((p) => p.data.intent !== 'informational').map((p) => (
             <li>
               <a href={`/${p.id}/`}>{p.data.breadcrumb}</a>
             </li>
