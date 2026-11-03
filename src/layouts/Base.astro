@@ -60,6 +60,7 @@ const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;
     <link rel="canonical" href={canonical} />
     {(noindex || staging) && <meta name="robots" content={staging ? 'noindex, nofollow' : 'noindex, follow'} />}
     <meta name="theme-color" content="#24493a" />
+    <meta name="google-site-verification" content="gy-v5y-voAu9m4D_5XNtaanC5QeDQwyliMy4hMeVajw" />
     <meta name="geo.region" content="IN-KL" />
     <meta name="geo.placename" content={`${site.address.locality}, ${site.address.district}, ${site.address.region}`} />
     <meta name="geo.position" content={`${site.geo.lat};${site.geo.lng}`} />
