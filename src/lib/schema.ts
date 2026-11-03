@@ -5,7 +5,7 @@ type Thing = Record<string, unknown>;
 
 export const abs = (path: string, base: URL | string) => new URL(path, base).href;
 
-export function resortSchema(siteUrl: URL | string, image: string): Thing {
+export function resortSchema(siteUrl: URL | string, image: string, numberOfRooms?: number): Thing {
   const id = abs('/#resort', siteUrl);
   return {
     '@type': 'Resort',
@@ -14,9 +14,14 @@ export function resortSchema(siteUrl: URL | string, image: string): Thing {
     description: site.description,
     url: abs('/', siteUrl),
     image,
+    logo: abs('/logo.png', siteUrl),
     telephone: site.phoneE164,
+    availableLanguage: [...site.languages],
+    slogan: site.tagline,
+    knowsAbout: ['Wayanad', 'Vythiri', 'Chembra Peak', 'Pookode Lake', 'Banasura Sagar Dam', 'Kerala tea estates'],
     email: site.email,
     priceRange: site.priceRange,
+    ...(numberOfRooms ? { numberOfRooms } : {}),
     currenciesAccepted: site.currency,
     checkinTime: site.checkIn,
     checkoutTime: site.checkOut,
@@ -110,7 +115,22 @@ export function roomSchema(
   ];
 }
 
-export function placesSchema(places: Place[], images: string[], pageUrl: string): Thing {
+/** ImageObject with licence metadata (Google Images can show credit + licence). */
+export function imageObject(url: string, c?: { author: string; license: string; licenseUrl: string; source: string }): Thing {
+  if (!c) return { '@type': 'ImageObject', contentUrl: url, url };
+  return {
+    '@type': 'ImageObject',
+    contentUrl: url,
+    url,
+    creditText: `${c.author} / Wikimedia Commons`,
+    creator: { '@type': 'Person', name: c.author },
+    copyrightNotice: `${c.author}, ${c.license}`,
+    ...(c.licenseUrl ? { license: c.licenseUrl } : {}),
+    acquireLicensePage: c.source,
+  };
+}
+
+export function placesSchema(places: Place[], images: (string | Thing)[], pageUrl: string): Thing {
   return {
     '@type': 'ItemList',
     name: 'Places to visit in Wayanad',

@@ -10,6 +10,7 @@ import JsonLd from '../components/JsonLd.astro';
 import { site } from '../data/site';
 import { img } from '../lib/images';
 import { graph, resortSchema, websiteSchema } from '../lib/schema';
+import { getRooms, totals } from '../lib/inventory';
 
 interface Props {
   title: string;
@@ -41,7 +42,8 @@ const og = await getImage({ src: ogImage, width: 1200, height: 630, fit: 'cover'
 const ogUrl = new URL(og.src, siteUrl).href;
 const heroOg = await getImage({ src: img('hero/wayanad-tea-estate-misty-hills'), width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
 
-const ld = graph(websiteSchema(siteUrl), resortSchema(siteUrl, new URL(heroOg.src, siteUrl).href), ...schema);
+const units = totals(await getRooms()).units;
+const ld = graph(websiteSchema(siteUrl), resortSchema(siteUrl, new URL(heroOg.src, siteUrl).href, units), ...schema);
 const staging = __SITE_STAGING__;
 const analytics = import.meta.env.PUBLIC_ANALYTICS === 'true';
 const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;

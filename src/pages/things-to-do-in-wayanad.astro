@@ -6,8 +6,8 @@ import PlaceTable from '../components/PlaceTable.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { places } from '../data/places';
 import { site } from '../data/site';
-import { img, creditLine } from '../lib/images';
-import { breadcrumbSchema, placesSchema } from '../lib/schema';
+import { img, creditLine, credit } from '../lib/images';
+import { breadcrumbSchema, placesSchema, imageObject } from '../lib/schema';
 
 const crumbs = [
   { name: 'Home', href: '/' },
@@ -15,7 +15,7 @@ const crumbs = [
 ];
 const pageUrl = new URL('/things-to-do-in-wayanad/', Astro.site).href;
 const imageUrls = await Promise.all(
-  places.map(async (p) => new URL((await getImage({ src: img(p.image), width: 1200, format: 'jpg', quality: 75 })).src, Astro.site).href),
+  places.map(async (p) => imageObject(new URL((await getImage({ src: img(p.image), width: 1200, format: 'jpg', quality: 75 })).src, Astro.site).href, credit(p.image))),
 );
 
 const plans = [
