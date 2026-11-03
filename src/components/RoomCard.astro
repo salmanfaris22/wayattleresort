@@ -2,6 +2,7 @@
 import { Picture } from 'astro:assets';
 import type { Room } from '../lib/inventory';
 import { inr } from '../lib/inventory';
+import { site } from '../data/site';
 import { roomMessage, waLink } from '../lib/whatsapp';
 
 interface Props {
@@ -14,14 +15,19 @@ const r = room.data;
 
 <article class="card">
   <a class="media" href={`/rooms/${room.id}/`} tabindex="-1" aria-hidden="true">
-    <Picture src={r.image} alt="" formats={['avif', 'webp']} widths={[400, 640, 900]} sizes="(min-width: 900px) 33vw, 100vw" quality={52} />
+    <Picture src={r.image} alt="" formats={['avif', 'webp']} widths={[320, 480, 640, 900]} sizes="(min-width: 1240px) 290px, (min-width: 700px) 45vw, 92vw" quality={52} />
     {r.stockPhoto && <span class="tag">Sample photo</span>}
   </a>
   <div class="body">
     <h3><a href={`/rooms/${room.id}/`}>{r.name}</a></h3>
     {note && <p class="note">{note}</p>}
     <p class="meta">{r.guestsNote} · {r.bed}</p>
-    <p class="price">From <strong>{inr(r.priceFrom)}</strong> a night with breakfast</p>
+    <ul class="specs" role="list">
+      <li>{r.sizeSqft} sq ft</li>
+      <li>{r.view}</li>
+      <li>Breakfast included</li>
+    </ul>
+    {site.showPrices && <p class="price">From <strong>{inr(r.priceFrom)}</strong> a night with breakfast</p>}
     <p class="links">
       <a href={waLink(roomMessage(r.name))} target="_blank" rel="noopener">Ask on WhatsApp</a>
       <a href={`/rooms/${room.id}/`}>Room details<span class="visually-hidden">: {r.name}</span></a>
@@ -45,6 +51,8 @@ const r = room.data;
     background: var(--mist-2);
   }
   .media :global(img) {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -84,9 +92,25 @@ const r = room.data;
   .price {
     margin-bottom: 0.8rem;
   }
+  .specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .specs li {
+    font-size: 0.78rem;
+    background: var(--mist);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
   .links {
     margin: auto 0 0;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.4rem 1.2rem;
     font-weight: 600;

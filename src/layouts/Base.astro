@@ -6,6 +6,7 @@ import Analytics from '@vercel/analytics/astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobileActionBar from '../components/MobileActionBar.astro';
+import LeadPopup from '../components/LeadPopup.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { site } from '../data/site';
 import { img } from '../lib/images';
@@ -107,6 +108,7 @@ const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;
     </main>
     <Footer />
     <MobileActionBar />
+    <LeadPopup />
     {analytics && <Analytics />}
     {
       ga4 && (

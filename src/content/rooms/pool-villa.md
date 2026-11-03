@@ -2,7 +2,7 @@
 name: Private Pool Villa
 order: 1
 seoTitle: Private Pool Villa in Wayanad with Valley View | Mistvale
-seoDescription: A private pool villa in Wayanad with a plunge pool facing the Vythiri tea valley, king bed and sit-out. From ₹12,500 a night with breakfast. Book on WhatsApp.
+seoDescription: A private pool villa in Wayanad with a plunge pool facing the Vythiri tea valley, king bed and sit-out. Breakfast included. Book directly on WhatsApp.
 keyword: private pool villa in Wayanad
 summary: Our most private stay. A stand-alone villa at the top of the estate with its own plunge pool facing the tea valley, a king bed, a deep bathtub and a sit-out for long breakfasts.
 guests: 3

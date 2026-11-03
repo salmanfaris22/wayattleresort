@@ -1,0 +1,160 @@
+---
+// Opens once per visit after 30 seconds: name, number, message → WhatsApp.
+// Skipped if the visitor already messaged us, and never shown without JavaScript.
+import { site } from '../data/site';
+import WaIcon from './WaIcon.astro';
+import ContourLines from './ContourLines.astro';
+---
+
+<dialog class="lead" aria-labelledby="lead-title" data-lead>
+  <div class="top">
+    <ContourLines class="lead-lines" />
+    <p class="eyebrow">{site.shortName} · Vythiri, Wayanad</p>
+    <h2 id="lead-title">Planning a stay in the tea hills?</h2>
+    <p>Leave your name and number. We reply on WhatsApp within an hour, 8 am to 10 pm.</p>
+    <form method="dialog"><button class="x" aria-label="Close">×</button></form>
+  </div>
+  <form class="body" action="https://api.whatsapp.com/send" method="get" target="_blank" data-lead-form>
+    <input type="hidden" name="phone" value={site.whatsapp} />
+    <input type="hidden" name="text" value={`Hi ${site.shortName}, I'm planning a stay in Wayanad.`} />
+    <label for="ld-name">Your name</label>
+    <input id="ld-name" type="text" data-k="Name" autocomplete="name" required maxlength="60" />
+    <label for="ld-phone">Phone / WhatsApp</label>
+    <input id="ld-phone" type="tel" data-k="Phone" autocomplete="tel" inputmode="tel" required pattern="[0-9+()\- ]{10,16}" placeholder="+91 98765 43210" />
+    <label for="ld-msg">Message <span>(dates, guests, questions)</span></label>
+    <textarea id="ld-msg" data-k="Message" rows="3" maxlength="500" placeholder="e.g. 4 adults, 20–22 Dec, family suite"></textarea>
+    <button class="btn btn--wa" type="submit"><WaIcon /><span>Send on WhatsApp</span></button>
+    <p class="small">Or call <a href={`tel:${site.phoneE164}`}>{site.phone}</a>. Nothing is stored on this website.</p>
+  </form>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const d = document.querySelector('[data-lead]');
+    if (!d || !d.showModal) return;
+    const KEY = 'lead-popup';
+    const done = () => sessionStorage.setItem(KEY, '1');
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest && e.target.closest('a[href*="wa.me"],a[href^="tel:"]');
+      if (a) done();
+    });
+    document.addEventListener('submit', done, true);
+    setTimeout(() => {
+      if (sessionStorage.getItem(KEY) || document.querySelector('dialog[open]')) return;
+      done();
+      d.showModal();
+    }, 30000);
+    d.addEventListener('click', (e) => e.target === d && d.close());
+    const f = d.querySelector('[data-lead-form]');
+    f.addEventListener('submit', () => {
+      const lines = [...f.querySelectorAll('[data-k]')].map((el) => el.dataset.k + ': ' + (el.value.trim() || '-'));
+      lines.push('Page: ' + location.pathname);
+      f.elements.text.value = f.elements.text.defaultValue + '\n' + lines.join('\n');
+      setTimeout(() => d.close(), 300);
+    });
+  })();
+</script>
+
+<style>
+  .lead {
+    width: min(26rem, calc(100vw - 2rem));
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--paper);
+    color: var(--pepper);
+    box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.55);
+  }
+  .lead::backdrop {
+    background: rgb(12 20 16 / 0.6);
+    backdrop-filter: blur(2px);
+  }
+  .lead[open] {
+    animation: lead-in 0.35s ease-out;
+  }
+  @keyframes lead-in {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+  .top {
+    position: relative;
+    isolation: isolate;
+    background: var(--tea);
+    color: #e5ede8;
+    padding: 1.4rem 1.4rem 1.2rem;
+  }
+  .top :global(.lead-lines) {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    color: rgb(255 255 255 / 0.12);
+  }
+  .eyebrow {
+    margin: 0 0 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--turmeric-light);
+  }
+  h2 {
+    color: #fff;
+    font-size: var(--step-2);
+    margin: 0 2rem 0.4rem 0;
+  }
+  .top p:last-of-type {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  .x {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.15);
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  .body {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.2rem 1.4rem 1.4rem;
+  }
+  label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+  }
+  label span {
+    font-weight: 400;
+    color: var(--monsoon-ink);
+  }
+  input,
+  textarea {
+    font: inherit;
+    min-height: 46px;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--monsoon);
+    border-radius: 6px;
+    background: #fff;
+    width: 100%;
+  }
+  textarea {
+    resize: vertical;
+  }
+  .btn {
+    margin-top: 0.8rem;
+    justify-content: center;
+  }
+  .small {
+    margin: 0.3rem 0 0;
+    font-size: 0.8rem;
+    color: var(--monsoon-ink);
+    text-align: center;
+  }
+</style>

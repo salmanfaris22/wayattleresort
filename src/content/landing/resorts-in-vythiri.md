@@ -2,8 +2,8 @@
 # TODO(launch): owner to confirm distances from the exact resort location
 status: published
 updated: 2026-11-03
-seoTitle: "Resort in Vythiri, Wayanad: Rooms, Rates & How to Reach"
-description: "Mistvale is a small resort in Vythiri, Wayanad, near Pookode Lake and the Lakkidi viewpoint. Rooms, rates, directions from Kozhikode and things to do nearby."
+seoTitle: "Resort in Vythiri, Wayanad: Rooms, Contact & How to Reach"
+description: "Mistvale is a small resort in Vythiri, Wayanad, near Pookode Lake and the Lakkidi viewpoint. Rooms, contact, directions from Kozhikode and things to do nearby."
 h1: "Resort in Vythiri, Wayanad"
 breadcrumb: "Resort in Vythiri"
 lede: "Vythiri is the first part of Wayanad you reach after the Thamarassery Ghat: cooler air, tea estates and Pookode Lake down the road. Our estate is here, {{km:pookode-lake}} from the lake."
@@ -38,7 +38,7 @@ faqs:
     a: "Yes. KSRTC buses between Kozhikode and Kalpetta, Sulthan Bathery or Mysuru run through Vythiri on NH 766. Get off at Vythiri town and message us; we can arrange a taxi for the last stretch."
   - q: "How do I contact the resort directly?"
     a: "Call or WhatsApp {{phone}}. You will talk to the people who run the resort, and there is no booking fee."
-related: [where-to-stay-in-wayanad, wayanad-resort-prices, things-to-do-in-wayanad, family-resorts-in-wayanad]
+related: [where-to-stay-in-wayanad, resorts-in-wayanad-for-couples, things-to-do-in-wayanad, family-resorts-in-wayanad]
 enquiry: "stay in Vythiri"
 ---
 
@@ -59,4 +59,4 @@ Pookode Lake is the closest outing, ten minutes away, with boats and a walking p
 
 ## Booking direct with us
 
-Mistvale is a small, owner-run resort in Vythiri. You can see every room, price and policy on this site, and book by WhatsApp or phone with no booking fee. For directions and our map pin, see the [contact page](/contact/).
+Mistvale is a small, owner-run resort in Vythiri. You can see every room and policy on this site, and book by WhatsApp or phone with no booking fee. For directions and our map pin, see the [contact page](/contact/).

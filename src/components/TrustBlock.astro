@@ -17,7 +17,7 @@ const { updated } = Astro.props;
     <div><dt>Address</dt><dd>{fullAddress}</dd></div>
     <div><dt>Phone and WhatsApp</dt><dd><a href={`tel:${site.phoneE164}`}>{site.phone}</a></dd></div>
     <div><dt>Check-in / out</dt><dd>{fmtTime(site.checkIn)} / {fmtTime(site.checkOut)}</dd></div>
-    <div><dt>Policies</dt><dd><a href="/wayanad-resort-prices/#policies">Advance, cancellation and children</a></dd></div>
+    <div><dt>Policies</dt><dd><a href="/contact/#policies">Advance, cancellation and children</a></dd></div>
   </dl>
   {
     updated && (

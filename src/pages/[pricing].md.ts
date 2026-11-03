@@ -2,7 +2,10 @@ import type { APIRoute } from 'astro';
 import { site, fmtTime } from '../data/site';
 import { getRooms, planFor, totals, inr, describePlan } from '../lib/inventory';
 
-// Plain-markdown rates for AI assistants and booking agents (linked from llms.txt).
+// Plain-markdown rates for AI assistants (linked from llms.txt). Only built when site.showPrices is true.
+export function getStaticPaths() {
+  return site.showPrices ? [{ params: { pricing: 'pricing' } }] : [];
+}
 export const GET: APIRoute = async ({ site: base }) => {
   const rooms = await getRooms();
   const t = totals(rooms);

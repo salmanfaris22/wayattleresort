@@ -3,7 +3,7 @@
 status: published
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad with Swimming Pool | Mistvale, Vythiri"
-description: "Outdoor pool with a shallow end, plus a private plunge pool villa, on a tea estate in Vythiri, Wayanad. Pool timings, depth, rooms and prices. Book on WhatsApp."
+description: "Outdoor pool with a shallow end, plus a private plunge pool villa, on a tea estate in Vythiri, Wayanad. Pool timings, depth and rooms. Book on WhatsApp."
 h1: "Resort in Wayanad with a swimming pool, on a tea estate in Vythiri"
 breadcrumb: "Resort with swimming pool"
 lede: "An outdoor pool on the lawn below the tea, with a shallow end for children, and a private plunge pool at the villa. Every room has pool access, and breakfast is included."
@@ -38,8 +38,8 @@ faqs:
   - q: "What should we wear in the pool?"
     a: "Proper swimwear, please; cotton clothes shed fibres and cloud the filter. Pool towels are provided, so you only need to bring your swimwear and sunscreen."
   - q: "Are there cheaper resorts in Wayanad with a pool?"
-    a: "Yes. Many smaller resorts and homestays around Kalpetta and Vythiri have pools at lower prices than ours. Here you pay for the estate setting, a pool shared by only a few rooms, and food cooked on site. Our lowest rate with pool access is {{price:plantation-cottage}} a night for two with breakfast."
-related: [family-resorts-in-wayanad, private-resort-in-wayanad, resorts-in-wayanad-for-couples, wayanad-resort-prices]
+    a: "Yes. Many smaller resorts and homestays around Kalpetta and Vythiri have pools at lower prices than ours. Here you pay for the estate setting, a pool shared by only a few rooms, and food cooked on site. Every room includes pool access and breakfast; ask us on WhatsApp for rates on your dates."
+related: [family-resorts-in-wayanad, private-resort-in-wayanad, resorts-in-wayanad-for-couples, group-stays-in-wayanad]
 enquiry: "pool stay"
 ---
 

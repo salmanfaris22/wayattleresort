@@ -3,10 +3,10 @@
 status: published
 updated: 2026-11-03
 seoTitle: "Group Stay in Wayanad for Friends & Families | Mistvale"
-description: "Group stay in Vythiri, Wayanad for friends, families and teams: room plans for 5 to {{maxGuests}} guests, per-person costs, campfire, pool and Kerala meals."
+description: "Group stay in Vythiri, Wayanad for friends, families and teams: room plans for 5 to {{maxGuests}} guests, campfire, pool, Kerala meals and whole-resort booking."
 h1: "Group stay in Wayanad for friends and big families"
 breadcrumb: "Group stays"
-lede: "Room plans, per-person costs and food for groups of five to {{maxGuests}}, on a quiet estate with a pool, a campfire lawn and a Kerala kitchen."
+lede: "Room plans and food for groups of five to {{maxGuests}}, on a quiet estate with a pool, a campfire lawn and a Kerala kitchen."
 heroImage: "experiences/evening-campfire"
 heroAlt: "Campfire burning on a cold night"
 primaryKeyword: "group stay in Wayanad"
@@ -14,7 +14,7 @@ secondaryKeywords: ["resorts in Wayanad for friends", "best group resorts in Way
 intent: commercial
 answer:
   q: "Where can a group stay together in Wayanad?"
-  a: "Groups usually choose between a large homestay, a villa or a small resort booked as a whole. A resort gives each couple or family its own room and bathroom, plus a pool and a kitchen that cooks for everyone. Mistvale hosts groups of up to {{maxGuests}} across {{units}} rooms in Vythiri; ten people start at {{planTotal:10}} a night with breakfast."
+  a: "Groups usually choose between a large homestay, a villa or a small resort booked as a whole. A resort gives each couple or family its own room and bathroom, plus a pool and a kitchen that cooks for everyone. Mistvale hosts groups of up to {{maxGuests}} across {{units}} rooms in Vythiri; ten people fit in {{planRooms:10}} rooms, breakfast included."
 rooms:
   - id: family-suite
     note: "Sleeps up to five in two bedrooms; the group's base for cards and carrom."
@@ -40,8 +40,8 @@ faqs:
   - q: "How do groups get around for sightseeing?"
     a: "We can book a tempo traveller or jeeps with local drivers for day trips to Banasura, Edakkal Caves or Kuruva Island. You pay the driver directly, and there is parking for a tempo traveller inside the estate."
   - q: "Is a group of five charged per person or per room?"
-    a: "Per room. Five people fit in the family suite with one extra mattress, which costs {{planTotal:5}} a night with breakfast, about {{planPerPerson:5}} each."
-related: [resort-in-wayanad-for-10-people, private-resort-in-wayanad, wayanad-resort-activities, wayanad-resort-prices]
+    a: "Per room, not per person, so the cost per head falls as rooms fill up. Five people fit in the family suite with one extra mattress. Send your dates on WhatsApp for the total."
+related: [resort-in-wayanad-for-10-people, private-resort-in-wayanad, wayanad-resort-activities, family-resorts-in-wayanad]
 enquiry: "group stay"
 ---
 

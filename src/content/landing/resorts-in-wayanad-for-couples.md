@@ -3,7 +3,7 @@
 status: published
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad for Couples: Private Pool & Tree House"
-description: "Couple-friendly resort in Vythiri, Wayanad: a private pool villa, a tree house in the silver oaks and quiet cottages. Honeymoon ideas, prices, WhatsApp booking."
+description: "Couple-friendly resort in Vythiri, Wayanad: a private pool villa, a tree house in the silver oaks and quiet cottages. Honeymoon ideas and WhatsApp booking."
 h1: "Resort in Wayanad for couples, with a private pool or a tree house"
 breadcrumb: "Resort for couples"
 lede: "Two rooms built for two: a villa with its own plunge pool facing the tea valley, and a tree house six metres up among silver oaks. Both include breakfast on your own deck or balcony."
@@ -34,10 +34,10 @@ faqs:
   - q: "Can you arrange a honeymoon or anniversary setup?"
     a: "Yes. With a day's notice we can set up a candle-light dinner on the villa deck and flowers in the room, charged separately. Tell us the date and anything you would like when you book."
   - q: "Which room is cheapest for a couple?"
-    a: "The plantation cottage at {{price:plantation-cottage}} a night with breakfast. The tree house is {{price:tree-house}} and the Private Pool Villa {{price:pool-villa}}. Weekday dates are usually easier to get."
+    a: "The plantation cottage is our most affordable room for two, then the tree house, then the Private Pool Villa. All include breakfast. Send your dates on WhatsApp for the exact rate; weekdays are usually easier to get."
   - q: "Are unmarried couples welcome?"
     a: "Adult couples are welcome. Every guest needs a government photo ID at check-in, as at any hotel or resort in India."
-related: [private-resort-in-wayanad, resorts-in-wayanad-with-swimming-pool, wayanad-resort-activities, wayanad-resort-prices]
+related: [private-resort-in-wayanad, resorts-in-wayanad-with-swimming-pool, wayanad-resort-activities, resorts-in-vythiri]
 enquiry: "couple stay"
 ---
 

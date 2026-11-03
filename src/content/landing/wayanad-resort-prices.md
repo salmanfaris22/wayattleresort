@@ -1,6 +1,6 @@
 ---
 # TODO(launch): owner to confirm rates, taxes, advance and cancellation policy
-status: published
+status: draft # hidden while site.showPrices is false
 updated: 2026-11-03
 seoTitle: "Wayanad Resort Prices 2026: Room Rates | Mistvale, Vythiri"
 description: "Room rates at Mistvale, Vythiri, Wayanad for 2026: every room with breakfast, extra mattresses, group cost per person and booking policy. No booking fee."

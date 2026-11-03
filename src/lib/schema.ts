@@ -20,7 +20,7 @@ export function resortSchema(siteUrl: URL | string, image: string, numberOfRooms
     slogan: site.tagline,
     knowsAbout: ['Wayanad', 'Vythiri', 'Chembra Peak', 'Pookode Lake', 'Banasura Sagar Dam', 'Kerala tea estates'],
     email: site.email,
-    priceRange: site.priceRange,
+    ...(site.showPrices ? { priceRange: site.priceRange } : {}),
     ...(numberOfRooms ? { numberOfRooms } : {}),
     currenciesAccepted: site.currency,
     checkinTime: site.checkIn,
@@ -95,7 +95,7 @@ export function roomSchema(
       amenityFeature: room.amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
       containedInPlace: { '@id': abs('/#resort', siteUrl) },
     },
-    {
+    ...(!site.showPrices ? [] : [{
       '@type': 'Offer',
       name: `${room.name} – nightly rate with breakfast`,
       url,
@@ -111,7 +111,7 @@ export function roomSchema(
       itemOffered: { '@id': roomId },
       offeredBy: { '@id': abs('/#resort', siteUrl) },
       availability: 'https://schema.org/InStock',
-    },
+    }]),
   ];
 }
 

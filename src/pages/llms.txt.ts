@@ -21,14 +21,14 @@ export const GET: APIRoute = async ({ site: base }) => {
     `- Location: ${fullAddress}, India`,
     `- Booking: WhatsApp ${site.phone} (https://wa.me/${site.whatsapp}). No booking fee.`,
     `- Check-in ${fmtTime(site.checkIn)}, check-out ${fmtTime(site.checkOut)}. Breakfast included.`,
-    `- Price range: ${site.priceRange} (full rate card: ${u('/pricing.md')})`,
+    ...(site.showPrices ? [`- Price range: ${site.priceRange} (full rate card: ${u('/pricing.md')})`] : ['- Prices: on request by WhatsApp for your dates']),
     `- Capacity: ${t.units} rooms, ${t.standard} guests in beds, up to ${t.max} with extra mattresses; whole-resort private booking available`,
     `- Amenities: ${site.amenities.join(', ')}`,
     '',
     '## Rooms',
     ...rooms.map(
       (r) =>
-        `- [${r.data.name}](${u(`/rooms/${r.id}/`)}): ${r.data.guestsNote}, ${r.data.sizeSqft} sq ft, ${r.data.bed}, from ₹${r.data.priceFrom.toLocaleString('en-IN')} a night. ${r.data.summary}`,
+        `- [${r.data.name}](${u(`/rooms/${r.id}/`)}): ${r.data.guestsNote}, ${r.data.sizeSqft} sq ft, ${r.data.bed}, ${site.showPrices ? `from ₹${r.data.priceFrom.toLocaleString('en-IN')} a night. ` : ''}${r.data.summary}`,
     ),
     '',
     '## Stays by need',

@@ -2,7 +2,7 @@
 name: Tree House
 order: 2
 seoTitle: Tree House Stay in Wayanad among Silver Oaks | Mistvale
-seoDescription: Sleep 6 m up in a wooden tree house in Wayanad, built among silver oaks over a coffee plantation. Queen bed, private balcony. From ₹8,500 with breakfast.
+seoDescription: Sleep 6 m up in a wooden tree house in Wayanad, built among silver oaks over a coffee plantation. Queen bed, private balcony and breakfast. Book on WhatsApp.
 keyword: tree house in Wayanad
 summary: A wooden room built around three silver oaks, 6 m above the coffee. A queen bed, a balcony at canopy height and birds at eye level in the morning.
 guests: 2

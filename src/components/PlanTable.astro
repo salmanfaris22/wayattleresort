@@ -16,8 +16,8 @@ const { rows, caption = 'Room plans for your group' } = Astro.props;
       <tr>
         <th scope="col">Group</th>
         <th scope="col">Rooms</th>
-        <th scope="col">From / night</th>
-        <th scope="col">Per person</th>
+        {site.showPrices && <th scope="col">From / night</th>}
+        {site.showPrices && <th scope="col">Per person</th>}
       </tr>
     </thead>
     <tbody>
@@ -29,8 +29,8 @@ const { rows, caption = 'Room plans for your group' } = Astro.props;
               {describePlan(plan)}
               {plan.wholeResort && <span class="whole">Whole resort, private</span>}
             </td>
-            <td>{inr(plan.nightly)}</td>
-            <td>{inr(plan.perPerson)}</td>
+            {site.showPrices && <td>{inr(plan.nightly)}</td>}
+            {site.showPrices && <td>{inr(plan.perPerson)}</td>}
           </tr>
         ))
       }
@@ -38,8 +38,7 @@ const { rows, caption = 'Room plans for your group' } = Astro.props;
   </table>
 </div>
 <p class="muted">
-  Worked out from our real rooms: the fewest rooms at the lowest total, breakfast included. Extra mattresses are {inr(site.extraMattressPrice)} a night.
-  Weekend and holiday rates are higher.
+  Worked out from our real rooms: the fewest rooms for your group, breakfast included. Send your dates on WhatsApp for the total.
 </p>
 
 <style>

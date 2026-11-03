@@ -2,7 +2,7 @@
 name: Plantation Cottage
 order: 3
 seoTitle: Plantation Cottage Stay in Wayanad, Kerala | Mistvale
-seoDescription: A Kerala-style plantation cottage in Wayanad with a tiled roof, verandah over the coffee and a king bed. Pet-friendly on request. From ₹6,500 with breakfast.
+seoDescription: A Kerala-style plantation cottage in Wayanad with a tiled roof, verandah over the coffee and a king bed. Pet-friendly on request, breakfast included.
 keyword: plantation stay in Wayanad
 summary: A tiled-roof Kerala cottage with a wide verandah over the coffee and pepper. A king bed, an extra mattress for a child, and the shortest walk to the restaurant.
 guests: 3
@@ -18,7 +18,7 @@ stockPhoto: true
 units: 2 # TODO: number of identical rooms of this type
 sleeps: 3 # max guests incl. extra mattress
 flags: [couples, family, levelAccess, petsOnRequest]
-related: [family-resorts-in-wayanad, wayanad-resort-prices, group-stays-in-wayanad]
+related: [family-resorts-in-wayanad, resorts-in-vythiri, group-stays-in-wayanad]
 amenities: [King bed, Extra mattress on request, Verandah with chairs, Attached bathroom with hot water, Ceiling fan, Tea and coffee tray, Free Wi-Fi, Breakfast included]
 goodFor: [Small families, Pet owners (on request), Longer stays on a budget]
 ---

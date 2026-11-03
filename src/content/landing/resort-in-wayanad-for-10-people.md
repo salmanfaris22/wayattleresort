@@ -2,11 +2,11 @@
 # TODO(launch): owner to confirm room plan, meals and transport for groups of ten
 status: published
 updated: 2026-11-03
-seoTitle: "Resort in Wayanad for 10 People: Room Plan & Price | Mistvale"
-description: "Staying in Wayanad with 10 people? See the exact room plan, total and per-person price with breakfast, plus the pool, campfire and meals for your group."
+seoTitle: "Resort in Wayanad for 10 People: Room Plan | Mistvale"
+description: "Staying in Wayanad with 10 people? See the exact room plan with breakfast, plus the pool, campfire, Kerala meals and day trips we arrange for your group."
 h1: "Resort in Wayanad for 10 people"
 breadcrumb: "Stay for 10 people"
-lede: "Ten guests fit into {{planRooms:10}} rooms here, from {{planTotal:10}} a night with breakfast, about {{planPerPerson:10}} per person. This is exactly how we would put your group up."
+lede: "Ten guests fit into {{planRooms:10}} rooms here, with breakfast, a pool and a campfire lawn. This is exactly how we would put your group up."
 heroImage: "gallery/banasura-hills-and-fields"
 heroAlt: "Banasura hills above farmland near the reservoir in Wayanad"
 primaryKeyword: "10 person resort Wayanad"
@@ -14,7 +14,7 @@ secondaryKeywords: ["best 10 person resort Wayanad", "10 person resort Wayanad w
 intent: transactional
 answer:
   q: "Where can 10 people stay together in Wayanad?"
-  a: "Ten people can stay together in a large villa, a homestay with several rooms or a small resort. At Mistvale in Vythiri a group of ten takes {{planRooms:10}} rooms ({{planDesc:10}}) from {{planTotal:10}} a night with breakfast, roughly {{planPerPerson:10}} per person, with a pool and a campfire lawn."
+  a: "Ten people can stay together in a large villa, a homestay with several rooms or a small resort. At Mistvale in Vythiri a group of ten takes {{planRooms:10}} rooms ({{planDesc:10}}), with breakfast, a pool and a campfire lawn, and every room has its own bathroom."
 plans: [10]
 planWithPrivatePool: true
 facilities: [pool, campfire, restaurant, parking]
@@ -23,8 +23,8 @@ requires:
   minGuests: 10
   facilities: [pool]
 faqs:
-  - q: "How much does a Wayanad resort cost for 10 people?"
-    a: "At Mistvale, from {{planTotal:10}} a night for ten with breakfast, about {{planPerPerson:10}} per person. Weekends, long weekends and late December cost more. Lunch, dinner and sightseeing transport are extra."
+  - q: "How is a stay for 10 people priced?"
+    a: "Per room, with breakfast included. Ten people take {{planRooms:10}} rooms, so the cost per head is lower than in a hotel. Send your dates on WhatsApp for the total; weekends and late December cost more, and lunch, dinner and transport are extra."
   - q: "Can 10 people stay in one room?"
     a: "No. Our largest room, the family suite, sleeps five with an extra mattress. For ten we use {{planRooms:10}} rooms, so everyone has a real bed and a bathroom close by."
   - q: "Is the plan different for 10 friends and for two families?"
@@ -33,15 +33,15 @@ faqs:
     a: "Yes, by booking the whole resort. The family suite has two separate bedrooms, so together with the other rooms there is a bedroom for each couple."
   - q: "Is there a pool for a group of ten?"
     a: "Yes, the shared outdoor pool on the lawn, open from 7 am to 7 pm. With only {{units}} rooms on the estate, it never gets crowded."
-related: [group-stays-in-wayanad, private-resort-in-wayanad, family-resorts-in-wayanad, wayanad-resort-prices]
+related: [group-stays-in-wayanad, private-resort-in-wayanad, family-resorts-in-wayanad, wayanad-resort-activities]
 enquiry: "group of 10"
 ---
 
 ## How we would host ten guests
 
-The plan above uses the fewest rooms for ten people at the lowest total, and it is worked out from our actual rooms and prices. Every room has its own bathroom. If someone in the group cannot climb stairs, we keep them on the level path between the car park, the cottages, the family suite and the restaurant.
+The plan above uses the fewest rooms for ten people, and it is worked out from our actual rooms and prices. Every room has its own bathroom. If someone in the group cannot climb stairs, we keep them on the level path between the car park, the cottages, the family suite and the restaurant.
 
-The second plan includes the Private Pool Villa. It costs more, but many groups of ten book it for a couple celebrating a birthday or anniversary.
+The second plan includes the Private Pool Villa. Many groups of ten book it for a couple celebrating a birthday or anniversary.
 
 ## A two-day plan for a group of ten
 

@@ -3,7 +3,7 @@
 status: published
 updated: 2026-11-03
 seoTitle: "Private Resort in Wayanad: Book the Whole Estate | Mistvale"
-description: "Book the whole Mistvale estate in Vythiri, Wayanad for family or friends, or the Private Pool Villa for two. Capacity, prices and how private booking works."
+description: "Book the whole Mistvale estate in Vythiri, Wayanad for family or friends, or the Private Pool Villa for two. Capacity and how private booking works."
 h1: "Private resort in Wayanad: the whole estate, just for your group"
 breadcrumb: "Private resort booking"
 lede: "Take every room on the estate so the pool, lawn and campfire are yours alone. If there are only two of you, the Private Pool Villa gives you a plunge pool of your own."
@@ -41,7 +41,7 @@ faqs:
     a: "A birthday dinner or a family get-together for staying guests is fine. We do not host DJs, loud parties or outside guests after 10 pm, because the estate borders homes and forest."
   - q: "Is there a private pool villa with a waterfall view?"
     a: "Not here; there is no waterfall on the estate. Soochipara and Meenmutty falls are each about an hour away, and a stream runs along the bottom of the property, which you hear at night."
-related: [group-stays-in-wayanad, resort-in-wayanad-for-10-people, resorts-in-wayanad-for-couples, wayanad-resort-prices]
+related: [group-stays-in-wayanad, resort-in-wayanad-for-10-people, resorts-in-wayanad-for-couples, wayanad-resort-activities]
 enquiry: "private whole-resort booking"
 ---
 
@@ -54,8 +54,8 @@ Mistvale offers both. A whole-resort booking gives your group every room on the 
 ## How a whole-resort booking works
 
 1. Send your dates and the number of adults and children on WhatsApp.
-2. We check that every room is free, hold them for 24 hours and send the total price.
-3. A part advance confirms the booking; the current advance and cancellation policy is on our prices page.
+2. We check that every room is free, hold them for 24 hours and send the total.
+3. A part advance confirms the booking; the advance and cancellation policy is on our contact page.
 4. A week before arrival we agree a menu with you, so the kitchen can shop for your group.
 5. On arrival, check-in is done together and the estate is yours until check-out.
 

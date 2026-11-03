@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
-import RoomRow from '../../components/RoomRow.astro';
+import RoomCard from '../../components/RoomCard.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import { img } from '../../lib/images';
 import { breadcrumbSchema } from '../../lib/schema';
@@ -12,17 +12,16 @@ const crumbs = [
   { name: 'Home', href: '/' },
   { name: 'Rooms', href: '/rooms/' },
 ];
-const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
 ---
 
 <Base
   title="Wayanad Resort Rooms: Pool Villa, Tree House & Cottages"
-  description="Compare our Wayanad resort rooms: private pool villa, tree house, plantation cottage and family suite. Sizes, beds, guests and prices from ₹6,500 with breakfast."
+  description="Compare our Wayanad resort rooms: private pool villa, tree house, plantation cottage and family suite. Sizes, beds, guests and views, with breakfast included."
   schema={[breadcrumbSchema(crumbs, Astro.site!)]}
 >
   <PageHero
     title="Rooms and villas at our Wayanad resort"
-    lede="Four room types on one tea-and-coffee hillside. Every rate includes breakfast, Wi-Fi and parking."
+    lede="Four room types on one tea-and-coffee hillside. Every stay includes breakfast, Wi-Fi and parking."
     image={img('hero/wayanad-tea-estate-misty-hills')}
     imageAlt="Tea estates on the Wayanad hills under low cloud"
     crumbs={crumbs}
@@ -40,7 +39,6 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
               <th scope="col">Size</th>
               <th scope="col">Bed</th>
               <th scope="col">View</th>
-              <th scope="col">From / night</th>
             </tr>
           </thead>
           <tbody>
@@ -52,20 +50,22 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
                   <td>{r.data.sizeSqft} sq ft</td>
                   <td>{r.data.bed}</td>
                   <td>{r.data.view}</td>
-                  <td>{inr(r.data.priceFrom)}</td>
                 </tr>
               ))
             }
           </tbody>
         </table>
       </div>
-      <p class="muted">Prices are for two guests with breakfast and change with season and long weekends. Message us for an exact quote.</p>
+      <p class="muted">Every room includes breakfast. Send your dates on WhatsApp for availability and the rate.</p>
     </div>
   </section>
 
   <section class="section list">
-    <div class="wrap rooms">
-      {rooms.map((room, i) => <RoomRow room={room} flip={i % 2 === 1} headingLevel="h2" />)}
+    <div class="wrap">
+      <h2>All rooms</h2>
+      <div class="room-grid">
+        {rooms.map((room) => <RoomCard room={room} note={room.data.summary} />)}
+      </div>
     </div>
   </section>
 
@@ -86,12 +86,10 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
   .list {
     background: var(--paper);
   }
-  .rooms {
+  .room-grid {
     display: grid;
-    gap: var(--space-xl);
-  }
-  .rooms :global(h2) {
-    font-size: var(--step-3);
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
   .muted {
     margin-top: 0.8rem;

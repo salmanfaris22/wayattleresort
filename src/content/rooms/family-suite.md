@@ -2,7 +2,7 @@
 name: Family Suite
 order: 4
 seoTitle: Family Resort Suite in Wayanad for 4 Guests | Mistvale
-seoDescription: A two-room family suite in Wayanad that sleeps four, with a king room, a twin room and a sitting area near the pool. From ₹10,500 a night with breakfast.
+seoDescription: A two-room family suite in Wayanad that sleeps four, with a king room, a twin room and a sitting area near the pool. Breakfast included; book on WhatsApp.
 keyword: family resort in Wayanad
 summary: Two connected rooms for a family of four, a king room and a twin room, with a sitting area between them and a short walk to the pool and play lawn.
 guests: 4

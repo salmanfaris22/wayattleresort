@@ -3,7 +3,7 @@
 status: published
 updated: 2026-11-03
 seoTitle: "Family Resort in Wayanad with Pool & Family Suite | Mistvale"
-description: "Family resort in Vythiri, Wayanad with a pool shallow end, a two-room family suite, level paths and Kerala meals. Room plans and prices; book on WhatsApp."
+description: "Family resort in Vythiri, Wayanad with a pool shallow end, a two-room family suite, level paths and Kerala meals. Room plans for families; book on WhatsApp."
 h1: "Family resort in Wayanad with a pool and room to spread out"
 breadcrumb: "Family resort in Wayanad"
 lede: "A two-room family suite, cottages on level paths and a pool with a shallow end, on a quiet tea estate in Vythiri. Breakfast is included and the kitchen is used to cooking for children."
@@ -31,14 +31,14 @@ faqs:
   - q: "Is the pool safe for young children?"
     a: "The pool has a 0.9 m shallow end and is open from 7 am to 7 pm. There is no lifeguard, so children need an adult with them in the water. The family suite verandah looks straight onto the pool lawn."
   - q: "Do children stay free?"
-    a: "{{policy:children}}. A fifth person in the family suite sleeps on an extra mattress at {{extraMattress}} a night, breakfast included."
+    a: "{{policy:children}}. A fifth person in the family suite sleeps on an extra mattress, breakfast included."
   - q: "Can we get a cot or a high chair?"
     a: "Yes, both are free on request. Tell us the child's age when you book so the room is ready when you arrive."
   - q: "Which room is best if grandparents are travelling with us?"
     a: "The family suite and the plantation cottages are on a level path from the car park to the restaurant and pool. The tree house has a steep staircase and the pool villa is about 120 steps up, so we do not suggest them for older guests."
   - q: "Is there a budget-friendly family option?"
-    a: "The plantation cottage at {{price:plantation-cottage}} a night suits two adults and a child. For a family of four or five, the family suite at {{price:family-suite}} costs less per person than booking two rooms."
-related: [resorts-in-wayanad-with-swimming-pool, group-stays-in-wayanad, wayanad-resort-prices, wayanad-resort-activities]
+    a: "The plantation cottage is our most affordable room and suits two adults and a child. For a family of four or five, the family suite costs less per person than booking two rooms. Send your dates on WhatsApp for the exact rate."
+related: [resorts-in-wayanad-with-swimming-pool, group-stays-in-wayanad, resort-in-wayanad-for-10-people, wayanad-resort-activities]
 enquiry: "family stay"
 ---
 
@@ -55,7 +55,7 @@ Wayanad trips with children go best when the resort removes the small daily prob
 
 The family suite is the room most families pick: a king room for parents, a twin room for children, a bathroom for each and a small sitting area with board games and a carrom board. It faces the pool lawn, so parents can sit on the verandah while children swim within sight.
 
-Smaller families often take a plantation cottage, which has a king bed and space for a mattress. Families of six to eight usually book the family suite with a cottage next door; the table above shows what that costs.
+Smaller families often take a plantation cottage, which has a king bed and space for a mattress. Families of six to eight usually book the family suite with a cottage next door; the plan table above shows how that works.
 
 ## A simple two-day plan with children
 

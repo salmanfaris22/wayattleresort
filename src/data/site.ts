@@ -25,6 +25,8 @@ export const site = {
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Vythiri%2C+Wayanad%2C+Kerala', // TODO: resort's Google Maps link
   checkIn: '13:00', // TODO
   checkOut: '11:00', // TODO
+  // Prices are hidden on the site (guests ask on WhatsApp). Set true to show rates everywhere again.
+  showPrices: false,
   priceRange: '₹6,500 – ₹12,500 per night', // TODO
   currency: 'INR',
   facts: [
@@ -80,7 +82,6 @@ export const fullAddress = [
 
 export const nav = [
   { href: '/rooms/', label: 'Rooms' },
-  { href: '/wayanad-resort-prices/', label: 'Prices' },
   { href: '/group-stays-in-wayanad/', label: 'Groups' },
   { href: '/things-to-do-in-wayanad/', label: 'Wayanad guide' },
   { href: '/contact/', label: 'Contact' },

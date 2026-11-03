@@ -96,7 +96,7 @@ const schema = [
     }
 
     {
-      d.priceTable && (
+      d.priceTable && site.showPrices && (
         <section aria-label="Room rates">
           <PriceTable rooms={rooms} />
         </section>
@@ -118,7 +118,7 @@ const schema = [
           <dl>
             <div><dt>Rooms</dt><dd>{whole.units}</dd></div>
             <div><dt>Guests</dt><dd>{whole.standard} in beds, {whole.max} with extra mattresses</dd></div>
-            <div><dt>From / night</dt><dd>{`₹${wholePlan.nightly.toLocaleString('en-IN')}`} for {whole.max} guests, with breakfast</dd></div>
+            {site.showPrices && <div><dt>From / night</dt><dd>{`₹${wholePlan.nightly.toLocaleString('en-IN')}`} for {whole.max} guests, with breakfast</dd></div>}
             <div><dt>Minimum stay</dt><dd>{site.wholeProperty.minNights} nights</dd></div>
           </dl>
           <p class="muted">{site.wholeProperty.note}</p>
