@@ -1,7 +1,6 @@
 ---
 // Lightweight SVG map of Wayanad (schematic, not to scale). Replaces a heavy Maps iframe.
 import { places, towns } from '../data/places';
-import { site } from '../data/site';
 import ContourLines from './ContourLines.astro';
 
 const W = 600,
@@ -39,7 +38,7 @@ const short: Record<string, string> = {
     <ContourLines class="map-lines" />
     <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="map-title map-desc">
       <title id="map-title">Schematic map of Wayanad</title>
-      <desc id="map-desc">The resort in {site.baseTown} and the main places to visit in Wayanad, Kerala. Not to scale.</desc>
+      <desc id="map-desc">Main towns and places to visit in Wayanad, Kerala. Not to scale.</desc>
       {
         towns.map((t) => {
           const [dx, dy, anchor] = label(townLabel, t.name);
@@ -47,7 +46,7 @@ const short: Record<string, string> = {
             <g class:list={['town', { base: t.base }]}>
               <rect x={x(t.lng) - 4} y={y(t.lat) - 4} width="8" height="8" />
               <text x={x(t.lng) + dx} y={y(t.lat) + (t.base ? dy : dy === 5 ? -8 : dy)} text-anchor={anchor}>
-                {t.base ? `${site.shortName} (${t.name})` : t.name}
+                {t.name}
               </text>
             </g>
           );
@@ -71,7 +70,7 @@ const short: Record<string, string> = {
     </svg>
   </div>
   <figcaption>
-    Schematic map, not to scale. <a href={site.mapsUrl} target="_blank" rel="noopener">Open the resort in Google Maps</a>
+    Schematic map, not to scale. <a href="https://www.google.com/maps/search/?api=1&query=Wayanad%2C+Kerala" target="_blank" rel="noopener">Open Wayanad in Google Maps</a>
   </figcaption>
 </figure>
 

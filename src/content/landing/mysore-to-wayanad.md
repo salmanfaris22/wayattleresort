@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check distances and times from the exact resort location
 status: published
 updated: 2026-11-03
 seoTitle: "Mysore to Wayanad: Distance, Route & Forest Timings"
@@ -16,8 +15,6 @@ answer:
   q: "How far is Wayanad from Mysore?"
   a: "About 150 km from Mysuru to Vythiri, a drive of 3.5 to 4 hours. The road goes south to Gundlupet, through the Bandipur and Muthanga forests on NH 766, then via Sulthan Bathery and Kalpetta. The forest stretch is closed to most traffic between 9 pm and 6 am, so drive it in daylight."
 places: [muthanga-wildlife-sanctuary, edakkal-caves, banasura-sagar-dam]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "Is there another route from Mysore that avoids Bandipur?"
     a: "There is a route via HD Kote and Bavali towards Mananthavady in north Wayanad, but it also passes through forest with its own restrictions. For Vythiri in south Wayanad, the Gundlupet–Bandipur route is shorter and simpler."
@@ -51,4 +48,4 @@ Gundlupet is the last place for fuel and snacks before the forest. After the bor
 
 ## From Mysuru without a car
 
-State buses run often from Mysuru to Sulthan Bathery and Kalpetta during the day. From Kalpetta, take a local bus or taxi to Vythiri. Message us before you travel and we can arrange a taxi from Kalpetta.
+State buses run often from Mysuru to Sulthan Bathery and Kalpetta during the day. From Kalpetta, take a local bus or taxi to Vythiri. From Mysuru, resorts near Sulthan Bathery are the quickest to reach.

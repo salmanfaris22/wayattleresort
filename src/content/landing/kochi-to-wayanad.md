@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check distances and times from the exact resort location
 status: published
 updated: 2026-11-03
 seoTitle: "Kochi to Wayanad: Distance, Route, Train & Drive Time"
@@ -16,8 +15,6 @@ answer:
   q: "How far is Wayanad from Kochi?"
   a: "About 260 km from Kochi to Vythiri in south Wayanad, a drive of 6 to 7 hours via Thrissur and Kozhikode, finishing up the Thamarassery Ghat. Many travellers instead take a train from Ernakulam to Kozhikode, about 4 hours, then drive the last 60 km, about 2 hours."
 places: [pookode-lake, chembra-peak, soochipara-falls]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "Is it better to drive or take the train from Kochi?"
     a: "The train is more relaxing: Ernakulam to Kozhikode is about 4 hours on frequent trains, then a taxi up the ghat. Driving gives you flexibility for stops, but the coastal highway through Thrissur and Malappuram is busy most of the day."
@@ -45,11 +42,11 @@ Start early to clear Kochi and Thrissur before traffic builds. The last stretch 
 
 ## By train
 
-Many trains run between Ernakulam and Kozhikode through the day. From Kozhikode station, it is about 2 hours by taxi to Vythiri. We can arrange a taxi to meet your train; message us your train number and arrival time.
+Many trains run between Ernakulam and Kozhikode through the day. From Kozhikode station, it is about 2 hours by taxi to Vythiri. Ask us when you book and we will tell you how to reach your resort from the station.
 
 ## Arriving in Vythiri
 
-Vythiri is the first town after the top of the ghat, so you reach the resort before the rest of Wayanad. From here, Pookode Lake is ten minutes away and Chembra Peak and Soochipara Falls are under an hour.
+Vythiri is the first town after the top of the ghat, so resorts there are the quickest to reach from Kochi. From here, Pookode Lake is ten minutes away and Chembra Peak and Soochipara Falls are under an hour.
 
 ## Combining Wayanad with the rest of Kerala
 

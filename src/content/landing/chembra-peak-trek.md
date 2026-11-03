@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check current trek status, permit process and timings with the forest department
 status: published
 updated: 2026-11-03
 seoTitle: "Chembra Peak Trek, Wayanad: Permit, Heart Lake & Tips"
@@ -16,8 +15,6 @@ answer:
   q: "How do you trek Chembra Peak in Wayanad?"
   a: "Chembra Peak, about 2,100 m, is reached on a guided forest-department trek that starts near Meppadi, about {{km:chembra-peak}} from Vythiri. Permits are issued in the morning to a limited number of groups, the trek goes up through grassland to a heart-shaped lake, and it closes during fire season, heavy rain and conservation periods."
 places: [chembra-peak, soochipara-falls, meenmutty-falls]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "Is the Chembra Peak trek open now?"
     a: "It depends on the season and forest-department decisions. The trek closes during the fire-prone dry months, in heavy monsoon rain, and has closed for long periods for conservation. Ask us or the forest office the day before; we check for our guests."
@@ -26,7 +23,7 @@ faqs:
   - q: "What should I carry for Chembra?"
     a: "Water (at least 1.5 litres each), a cap and sunscreen, light rain gear, shoes with grip, a snack and cash for fees. Plastic is restricted in the area, so bring a steel bottle. Drones and littering are not allowed."
   - q: "Can children do the Chembra trek?"
-    a: "Older children who walk regularly can manage it with breaks. For young children, Pookode Lake and the plantation walk at the resort are better choices."
+    a: "Older children who walk regularly can manage it with breaks. For young children, Pookode Lake or a plantation walk are better choices."
 related: [wayanad-resort-activities, things-to-do-in-wayanad, banasura-sagar-dam, resorts-in-wayanad-for-couples]
 enquiry: "Chembra trek"
 ---
@@ -52,4 +49,4 @@ The path leaves the tea estates and climbs into open grassland with wide views o
 
 ## Make a day of it
 
-Soochipara Falls and Meenmutty Falls are both close to Meppadi, so a fit group can trek in the morning and visit a waterfall after lunch. We pack breakfast for early starts and can arrange a jeep to the trailhead.
+Soochipara Falls and Meenmutty Falls are both close to Meppadi, so a fit group can trek in the morning and visit a waterfall after lunch. Ask us for a resort near Meppadi if the trek is your main plan; many can pack breakfast for an early start.

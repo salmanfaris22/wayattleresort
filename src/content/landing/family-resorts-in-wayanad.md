@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm every claim on this page (rooms, pool, food, policies)
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Family Resort in Wayanad with Pool & Family Suite | Mistvale"
 description: "Family resort in Vythiri, Wayanad with a pool shallow end, a two-room family suite, level paths and Kerala meals. Room plans for families; book on WhatsApp."
@@ -22,11 +22,7 @@ rooms:
     note: "King bed plus a mattress for a child. The closest room to the restaurant, on a level path."
   - id: pool-villa
     note: "Two adults and a child under 10, with a private plunge pool. About 120 steps up from parking."
-plans: [5, 8]
-facilities: [pool, kidsPool, restaurant, parking, powerBackup]
 places: [pookode-lake, banasura-sagar-dam, kuruva-island, soochipara-falls]
-requires:
-  facilities: [pool]
 faqs:
   - q: "Is the pool safe for young children?"
     a: "The pool has a 0.9 m shallow end and is open from 7 am to 7 pm. There is no lifeguard, so children need an adult with them in the water. The family suite verandah looks straight onto the pool lawn."

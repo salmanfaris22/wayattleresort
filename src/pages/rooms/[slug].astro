@@ -4,10 +4,11 @@ import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
 import { roomMessage } from '../../lib/whatsapp';
-import { breadcrumbSchema, roomSchema } from '../../lib/schema';
+import { breadcrumbSchema, stayTypeSchema } from '../../lib/schema';
 import { creditLine } from '../../lib/images';
-import { site, fmtTime } from '../../data/site';
+import { tiers } from '../../data/site';
 import RelatedPages from '../../components/RelatedPages.astro';
 
 export async function getStaticPaths() {
@@ -25,11 +26,11 @@ const { Content } = await render(room);
 const url = new URL(`/rooms/${room.id}/`, Astro.site).href;
 const crumbs = [
   { name: 'Home', href: '/' },
-  { name: 'Rooms', href: '/rooms/' },
+  { name: 'Stays', href: '/rooms/' },
   { name: r.name, href: `/rooms/${room.id}/` },
 ];
 const ogImg = await getImage({ src: r.image, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
-const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
+const budgetList = r.tiers.map((id) => tiers.find((t) => t.id === id)!.name.replace(' resorts', '')).join(', ');
 ---
 
 <Base
@@ -37,10 +38,10 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
   description={r.seoDescription}
   ogImage={r.image}
   ogAlt={r.imageAlt}
-  schema={[...roomSchema(r, url, new URL(ogImg.src, Astro.site).href, Astro.site!), breadcrumbSchema(crumbs, Astro.site!)]}
+  schema={[stayTypeSchema(r, url, new URL(ogImg.src, Astro.site).href, Astro.site!), breadcrumbSchema(crumbs, Astro.site!)]}
 >
   <PageHero
-    title={`${r.name} in Wayanad`}
+    title={`${r.name} stays in Wayanad`}
     lede={r.summary}
     image={r.image}
     imageAlt={r.imageAlt}
@@ -48,8 +49,7 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
     stockPhoto={r.stockPhoto}
   >
     <div class="hero-cta">
-      <WhatsAppButton message={roomMessage(r.name)} label={`Check ${r.name.toLowerCase()} dates`} />
-      {site.showPrices && <p class="price">From <strong>{inr(r.priceFrom)}</strong> a night with breakfast</p>}
+      <WhatsAppButton message={roomMessage(r.name)} label={`Find a ${r.name.toLowerCase()}`} />
     </div>
   </PageHero>
 
@@ -62,14 +62,11 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
         <h2 id="spec-title">At a glance</h2>
         <dl>
           <div><dt>Guests</dt><dd>{r.guestsNote}</dd></div>
-          <div><dt>Size</dt><dd>{r.sizeSqft} sq ft</dd></div>
-          <div><dt>Bed</dt><dd>{r.bed}</dd></div>
-          <div><dt>View</dt><dd>{r.view}</dd></div>
-          <div><dt>Check-in / out</dt><dd>{fmtTime(site.checkIn)} / {fmtTime(site.checkOut)}</dd></div>
-          {site.showPrices && <div><dt>Price</dt><dd>From {inr(r.priceFrom)} a night</dd></div>}
+          <div><dt>Budgets</dt><dd>{budgetList}</dd></div>
+          <div><dt>Check-in / out</dt><dd>Depends on the resort; we confirm it when you book</dd></div>
         </dl>
-        <h3>In the room</h3>
-        <ul>{r.amenities.map((a) => <li>{a}</li>)}</ul>
+        <h3>What to expect</h3>
+        <ul>{r.features.map((a) => <li>{a}</li>)}</ul>
         <h3>Best for</h3>
         <ul>{r.goodFor.map((a) => <li>{a}</li>)}</ul>
         <WhatsAppButton message={roomMessage(r.name)} label="Ask on WhatsApp" />
@@ -77,23 +74,28 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
     </div>
   </section>
 
+  <section class="section">
+    <div class="wrap">
+      <h2>How booking works</h2>
+      <HowItWorks />
+    </div>
+  </section>
+
   <section class="section other">
     <div class="wrap">
-      <h2>Other rooms</h2>
+      <h2>Other stays</h2>
       <ul class="others" role="list">
         {
           others.map((o) => (
             <li>
               <a href={`/rooms/${o.id}/`}>{o.data.name}</a>
-              <span>
-                {o.data.guestsNote}{site.showPrices && `, from ${inr(o.data.priceFrom)}`}
-              </span>
+              <span>{o.data.guestsNote}</span>
             </li>
           ))
         }
       </ul>
       <RelatedPages slugs={[...r.related, 'things-to-do-in-wayanad']} title="Also useful" />
-      {r.stockPhoto && <p class="credit">The photo on this page is a sample, not this room. {creditLine(r.imageCredit)}</p>}
+      {r.stockPhoto && <p class="credit">The photo on this page is an example of this kind of stay, not a specific resort. {creditLine(r.imageCredit)}</p>}
     </div>
   </section>
 </Base>
@@ -105,10 +107,6 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
     align-items: center;
     gap: 0.8rem 1.4rem;
     margin-top: 1.4rem;
-  }
-  .price {
-    margin: 0;
-    color: #fff;
   }
   .layout {
     display: grid;

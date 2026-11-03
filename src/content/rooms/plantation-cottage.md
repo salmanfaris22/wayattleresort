@@ -1,34 +1,32 @@
 ---
 name: Plantation Cottage
 order: 3
-seoTitle: Plantation Cottage Stay in Wayanad, Kerala | Mistvale
-seoDescription: A Kerala-style plantation cottage in Wayanad with a tiled roof, verandah over the coffee and a king bed. Pet-friendly on request, breakfast included.
+seoTitle: Plantation Cottage Stay in Wayanad – Book on WhatsApp | Mistvale
+seoDescription: Plantation cottages in Wayanad's tea and coffee estates, from budget homestays to luxury bungalows. Send your dates on WhatsApp and we find one free.
 keyword: plantation stay in Wayanad
-summary: A tiled-roof Kerala cottage with a wide verandah over the coffee and pepper. A king bed, an extra mattress for a child, and the shortest walk to the restaurant.
-guests: 3
-guestsNote: 2 adults + 1 child
-sizeSqft: 450
-bed: King bed + extra mattress
-view: Coffee and pepper garden
-priceFrom: 6500
+summary: A cottage on a working tea, coffee or spice estate, with plantation walks and quiet mornings. Available at every budget, from homestays to old estate bungalows.
+guestsNote: 2 to 4 guests per cottage
+tiers: [luxury, affordable, budget]
 image: ../../assets/images/rooms/sample-kerala-cottage.jpg
-imageAlt: Sample photo of a traditional Kerala cottage with a sloping tiled roof and wooden windows
+imageAlt: Example photo of a traditional Kerala cottage with a sloping tiled roof and wooden windows
 imageCredit: rooms/sample-kerala-cottage
 stockPhoto: true
-units: 2 # TODO: number of identical rooms of this type
-sleeps: 3 # max guests incl. extra mattress
-flags: [couples, family, levelAccess, petsOnRequest]
+flags: [couples, family]
 related: [family-resorts-in-wayanad, resorts-in-vythiri, group-stays-in-wayanad]
-amenities: [King bed, Extra mattress on request, Verandah with chairs, Attached bathroom with hot water, Ceiling fan, Tea and coffee tray, Free Wi-Fi, Breakfast included]
-goodFor: [Small families, Pet owners (on request), Longer stays on a budget]
+features: [Set in tea, coffee or pepper, Plantation walk with the estate staff, Kerala home-style food, Level paths at many estates, Quiet nights]
+goodFor: [Families, Couples, Anyone who wants a slow, quiet stay]
 ---
 
-The plantation cottages follow the old Kerala estate bungalow pattern: a sloping clay-tiled roof, thick walls that hold the cool, wooden windows and a wide verandah on the garden side. Each has a king bed and room for an extra mattress.
+Most of Wayanad is plantation land, so a cottage on a working estate is the most typical Wayanad stay. You wake up to mist over the tea or coffee, walk the estate with the people who work it and eat home-style Kerala food.
 
-They sit closest to the restaurant and the pool, about 40 m away on a level path, so they suit families and guests who prefer not to climb. From the verandah you look over coffee bushes trained under pepper vines; in March and April the coffee flowers and the whole slope smells of jasmine.
+## What to check before you book
+
+Estates differ more than resorts do. Some are old planters' bungalows with large rooms, others are a few simple cottages next to the owner's house. Ask how far the cottage is from the main road, since some estate roads are rough, and whether food is cooked on site. Many plantation stays have level paths, which helps if older guests are with you.
+
+Tell us your budget and who is travelling, and we send plantation stays free for your dates, with photos and the rate.
 
 ## Good to know
 
-- Level access from parking; the easiest room for older guests.
-- Well-behaved pets allowed in this room only, on request.
-- Two cottages share a wall, so book both together for a group.
+- Coffee blossoms in March to April and is picked from December to February.
+- Many estates offer a guided plantation walk in the morning.
+- Plantation stays are spread across Vythiri, Meppadi, Kalpetta and Sulthan Bathery.

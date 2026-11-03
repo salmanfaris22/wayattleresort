@@ -1,0 +1,50 @@
+---
+import { site } from '../data/site';
+---
+
+<ol class="steps" role="list">
+  {
+    site.howItWorks.map((s, i) => (
+      <li>
+        <span class="num" aria-hidden="true">{i + 1}</span>
+        <h3>{s.title}</h3>
+        <p>{s.text}</p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-m) 0 0;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+  li {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem;
+  }
+  .num {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--tea);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.3rem;
+  }
+  p {
+    margin: 0;
+  }
+</style>

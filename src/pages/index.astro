@@ -4,6 +4,8 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import RoomCard from '../components/RoomCard.astro';
+import TierCards from '../components/TierCards.astro';
+import HowItWorks from '../components/HowItWorks.astro';
 import Experiences from '../components/Experiences.astro';
 import PlaceTable from '../components/PlaceTable.astro';
 import Gallery from '../components/Gallery.astro';
@@ -37,12 +39,12 @@ const gallery: { key: string; alt: string; caption: string; size?: 'big' | 'tall
 ];
 
 const chooseRows = [
-  ['Location', 'Wayanad is large; a central base saves hours of driving.', `${site.baseTown}, 3 km from Pookode Lake and under an hour from Chembra, Soochipara and Banasura.`],
-  ['Road access', 'Some hill resorts are reached only by jeep track.', 'Paved road to the gate and free parking inside; a short plantation road at the end.'],
-  ['Views and altitude', 'Higher ground means cooler nights and more mist.', `About ${site.facts[0].value} up, facing the tea valley.`],
-  ['Room choice', 'Couples, families and groups need different rooms.', 'A private pool villa, a tree house, plantation cottages and a family suite.'],
-  ['Food', 'Many places outside towns have limited menus.', 'A Kerala kitchen with breakfast included and a banana-leaf meal on request.'],
-  ['Booking', 'Agent sites add commission and slow replies.', 'Book directly with the owner on WhatsApp.'],
+  ['Location', 'Wayanad is large; a central base saves hours of driving.', 'We suggest resorts near the sights you plan to see, mostly around Vythiri, Kalpetta and Meppadi.'],
+  ['Road access', 'Some hill resorts are reached only by jeep track.', 'We tell you about rough last stretches and steps before you book.'],
+  ['Views', 'Higher ground means cooler nights and more mist.', 'Ask us for valley-view, lake-view or forest-edge stays.'],
+  ['Room type', 'Couples, families and groups need different rooms.', 'Pool villas, tree houses, plantation cottages, family suites and private villas.'],
+  ['Budget', 'Rates in the same area can differ by several times.', 'Private, luxury, affordable and budget options for the same dates.'],
+  ['Booking', 'Comparing resorts one by one takes days of calls.', 'One WhatsApp message; we send what is free and book the one you choose.'],
 ];
 ---
 
@@ -51,24 +53,26 @@ const chooseRows = [
     { lang: 'en-IN', href: '/' },
     { lang: 'ml-IN', href: '/ml/' },
   ]}
-  title="Best Resort in Wayanad – Pool Villas & Tree Houses | Mistvale"
-  description="Hillside resort in Vythiri, Wayanad: private pool villa, tree house, plantation cottages and a family suite on a tea estate. Breakfast included; book on WhatsApp."
+  title="Best Resorts in Wayanad – Pool Villas, Tree Houses | Mistvale"
+  description="Find and book the best resort in Wayanad for your trip: private, luxury, affordable and budget resorts, pool villas and tree houses. Send your dates on WhatsApp."
   schema={[faqSchema(faq)]}
 >
   <Hero
-    eyebrow="In the tea hills of Vythiri, Wayanad"
-    title="Best resort in Wayanad for misty tea-hill mornings"
-    lede={`Four kinds of rooms on ${site.facts[1].value} of tea and coffee, 3 km from Pookode Lake. Book directly with us on WhatsApp and pay no agent commission.`}
+    eyebrow="Resort booking across Wayanad, Kerala"
+    title="Find the best resort in Wayanad for your trip"
+    lede="Private, luxury, affordable and budget resorts: pool villas, tree houses, plantation cottages and family suites. Send your dates on WhatsApp and we reply with what is free."
   />
 
   <section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
     <div class="wrap">
-      <h2 id="rooms-title">Rooms and villas</h2>
-      <p class="lede">Every stay includes breakfast, Wi-Fi, parking and the pool. Send your dates on WhatsApp for availability and the rate.</p>
+      <h2 id="rooms-title">Wayanad resorts for every budget</h2>
+      <p class="lede">Pick a budget or a kind of stay. We send the resorts that have rooms free for your dates, with photos and the rate.</p>
+      <TierCards />
+      <h3 class="types-title">Kinds of stay</h3>
       <div class="room-grid">
         {rooms.map((room) => <RoomCard room={room} note={room.data.summary} />)}
       </div>
-      <p class="all-rooms"><a href="/rooms/">Compare all rooms side by side</a></p>
+      <p class="all-rooms"><a href="/rooms/">See all stay types</a></p>
     </div>
   </section>
 
@@ -82,22 +86,22 @@ const chooseRows = [
           </div>
         ))
       }
-      <div><dt>4</dt><dd>kinds of rooms, breakfast included</dd></div>
+      <div><dt>1</dt><dd>WhatsApp message to compare resorts</dd></div>
     </dl>
   </section>
 
   <section class="section" id="about" aria-labelledby="about-title">
     <div class="wrap split">
       <div>
-        <h2 id="about-title">A working tea and coffee estate in Vythiri</h2>
+        <h2 id="about-title">Wayanad resort booking, done for you</h2>
         <p class="lede">
-          {site.name} is a small resort on a hillside estate in Vythiri, in the south of Wayanad, Kerala. Tea grows on the upper
-          slope and coffee and pepper below. There are only a handful of rooms, so mornings are quiet: mist in the valley,
-          birds in the silver oaks and breakfast on your verandah.
+          {site.name} is a resort booking service for Wayanad, Kerala. We work with resorts, villas, tree houses and
+          plantation stays across the district, so you can tell us what you want once and get a short list that fits.
         </p>
         <p>
-          We are on the main Kozhikode–Wayanad route, so you skip the long inner roads, yet far enough up the hill that the only
-          sound at night is the stream. Most of our guests come from Bengaluru, Kochi and Kozhikode for two or three nights.
+          Tell us your dates, who is travelling and your budget. We check which resorts have rooms free, send you photos and
+          rates on WhatsApp, and book the one you pick. You get the resort's name, address and booking details in writing
+          before you travel.
         </p>
         <p><a href="/where-to-stay-in-wayanad/">Not sure which part of Wayanad to stay in? Read our area guide.</a></p>
       </div>
@@ -116,6 +120,13 @@ const chooseRows = [
     </div>
   </section>
 
+  <section class="section how" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 id="how-title">How booking works</h2>
+      <HowItWorks />
+    </div>
+  </section>
+
   <section class="section find" aria-label="Find the right stay">
     <div class="wrap">
       <RelatedPages slugs={landingPages.map((p) => p.id)} title="Find the right stay" />
@@ -128,12 +139,12 @@ const chooseRows = [
       <h2 id="choose-title">How to choose the best resort in Wayanad</h2>
       <p class="lede">
         The best resort in Wayanad for you depends on where you stay, how easy the road is and the kind of room you need. These
-        are the six things we would check before booking anywhere, and how we measure up.
+        are the six things we check for every guest, and how we help.
       </p>
       <div class="table-scroll">
         <table>
           <thead>
-            <tr><th scope="col">What to check</th><th scope="col">Why it matters</th><th scope="col">At {site.shortName}</th></tr>
+            <tr><th scope="col">What to check</th><th scope="col">Why it matters</th><th scope="col">How we help</th></tr>
           </thead>
           <tbody>
             {
@@ -141,7 +152,7 @@ const chooseRows = [
                 <tr>
                   <th scope="row">{what}</th>
                   <td data-label="Why it matters">{why}</td>
-                  <td data-label={`At ${site.shortName}`}>{us}</td>
+                  <td data-label="How we help">{us}</td>
                 </tr>
               ))
             }
@@ -153,17 +164,17 @@ const chooseRows = [
 
   <section class="section" id="experiences" aria-labelledby="exp-title">
     <div class="wrap">
-      <h2 id="exp-title">Things to do at the resort</h2>
-      <p class="lede">Slow days on the estate, or a packed itinerary around Wayanad. We help with both.</p>
+      <h2 id="exp-title">Things to do on your trip</h2>
+      <p class="lede">Most resorts can arrange these. Tell us what you want to do and we suggest resorts that offer it.</p>
       <Experiences />
     </div>
   </section>
 
   <section class="section explore" id="explore" aria-labelledby="explore-title">
     <div class="wrap">
-      <h2 id="explore-title">Places to visit near the resort</h2>
+      <h2 id="explore-title">Places to visit in Wayanad</h2>
       <p class="lede">
-        {site.baseTown} is in the south of Wayanad, so Pookode Lake, Chembra Peak, Soochipara Falls and Banasura Sagar Dam are
+        From {site.baseTown} in the south of Wayanad, Pookode Lake, Chembra Peak, Soochipara Falls and Banasura Sagar Dam are
         all within an hour. The wildlife sanctuaries and Thirunelli make good full-day trips.
       </p>
       <PlaceTable linkToGuide />
@@ -174,7 +185,7 @@ const chooseRows = [
   <section class="section" id="gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <h2 id="gallery-title">Wayanad in pictures</h2>
-      <p class="lede">The hills, lakes and wildlife around us. Tap a photo to see it larger.</p>
+      <p class="lede">The hills, lakes and wildlife of Wayanad. Tap a photo to see it larger.</p>
       <Gallery items={gallery} />
     </div>
   </section>
@@ -182,7 +193,7 @@ const chooseRows = [
   <section class="section section--tea" id="enquire" aria-labelledby="enquire-title">
     <div class="wrap">
       <h2 id="enquire-title">Check availability</h2>
-      <p class="lede">Pick your dates and we will reply on WhatsApp with free rooms and the total price.</p>
+      <p class="lede">Pick your dates and we will reply on WhatsApp with resorts that are free, with photos and the rate.</p>
       <EnquiryForm />
     </div>
   </section>
@@ -216,7 +227,7 @@ const chooseRows = [
             </tbody>
           </table>
         </div>
-        <p><a href="/contact/">Directions, pickup and contact details</a></p>
+        <p><a href="/contact/">Contact us and how booking works</a></p>
       </div>
       <MapSchematic />
     </div>
@@ -232,8 +243,8 @@ const chooseRows = [
   <section class="final section section--tea" aria-labelledby="final-title">
     <ContourLines class="final-lines" />
     <div class="wrap">
-      <h2 id="final-title">Mist, tea hills and a quiet room are a message away</h2>
-      <p class="lede">Send your dates on WhatsApp. You talk to the people who run the resort, not a call centre.</p>
+      <h2 id="final-title">Your Wayanad resort is a message away</h2>
+      <p class="lede">Send your dates on WhatsApp. You talk to a person who knows Wayanad resorts, not a call centre.</p>
       <WhatsAppButton label={`WhatsApp ${site.phone}`} />
     </div>
   </section>
@@ -281,6 +292,13 @@ const chooseRows = [
   }
   .rooms-section {
     background: var(--paper);
+  }
+  .types-title {
+    margin-top: var(--space-l);
+    font-size: var(--step-2);
+  }
+  .how {
+    background: var(--mist-2);
   }
   .room-grid {
     display: grid;

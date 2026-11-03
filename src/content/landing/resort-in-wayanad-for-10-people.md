@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm room plan, meals and transport for groups of ten
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad for 10 People: Room Plan | Mistvale"
 description: "Staying in Wayanad with 10 people? See the exact room plan with breakfast, plus the pool, campfire, Kerala meals and day trips we arrange for your group."
@@ -15,13 +15,7 @@ intent: transactional
 answer:
   q: "Where can 10 people stay together in Wayanad?"
   a: "Ten people can stay together in a large villa, a homestay with several rooms or a small resort. At Mistvale in Vythiri a group of ten takes {{planRooms:10}} rooms ({{planDesc:10}}), with breakfast, a pool and a campfire lawn, and every room has its own bathroom."
-plans: [10]
-planWithPrivatePool: true
-facilities: [pool, campfire, restaurant, parking]
 places: [banasura-sagar-dam, chembra-peak, soochipara-falls, pookode-lake]
-requires:
-  minGuests: 10
-  facilities: [pool]
 faqs:
   - q: "How is a stay for 10 people priced?"
     a: "Per room, with breakfast included. Ten people take {{planRooms:10}} rooms, so the cost per head is lower than in a hotel. Send your dates on WhatsApp for the total; weekends and late December cost more, and lunch, dinner and transport are extra."

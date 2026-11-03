@@ -4,10 +4,10 @@ import PageHero from '../components/PageHero.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import MapSchematic from '../components/MapSchematic.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import { site, fullAddress, fmtTime } from '../data/site';
+import HowItWorks from '../components/HowItWorks.astro';
+import { site } from '../data/site';
 import { reach } from '../data/places';
 import { breadcrumbSchema } from '../lib/schema';
-import PolicyList from '../components/PolicyList.astro';
 
 const crumbs = [
   { name: 'Home', href: '/' },
@@ -16,13 +16,13 @@ const crumbs = [
 ---
 
 <Base
-  title={`Contact & How to Reach ${site.shortName} Resort, Wayanad`}
-  description={`Contact ${site.name} on WhatsApp ${site.phone}. Address, Google Maps location and how to reach Vythiri, Wayanad from Kozhikode, Kannur, Mysuru and Bengaluru.`}
+  title={`Contact ${site.shortName} – Wayanad Resort Booking on WhatsApp`}
+  description={`Contact ${site.name} on WhatsApp ${site.phone} to book a resort in Wayanad. How booking works, resort rules and how to reach Wayanad.`}
   schema={[breadcrumbSchema(crumbs, Astro.site!)]}
 >
   <PageHero
-    title="Contact and how to reach us"
-    lede="WhatsApp is the fastest way to reach us. We reply between 8 am and 10 pm, usually within an hour."
+    title="Contact us and book a Wayanad resort"
+    lede="WhatsApp is the fastest way to reach us. Send your dates, the number of guests and your budget."
     crumbs={crumbs}
   />
 
@@ -31,17 +31,15 @@ const crumbs = [
       <div>
         <h2>{site.name}</h2>
         <address>
-          {fullAddress}<br />
-          WhatsApp and phone: <a href={`tel:${site.phoneE164}`}>{site.phone}</a><br />
-          Email: <a href={`mailto:${site.email}`}>{site.email}</a><br />
-          Check-in {fmtTime(site.checkIn)}, check-out {fmtTime(site.checkOut)}
+          Resort booking for all of Wayanad, Kerala<br />
+          WhatsApp and phone: <a href={`tel:${site.phoneE164}`}>{site.phone}</a>
         </address>
         <div class="actions">
           <WhatsAppButton label="Chat on WhatsApp" />
-          <a class="btn btn--ghost" href={site.mapsUrl} target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn--ghost" href={`tel:${site.phoneE164}`}>Call {site.phone}</a>
         </div>
 
-        <h2 class="reach-title">How to reach the resort</h2>
+        <h2 class="reach-title">How to reach Wayanad</h2>
         <div class="table-scroll">
           <table>
             <thead>
@@ -62,7 +60,7 @@ const crumbs = [
           </table>
         </div>
         <p class="muted">
-          Airport and railway pickups can be arranged by taxi; ask us for the current fare. Drive the Thamarassery Ghat in daylight
+          Distances are to Vythiri in south Wayanad; your resort may be closer or further. Drive the Thamarassery Ghat in daylight
           if you can, and expect slow traffic on weekends.
         </p>
       </div>
@@ -71,16 +69,22 @@ const crumbs = [
   </section>
 
   <section class="section" id="policies">
-    <div class="wrap narrow">
-      <h2>Booking policies</h2>
-      <PolicyList />
+    <div class="wrap">
+      <h2>How booking works</h2>
+      <HowItWorks />
+      <h3 class="rules-title">Resort rules</h3>
+      <p class="narrow">
+        Every resort has its own check-in time, advance payment, cancellation rule, children's policy and pet policy. We send
+        you the rules of the resort you choose before you pay. Every adult needs a government photo ID at check-in; this is
+        required by law in India.
+      </p>
     </div>
   </section>
 
   <section class="section section--tea">
     <div class="wrap">
       <h2>Send an enquiry</h2>
-      <p class="lede">Pick your dates and we will reply on WhatsApp with available rooms and the total price.</p>
+      <p class="lede">Pick your dates and we will reply on WhatsApp with resorts that are free, with photos and the rate.</p>
       <EnquiryForm />
     </div>
   </section>
@@ -116,5 +120,11 @@ const crumbs = [
   }
   .muted {
     margin-top: 0.8rem;
+  }
+  .rules-title {
+    margin-top: var(--space-l);
+  }
+  .narrow {
+    max-width: 65ch;
   }
 </style>

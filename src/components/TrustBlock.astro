@@ -1,5 +1,5 @@
 ---
-import { site, fullAddress, fmtTime } from '../data/site';
+import { site } from '../data/site';
 
 interface Props {
   updated?: Date;
@@ -10,14 +10,13 @@ const { updated } = Astro.props;
 <aside class="trust" aria-labelledby="trust-title">
   <h2 id="trust-title">About {site.name}</h2>
   <p>
-    A small resort on a tea and coffee estate in {site.address.locality}, {site.address.district}, run by the people who answer your
-    messages. You book directly with us; there is no booking fee.
+    A resort booking service for Wayanad, Kerala. We work with resorts, villas, tree houses and plantation stays across the
+    district, check which are free for your dates and book the one you choose.
   </p>
   <dl>
-    <div><dt>Address</dt><dd>{fullAddress}</dd></div>
+    <div><dt>Area</dt><dd>All of Wayanad, Kerala</dd></div>
     <div><dt>Phone and WhatsApp</dt><dd><a href={`tel:${site.phoneE164}`}>{site.phone}</a></dd></div>
-    <div><dt>Check-in / out</dt><dd>{fmtTime(site.checkIn)} / {fmtTime(site.checkOut)}</dd></div>
-    <div><dt>Policies</dt><dd><a href="/contact/#policies">Advance, cancellation and children</a></dd></div>
+    <div><dt>Resort rules</dt><dd><a href="/contact/#policies">Check-in, advance and cancellation</a></dd></div>
   </dl>
   {
     updated && (

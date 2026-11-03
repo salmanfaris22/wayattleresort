@@ -1,5 +1,5 @@
 ---
-import { site } from '../data/site';
+import { site, tiers } from '../data/site';
 import { getRooms } from '../lib/inventory';
 import WaIcon from './WaIcon.astro';
 
@@ -11,7 +11,8 @@ interface Props {
 }
 const { context, room } = Astro.props;
 const rooms = await getRooms();
-const greeting = `Hi ${site.shortName}, I'd like to check availability${context ? ` for a ${context}` : ''}.`;
+const greeting = `Hi ${site.shortName}, please send resorts in Wayanad${context ? ` for a ${context}` : ''}.`;
+const budgets = tiers.map((t) => t.name);
 ---
 
 <form class="enquiry" action="https://api.whatsapp.com/send" method="get" target="_blank" data-enquiry>
@@ -36,20 +37,26 @@ const greeting = `Hi ${site.shortName}, I'd like to check availability${context 
   <div class="field">
     <label for="eq-guests">Guests</label>
     <select id="eq-guests" data-k="Guests">
-      {['1', '2', '3', '4', '5', '6', '7–10', '11–16'].map((g) => <option selected={g === '2'}>{g}</option>)}
+      {['1', '2', '3', '4', '5', '6', '7–10', '11–20', '20+'].map((g) => <option selected={g === '2'}>{g}</option>)}
     </select>
   </div>
   <div class="field">
-    <label for="eq-room">Room</label>
-    <select id="eq-room" data-k="Room">
+    <label for="eq-room">Kind of stay</label>
+    <select id="eq-room" data-k="Stay">
       <option>Not sure yet</option>
       {rooms.map((r) => <option selected={r.data.name === room}>{r.data.name}</option>)}
-      {site.wholeProperty.available && <option>Whole resort (private group)</option>}
+    </select>
+  </div>
+  <div class="field">
+    <label for="eq-budget">Budget</label>
+    <select id="eq-budget" data-k="Budget">
+      <option>Not sure yet</option>
+      {budgets.map((b) => <option>{b}</option>)}
     </select>
   </div>
   <button class="btn btn--wa" type="submit"><WaIcon /><span>Send on WhatsApp</span></button>
   <p class="note">
-    Opens WhatsApp with your details filled in. Nothing is stored on this website. We usually reply within an hour, 8 am to 10 pm, or call
+    Opens WhatsApp with your details filled in. Nothing is stored on this website. You can also call
     <a href={`tel:${site.phoneE164}`}>{site.phone}</a>.
   </p>
 </form>

@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm group rules, set menus and transport arrangements
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Group Stay in Wayanad for Friends & Families | Mistvale"
 description: "Group stay in Vythiri, Wayanad for friends, families and teams: room plans for 5 to {{maxGuests}} guests, campfire, pool, Kerala meals and whole-resort booking."
@@ -24,12 +24,7 @@ rooms:
     note: "The room everyone wants. Give it to the couple celebrating something."
   - id: tree-house
     note: "Two people, six metres up. Better for friends than for small children."
-plans: [5, 10, 12, 15]
-wholeResort: true
-facilities: [campfire, barbecue, pool, restaurant, parking]
 places: [banasura-sagar-dam, chembra-peak, edakkal-caves, kuruva-island]
-requires:
-  minGuests: 10
 faqs:
   - q: "What is the largest group you can host?"
     a: "{{maxGuests}} guests, using every room and extra mattresses. We cannot take 20 people; for a group that size, look for a larger resort or split the group between two places close to each other."

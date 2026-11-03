@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check distances and times from the exact resort location
 status: published
 updated: 2026-11-03
 seoTitle: "Bangalore to Wayanad by Road: Route, Distance & Night Ban"
@@ -16,8 +15,6 @@ answer:
   q: "How far is Wayanad from Bangalore?"
   a: "About 290 km from Bengaluru to Vythiri in south Wayanad, a drive of 6.5 to 7 hours. The main route runs via Mysuru, Gundlupet, the Bandipur and Muthanga forests, Sulthan Bathery and Kalpetta. The forest stretch on NH 766 is closed to most traffic from 9 pm to 6 am, so plan to cross it in daylight."
 places: [muthanga-wildlife-sanctuary, edakkal-caves, pookode-lake]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "Can I drive from Bangalore to Wayanad at night?"
     a: "Not through Bandipur. The NH 766 forest stretch between Gundlupet and the Kerala border is closed to most vehicles from 9 pm to 6 am to protect wildlife. Leave Bengaluru by early afternoon at the latest, or set off before dawn so you reach the forest after 6 am."
@@ -53,6 +50,6 @@ This stretch is the highlight and the main constraint. Elephants, deer and gaur 
 - **By train:** take a train to Mysuru and a taxi from there, or to Kozhikode and drive up the Thamarassery Ghat.
 - **By bus:** state and private buses run to Sulthan Bathery and Kalpetta; take a taxi for the last stretch to Vythiri.
 
-## Arriving at the resort
+## Arriving in Wayanad
 
-Vythiri is about 15 km past Kalpetta on the road towards Kozhikode. If you arrive before check-in, message us on WhatsApp; you can leave your bags and have lunch while the room is prepared.
+From Bengaluru you reach Sulthan Bathery first, then Kalpetta; Vythiri is about 15 km past Kalpetta on the road towards Kozhikode. If you are coming from Bengaluru, ask us for resorts near Bathery or Kalpetta to save the last hour of driving.

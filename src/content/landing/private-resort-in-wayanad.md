@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm whole-resort bookings, minimum nights and house rules
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Private Resort in Wayanad: Book the Whole Estate | Mistvale"
 description: "Book the whole Mistvale estate in Vythiri, Wayanad for family or friends, or the Private Pool Villa for two. Capacity and how private booking works."
@@ -24,12 +24,7 @@ rooms:
     note: "Two cottages side by side, each for two adults and a child."
   - id: tree-house
     note: "A room for two up in the silver oaks."
-wholeResort: true
-facilities: [pool, privatePool, campfire, barbecue, restaurant, parking]
 places: [pookode-lake, banasura-sagar-dam, chembra-peak]
-requires:
-  facilities: [privatePool]
-  wholeProperty: true
 faqs:
   - q: "How many people can stay if we book the whole resort?"
     a: "{{standardGuests}} guests in the existing beds, or {{maxGuests}} with extra mattresses, across {{units}} rooms. We cannot take more than that, because every guest needs a proper bed and a bathroom nearby."

@@ -1,8 +1,7 @@
 ---
 import { Picture } from 'astro:assets';
 import type { Room } from '../lib/inventory';
-import { inr } from '../lib/inventory';
-import { site } from '../data/site';
+import { tiers } from '../data/site';
 import { roomMessage, waLink } from '../lib/whatsapp';
 
 interface Props {
@@ -11,26 +10,24 @@ interface Props {
 }
 const { room, note } = Astro.props;
 const r = room.data;
+const tierNames = r.tiers.map((id) => tiers.find((t) => t.id === id)!.name.replace(' resorts', ''));
 ---
 
 <article class="card">
   <a class="media" href={`/rooms/${room.id}/`} tabindex="-1" aria-hidden="true">
     <Picture src={r.image} alt="" formats={['avif', 'webp']} widths={[320, 480, 640, 900]} sizes="(min-width: 1240px) 290px, (min-width: 700px) 45vw, 92vw" quality={52} />
-    {r.stockPhoto && <span class="tag">Sample photo</span>}
+    {r.stockPhoto && <span class="tag">Example photo</span>}
   </a>
   <div class="body">
     <h3><a href={`/rooms/${room.id}/`}>{r.name}</a></h3>
     {note && <p class="note">{note}</p>}
-    <p class="meta">{r.guestsNote} · {r.bed}</p>
-    <ul class="specs" role="list">
-      <li>{r.sizeSqft} sq ft</li>
-      <li>{r.view}</li>
-      <li>Breakfast included</li>
+    <p class="meta">{r.guestsNote}</p>
+    <ul class="specs" role="list" aria-label="Budgets">
+      {tierNames.map((t) => <li>{t}</li>)}
     </ul>
-    {site.showPrices && <p class="price">From <strong>{inr(r.priceFrom)}</strong> a night with breakfast</p>}
     <p class="links">
-      <a href={waLink(roomMessage(r.name))} target="_blank" rel="noopener">Ask on WhatsApp</a>
-      <a href={`/rooms/${room.id}/`}>Room details<span class="visually-hidden">: {r.name}</span></a>
+      <a href={waLink(roomMessage(r.name))} target="_blank" rel="noopener" data-wa>Ask on WhatsApp</a>
+      <a href={`/rooms/${room.id}/`}>Details<span class="visually-hidden">: {r.name}</span></a>
     </p>
   </div>
 </article>
@@ -88,9 +85,6 @@ const r = room.data;
     font-size: var(--step--1);
     color: var(--monsoon-ink);
     margin-bottom: 0.3rem;
-  }
-  .price {
-    margin-bottom: 0.8rem;
   }
   .specs {
     list-style: none;

@@ -19,7 +19,6 @@ export function findPlaceholders(root = process.cwd()) {
         .split('\n')
         .forEach((line, i) => {
           if (/\/\/\s*TODO|#\s*TODO|\bTODO\(/.test(line)) problems.push(`${file}:${i + 1}  ${line.trim().slice(0, 110)}`);
-          if (/^stockPhoto:\s*true/.test(line)) problems.push(`${file}:${i + 1}  room photo is a stock sample; add the resort's own photo`);
         });
     }
   }

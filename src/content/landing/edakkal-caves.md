@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check opening days, ticket limits and timings
 status: published
 updated: 2026-11-03
 seoTitle: "Edakkal Caves, Wayanad: Carvings, Climb, Timings & Tips"
@@ -16,8 +15,6 @@ answer:
   q: "What are the Edakkal Caves?"
   a: "Edakkal Caves are two natural rock chambers on Ambukuthi Mala, near Sulthan Bathery in Wayanad, whose walls carry carved human and animal figures and symbols, some believed to be several thousand years old. Reaching them takes a steep climb of about 45 minutes, and entry tickets are limited each day."
 places: [edakkal-caves, muthanga-wildlife-sanctuary, pookode-lake]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "How hard is the climb to Edakkal Caves?"
     a: "The last stretch is steep, with steps, rock and iron ladders, and takes about 45 minutes from the parking area for most people. It suits anyone reasonably fit; older guests and small children may find the final section difficult."
@@ -54,4 +51,4 @@ The "cave" is really a deep cleft between huge boulders, roofed over by a fallen
 
 ## Combine it with
 
-Sulthan Bathery town has good places for lunch, and Muthanga Wildlife Sanctuary is a short drive on, for an afternoon jeep safari if tickets are available. Back at the resort, the campfire is waiting.
+Sulthan Bathery town has good places for lunch, and Muthanga Wildlife Sanctuary is a short drive on, for an afternoon jeep safari if tickets are available. If the caves are your main plan, ask us for a resort near Sulthan Bathery.

@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm distances from the exact resort location
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Resort in Vythiri, Wayanad: Rooms, Contact & How to Reach"
 description: "Mistvale is a small resort in Vythiri, Wayanad, near Pookode Lake and the Lakkidi viewpoint. Rooms, contact, directions from Kozhikode and things to do nearby."
@@ -25,8 +25,6 @@ rooms:
   - id: family-suite
     note: "Two bedrooms beside the pool lawn."
 places: [pookode-lake, chembra-peak, banasura-sagar-dam, soochipara-falls, meenmutty-falls]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "How far is Vythiri from Kalpetta?"
     a: "About 15 km, or around half an hour on NH 766. Kalpetta is the district town, with hospitals, banks and larger shops; Vythiri has a small market, fuel and ATMs."

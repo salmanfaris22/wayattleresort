@@ -10,8 +10,7 @@ import LeadPopup from '../components/LeadPopup.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { site } from '../data/site';
 import { img } from '../lib/images';
-import { graph, resortSchema, websiteSchema } from '../lib/schema';
-import { getRooms, totals } from '../lib/inventory';
+import { graph, businessSchema, websiteSchema } from '../lib/schema';
 
 interface Props {
   title: string;
@@ -43,8 +42,7 @@ const og = await getImage({ src: ogImage, width: 1200, height: 630, fit: 'cover'
 const ogUrl = new URL(og.src, siteUrl).href;
 const heroOg = await getImage({ src: img('hero/wayanad-tea-estate-misty-hills'), width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
 
-const units = totals(await getRooms()).units;
-const ld = graph(websiteSchema(siteUrl), resortSchema(siteUrl, new URL(heroOg.src, siteUrl).href, units), ...schema);
+const ld = graph(websiteSchema(siteUrl), businessSchema(siteUrl, new URL(heroOg.src, siteUrl).href), ...schema);
 const staging = __SITE_STAGING__;
 const analytics = import.meta.env.PUBLIC_ANALYTICS === 'true';
 const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;
@@ -62,9 +60,7 @@ const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;
     <meta name="theme-color" content="#24493a" />
     <meta name="google-site-verification" content="gy-v5y-voAu9m4D_5XNtaanC5QeDQwyliMy4hMeVajw" />
     <meta name="geo.region" content="IN-KL" />
-    <meta name="geo.placename" content={`${site.address.locality}, ${site.address.district}, ${site.address.region}`} />
-    <meta name="geo.position" content={`${site.geo.lat};${site.geo.lng}`} />
-    <meta name="ICBM" content={`${site.geo.lat}, ${site.geo.lng}`} />
+    <meta name="geo.placename" content="Wayanad, Kerala" />
     {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={new URL(a.href, siteUrl).href} />)}
     {alternates.length > 0 && <link rel="alternate" hreflang="x-default" href={new URL(alternates[0].href, siteUrl).href} />}
     <Font cssVariable="--font-display" preload />
@@ -99,7 +95,7 @@ const ga4 = import.meta.env.PUBLIC_GA4_ID as string | undefined;
     {
       staging && (
         <p class="staging-banner" role="note">
-          Preview site: the resort name, prices, policies and room photos are placeholders until launch.
+          Preview site: some details are placeholders until launch.
         </p>
       )
     }

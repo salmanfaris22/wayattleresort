@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { site, fullAddress, fmtTime } from '../data/site';
+import { site, tiers } from '../data/site';
 import { places } from '../data/places';
 import { faq } from '../data/faq';
 import { getLandingPages, makeFiller } from '../lib/landing';
-import { getRooms, totals } from '../lib/inventory';
+import { getRooms } from '../lib/inventory';
 
 // Plain-text summary for AI assistants (llms.txt convention).
 export const GET: APIRoute = async ({ site: base }) => {
@@ -12,24 +12,21 @@ export const GET: APIRoute = async ({ site: base }) => {
   const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
   const { published } = await getLandingPages();
   const fill = makeFiller(await getRooms());
-  const t = totals(rooms);
   const lines = [
     `# ${site.name}`,
     '',
     `> ${site.description}`,
     '',
-    `- Location: ${fullAddress}, India`,
-    `- Booking: WhatsApp ${site.phone} (https://wa.me/${site.whatsapp}). No booking fee.`,
-    `- Check-in ${fmtTime(site.checkIn)}, check-out ${fmtTime(site.checkOut)}. Breakfast included.`,
-    ...(site.showPrices ? [`- Price range: ${site.priceRange} (full rate card: ${u('/pricing.md')})`] : ['- Prices: on request by WhatsApp for your dates']),
-    `- Capacity: ${t.units} rooms, ${t.standard} guests in beds, up to ${t.max} with extra mattresses; whole-resort private booking available`,
-    `- Amenities: ${site.amenities.join(', ')}`,
+    `- What we are: a resort booking service for Wayanad, Kerala, India. We book partner resorts; we do not own a resort.`,
+    `- Area: all of Wayanad (Vythiri, Lakkidi, Kalpetta, Meppadi, Sulthan Bathery, Mananthavady)`,
+    `- Booking: WhatsApp ${site.phone} (https://wa.me/${site.whatsapp}). Send dates, guests and budget; we reply with resorts free for those dates.`,
+    '- Prices: on request by WhatsApp for your dates; check-in times and cancellation rules depend on the resort',
     '',
-    '## Rooms',
-    ...rooms.map(
-      (r) =>
-        `- [${r.data.name}](${u(`/rooms/${r.id}/`)}): ${r.data.guestsNote}, ${r.data.sizeSqft} sq ft, ${r.data.bed}, ${site.showPrices ? `from ₹${r.data.priceFrom.toLocaleString('en-IN')} a night. ` : ''}${r.data.summary}`,
-    ),
+    '## Budgets',
+    ...tiers.map((t) => `- ${t.name}: ${t.summary}`),
+    '',
+    '## Stay types',
+    ...rooms.map((r) => `- [${r.data.name}](${u(`/rooms/${r.id}/`)}): ${r.data.guestsNote}. ${r.data.summary}`),
     '',
     '## Stays by need',
     ...published.map((p) => `- [${p.data.breadcrumb}](${u(`/${p.id}/`)}): ${fill(p.data.answer.a)}`),
@@ -38,7 +35,7 @@ export const GET: APIRoute = async ({ site: base }) => {
     `- [Places to visit in Wayanad](${u('/things-to-do-in-wayanad/')}): distances, tips and itineraries`,
     `- [Where to stay in Wayanad](${u('/where-to-stay-in-wayanad/')}): areas compared`,
     `- [Best time to visit Wayanad](${u('/best-time-to-visit-wayanad/')}): month-by-month weather`,
-    `- [Contact and how to reach](${u('/contact/')})`,
+    `- [Contact and how booking works](${u('/contact/')})`,
     `- [Malayalam page (മലയാളം)](${u('/ml/')})`,
     '',
     `## Distances from ${site.baseTown} (approximate, by road)`,

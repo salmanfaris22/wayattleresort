@@ -1,5 +1,5 @@
 // Wayanad attractions. Distances are approximate road distances from Vythiri.
-// TODO(launch): re-check km and drive times once the resort's exact location is set.
+// Distances and drive times are approximate, measured by road from Vythiri (south Wayanad).
 
 export type Place = {
   slug: string;

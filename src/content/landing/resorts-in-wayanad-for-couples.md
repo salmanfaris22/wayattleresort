@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm every claim on this page (villa, tree house, honeymoon setups)
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad for Couples: Private Pool & Tree House"
 description: "Couple-friendly resort in Vythiri, Wayanad: a private pool villa, a tree house in the silver oaks and quiet cottages. Honeymoon ideas and WhatsApp booking."
@@ -22,10 +22,7 @@ rooms:
     note: "A balcony at canopy height with birds at eye level in the morning. The staircase is steep."
   - id: plantation-cottage
     note: "Our lowest price for two, with a wide verandah over the coffee and pepper."
-facilities: [privatePool, pool, campfire, restaurant]
 places: [chembra-peak, pookode-lake, banasura-sagar-dam, meenmutty-falls]
-requires:
-  facilities: [privatePool]
 faqs:
   - q: "Is the Private Pool Villa really private?"
     a: "Yes. It stands alone at the top of the estate, the plunge pool is only for villa guests, and we route plantation walks away from it. The nearest room is the tree house, about 60 m away through coffee bushes."

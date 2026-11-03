@@ -1,0 +1,66 @@
+---
+import { tiers } from '../data/site';
+import { tierMessage, waLink } from '../lib/whatsapp';
+---
+
+<ul class="tiers" role="list">
+  {
+    tiers.map((t) => (
+      <li class="tier" id={t.id}>
+        <h3>{t.name}</h3>
+        <p>{t.summary}</p>
+        <ul class="for" role="list" aria-label="Good for">
+          {t.goodFor.map((g) => <li>{g}</li>)}
+        </ul>
+        <a class="ask" href={waLink(tierMessage(t.name))} target="_blank" rel="noopener" data-wa>
+          Ask for {t.name.toLowerCase()}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .tiers {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-l) 0 0;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+  .tier {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--tea);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 6rem;
+  }
+  h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.4rem;
+  }
+  .for {
+    list-style: none;
+    padding: 0;
+    margin: 0.2rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .for li {
+    font-size: 0.78rem;
+    background: var(--mist);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
+  .ask {
+    margin-top: auto;
+    font-weight: 600;
+    padding-block: 0.4rem;
+  }
+</style>

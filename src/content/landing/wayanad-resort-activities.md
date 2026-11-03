@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm every activity, its timing and whether it is free or charged
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Wayanad Resort with Activities & Campfire | Mistvale"
 description: "Things to do at Mistvale, Vythiri: campfire and barbecue nights, plantation walks, the pool, birding, Ayurveda and Chembra or Banasura treks we book for you."
@@ -20,10 +20,7 @@ rooms:
     note: "Best for birders: thrushes and barbets come to the balcony."
   - id: family-suite
     note: "Carrom and board games for rainy afternoons."
-facilities: [campfire, barbecue, pool]
 places: [chembra-peak, banasura-sagar-dam, muthanga-wildlife-sanctuary, kuruva-island]
-requires:
-  facilities: [campfire]
 faqs:
   - q: "Is there a campfire every night?"
     a: "On dry evenings, yes, from about 7 pm on the lawn. In heavy rain we skip the fire and move everyone to the verandah. Tell us before 6 pm if you want a barbecue with it."

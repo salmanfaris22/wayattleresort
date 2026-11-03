@@ -1,5 +1,5 @@
 ---
-# TODO(launch): owner to confirm rates, taxes, advance and cancellation policy
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
 status: draft # hidden while site.showPrices is false
 updated: 2026-11-03
 seoTitle: "Wayanad Resort Prices 2026: Room Rates | Mistvale, Vythiri"
@@ -15,12 +15,6 @@ intent: transactional
 answer:
   q: "How much does a resort in Wayanad cost per night?"
   a: "It depends on the type of stay. On booking sites in November 2026, homestays and small pool resorts in Wayanad started from about ₹2,000 a night, while private pool villas and luxury resorts often cost over ₹10,000. At Mistvale rooms cost {{priceRange}} a night for two guests, with breakfast included."
-priceTable: true
-policies: true
-plans: [2, 4, 10, 15]
-facilities: [pool, restaurant, parking, wifi]
-requires:
-  facilities: []
 faqs:
   - q: "Are taxes included in the price?"
     a: "The rates shown are room prices before GST. Tax is added to the bill at the rate set by the government for the room tariff, and we show it separately on your confirmation."

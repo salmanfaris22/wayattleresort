@@ -1,11 +1,13 @@
 ---
-import { site, fullAddress } from '../data/site';
+import { site } from '../data/site';
+import { getRooms } from '../lib/inventory';
 import { waLink } from '../lib/whatsapp';
 import ContourLines from './ContourLines.astro';
 import WaIcon from './WaIcon.astro';
 import { getLandingPages } from '../lib/landing';
 
 const { published } = await getLandingPages();
+const stays = await getRooms();
 
 const year = new Date().getFullYear();
 ---
@@ -16,19 +18,15 @@ const year = new Date().getFullYear();
     <div>
       <p class="name">{site.name}</p>
       <address>
-        {fullAddress}<br />
-        <a href={`tel:${site.phoneE164}`}>{site.phone}</a><br />
-        <a href={`mailto:${site.email}`}>{site.email}</a>
+        Resort booking across Wayanad, Kerala<br />
+        <a href={`tel:${site.phoneE164}`}>{site.phone}</a>
       </address>
       <a class="btn btn--wa" href={waLink()} target="_blank" rel="noopener"><WaIcon /><span>WhatsApp us</span></a>
     </div>
-    <nav aria-label="Rooms">
+    <nav aria-label="Stays">
       <p class="head">Stay</p>
       <ul>
-        <li><a href="/rooms/pool-villa/">Private pool villa</a></li>
-        <li><a href="/rooms/tree-house/">Tree house</a></li>
-        <li><a href="/rooms/plantation-cottage/">Plantation cottage</a></li>
-        <li><a href="/rooms/family-suite/">Family suite</a></li>
+        {stays.map((r) => <li><a href={`/rooms/${r.id}/`}>{r.data.name}</a></li>)}
       </ul>
     </nav>
     <nav aria-label="Wayanad guides">

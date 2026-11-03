@@ -1,52 +1,33 @@
-import { site, fullAddress } from '../data/site';
+import { site } from '../data/site';
 import type { Place } from '../data/places';
 
 type Thing = Record<string, unknown>;
 
 export const abs = (path: string, base: URL | string) => new URL(path, base).href;
 
-export function resortSchema(siteUrl: URL | string, image: string, numberOfRooms?: number): Thing {
-  const id = abs('/#resort', siteUrl);
+export const businessId = (siteUrl: URL | string) => abs('/#business', siteUrl);
+
+/** The business: a travel agency that books partner resorts across Wayanad (no public office). */
+export function businessSchema(siteUrl: URL | string, image: string): Thing {
   return {
-    '@type': 'Resort',
-    '@id': id,
+    '@type': 'TravelAgency',
+    '@id': businessId(siteUrl),
     name: site.name,
     description: site.description,
     url: abs('/', siteUrl),
     image,
     logo: abs('/logo.png', siteUrl),
     telephone: site.phoneE164,
-    availableLanguage: [...site.languages],
     slogan: site.tagline,
-    knowsAbout: ['Wayanad', 'Vythiri', 'Chembra Peak', 'Pookode Lake', 'Banasura Sagar Dam', 'Kerala tea estates'],
-    email: site.email,
-    ...(site.showPrices ? { priceRange: site.priceRange } : {}),
-    ...(numberOfRooms ? { numberOfRooms } : {}),
-    currenciesAccepted: site.currency,
-    checkinTime: site.checkIn,
-    checkoutTime: site.checkOut,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: site.address.street,
-      addressLocality: site.address.locality,
-      addressRegion: site.address.region,
-      postalCode: site.address.postalCode,
-      addressCountry: site.address.country,
-    },
-    geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
-    hasMap: site.mapsUrl,
-    amenityFeature: site.amenities.map((name) => ({
-      '@type': 'LocationFeatureSpecification',
-      name,
-      value: true,
-    })),
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Wayanad, Kerala, India' },
+    knowsAbout: ['Wayanad resorts', 'Vythiri', 'Kalpetta', 'Chembra Peak', 'Pookode Lake', 'Banasura Sagar Dam'],
+    areaServed: { '@type': 'AdministrativeArea', name: 'Wayanad, Kerala, India' },
+    address: { '@type': 'PostalAddress', addressRegion: site.address.region, addressCountry: site.address.country },
     ...(site.socials.length ? { sameAs: site.socials.map((s) => s.url) } : {}),
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: site.phoneE164,
       contactType: 'reservations',
-      availableLanguage: ['English', 'Malayalam', 'Hindi'],
+      availableLanguage: [...site.languages],
     },
   };
 }
@@ -58,7 +39,7 @@ export function websiteSchema(siteUrl: URL | string): Thing {
     url: abs('/', siteUrl),
     name: site.name,
     inLanguage: 'en-IN',
-    publisher: { '@id': abs('/#resort', siteUrl) },
+    publisher: { '@id': businessId(siteUrl) },
   };
 }
 
@@ -74,45 +55,24 @@ export function breadcrumbSchema(items: { name: string; href: string }[], siteUr
   };
 }
 
-export function roomSchema(
-  room: { name: string; summary: string; guests: number; sizeSqft: number; bed: string; priceFrom: number; amenities: string[] },
+/** A stay type we book (e.g. tree houses) as a Service offered by the business. */
+export function stayTypeSchema(
+  stay: { name: string; summary: string },
   url: string,
   image: string,
   siteUrl: URL | string,
-): Thing[] {
-  const roomId = `${url}#room`;
-  return [
-    {
-      '@type': 'HotelRoom',
-      '@id': roomId,
-      name: room.name,
-      description: room.summary,
-      url,
-      image,
-      bed: { '@type': 'BedDetails', typeOfBed: room.bed },
-      occupancy: { '@type': 'QuantitativeValue', maxValue: room.guests },
-      floorSize: { '@type': 'QuantitativeValue', value: room.sizeSqft, unitCode: 'FTK' },
-      amenityFeature: room.amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
-      containedInPlace: { '@id': abs('/#resort', siteUrl) },
-    },
-    ...(!site.showPrices ? [] : [{
-      '@type': 'Offer',
-      name: `${room.name} – nightly rate with breakfast`,
-      url,
-      priceCurrency: site.currency,
-      price: room.priceFrom,
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: room.priceFrom,
-        priceCurrency: site.currency,
-        unitCode: 'DAY',
-        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'DAY' },
-      },
-      itemOffered: { '@id': roomId },
-      offeredBy: { '@id': abs('/#resort', siteUrl) },
-      availability: 'https://schema.org/InStock',
-    }]),
-  ];
+): Thing {
+  return {
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name: `${stay.name} booking in Wayanad`,
+    serviceType: 'Resort booking',
+    description: stay.summary,
+    url,
+    image,
+    areaServed: { '@type': 'AdministrativeArea', name: 'Wayanad, Kerala, India' },
+    provider: { '@id': businessId(siteUrl) },
+  };
 }
 
 /** ImageObject with licence metadata (Google Images can show credit + licence). */
@@ -168,7 +128,6 @@ export const graph = (...nodes: (Thing | Thing[])[]) => ({
   '@graph': nodes.flat().map((n) => JSON.parse(JSON.stringify(n))),
 });
 
-export { fullAddress };
 
 /** WebPage node for a landing page; ties the page to the resort entity instead of inventing a new business. */
 export function webPageSchema(
@@ -183,15 +142,15 @@ export function webPageSchema(
     description: page.description,
     inLanguage: page.lang ?? 'en-IN',
     isPartOf: { '@id': abs('/#website', siteUrl) },
-    about: { '@id': abs('/#resort', siteUrl) },
+    about: { '@id': businessId(siteUrl) },
     ...(page.updated ? { dateModified: page.updated.toISOString().slice(0, 10) } : {}),
     ...(page.mainEntityId ? { mainEntity: { '@id': page.mainEntityId } } : {}),
   };
 }
 
-/** ItemList pointing at the real room entities (defined on each room page). */
-export function roomListSchema(
-  rooms: { id: string; name: string }[],
+/** ItemList pointing at the stay-type services (defined on each /rooms/<id>/ page). */
+export function stayListSchema(
+  stays: { id: string; name: string }[],
   listId: string,
   name: string,
   siteUrl: URL | string,
@@ -200,12 +159,12 @@ export function roomListSchema(
     '@type': 'ItemList',
     '@id': listId,
     name,
-    numberOfItems: rooms.length,
-    itemListElement: rooms.map((r, i) => ({
+    numberOfItems: stays.length,
+    itemListElement: stays.map((r, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       url: abs(`/rooms/${r.id}/`, siteUrl),
-      item: { '@type': 'HotelRoom', '@id': abs(`/rooms/${r.id}/#room`, siteUrl), name: r.name, url: abs(`/rooms/${r.id}/`, siteUrl) },
+      name: r.name,
     })),
   };
 }

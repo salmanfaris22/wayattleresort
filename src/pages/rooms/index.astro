@@ -3,66 +3,36 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import RoomCard from '../../components/RoomCard.astro';
+import TierCards from '../../components/TierCards.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import { img } from '../../lib/images';
-import { breadcrumbSchema } from '../../lib/schema';
+import { breadcrumbSchema, stayListSchema } from '../../lib/schema';
 
 const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
 const crumbs = [
   { name: 'Home', href: '/' },
-  { name: 'Rooms', href: '/rooms/' },
+  { name: 'Stays', href: '/rooms/' },
 ];
+const listId = new URL('/rooms/#stays', Astro.site).href;
 ---
 
 <Base
-  title="Wayanad Resort Rooms: Pool Villa, Tree House & Cottages"
-  description="Compare our Wayanad resort rooms: private pool villa, tree house, plantation cottage and family suite. Sizes, beds, guests and views, with breakfast included."
-  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+  title="Wayanad Resorts by Type: Pool Villas, Tree Houses & More"
+  description="Pool villas, tree houses, plantation cottages, family suites and couple stays across Wayanad, from luxury to budget. Tell us your dates and we book one for you."
+  schema={[breadcrumbSchema(crumbs, Astro.site!), stayListSchema(rooms.map((r) => ({ id: r.id, name: r.data.name })), listId, 'Stay types we book in Wayanad', Astro.site!)]}
 >
   <PageHero
-    title="Rooms and villas at our Wayanad resort"
-    lede="Four room types on one tea-and-coffee hillside. Every stay includes breakfast, Wi-Fi and parking."
+    title="Wayanad stays we can book for you"
+    lede="Five kinds of stay in resorts across Wayanad, at every budget. Tell us who is travelling and we send the ones free for your dates."
     image={img('hero/wayanad-tea-estate-misty-hills')}
     imageAlt="Tea estates on the Wayanad hills under low cloud"
     crumbs={crumbs}
   />
 
-  <section class="section">
-    <div class="wrap">
-      <h2>Compare rooms</h2>
-      <div class="table-scroll">
-        <table class="compare">
-          <thead>
-            <tr>
-              <th scope="col">Room</th>
-              <th scope="col">Guests</th>
-              <th scope="col">Size</th>
-              <th scope="col">Bed</th>
-              <th scope="col">View</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              rooms.map((r) => (
-                <tr>
-                  <th scope="row"><a href={`/rooms/${r.id}/`}>{r.data.name}</a></th>
-                  <td>{r.data.guestsNote}</td>
-                  <td>{r.data.sizeSqft} sq ft</td>
-                  <td>{r.data.bed}</td>
-                  <td>{r.data.view}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-      <p class="muted">Every room includes breakfast. Send your dates on WhatsApp for availability and the rate.</p>
-    </div>
-  </section>
-
   <section class="section list">
     <div class="wrap">
-      <h2>All rooms</h2>
+      <h2>Stay types</h2>
       <div class="room-grid">
         {rooms.map((room) => <RoomCard room={room} note={room.data.summary} />)}
       </div>
@@ -70,19 +40,30 @@ const crumbs = [
   </section>
 
   <section class="section">
+    <div class="wrap">
+      <h2>Budgets</h2>
+      <p class="lede">From whole private villas to simple cottages. Rates change with the season, so we confirm the price on WhatsApp.</p>
+      <TierCards />
+    </div>
+  </section>
+
+  <section class="section list">
+    <div class="wrap">
+      <h2>How booking works</h2>
+      <HowItWorks />
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap cta">
-      <h2>Not sure which room fits?</h2>
-      <p class="lede">Tell us who is travelling and your dates. We will suggest the right room and send the total price.</p>
-      <WhatsAppButton message="Hi, we are ___ adults and ___ children, travelling on ___. Which room do you suggest?" />
+      <h2>Not sure which stay fits?</h2>
+      <p class="lede">Tell us who is travelling, your dates and your budget. We will suggest resorts that suit you.</p>
+      <WhatsAppButton message="Hi, we are ___ adults and ___ children, travelling on ___, budget ___. Which resort do you suggest?" />
     </div>
   </section>
 </Base>
 
 <style>
-  .compare {
-    min-width: 46rem;
-    background: var(--paper);
-  }
   .list {
     background: var(--paper);
   }
@@ -90,8 +71,5 @@ const crumbs = [
     display: grid;
     gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  }
-  .muted {
-    margin-top: 0.8rem;
   }
 </style>

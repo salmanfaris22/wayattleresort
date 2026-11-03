@@ -30,13 +30,13 @@ const ga4 = Boolean(import.meta.env.PUBLIC_GA4_ID);
       <h2>Privacy</h2>
       <p>
         This website does not ask you to create an account and does not store the details you type into the
-        enquiry form. When you press “Send on WhatsApp”, your dates and room choice are placed into a WhatsApp message on your
+        enquiry form. When you press “Send on WhatsApp”, your dates and choices are placed into a WhatsApp message on your
         own device. Nothing is sent to us until you choose to send that message.
       </p>
       <p>
         When you message or call us, we use your name, phone number and travel details only to answer your enquiry and manage
-        your booking. We do not sell or share them for marketing. Guest registration details required by Indian law are kept
-        as the law requires.
+        your booking. When you confirm a booking, we share your name, phone number, dates and number of guests with the resort you
+        chose so it can hold your room. We do not sell or share your details for marketing.
       </p>
       {
         ga4 && (
@@ -48,13 +48,13 @@ const ga4 = Boolean(import.meta.env.PUBLIC_GA4_ID);
       }
       <p>
         {ga4 ? 'Apart from Google Analytics, we' : 'We'} may use privacy-friendly, cookie-free visit statistics (page views and country only) to see which pages are useful.
-        To ask about or delete your data, write to <a href={`mailto:${site.email}`}>{site.email}</a>.
+        To ask about or delete your data, message us on WhatsApp at <a href={`https://wa.me/${site.whatsapp}`}>{site.phone}</a>.
       </p>
 
       <h2>Photo credits</h2>
       <p>
-        Photographs of Wayanad on this site come from Wikimedia Commons and are used under the licences below. Room photos marked
-        “Sample photo” are not of our rooms and will be replaced with our own photographs.
+        Photographs of Wayanad on this site come from Wikimedia Commons and are used under the licences below. Photos marked
+        “Example photo” show the kind of stay, not a specific resort; we send real photos of each resort on WhatsApp.
       </p>
     </div>
     <div class="wrap">

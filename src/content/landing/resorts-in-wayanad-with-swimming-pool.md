@@ -1,6 +1,6 @@
 ---
-# TODO(launch): owner to confirm pool size, depth, timings and rules
-status: published
+# DRAFT: written for a single resort; rewrite for the booking service before publishing
+status: draft
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad with Swimming Pool | Mistvale, Vythiri"
 description: "Outdoor pool with a shallow end, plus a private plunge pool villa, on a tea estate in Vythiri, Wayanad. Pool timings, depth and rooms. Book on WhatsApp."
@@ -24,10 +24,7 @@ rooms:
     note: "About 40 m from the pool on a level path."
   - id: tree-house
     note: "Shared pool access, a short walk down through the coffee."
-facilities: [pool, privatePool, kidsPool]
 places: [pookode-lake, banasura-sagar-dam, soochipara-falls, meenmutty-falls]
-requires:
-  facilities: [pool]
 faqs:
   - q: "Is the pool open during the monsoon?"
     a: "Yes, except during thunderstorms or very heavy rain, when we close it for safety. Swimming in light rain is allowed. From June to September the water is cooler, and the hills around it are at their greenest."

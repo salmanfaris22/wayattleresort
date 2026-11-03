@@ -9,9 +9,9 @@ import ContourLines from './ContourLines.astro';
 <dialog class="lead" aria-labelledby="lead-title" data-lead>
   <div class="top">
     <ContourLines class="lead-lines" />
-    <p class="eyebrow">{site.shortName} · Vythiri, Wayanad</p>
-    <h2 id="lead-title">Planning a stay in the tea hills?</h2>
-    <p>Leave your name and number. We reply on WhatsApp within an hour, 8 am to 10 pm.</p>
+    <p class="eyebrow">{site.shortName} · Wayanad resort booking</p>
+    <h2 id="lead-title">Looking for a resort in Wayanad?</h2>
+    <p>Leave your name and number. We reply on WhatsApp with resorts free for your dates.</p>
     <form method="dialog"><button class="x" aria-label="Close">×</button></form>
   </div>
   <form class="body" action="https://api.whatsapp.com/send" method="get" target="_blank" data-lead-form>
@@ -22,7 +22,7 @@ import ContourLines from './ContourLines.astro';
     <label for="ld-phone">Phone / WhatsApp</label>
     <input id="ld-phone" type="tel" data-k="Phone" autocomplete="tel" inputmode="tel" required pattern="[0-9+()\- ]{10,16}" placeholder="+91 98765 43210" />
     <label for="ld-msg">Message <span>(dates, guests, questions)</span></label>
-    <textarea id="ld-msg" data-k="Message" rows="2" maxlength="500" placeholder="e.g. 4 adults, 20–22 Dec, family suite"></textarea>
+    <textarea id="ld-msg" data-k="Message" rows="2" maxlength="500" placeholder="e.g. 4 adults, 20–22 Dec, pool villa, mid budget"></textarea>
     <button class="btn btn--wa" type="submit"><WaIcon /><span>Send on WhatsApp</span></button>
     <p class="small">Or call <a href={`tel:${site.phoneE164}`}>{site.phone}</a>. Nothing is stored on this website.</p>
   </form>

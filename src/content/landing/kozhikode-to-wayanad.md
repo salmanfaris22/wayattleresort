@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check distances and times from the exact resort location
 status: published
 updated: 2026-11-03
 seoTitle: "Kozhikode to Wayanad: Thamarassery Ghat Route & Distance"
@@ -16,15 +15,13 @@ answer:
   q: "How far is Wayanad from Kozhikode?"
   a: "About 60 km from Kozhikode city to Vythiri, around 2 hours by road on NH 766 via Thamarassery and the ghat road to Lakkidi. From Calicut International Airport it is about 90 km, 2.5 to 3 hours. Kozhikode railway station is the nearest major station, about 65 km away."
 places: [pookode-lake, chembra-peak, banasura-sagar-dam]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "How difficult is the Thamarassery Ghat drive?"
     a: "It is a well-paved two-lane road with nine hairpin bends over about 12 km. Traffic is heavy on weekends and holidays, and trucks slow the climb. Drive in daylight if you can, use low gear going down, and expect delays after heavy rain."
   - q: "Is there a bus from Kozhikode to Vythiri?"
-    a: "Yes. KSRTC buses from Kozhikode to Kalpetta, Sulthan Bathery and Mysuru run through Vythiri on NH 766 throughout the day. Ask for Vythiri and message us when you get off."
+    a: "Yes. KSRTC buses from Kozhikode to Kalpetta, Sulthan Bathery and Mysuru run through Vythiri on NH 766 throughout the day. Ask for the stop nearest your resort."
   - q: "How do I get from Calicut airport to Wayanad?"
-    a: "Prepaid and app taxis run from the airport; the drive to Vythiri takes 2.5 to 3 hours via Kozhikode city or the bypass and the ghat. We can also arrange a taxi to meet your flight."
+    a: "Prepaid and app taxis run from the airport; the drive to Vythiri takes 2.5 to 3 hours via Kozhikode city or the bypass and the ghat. Ask us how to reach your resort when you book."
   - q: "Is the Lakkidi viewpoint on the way?"
     a: "Yes. It is at the top of the ghat, just before Vythiri, with views back down the hairpins. Stop there on a clear morning or evening."
 related: [resorts-in-vythiri, kochi-to-wayanad, where-to-stay-in-wayanad, wayanad-in-monsoon]
@@ -50,6 +47,6 @@ The Thamarassery Ghat (Thamarassery Churam) climbs from the plains to Wayanad's 
 
 Kozhikode railway station is on the main west coast line, with trains from Kochi, Mangaluru, Chennai and Bengaluru. From the station, take a taxi or a KSRTC bus towards Kalpetta; get off at Vythiri.
 
-## Arriving at the resort
+## Arriving in Wayanad
 
-Vythiri is only a few minutes past the top of the ghat, which makes it the easiest part of Wayanad to reach from Kozhikode. Message us with your arrival time and we will send directions or arrange pickup.
+Vythiri is only a few minutes past the top of the ghat, which makes it the easiest part of Wayanad to reach from Kozhikode. Resorts in Vythiri and Lakkidi are the quickest to reach; we send you directions to your resort when you book.

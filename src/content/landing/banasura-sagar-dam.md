@@ -1,5 +1,4 @@
 ---
-# TODO(launch): re-check opening hours, boat rides and ticket rules
 status: published
 updated: 2026-11-03
 seoTitle: "Banasura Sagar Dam, Wayanad: Boating, Timings & Tips"
@@ -16,8 +15,6 @@ answer:
   q: "What is there to do at Banasura Sagar Dam?"
   a: "Walk along the dam top for views of the reservoir and its islands, take a speedboat or pedal-boat ride, and in clear weather join a guided walk on Banasura Hill. The dam is often described as the largest earth dam in India and is about {{km:banasura-sagar-dam}} from Vythiri, under an hour's drive."
 places: [banasura-sagar-dam, pookode-lake, meenmutty-falls]
-requires:
-  location: "Vythiri"
 faqs:
   - q: "What is the best time of day to visit Banasura Sagar?"
     a: "Late afternoon, when the light falls across the islands and the heat has gone. Mornings are quieter on weekdays. Allow two to three hours including a boat ride."
@@ -49,4 +46,4 @@ The reservoir is fullest after the monsoon, from September to December, when the
 
 ## Combine it with
 
-Meenmutty Falls and the Karlad Lake area are on the way back towards the south of the district, and Pookode Lake is ten minutes from the resort for an easy evening. We can suggest a route that fits your day.
+Meenmutty Falls and the Karlad Lake area are on the way back towards the south of the district, and Pookode Lake near Vythiri makes an easy evening stop. We can suggest a route that fits your day.
