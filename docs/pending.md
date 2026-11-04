@@ -6,7 +6,7 @@ Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many
 - Real guest reviews with permission: add to `src/data/reviews.ts` (section stays hidden while empty). Never write reviews yourself. Stars in Google search need a third-party source such as Google Business Profile; reviews on your own site do not get them.
 - Team names and roles, if you want them shown: `team` in `src/data/site.ts`.
 - Read /terms/ and confirm it matches how you take advance payments and refunds. It does not state a refund rule because none was given.
-- Google Business Profile as a service-area business, the main way to reach the map pack.
+- Google Business Profile as a service-area business, the main way to reach the map pack. Paste-ready details: `docs/launch-actions.md`.
 - Search Console: submit `sitemap-index.xml`, then request indexing for /, /services/ and /faq/.
 
 | # | Area | Item | Impact | Owner | Status |
