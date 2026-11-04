@@ -1,7 +1,7 @@
 ---
 name: Private Pool Villa
 order: 1
-seoTitle: Private Pool Villa in Wayanad – Book on WhatsApp | Mistvale
+seoTitle: Private Pool Villa in Wayanad – Book on WhatsApp
 seoDescription: Private pool villas in Wayanad for couples, families and groups, from luxury resorts to whole private villas. Tell us your dates and we find one free.
 keyword: private pool villa in Wayanad
 summary: A villa with its own pool that only your group uses. We book them in luxury resorts for couples and in private villas for families and friends.
@@ -17,7 +17,7 @@ features: [Pool used only by your group, Valley or plantation view, Air-conditio
 goodFor: [Honeymoons and anniversaries, Families who want privacy, Friends trips and birthdays]
 ---
 
-A private pool villa is the most asked-for stay in Wayanad. There are two kinds, and we book both:
+A private pool villa in Wayanad is the most asked-for stay in the district. There are two kinds, and we book both:
 
 - **Couple pool villas** inside luxury resorts: one bedroom, a plunge pool on the deck and the resort's restaurant and spa a short walk away.
 - **Private pool villas** for families and groups: two to five bedrooms and a full-size pool, booked only for you, often with a cook.
@@ -26,7 +26,7 @@ A private pool villa is the most asked-for stay in Wayanad. There are two kinds,
 
 Pool size and depth vary a lot. A plunge pool is for sitting in, not swimming laps, and most pools in Wayanad are not heated, so the water is cold on December and January mornings. Ask whether the pool is fully private or only screened, and how far the villa is from parking. Many hillside villas have steps.
 
-When you message us, tell us how many adults and children are coming and whether you want a quiet couple villa or space for a group. We send villas that are free for your dates, with photos and the rate, and book the one you pick.
+When you message us, tell us how many adults and children are coming and whether you want a quiet couple villa or space for a group. We send private pool villas in Wayanad that are free for your dates, with photos and the rate, and book the one you pick.
 
 ## Good to know
 

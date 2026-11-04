@@ -38,7 +38,9 @@ const {
   alternates = [],
   keywords = [],
 } = Astro.props;
-const keywordList = [...new Set(keywords.map((k) => k.trim().toLowerCase()).filter(Boolean))].slice(0, 10).join(', ');
+// First entry is the page's main keyword (scripts/seo-check.mjs). The two site-wide phrases go on every page that has keywords.
+const allKeywords = keywords.length ? [...keywords, 'best resort in Wayanad', 'Wayanad resort booking'] : [];
+const keywordList = [...new Set(allKeywords.map((k) => k.trim().toLowerCase()).filter(Boolean))].slice(0, 12).join(', ');
 
 const siteUrl = Astro.site!;
 const canonical = new URL(Astro.url.pathname, siteUrl).href;

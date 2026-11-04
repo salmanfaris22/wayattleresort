@@ -13,6 +13,7 @@ export function businessSchema(siteUrl: URL | string, image: string): Thing {
     '@type': 'TravelAgency',
     '@id': businessId(siteUrl),
     name: site.name,
+    alternateName: [...site.alternateNames],
     description: site.description,
     url: abs('/', siteUrl),
     image,
@@ -38,6 +39,7 @@ export function websiteSchema(siteUrl: URL | string): Thing {
     '@id': abs('/#website', siteUrl),
     url: abs('/', siteUrl),
     name: site.name,
+    alternateName: [...site.alternateNames],
     inLanguage: 'en-IN',
     publisher: { '@id': businessId(siteUrl) },
   };

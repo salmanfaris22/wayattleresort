@@ -5,10 +5,10 @@ seoTitle: "Wayanad in Monsoon: What to Expect, What's Open, Where to Stay"
 description: "Wayanad in the monsoon (June to September): mist, full waterfalls and lower crowds, plus what closes, road and safety tips and how to plan a rainy resort stay."
 h1: "Wayanad in the monsoon"
 breadcrumb: "Wayanad in monsoon"
-lede: "From June to September Wayanad turns its greenest, the waterfalls run full and mist sits on the tea for days. It is a different trip from the dry season, and a good one if you plan for rain."
+lede: "Wayanad in the monsoon, from June to September, turns its greenest, the waterfalls run full and mist sits on the tea for days. It is a different trip from the dry season, and a good one if you plan for rain."
 heroImage: "places/soochipara-falls"
 heroAlt: "Soochipara Falls running full after rain in Wayanad"
-primaryKeyword: "wayanad in monsoon"
+primaryKeyword: "wayanad in the monsoon"
 secondaryKeywords: ["wayanad rainy season", "is wayanad good in monsoon", "wayanad in july", "wayanad in august", "monsoon resort wayanad"]
 intent: informational
 answer:

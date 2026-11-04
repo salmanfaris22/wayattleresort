@@ -1,122 +1,138 @@
 {
   "/": {
-    "hash": "a5f2833c816d1f77",
-    "lastmod": "2026-11-03"
+    "hash": "e1bd619d80c81d08",
+    "lastmod": "2026-11-04"
+  },
+  "/about/": {
+    "hash": "cf2ea2572001d57c",
+    "lastmod": "2026-11-04"
   },
   "/banasura-sagar-dam/": {
-    "hash": "1d9e0080871a0e28",
-    "lastmod": "2026-11-03"
+    "hash": "308cc0230dc1dd79",
+    "lastmod": "2026-11-04"
   },
   "/bangalore-to-wayanad/": {
-    "hash": "cd92374280e7246b",
-    "lastmod": "2026-11-03"
+    "hash": "f5c79994db8ecf08",
+    "lastmod": "2026-11-04"
   },
   "/best-time-to-visit-wayanad/": {
     "hash": "fe97af9fb794bdd6",
     "lastmod": "2026-11-03"
   },
   "/chembra-peak-trek/": {
-    "hash": "c5c98cab6c41c8ff",
-    "lastmod": "2026-11-03"
+    "hash": "6f239c3f3465a7dc",
+    "lastmod": "2026-11-04"
   },
   "/contact/": {
-    "hash": "1a8ba974499dcbea",
-    "lastmod": "2026-11-03"
+    "hash": "a3f55ba52969d613",
+    "lastmod": "2026-11-04"
   },
   "/edakkal-caves/": {
-    "hash": "1e3ea66849568385",
-    "lastmod": "2026-11-03"
+    "hash": "ec7471cca6bd62ea",
+    "lastmod": "2026-11-04"
   },
   "/family-resorts-in-wayanad/": {
-    "hash": "3d37964e1922c9b6",
-    "lastmod": "2026-11-03"
+    "hash": "6412e5cca2808548",
+    "lastmod": "2026-11-04"
+  },
+  "/faq/": {
+    "hash": "a5c3b47fe508695c",
+    "lastmod": "2026-11-04"
   },
   "/group-stays-in-wayanad/": {
-    "hash": "425fe61359a25db0",
-    "lastmod": "2026-11-03"
+    "hash": "99b0458ce688cc86",
+    "lastmod": "2026-11-04"
   },
   "/kochi-to-wayanad/": {
-    "hash": "28fa4b56fc43538e",
-    "lastmod": "2026-11-03"
+    "hash": "e54866fa95397520",
+    "lastmod": "2026-11-04"
   },
   "/kozhikode-to-wayanad/": {
-    "hash": "47cb90869819ce5c",
-    "lastmod": "2026-11-03"
+    "hash": "c1991eaef0500b38",
+    "lastmod": "2026-11-04"
   },
   "/ml/": {
-    "hash": "9fb274d07996560d",
-    "lastmod": "2026-11-03"
+    "hash": "28d9b4f104645aed",
+    "lastmod": "2026-11-04"
   },
   "/mysore-to-wayanad/": {
-    "hash": "f2ade40ad1347c02",
-    "lastmod": "2026-11-03"
+    "hash": "619a9f1a71cf2b33",
+    "lastmod": "2026-11-04"
   },
   "/privacy/": {
     "hash": "a2f924c54d4ee4ae",
     "lastmod": "2026-11-03"
   },
   "/private-resort-in-wayanad/": {
-    "hash": "ca3e5f4f2950124e",
-    "lastmod": "2026-11-03"
+    "hash": "362fbe081d3a2191",
+    "lastmod": "2026-11-04"
   },
   "/resort-in-wayanad-for-10-people/": {
-    "hash": "a0e3b8191687bca1",
-    "lastmod": "2026-11-03"
+    "hash": "a71b251d3c384391",
+    "lastmod": "2026-11-04"
   },
   "/resorts-in-vythiri/": {
-    "hash": "ada948eda560a647",
-    "lastmod": "2026-11-03"
+    "hash": "e1011f10a3542768",
+    "lastmod": "2026-11-04"
   },
   "/resorts-in-wayanad-for-couples/": {
-    "hash": "0a70152901a7e229",
-    "lastmod": "2026-11-03"
+    "hash": "08cdb54040c28ad2",
+    "lastmod": "2026-11-04"
   },
   "/resorts-in-wayanad-with-swimming-pool/": {
-    "hash": "3cdacc6ff72c7e9a",
-    "lastmod": "2026-11-03"
+    "hash": "705b118b5a651323",
+    "lastmod": "2026-11-04"
   },
   "/rooms/": {
-    "hash": "71113b682aa0acfa",
-    "lastmod": "2026-11-03"
+    "hash": "a5083343b142754e",
+    "lastmod": "2026-11-04"
   },
   "/rooms/couple-stay/": {
-    "hash": "48a13167ad749728",
-    "lastmod": "2026-11-03"
+    "hash": "1cd82b09889606a4",
+    "lastmod": "2026-11-04"
   },
   "/rooms/family-suite/": {
-    "hash": "453f88b5f97246fb",
-    "lastmod": "2026-11-03"
+    "hash": "4ed32f84f6a7a701",
+    "lastmod": "2026-11-04"
   },
   "/rooms/plantation-cottage/": {
-    "hash": "a1454da1bd96f8a4",
-    "lastmod": "2026-11-03"
+    "hash": "4f740455192d9318",
+    "lastmod": "2026-11-04"
   },
   "/rooms/pool-villa/": {
-    "hash": "8304fbf1f4055154",
-    "lastmod": "2026-11-03"
+    "hash": "96bf897c9df3c425",
+    "lastmod": "2026-11-04"
   },
   "/rooms/tree-house/": {
-    "hash": "bddd534a8b5f26c2",
-    "lastmod": "2026-11-03"
+    "hash": "bb69127834b05bab",
+    "lastmod": "2026-11-04"
+  },
+  "/services/": {
+    "hash": "ce7f35aedb6d63c8",
+    "lastmod": "2026-11-04"
+  },
+  "/terms/": {
+    "hash": "c7818b9af624f978",
+    "lastmod": "2026-11-04"
   },
   "/things-to-do-in-wayanad/": {
     "hash": "0a642cd2165f1530",
     "lastmod": "2026-11-03"
   },
   "/wayanad-in-monsoon/": {
-    "hash": "ffcd14fbbb82f4dd",
-    "lastmod": "2026-11-03"
+    "hash": "da1bba9837546906",
+    "lastmod": "2026-11-04"
   },
   "/wayanad-resort-activities/": {
-    "hash": "da78b08a104b3272",
-    "lastmod": "2026-11-03"
+    "hash": "ca405dcf7da8ab5c",
+    "lastmod": "2026-11-04"
   },
   "/wayanad-resort-prices/": {
     "hash": "dee9e2fcf0830e64",
     "lastmod": "2026-11-03"
   },
   "/where-to-stay-in-wayanad/": {
-    "hash": "09f01dba57de4a26",
-    "lastmod": "2026-11-03"
+    "hash": "dfc5efe2caa76c00",
+    "lastmod": "2026-11-04"
   }
 }

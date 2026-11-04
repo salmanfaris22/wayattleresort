@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Reviews from '../components/Reviews.astro';
+import { site } from '../data/site';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'About us', href: '/about/' },
+];
+---
+
+<Base
+  keywords={['Wayanad resort booking team', 'about Resort in Wayanad', 'resortinwayanad reviews']}
+  title={`About Us: Wayanad Resort Booking Team | ${site.name}`}
+  description="Resort in Wayanad is a Wayanad resort booking team. We work with partner resorts across the district, in English and Malayalam, by phone and WhatsApp."
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="About our Wayanad resort booking team"
+    lede={`${site.name} is a Wayanad resort booking team, not a single resort. We work with resorts, villas, tree houses and plantation stays across the district.`}
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap narrow prose">
+      <h2>What our Wayanad resort booking team does</h2>
+      <p>
+        We find the best resort in Wayanad for your trip. You tell us your dates, who is travelling and your budget, and we check
+        which resorts are free, send you photos and rates, and book the one you pick. We help in {site.languages.join(' and ')}, by
+        phone and on WhatsApp at <a href={`tel:${site.phoneE164}`}>{site.phone}</a>.
+      </p>
+      <p>We have no public office. See <a href="/services/">our services</a> or the <a href="/faq/">FAQ</a>.</p>
+      {
+        site.team.length > 0 && (
+          <>
+            <h2>Our Wayanad resort booking team</h2>
+            <ul>
+              {site.team.map((m) => (
+                <li>
+                  <strong>{m.name}</strong>, {m.role}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>How booking works</h2>
+      <HowItWorks />
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <h2>Guest reviews</h2>
+      <Reviews />
+    </div>
+  </section>
+</Base>

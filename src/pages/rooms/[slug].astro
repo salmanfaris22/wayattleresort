@@ -42,7 +42,7 @@ const budgetList = r.tiers.map((id) => tiers.find((t) => t.id === id)!.name.repl
   schema={[stayTypeSchema(r, url, new URL(ogImg.src, Astro.site).href, Astro.site!), breadcrumbSchema(crumbs, Astro.site!)]}
 >
   <PageHero
-    title={`${r.name} stays in Wayanad`}
+    title={r.keyword[0].toUpperCase() + r.keyword.slice(1)}
     lede={r.summary}
     image={r.image}
     imageAlt={r.imageAlt}

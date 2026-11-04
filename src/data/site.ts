@@ -1,16 +1,17 @@
 // ⭐ One file for every business fact on the site.
-// Mistvale Wayanad is a resort booking service: we find and book partner resorts
+// Resort in Wayanad is a resort booking service: we find and book partner resorts
 // across Wayanad for guests on WhatsApp. We do not own or run a resort.
 // Anything marked TODO is a placeholder; `pnpm check:launch` lists them and
 // Vercel builds stay noindex until they are all replaced.
 
 export const site = {
-  name: 'Mistvale Wayanad',
-  shortName: 'Mistvale',
-  legalName: 'Mistvale Wayanad',
-  tagline: 'Resort booking help for every part of Wayanad',
+  name: 'Resort in Wayanad',
+  // Other ways people type the name; used as alternateName so Google links them to this site.
+  alternateNames: ['resortinwayanad', 'resortinwayanad.in', 'Resort in Wayanad booking'],
+  legalName: 'Resort in Wayanad',
+  tagline: 'Wayanad resort booking: the best resort for your trip',
   description:
-    'We find and book Wayanad resorts for you: private pool villas, tree houses, plantation cottages, family suites and couple stays, from luxury to budget. Book on WhatsApp.',
+    'We find and book the best resort in Wayanad for your trip: private pool villas, tree houses, plantation cottages, family suites and couple stays, from luxury to budget. Book on WhatsApp.',
   phone: '+91 90610 79722',
   phoneE164: '+919061079722',
   whatsapp: '919061079722',
@@ -31,6 +32,8 @@ export const site = {
     { value: 'All', label: 'of Wayanad: Vythiri, Kalpetta, Meppadi, Bathery and more' },
   ],
   socials: [] as { name: string; url: string }[],
+  // Real people only. Shown on /about/ once filled in.
+  team: [] as { name: string; role: string }[],
   // Reference point for the distances in places.ts (south Wayanad, on the main road from Kozhikode).
   baseTown: 'Vythiri',
   languages: ['English', 'Malayalam'],
@@ -74,7 +77,9 @@ export const fullAddress = `${site.address.district}, ${site.address.region}, In
 
 export const nav = [
   { href: '/rooms/', label: 'Stays' },
+  { href: '/services/', label: 'Services' },
   { href: '/where-to-stay-in-wayanad/', label: 'Where to stay' },
   { href: '/things-to-do-in-wayanad/', label: 'Wayanad guide' },
+  { href: '/faq/', label: 'FAQ' },
   { href: '/contact/', label: 'Contact' },
 ];

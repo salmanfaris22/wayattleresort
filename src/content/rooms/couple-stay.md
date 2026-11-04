@@ -1,7 +1,7 @@
 ---
 name: Couple Stay
 order: 5
-seoTitle: Couple Friendly Resorts in Wayanad – Book on WhatsApp | Mistvale
+seoTitle: Couple Friendly Resorts in Wayanad – Book on WhatsApp
 seoDescription: Couple-friendly resorts in Wayanad for honeymoons and anniversaries, from budget cottages to luxury pool villas. Send your dates and we find one free.
 keyword: couple friendly resorts in Wayanad
 summary: Quiet rooms for two with a view, from budget cottages to luxury villas. We can arrange candle-light dinners and room decoration for honeymoons and anniversaries.
@@ -17,13 +17,13 @@ features: [Room for two with a view, Couple-friendly resort policy, Candle-light
 goodFor: [Honeymoons, Anniversaries, Weekend breaks]
 ---
 
-Wayanad is one of Kerala's favourite honeymoon spots: misty mornings, quiet nights and short drives to lakes and viewpoints. We book couple stays at every budget, from simple cottages to luxury villas with a private pool.
+Wayanad is one of Kerala's favourite honeymoon spots: misty mornings, quiet nights and short drives to lakes and viewpoints. We book couple-friendly resorts in Wayanad at every budget, from simple cottages to luxury villas with a private pool.
 
 ## What to check before you book
 
 Some resorts do not accept unmarried couples, so tell us when you message and we will only suggest resorts that do. Both guests need photo ID at check-in. Check whether the room has a view or faces the parking, and how close it is to group rooms, since weekends can be loud. For a honeymoon, ask for decoration and a candle-light dinner when you book; most resorts need a day's notice.
 
-Tell us your dates and budget on WhatsApp and we send couple-friendly rooms free for those dates, with photos and the rate.
+Tell us your dates and budget on WhatsApp and we send couple-friendly resorts in Wayanad free for those dates, with photos and the rate.
 
 ## Good to know
 

@@ -18,7 +18,8 @@ import { site } from '../data/site';
 import { reach } from '../data/places';
 import { faq } from '../data/faq';
 import { img, creditLine } from '../lib/images';
-import { faqSchema } from '../lib/schema';
+import Reviews from '../components/Reviews.astro';
+import { reviews } from '../data/reviews';
 import RelatedPages from '../components/RelatedPages.astro';
 import { getLandingPages } from '../lib/landing';
 
@@ -49,14 +50,13 @@ const chooseRows = [
 ---
 
 <Base
-  keywords={['best resort in Wayanad', 'resort in Wayanad', 'Wayanad resorts', 'resort booking Wayanad', 'private resort in Wayanad', 'luxury resort in Wayanad', 'budget resort in Wayanad', 'pool villa Wayanad', 'tree house Wayanad', 'resortinwayanad']}
+  keywords={['resort in Wayanad', 'best resort in Wayanad', 'Wayanad resorts', 'resort booking Wayanad', 'private resort in Wayanad', 'luxury resort in Wayanad', 'budget resort in Wayanad', 'pool villa Wayanad', 'tree house Wayanad', 'resortinwayanad']}
   alternates={[
     { lang: 'en-IN', href: '/' },
     { lang: 'ml-IN', href: '/ml/' },
   ]}
-  title="Best Resorts in Wayanad – Pool Villas, Tree Houses | Mistvale"
-  description="Find and book the best resort in Wayanad for your trip: private, luxury, affordable and budget resorts, pool villas and tree houses. Send your dates on WhatsApp."
-  schema={[faqSchema(faq)]}
+  title="Resort in Wayanad – Best Pool Villas, Tree Houses & Stays"
+  description="Find and book the best resort in Wayanad: private, luxury, affordable and budget stays, pool villas and tree houses. All Wayanad resort booking on WhatsApp."
 >
   <Hero
     eyebrow="Resort booking across Wayanad, Kerala"
@@ -130,7 +130,7 @@ const chooseRows = [
 
   <section class="section find" aria-label="Find the right stay">
     <div class="wrap">
-      <RelatedPages slugs={landingPages.map((p) => p.id)} title="Find the right stay" />
+      <RelatedPages slugs={landingPages.map((p) => p.id)} title="Find the right stay" blurbs={false} />
     </div>
   </section>
 
@@ -234,10 +234,22 @@ const chooseRows = [
     </div>
   </section>
 
+  {
+    reviews.length > 0 && (
+      <section class="section" id="reviews" aria-labelledby="reviews-title">
+        <div class="wrap">
+          <h2 id="reviews-title">What guests say</h2>
+          <Reviews invite={false} />
+        </div>
+      </section>
+    )
+  }
+
   <section class="section faq-section" id="faq" aria-labelledby="faq-title">
     <div class="wrap narrow-wrap">
       <h2 id="faq-title">Questions guests ask</h2>
-      <Faq items={faq} />
+      <Faq items={faq.slice(0, 4)} />
+      <p><a href="/faq/">See all questions</a></p>
     </div>
   </section>
 

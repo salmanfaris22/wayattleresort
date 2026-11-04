@@ -35,3 +35,15 @@ export const faq = [
     a: "Yes. Each resort has its own check-in time, advance and cancellation rule, children's policy and pet policy. We tell you the rules of the resort you choose before you pay anything, so you can compare them along with the rate.",
   },
 ];
+
+// Questions about the business itself. Shown on /faq/ with the list above.
+export const brandFaq = [
+  {
+    q: 'What is Resort in Wayanad?',
+    a: 'Resort in Wayanad (resortinwayanad.in) is a resort booking service for Wayanad, Kerala. We are not a single resort. You tell us your dates, guests and budget on WhatsApp, we send resorts that are free, and we book the one you choose.',
+  },
+  {
+    q: 'Do you own the resorts you book?',
+    a: 'No. We work with partner resorts, villas, tree houses and plantation stays across Wayanad. Each one is run by its own owners and has its own rules. We tell you the name of the resort, its address and its rules before you pay.',
+  },
+];

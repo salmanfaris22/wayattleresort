@@ -1,6 +1,13 @@
 # Pending tracker (SEO · performance · local · AEO/GEO)
 
-Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Mistvale Wayanad, no office, no email.** Rows 1–8 about one resort's own data no longer apply. 8 sales pages rewritten and live; the prices page stays draft until real rate ranges exist. SEO plan and keyword files: seo/ROADMAP.md. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
+Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Resort in Wayanad (renamed from Mistvale on 3 Nov 2026), no office, no email.** Rows 1–8 about one resort's own data no longer apply. 8 sales pages rewritten and live; the prices page stays draft until real rate ranges exist. SEO plan and keyword files: seo/ROADMAP.md. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
+
+**Added 3 Nov 2026, needs the owner:**
+- Real guest reviews with permission: add to `src/data/reviews.ts` (section stays hidden while empty). Never write reviews yourself. Stars in Google search need a third-party source such as Google Business Profile; reviews on your own site do not get them.
+- Team names and roles, if you want them shown: `team` in `src/data/site.ts`.
+- Read /terms/ and confirm it matches how you take advance payments and refunds. It does not state a refund rule because none was given.
+- Google Business Profile as a service-area business, the main way to reach the map pack.
+- Search Console: submit `sitemap-index.xml`, then request indexing for /, /services/ and /faq/.
 
 | # | Area | Item | Impact | Owner | Status |
 |---|---|---|---|---|---|

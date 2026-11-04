@@ -9,14 +9,14 @@ import ContourLines from './ContourLines.astro';
 <dialog class="lead" aria-labelledby="lead-title" data-lead>
   <div class="top">
     <ContourLines class="lead-lines" />
-    <p class="eyebrow">{site.shortName} · Wayanad resort booking</p>
+    <p class="eyebrow">{site.name} · Book on WhatsApp</p>
     <h2 id="lead-title">Looking for a resort in Wayanad?</h2>
     <p>Leave your name and number. We reply on WhatsApp with resorts free for your dates.</p>
     <form method="dialog"><button class="x" aria-label="Close">×</button></form>
   </div>
   <form class="body" action="https://api.whatsapp.com/send" method="get" target="_blank" data-lead-form>
     <input type="hidden" name="phone" value={site.whatsapp} />
-    <input type="hidden" name="text" value={`Hi ${site.shortName}, I'm planning a stay in Wayanad.`} />
+    <input type="hidden" name="text" value={"Hi, I'm planning a stay in Wayanad."} />
     <label for="ld-name">Your name</label>
     <input id="ld-name" type="text" data-k="Name" autocomplete="name" required maxlength="60" />
     <label for="ld-phone">Phone / WhatsApp</label>

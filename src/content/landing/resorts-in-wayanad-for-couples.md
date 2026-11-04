@@ -3,9 +3,9 @@ status: published
 updated: 2026-11-03
 seoTitle: "Resorts in Wayanad for Couples – Honeymoon & Pool Villas"
 description: "Couple-friendly resorts in Wayanad for honeymoons and anniversaries: pool villas, tree houses and quiet cottages. Send your dates and we find one free for you."
-h1: "Resorts in Wayanad for couples and honeymoons"
+h1: "Best resort in Wayanad for couples and honeymoons"
 breadcrumb: "Resorts for couples"
-lede: "Pool villas, tree houses and quiet rooms with a view, from budget to luxury. We find couple-friendly Wayanad resorts that are free for your dates."
+lede: "Looking for the best resort in Wayanad for couples? Pool villas, tree houses and quiet rooms with a view, from budget to luxury. We find couple-friendly Wayanad resorts that are free for your dates."
 heroImage: "experiences/chembra-heart-lake-trek"
 heroAlt: "The heart-shaped lake on the Chembra Peak trail"
 primaryKeyword: "best resort in Wayanad for couples"

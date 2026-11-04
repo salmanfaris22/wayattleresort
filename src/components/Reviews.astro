@@ -1,0 +1,61 @@
+---
+import { reviews } from '../data/reviews';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  invite?: boolean;
+}
+const { invite = true } = Astro.props;
+---
+
+{
+  reviews.length > 0 && (
+    <div class="reviews">
+      {reviews.map((r) => (
+        <figure>
+          <p class="stars" role="img" aria-label={`Rated ${r.rating} out of 5`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</p>
+          <blockquote>{r.text}</blockquote>
+          <figcaption>{r.name} · {r.trip}</figcaption>
+        </figure>
+      ))}
+    </div>
+  )
+}
+{
+  invite && (
+    <div class="invite">
+      <p>Booked a stay with us? Send your review on WhatsApp and, with your permission, we will publish it here in your own words.</p>
+      <WhatsAppButton message="Hi, I'd like to share a review of my Wayanad stay. Rating out of 5: ___. Review: ___. You can publish it with this name: ___" label="Send your review" />
+    </div>
+  )
+}
+
+<style>
+  .reviews {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    margin-bottom: var(--space-m);
+  }
+  figure {
+    margin: 0;
+    padding: var(--space-m);
+    background: var(--paper);
+    border-radius: var(--radius);
+  }
+  .stars {
+    color: #8a6410;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.1em;
+  }
+  blockquote {
+    margin: 0 0 0.75rem;
+  }
+  figcaption {
+    font-size: 0.9rem;
+    color: var(--monsoon-ink);
+  }
+  .invite p {
+    max-width: 60ch;
+  }
+</style>

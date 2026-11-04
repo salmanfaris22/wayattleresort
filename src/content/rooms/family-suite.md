@@ -1,7 +1,7 @@
 ---
 name: Family Suite
 order: 4
-seoTitle: Family Rooms and Suites in Wayanad – Book on WhatsApp | Mistvale
+seoTitle: Family Rooms and Suites in Wayanad – Book on WhatsApp
 seoDescription: Family suites and two-bedroom cottages in Wayanad resorts, with pools and food on site. Tell us how many adults and children and we find one free for you.
 keyword: family room in Wayanad
 summary: Two-bedroom suites, interconnected rooms and large cottages for families of four to eight, in resorts with a pool and a restaurant on site.
@@ -17,13 +17,13 @@ features: [Two bedrooms or interconnected rooms, Extra mattress on request, Pool
 goodFor: [Families with children, Families with grandparents, Two families travelling together]
 ---
 
-Families need more than a big bed. We look for two bedrooms or connected rooms, food on site, a pool with a shallow end and short drives to the sights.
+Families need more than a big bed. For a family room in Wayanad we look for two bedrooms or connected rooms, food on site, a pool with a shallow end and short drives to the sights.
 
 ## What to check before you book
 
 Ask whether the pool has a shallow end, whether there is a lifeguard (most resorts have none), and whether rooms are on a level path for grandparents. Outside the towns few restaurants stay open late, so a resort kitchen that can make plain food for children at short notice is worth a lot. Check the extra mattress charge and what the resort counts as a child's age.
 
-Send us the number of adults, the children's ages and your dates. We reply with family rooms free for those dates, with photos and the rate.
+Send us the number of adults, the children's ages and your dates. We reply with family rooms in Wayanad free for those dates, with photos and the rate.
 
 ## Good to know
 

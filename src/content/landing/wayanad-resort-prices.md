@@ -2,8 +2,8 @@
 # DRAFT: written for a single resort; rewrite for the booking service before publishing
 status: draft # hidden while site.showPrices is false
 updated: 2026-11-03
-seoTitle: "Wayanad Resort Prices 2026: Room Rates | Mistvale, Vythiri"
-description: "Room rates at Mistvale, Vythiri, Wayanad for 2026: every room with breakfast, extra mattresses, group cost per person and booking policy. No booking fee."
+seoTitle: "Wayanad Resort Prices 2026: Room Rates | Resort in Wayanad"
+description: "Room rates at Wayanad resorts for 2026: every room with breakfast, extra mattresses, group cost per person and booking policy. No booking fee."
 h1: "Wayanad resort prices and room rates"
 breadcrumb: "Prices"
 lede: "Every price on one page: nightly rates with breakfast, extra mattresses, group costs and the advance and cancellation policy. Booking direct on WhatsApp costs nothing extra."
@@ -14,7 +14,7 @@ secondaryKeywords: ["best resort in Wayanad with price", "Wayanad resort rates",
 intent: transactional
 answer:
   q: "How much does a resort in Wayanad cost per night?"
-  a: "It depends on the type of stay. On booking sites in November 2026, homestays and small pool resorts in Wayanad started from about ₹2,000 a night, while private pool villas and luxury resorts often cost over ₹10,000. At Mistvale rooms cost {{priceRange}} a night for two guests, with breakfast included."
+  a: "It depends on the type of stay. On booking sites in November 2026, homestays and small pool resorts in Wayanad started from about ₹2,000 a night, while private pool villas and luxury resorts often cost over ₹10,000. Rooms we book cost {{priceRange}} a night for two guests, with breakfast included."
 faqs:
   - q: "Are taxes included in the price?"
     a: "The rates shown are room prices before GST. Tax is added to the bill at the rate set by the government for the room tariff, and we show it separately on your confirmation."

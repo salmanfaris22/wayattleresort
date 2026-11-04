@@ -6,8 +6,10 @@ import { staticPages } from '../data/pages';
 interface Props {
   slugs: string[];
   title?: string;
+  /** Show the one-line question under each link. Off on the home page, which lists every page. */
+  blurbs?: boolean;
 }
-const { slugs, title = 'Plan your stay' } = Astro.props;
+const { slugs, title = 'Plan your stay', blurbs = true } = Astro.props;
 const { published } = await getLandingPages();
 const fill = makeFiller(await getRooms());
 const links = slugs
@@ -28,7 +30,7 @@ const links = slugs
         {links.map((l) => (
           <li>
             <a href={l.href}>{l.title}</a>
-            <span>{l.blurb}</span>
+            {blurbs && <span>{l.blurb}</span>}
           </li>
         ))}
       </ul>

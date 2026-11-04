@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Terms of service', href: '/terms/' },
+];
+---
+
+<Base
+  title={`Terms of Service | ${site.name}`}
+  description={`The terms for using ${site.name}, a resort booking service for Wayanad, Kerala: what we do, resort rules, rates, photos and how to contact us.`}
+  schema={[breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero title="Terms of service" lede="How our booking service works and what you can expect from us." crumbs={crumbs} />
+
+  <section class="section">
+    <div class="wrap narrow prose">
+      <h2>Who we are</h2>
+      <p>{site.name} ({new URL(Astro.site!).hostname}) is a resort booking service for Wayanad, Kerala. We book stays at partner resorts. We do not own or run a resort.</p>
+      <h2>Your booking</h2>
+      <p>We send you resorts that are free for your dates. When you choose one, we book it and send you the resort's name, address and booking details in writing.</p>
+      <h2>Rates</h2>
+      <p>Rates change with the season and the dates you travel. The rate for your stay is the one we confirm to you on WhatsApp.</p>
+      <h2>Resort rules</h2>
+      <p>Each resort sets its own check-in time, advance payment, cancellation rule, children's policy and pet policy. We send you the rules of the resort you choose before you pay. Those rules apply to your stay.</p>
+      <h2>Photo ID</h2>
+      <p>Every adult needs a government photo ID at check-in. This is required by law in India.</p>
+      <h2>Photos on this website</h2>
+      <p>Photos marked “Example photo” show a kind of stay, not a specific resort. We send real photos of each resort on WhatsApp.</p>
+      <h2>Your details</h2>
+      <p>Our <a href="/privacy/">privacy policy</a> explains how we use your details.</p>
+      <h2>Contact</h2>
+      <p>Questions about these terms: WhatsApp or call <a href={`tel:${site.phoneE164}`}>{site.phone}</a>.</p>
+    </div>
+  </section>
+</Base>

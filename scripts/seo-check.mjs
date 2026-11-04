@@ -28,6 +28,15 @@ const exists = (href) => {
   return p.endsWith('/') ? fs.existsSync(path.join(full, 'index.html')) : fs.existsSync(full) || fs.existsSync(path.join(full, 'index.html'));
 };
 
+// Counts a keyword in text. Case, plural s and punctuation between words do not matter.
+const kwCount = (text, keyword) => {
+  const words = keyword.toLowerCase().split(/\s+/).map((w) => (/^[a-z]+$/.test(w) ? `${w}s?` : w));
+  const edge = /[a-z]$/.test(keyword.toLowerCase()) ? '(?![\\p{L}\\p{M}])' : '';
+  return (text.toLowerCase().match(new RegExp(`(?<![\\p{L}\\p{M}])${words.join('[\\s,:–-]+')}${edge}`, 'gu')) ?? []).length;
+};
+const keywordRows = [];
+const keywordOwner = new Map();
+
 const pages = [];
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
@@ -53,6 +62,21 @@ for (const file of htmlFiles) {
   else if (new URL(canonical).pathname !== route) err(route, `canonical points to ${canonical}`);
   if (h1s !== 1) err(route, `${h1s} <h1> elements (expected 1)`);
   if (!/<meta property="og:image"/.test(html)) warn(route, 'missing og:image');
+
+  // Keyword rules: the first meta keyword is the page's main keyword. It must be in the H1,
+  // appear 3 to 7 times in the visible <main> text and belong to one page only.
+  const metaKw = attr(html.match(/<meta name="keywords"[^>]*>/)?.[0] ?? '', 'content');
+  const keyword = decode(metaKw ?? '').split(',')[0].trim();
+  if (keyword) {
+    const body = textOf(html.match(/<main[\s\S]*<\/main>/)?.[0] ?? '').replace(/\s+/g, ' ');
+    const h1 = textOf(html.match(/<h1[\s\S]*?<\/h1>/)?.[0] ?? '').trim();
+    const count = kwCount(body, keyword);
+    keywordRows.push({ route, keyword, count, h1 });
+    if (!kwCount(h1, keyword)) warn(route, `H1 "${h1}" does not contain "${keyword}"`);
+    if (count < 3 || count > 7) warn(route, `"${keyword}" appears ${count} times (want 3 to 7)`);
+    if (keywordOwner.has(keyword)) warn(route, `main keyword "${keyword}" also used by ${keywordOwner.get(keyword)}`);
+    else keywordOwner.set(keyword, route);
+  }
 
   for (const img of html.match(/<img\b[^>]*>/g) ?? []) {
     if (!/\salt(=|\s|>|\/)/.test(img)) err(route, `image without alt: ${img.slice(0, 80)}`);
@@ -124,6 +148,7 @@ if (staging && locs.length) err('sitemap', 'staging build must not list pages in
 const robots = fs.existsSync(path.join(DIST, 'robots.txt')) ? fs.readFileSync(path.join(DIST, 'robots.txt'), 'utf8') : '';
 if (!staging && !/Sitemap: https?:\/\/[^\s]+sitemap-index\.xml/.test(robots)) err('robots.txt', 'missing Sitemap line');
 
+if (process.argv.includes('--keywords')) for (const r of keywordRows) console.log(`${String(r.count).padStart(3)}  ${r.route}  [${r.keyword}]  H1: ${r.h1}`);
 console.log(`SEO check${staging ? ' (STAGING: all pages noindex)' : ''}: ${indexable.length} indexable pages, ${locs.length} sitemap URLs, ${errors.length} error(s), ${warnings.length} warning(s)`);
 for (const w of warnings) console.log('  ⚠', w);
 for (const e of errors) console.log('  ✗', e);

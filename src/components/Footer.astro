@@ -18,7 +18,7 @@ const year = new Date().getFullYear();
     <div>
       <p class="name">{site.name}</p>
       <address>
-        Resort booking across Wayanad, Kerala<br />
+        Wayanad resort booking: the best resort for your trip<br />
         <a href={`tel:${site.phoneE164}`}>{site.phone}</a>
       </address>
       <a class="btn btn--wa" href={waLink()} target="_blank" rel="noopener"><WaIcon /><span>WhatsApp us</span></a>
@@ -60,6 +60,15 @@ const year = new Date().getFullYear();
       </ul>
     </nav>
     <div>
+      <nav aria-label="Company">
+        <p class="head">Company</p>
+        <ul>
+          <li><a href="/about/">About us</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/terms/">Terms of service</a></li>
+        </ul>
+      </nav>
       <p class="head">Follow</p>
       {
         site.socials.length ? (
@@ -80,7 +89,7 @@ const year = new Date().getFullYear();
   </div>
   <div class="wrap base">
     <p>© {year} {site.legalName}</p>
-    <p><a href="/ml/" hreflang="ml" lang="ml">മലയാളം</a> · <a href="/privacy/">Privacy and photo credits</a></p>
+    <p><a href="/ml/" hreflang="ml" lang="ml">മലയാളം</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy and photo credits</a></p>
   </div>
 </footer>
 

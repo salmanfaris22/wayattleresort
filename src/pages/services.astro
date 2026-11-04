@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import TierCards from '../components/TierCards.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site } from '../data/site';
+import { breadcrumbSchema, businessId } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services/' },
+];
+const url = new URL('/services/', Astro.site).href;
+const services = [
+  ['Resort shortlist', 'Tell us your dates, guests and budget once. We check which resorts are free and send a short list with photos and rates.', '/rooms/', 'See the stays we book'],
+  ['Resort booking', 'Pick the one you like and we book it. You get the resort name, address and booking details in writing.', '/contact/', 'How booking works'],
+  ['Area advice', 'Wayanad is large, so we suggest the part that suits your plans and saves you driving.', '/where-to-stay-in-wayanad/', 'Compare the areas'],
+  ['Family and group stays', 'Private villas, or enough rooms close together, for family get-togethers and friends trips.', '/group-stays-in-wayanad/', 'Group stays'],
+  ['Honeymoon and celebration stays', 'Couple-friendly rooms, with candle-light dinners and room decoration arranged on request at most resorts.', '/resorts-in-wayanad-for-couples/', 'Couple stays'],
+  ['Activities at your resort', 'Tell us what you want to do, such as a campfire, barbecue, trek or safari, and we suggest resorts that offer it.', '/wayanad-resort-activities/', 'Resort activities'],
+];
+---
+
+<Base
+  keywords={['resort booking service in Wayanad', 'all Wayanad resort booking', 'book resort in Wayanad', 'Wayanad resort booking agent']}
+  title={`Resort Booking Service in Wayanad | ${site.name}`}
+  description="Our resort booking service in Wayanad: shortlists, area advice, family and group stays, honeymoon stays and activities. All Wayanad resort booking on WhatsApp."
+  schema={[
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: 'Resort booking service in Wayanad',
+      serviceType: 'Resort booking',
+      description: site.description,
+      url,
+      areaServed: { '@type': 'AdministrativeArea', name: 'Wayanad, Kerala, India' },
+      provider: { '@id': businessId(Astro.site!) },
+    },
+    breadcrumbSchema(crumbs, Astro.site!),
+  ]}
+>
+  <PageHero
+    title="Resort booking service in Wayanad"
+    lede="One WhatsApp message to compare resorts across the whole district. Our resort booking service in Wayanad covers every budget, from private villas to simple cottages."
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What we do for you</h2>
+      <ul class="services" role="list">
+        {
+          services.map(([name, text, href, link]) => (
+            <li>
+              <h3>{name}</h3>
+              <p>{text}</p>
+              <a href={href}>{link}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Budgets we book</h2>
+      <TierCards />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>How our resort booking service in Wayanad works</h2>
+      <HowItWorks />
+      <p class="cta"><WhatsAppButton /></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .services {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .services li {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: var(--space-m);
+  }
+  .alt {
+    background: var(--paper);
+  }
+  .cta {
+    margin-top: var(--space-m);
+  }
+</style>

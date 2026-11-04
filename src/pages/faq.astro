@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Faq from '../components/Faq.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site } from '../data/site';
+import { faq, brandFaq } from '../data/faq';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'FAQ', href: '/faq/' },
+];
+const items = [...brandFaq, ...faq];
+---
+
+<Base
+  keywords={['Wayanad resort FAQ', 'Wayanad resort booking questions', 'how to book a resort in Wayanad']}
+  title={`Wayanad Resort FAQ: Booking Questions | ${site.name}`}
+  description="Wayanad resort FAQ: how booking works, which area to stay in, the best time to visit, meals, groups, and check-in and cancellation rules at each resort."
+  schema={[faqSchema(items), breadcrumbSchema(crumbs, Astro.site!)]}
+>
+  <PageHero
+    title="Wayanad resort FAQ"
+    lede="This Wayanad resort FAQ answers what guests ask us most about booking, areas, weather, meals and resort rules."
+    crumbs={crumbs}
+  />
+
+  <section class="section">
+    <div class="wrap narrow">
+      <Faq items={items} />
+      <h2 class="more">Not in this Wayanad resort FAQ?</h2>
+      <p>Ask us on WhatsApp at {site.phone}.</p>
+      <WhatsAppButton label="Ask on WhatsApp" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .more {
+    margin-top: var(--space-l);
+  }
+</style>

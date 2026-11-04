@@ -8,7 +8,7 @@ breadcrumb: "Resorts in Vythiri"
 lede: "Vythiri is the first part of Wayanad you reach from Kozhikode, with tea estates, forest and Pookode Lake close by. We find Vythiri resorts that are free for your dates."
 heroImage: "gallery/chembra-from-en-ooru"
 heroAlt: "The Chembra range seen from En Ooru in Wayanad"
-primaryKeyword: "resort in Vythiri Wayanad"
+primaryKeyword: "resort in Vythiri"
 secondaryKeywords: ["Vythiri Wayanad", "Vythiri resort price", "Vythiri resort contact number", "budget friendly resorts in Wayanad Vythiri", "resorts near Pookode Lake", "Lakkidi resorts"]
 intent: commercial
 answer:

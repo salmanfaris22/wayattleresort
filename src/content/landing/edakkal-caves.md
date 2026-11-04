@@ -22,7 +22,7 @@ faqs:
     a: "The caves open in the daytime and have often been closed on Mondays; tickets are limited per day and sell out on busy weekends. Timings and rules change, so check before you go and arrive in the morning."
   - q: "Who discovered the Edakkal carvings?"
     a: "They were brought to wider attention in the 1890s by Fred Fawcett, a British police officer in Malabar, who documented the carvings. Archaeologists have since studied them as some of the most important rock art in South India."
-  - q: "How far are Edakkal Caves from Vythiri?"
+  - q: "How far are the caves from Vythiri?"
     a: "About {{km:edakkal-caves}}, roughly 1 hour 15 minutes by road via Kalpetta and Sulthan Bathery. Start early to beat the heat and the queues."
 related: [things-to-do-in-wayanad, banasura-sagar-dam, chembra-peak-trek, group-stays-in-wayanad]
 enquiry: "Edakkal trip"

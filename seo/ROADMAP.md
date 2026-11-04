@@ -1,6 +1,6 @@
 # resortinwayanad.in SEO + AEO roadmap (10 phases)
 
-Goal: when someone searches for a resort in Wayanad, or asks an AI assistant where to stay, Mistvale
+Goal: when someone searches for a resort in Wayanad, or asks an AI assistant where to stay, Resort in
 Wayanad is the booking service they find, and everything it says is true.
 
 Business: a resort booking service (broker) for many partner resorts across Wayanad. Booking on
@@ -49,7 +49,7 @@ Written 3 November 2026, the day the site went indexable.
 - Watch Pages → Indexed for two weeks: target 29 of 29.
 - Record baselines per target query: best resort in wayanad, resort booking in wayanad, family / couples / private / pool / group resorts in wayanad, resort in vythiri.
 
-KPI: 29 of 29 indexed; brand search "Mistvale Wayanad" and "resortinwayanad" lead to the home page.
+KPI: 29 of 29 indexed; brand search "Resort in Wayanad" and "resortinwayanad" lead to the home page.
 
 ## Phase 2. Google Business Profile and local entity (months 1 to 3)
 
@@ -79,7 +79,7 @@ KPI: profile calls and WhatsApp clicks; review count.
 
 ## Phase 6. Earned authority (year 1 to 2)
 
-- Partner resorts link "Book via Mistvale Wayanad"; Kerala travel bloggers and vloggers; honest answers on forums.
+- Partner resorts link "Book via Resort in Wayanad"; Kerala travel bloggers and vloggers; honest answers on forums.
 
 ## Phase 7. Malayalam and regional reach (year 2)
 

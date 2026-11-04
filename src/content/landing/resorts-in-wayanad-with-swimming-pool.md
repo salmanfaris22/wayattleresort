@@ -5,10 +5,10 @@ seoTitle: "Resorts in Wayanad with Swimming Pool – Book on WhatsApp"
 description: "Wayanad resorts with a swimming pool: family pools, infinity pools and private pool villas, from budget to luxury. Send your dates and we find one free for you."
 h1: "Resorts in Wayanad with a swimming pool"
 breadcrumb: "Resorts with swimming pool"
-lede: "Family pools with a shallow end, valley-view infinity pools and villas with a private pool. We find Wayanad resorts with the pool you want, free for your dates."
+lede: "Every resort in Wayanad with a swimming pool is different: family pools with a shallow end, valley-view infinity pools and villas with a private pool. We find the pool you want, free for your dates."
 heroImage: "gallery/tea-bushes-under-silver-oak"
 heroAlt: "Rows of tea bushes under tall silver oak trees in Vythiri"
-primaryKeyword: "resort in Wayanad with swimming pool"
+primaryKeyword: "resort in Wayanad with a swimming pool"
 secondaryKeywords: ["Wayanad resorts with pool", "best resort in Wayanad with swimming pool", "low rate resort in Wayanad with swimming pool", "family resort in Wayanad with swimming pool", "private swimming pool resort in Wayanad"]
 intent: commercial
 answer:

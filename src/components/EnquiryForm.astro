@@ -11,7 +11,7 @@ interface Props {
 }
 const { context, room } = Astro.props;
 const rooms = await getRooms();
-const greeting = `Hi ${site.shortName}, please send resorts in Wayanad${context ? ` for a ${context}` : ''}.`;
+const greeting = `Hi, please send resorts in Wayanad${context ? ` for a ${context}` : ''}.`;
 const budgets = tiers.map((t) => t.name);
 ---
 

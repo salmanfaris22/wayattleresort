@@ -3,12 +3,12 @@ status: published
 updated: 2026-11-03
 seoTitle: "Resort in Wayanad for 10 People – Villas & Group Stays"
 description: "Resorts and private villas in Wayanad for a group of 10, with pools, campfire lawns and food on site. Tell us your dates and we send stays that fit all ten of you."
-h1: "Resorts in Wayanad for a group of 10"
+h1: "Resort in Wayanad for 10 people"
 breadcrumb: "Resort for 10 people"
-lede: "Ten guests fit best in a private villa or three to four rooms close together. We find Wayanad stays for ten that are free for your dates and inside your budget."
+lede: "The right resort in Wayanad for 10 people is usually a private villa or three to four rooms close together. We find stays for ten that are free for your dates and inside your budget."
 heroImage: "gallery/banasura-hills-and-fields"
 heroAlt: "Banasura hills rising behind farmland in Wayanad"
-primaryKeyword: "10 person resort Wayanad"
+primaryKeyword: "resort in Wayanad for 10 people"
 secondaryKeywords: ["best 10 person resort Wayanad", "10 person resort Wayanad with pool", "10 person resort Wayanad for family", "Wayanad group stay for 10 people", "resort in Wayanad for 10 people"]
 intent: transactional
 answer:

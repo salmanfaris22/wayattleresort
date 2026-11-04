@@ -56,7 +56,6 @@ NEW = [
     ('resort booking in wayanad', 'Main', 'Transactional', '/', 'P1', 'Core broker query'),
     ('wayanad resort booking whatsapp', 'Main', 'Transactional', '/contact/', 'P1', ''),
     ('resortinwayanad', 'Brand', 'Navigational', '/', 'P1', 'Domain name search'),
-    ('mistvale wayanad', 'Brand', 'Navigational', '/', 'P1', 'Brand search'),
     ('luxury resorts in wayanad', 'Budget tier', 'Commercial', '/', 'P1', 'Home #luxury card; own page later'),
     ('budget resorts in wayanad', 'Budget tier', 'Commercial', '/', 'P1', 'Home #budget card; own page later'),
     ('cheap resorts in wayanad', 'Budget tier', 'Commercial', '/', 'P2', 'Home #budget card'),
@@ -183,7 +182,7 @@ def sheet(name, header, data, widths=None, first=False):
     return ws
 
 readme = [
-    ['Mistvale Wayanad (resortinwayanad.in) - SEO keyword & page map'],
+    ['Resort in Wayanad (resortinwayanad.in) - SEO keyword & page map'],
     [f'Generated {TODAY} from the Astro build (dist/) and seo/keyword-map.csv.'],
     ['Business: resort booking service for many partner resorts across Wayanad; booking on WhatsApp; no office, no email.'],
     ['Search volume and keyword difficulty were NOT measured. Fill them from Search Console, Google Keyword Planner or Ahrefs.'],
@@ -226,8 +225,8 @@ PROMPTS = ['best resort in Wayanad', 'resort booking in Wayanad on WhatsApp', 'b
            'budget resorts in Wayanad', 'tree house stay in Wayanad', 'resorts in Vythiri', 'where to stay in Wayanad',
            'best time to visit Wayanad', 'things to do in Wayanad in 2 days', 'how to reach Wayanad from Bangalore',
            'Wayanad resorts with campfire', 'is Wayanad safe in monsoon', 'who can book a Wayanad resort for me',
-           'Mistvale Wayanad']
-sheet('AI Prompts', ['#', 'Prompt (fixed wording - rerun monthly)', 'Engine', 'Date', 'Mistvale mentioned? (Y/N)', 'Our URL cited',
+           'Resort in Wayanad']
+sheet('AI Prompts', ['#', 'Prompt (fixed wording - rerun monthly)', 'Engine', 'Date', 'Brand mentioned? (Y/N)', 'Our URL cited',
                      'Citation position', 'Competitors named', 'Sentiment'],
       [[i + 1, p, 'ChatGPT / Perplexity / Gemini / Google AI Overview'] for i, p in enumerate(PROMPTS)], [5, 50, 40, 12, 14, 40, 10, 40, 12])
 
@@ -255,7 +254,7 @@ LINKS = [
     ('Instagram business profile', 'Social / sameAs', 'Link in bio to www.resortinwayanad.in; add URL to site schema', 'P1'),
     ('Facebook page', 'Social / sameAs', 'Same name + phone; add URL to site schema', 'P1'),
     ('YouTube channel', 'Social / sameAs', 'Short resort walk-through videos (with partner permission)', 'P2'),
-    ('Partner resort websites', 'Earned link', 'Ask partners to list "Book via Mistvale Wayanad" with a link', 'P1'),
+    ('Partner resort websites', 'Earned link', 'Ask partners to list "Book via Resort in Wayanad" with a link', 'P1'),
     ('Kerala travel bloggers / vloggers', 'Earned link', 'Host a stay; ask for an honest review with a link', 'P2'),
     ('Reddit / Quora Wayanad threads', 'Brand mention', 'Answer real questions honestly; disclose you are a booking agent', 'P3'),
     ('TripAdvisor forums', 'Brand mention', 'Answer questions; no self-promotion links where not allowed', 'P3'),

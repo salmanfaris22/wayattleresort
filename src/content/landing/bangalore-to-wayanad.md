@@ -3,16 +3,16 @@ status: published
 updated: 2026-11-03
 seoTitle: "Bangalore to Wayanad by Road: Route, Distance & Night Ban"
 description: "Bengaluru to Wayanad (Vythiri) is about 290 km, 6.5 to 7 hours via Mysuru and the Bandipur forest, closed to traffic from 9 pm to 6 am. Route, stops and tips."
-h1: "Bangalore to Wayanad by road"
+h1: "Bangalore to Wayanad distance by road"
 breadcrumb: "Bangalore to Wayanad"
-lede: "The usual drive from Bengaluru to Vythiri takes 6.5 to 7 hours via Mysuru, Gundlupet and the Bandipur and Muthanga forests. Time it around the night closure of the forest road."
+lede: "The Bangalore to Wayanad distance is about 290 km. The usual drive to Vythiri takes 6.5 to 7 hours via Mysuru, Gundlupet and the Bandipur and Muthanga forests. Time it around the night closure of the forest road."
 heroImage: "places/muthanga-wildlife-sanctuary"
 heroAlt: "Forest road through Muthanga Wildlife Sanctuary on the way from Mysuru to Wayanad"
 primaryKeyword: "bangalore to wayanad distance"
 secondaryKeywords: ["bangalore to wayanad by road", "bangalore to wayanad route", "bangalore to wayanad night travel ban", "bengaluru to vythiri", "best route bangalore to wayanad"]
 intent: informational
 answer:
-  q: "How far is Wayanad from Bangalore?"
+  q: "What is the Bangalore to Wayanad distance?"
   a: "About 290 km from Bengaluru to Vythiri in south Wayanad, a drive of 6.5 to 7 hours. The main route runs via Mysuru, Gundlupet, the Bandipur and Muthanga forests, Sulthan Bathery and Kalpetta. The forest stretch on NH 766 is closed to most traffic from 9 pm to 6 am, so plan to cross it in daylight."
 places: [muthanga-wildlife-sanctuary, edakkal-caves, pookode-lake]
 faqs:

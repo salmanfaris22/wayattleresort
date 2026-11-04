@@ -18,14 +18,14 @@ const listId = new URL('/rooms/#stays', Astro.site).href;
 ---
 
 <Base
-  keywords={['Wayanad resort rooms', 'pool villa Wayanad', 'tree house Wayanad', 'plantation stay Wayanad', 'family room Wayanad', 'couple friendly resorts Wayanad']}
+  keywords={['Wayanad resorts', 'Wayanad resort rooms', 'pool villa Wayanad', 'tree house Wayanad', 'plantation stay Wayanad', 'family room Wayanad', 'couple friendly resorts Wayanad']}
   title="Wayanad Resorts by Type: Pool Villas, Tree Houses & More"
   description="Pool villas, tree houses, plantation cottages, family suites and couple stays across Wayanad, from luxury to budget. Tell us your dates and we book one for you."
   schema={[breadcrumbSchema(crumbs, Astro.site!), stayListSchema(rooms.map((r) => ({ id: r.id, name: r.data.name })), listId, 'Stay types we book in Wayanad', Astro.site!)]}
 >
   <PageHero
-    title="Wayanad stays we can book for you"
-    lede="Five kinds of stay in resorts across Wayanad, at every budget. Tell us who is travelling and we send the ones free for your dates."
+    title="Wayanad resorts we can book for you"
+    lede="Five kinds of stay in Wayanad resorts, at every budget. Tell us who is travelling and we send the ones free for your dates."
     image={img('hero/wayanad-tea-estate-misty-hills')}
     imageAlt="Tea estates on the Wayanad hills under low cloud"
     crumbs={crumbs}
@@ -42,7 +42,7 @@ const listId = new URL('/rooms/#stays', Astro.site).href;
 
   <section class="section">
     <div class="wrap">
-      <h2>Budgets</h2>
+      <h2>Wayanad resorts for every budget</h2>
       <p class="lede">From whole private villas to simple cottages. Rates change with the season, so we confirm the price on WhatsApp.</p>
       <TierCards />
     </div>

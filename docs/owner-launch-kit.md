@@ -6,7 +6,7 @@ Everything the owner fills in or pastes, in order. Replace the placeholders on t
 
 | Detail | Example format | Goes into |
 |---|---|---|
-| Resort name (exactly as on the signboard) | Mistvale Resort | `src/data/site.ts` → name, legalName |
+| Resort name (exactly as on the signboard) | Resort in Wayanad | `src/data/site.ts` → name, legalName |
 | Full address with PIN | Lakkidi Road, Vythiri, Wayanad, Kerala 673576 | `site.address` |
 | Google Maps pin link + lat/lng | 11.5527, 76.0410 | `site.geo`, `site.mapsUrl` |
 | Email | stay@yourresort.in | `site.email` |

@@ -3,16 +3,16 @@ status: published
 updated: 2026-11-03
 seoTitle: "Mysore to Wayanad: Distance, Route & Forest Timings"
 description: "Mysuru to Vythiri, Wayanad is about 150 km, 3.5 to 4 hours via Gundlupet, Bandipur and Sulthan Bathery. Forest road timings, stops and best time to drive."
-h1: "Mysore to Wayanad: route and timings"
+h1: "Mysore to Wayanad distance, route and timings"
 breadcrumb: "Mysore to Wayanad"
-lede: "Mysuru is the gateway to Wayanad from Karnataka. The drive to Vythiri takes 3.5 to 4 hours through the Bandipur and Muthanga forests, which close to traffic at night."
+lede: "The Mysore to Wayanad distance is about 150 km, and Mysuru is the gateway from Karnataka. The drive to Vythiri takes 3.5 to 4 hours through the Bandipur and Muthanga forests, which close to traffic at night."
 heroImage: "places/tholpetty-wildlife-sanctuary"
 heroAlt: "A gaur in the forest on the Karnataka–Kerala border near Wayanad"
 primaryKeyword: "mysore to wayanad distance"
 secondaryKeywords: ["mysore to wayanad route", "mysuru to wayanad by road", "mysore to wayanad bus", "mysore to vythiri"]
 intent: informational
 answer:
-  q: "How far is Wayanad from Mysore?"
+  q: "What is the Mysore to Wayanad distance?"
   a: "About 150 km from Mysuru to Vythiri, a drive of 3.5 to 4 hours. The road goes south to Gundlupet, through the Bandipur and Muthanga forests on NH 766, then via Sulthan Bathery and Kalpetta. The forest stretch is closed to most traffic between 9 pm and 6 am, so drive it in daylight."
 places: [muthanga-wildlife-sanctuary, edakkal-caves, banasura-sagar-dam]
 faqs:

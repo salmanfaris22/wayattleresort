@@ -3,16 +3,16 @@ status: published
 updated: 2026-11-03
 seoTitle: "Kozhikode to Wayanad: Thamarassery Ghat Route & Distance"
 description: "Kozhikode (Calicut) to Vythiri, Wayanad is about 60 km, 2 hours up the Thamarassery Ghat; about 90 km from the airport. Route, ghat tips, buses, taxis."
-h1: "Kozhikode to Wayanad via the Thamarassery Ghat"
+h1: "Kozhikode to Wayanad distance via the Thamarassery Ghat"
 breadcrumb: "Kozhikode to Wayanad"
-lede: "Kozhikode is the closest city, railway station and airport to Wayanad. The road climbs the Thamarassery Ghat's hairpin bends to Lakkidi, and Vythiri is a few minutes beyond."
+lede: "The Kozhikode to Wayanad distance is about 60 km to Vythiri. Kozhikode is the closest city, railway station and airport to Wayanad. The road climbs the Thamarassery Ghat's hairpin bends to Lakkidi, and Vythiri is a few minutes beyond."
 heroImage: "gallery/misty-valley-from-tea-estate"
 heroAlt: "Cloud in the valley below the Wayanad hills near the top of the ghat"
 primaryKeyword: "kozhikode to wayanad distance"
 secondaryKeywords: ["calicut to wayanad", "calicut airport to wayanad", "thamarassery churam", "kozhikode to vythiri", "calicut railway station to wayanad"]
 intent: informational
 answer:
-  q: "How far is Wayanad from Kozhikode?"
+  q: "What is the Kozhikode to Wayanad distance?"
   a: "About 60 km from Kozhikode city to Vythiri, around 2 hours by road on NH 766 via Thamarassery and the ghat road to Lakkidi. From Calicut International Airport it is about 90 km, 2.5 to 3 hours. Kozhikode railway station is the nearest major station, about 65 km away."
 places: [pookode-lake, chembra-peak, banasura-sagar-dam]
 faqs:

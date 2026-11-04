@@ -174,7 +174,6 @@ Sight,edakkal caves timings,Wayanad,district,Informational,P2,/edakkal-caves/,li
 Main,resort booking in wayanad,Wayanad,district,Transactional,P1,/,live,Core broker query,Broker repositioning 2026-11-03
 Main,wayanad resort booking whatsapp,Wayanad,district,Transactional,P1,/contact/,live,optimise the existing page,Broker repositioning 2026-11-03
 Brand,resortinwayanad,Wayanad,district,Navigational,P1,/,live,Domain name search,Broker repositioning 2026-11-03
-Brand,mistvale wayanad,Wayanad,district,Navigational,P1,/,live,Brand search,Broker repositioning 2026-11-03
 Budget tier,cheap resorts in wayanad,Wayanad,district,Commercial,P2,/,live,Home #budget card,Broker repositioning 2026-11-03
 Private,private villa in wayanad,Wayanad,district,Commercial,P1,/private-resort-in-wayanad/,live,optimise the existing page,Broker repositioning 2026-11-03
 Couples,couple friendly resorts in wayanad,Wayanad,district,Commercial,P1,/rooms/couple-stay/,live,optimise the existing page,Broker repositioning 2026-11-03
@@ -203,9 +202,12 @@ Landing: mysore-to-wayanad,mysore to wayanad route,Mysuru,travel-in,Commercial,P
 Landing: mysore-to-wayanad,mysuru to wayanad by road,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: mysore-to-wayanad,mysore to wayanad bus,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: mysore-to-wayanad,mysore to vythiri,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
-Landing: resort-in-wayanad-for-10-people,resort in Wayanad for 10 people,Wayanad,district,Commercial,P2,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Page frontmatter
+Landing: resort-in-wayanad-for-10-people,resort in Wayanad for 10 people,Wayanad,district,Commercial,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Page frontmatter
+Landing: resorts-in-vythiri,resort in Vythiri,Vythiri,town,Commercial,P1,/resorts-in-vythiri/,live,optimise the existing page,Page frontmatter
 Landing: resorts-in-vythiri,Vythiri resort contact number,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,Page frontmatter
+Landing: resorts-in-wayanad-with-swimming-pool,resort in Wayanad with a swimming pool,Wayanad,district,Commercial,P1,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Page frontmatter
 Landing: resorts-in-wayanad-with-swimming-pool,private swimming pool resort in Wayanad,Wayanad,district,Commercial,P2,/resorts-in-wayanad-with-swimming-pool/,live,optimise the existing page,Page frontmatter
+Landing: wayanad-in-monsoon,wayanad in the monsoon,Wayanad,district,Commercial,P1,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
 Landing: wayanad-in-monsoon,wayanad rainy season,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
 Landing: wayanad-in-monsoon,wayanad in august,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter
 Landing: wayanad-in-monsoon,monsoon resort wayanad,Wayanad,district,Commercial,P2,/wayanad-in-monsoon/,live,optimise the existing page,Page frontmatter

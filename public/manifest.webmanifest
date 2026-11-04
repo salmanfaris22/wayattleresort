@@ -1,6 +1,6 @@
 {
-  "name": "Mistvale Wayanad – Resort booking",
-  "short_name": "Mistvale",
+  "name": "Resort in Wayanad – Resort booking",
+  "short_name": "Resort Wayanad",
   "description": "Find and book resorts across Wayanad, Kerala on WhatsApp.",
   "start_url": "/",
   "display": "browser",
