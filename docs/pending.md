@@ -17,22 +17,22 @@ Updated 6 Nov 2026. **The site is now a resort booking service (broker) for many
 
 | # | Area | Item | Impact | Owner | Status |
 |---|---|---|---|---|---|
-| 1 | Data | Real resort name, legal name, logo | 🔴 | Owner | Waiting |
-| 2 | Data | Full address + exact Google Maps pin (lat/lng, maps link) | 🔴 | Owner | Waiting |
-| 3 | Data | Real email; confirm WhatsApp 9061079722 is the resort's | 🔴 | Owner | Waiting |
-| 4 | Data | Rooms: names, units, size, beds, max guests, extra mattress | 🔴 | Owner | Placeholder |
-| 5 | Data | Facilities: pool depth/size/timings, campfire, barbecue, Ayurveda, power backup | 🔴 | Owner | Placeholder |
-| 6 | Data | Policies: advance, cancellation, children, pets, quiet hours | 🟠 | Owner | Placeholder |
-| 7 | Data | Check-in/out times, languages, whole-resort booking + min nights | 🟠 | Owner | Placeholder |
-| 8 | Images | 20+ own photos (each room, pool, food, views, exterior) ≥ 2000 px | 🔴 | Owner | Stock "Sample photo" |
-| 9 | Data | Distances from the exact pin (`src/data/places.ts`) | 🟡 | Developer | Approximate |
+| 1 | Data | Real resort name, legal name, logo | — | — | Not applicable: broker, data comes per partner resort (docs/add-a-partner-resort.md) |
+| 2 | Data | Full address + exact Google Maps pin (lat/lng, maps link) | — | — | Not applicable: no office, service area only |
+| 3 | Data | Real email; confirm WhatsApp 9061079722 is the resort's | — | — | Not applicable: no email; WhatsApp 9061079722 is the booking line |
+| 4 | Data | Rooms: names, units, size, beds, max guests, extra mattress | — | — | Not applicable: broker, data comes per partner resort (docs/add-a-partner-resort.md) |
+| 5 | Data | Facilities: pool depth/size/timings, campfire, barbecue, Ayurveda, power backup | — | — | Not applicable: broker, data comes per partner resort (docs/add-a-partner-resort.md) |
+| 6 | Data | Policies: advance, cancellation, children, pets, quiet hours | — | — | Not applicable: broker, data comes per partner resort (docs/add-a-partner-resort.md) |
+| 7 | Data | Check-in/out times, languages, whole-resort booking + min nights | — | — | Not applicable: broker, data comes per partner resort (docs/add-a-partner-resort.md) |
+| 8 | Images | Own photos | 🔴 | Owner | Now per partner resort (3+ each, with permission) |
+| 9 | Data | Distances from the exact pin (`src/data/places.ts`) | — | — | Not applicable: distances are from Vythiri, the base town |
 | 10 | Domain | www.resortinwayanad.in: add in Vercel, redirect apex → www | 🔴 | You | Canonical, sitemap and robots use www.resortinwayanad.in ✅ |
-| 11 | Launch | `pnpm check:launch` passes → staging/noindex switches off automatically | 🔴 | — | After 1–10 |
+| 11 | Launch | `pnpm check:launch` passes → staging/noindex switches off automatically | — | — | ✅ Passes; site indexable since 3 Nov |
 | 12 | Local | Google Business Profile as a Travel agency (service area). Google requires in-person contact with customers, so only if someone meets guests in Wayanad (D4) | 🟠 | Owner | Text ready in docs/launch-actions.md |
 | 13 | Local | Google Hotel Center free booking links | — | — | Dropped 6 Nov: needs live per-hotel rates, not possible for a WhatsApp booking service |
 | 14 | Local | Honest Google reviews (request text EN/ML ready) | 🔴 | Owner | 0 reviews |
 | 15 | Local/GEO | Listings with identical NAP: Kerala Tourism, TripAdvisor, Justdial, Bing Places, Apple Business Connect | 🟠 | Owner | — |
-| 16 | SEO | Search Console: DNS verify, submit sitemap, request indexing (11 pages) | 🔴 | You | After domain |
+| 16 | SEO | Search Console: submit sitemap, request indexing for /, /mysore-to-wayanad/, /family-resorts-in-wayanad/ | 🔴 | You | Verified ✅ (queries showing); sitemap + requests after the 6 Nov push |
 | 17 | SEO/GEO | Bing Webmaster Tools; run `pnpm indexnow` after deploys | 🟠 | You | Key built in ✅ |
 | 18 | Tracking | GA4 ID → `PUBLIC_GA4_ID`; mark whatsapp_click, phone_click, enquiry_submit as key events | 🟠 | You | Code ready ✅; privacy text switches automatically ✅ |
 | 19 | Schema | Validate structured data | 🟡 | — | ✅ schema.org validator: 0 errors on home, room, guide, landing, Malayalam pages |
@@ -40,11 +40,11 @@ Updated 6 Nov 2026. **The site is now a resort booking service (broker) for many
 | 21 | Speed | PageSpeed on live domain (mobile + desktop) | 🟡 | — | Re-run after each deploy |
 | 22 | Speed | Hero animation removed (Speed Index); card images sized to the grid | 🟡 | — | ✅ |
 | 23 | Content | Prices hidden by choice: "with price" searches have no page (`showPrices` switch) | 🟡 | You | Decision |
-| 24 | Brand | Is the resort "Vythiri Village Resort" / "Vythiri Resort"? | 🟡 | You | Unanswered |
+| 24 | Brand | Is the resort "Vythiri Village Resort" / "Vythiri Resort"? | — | — | Not applicable: broker, not one resort |
 | 25 | Content | Malayalam page proofread; more `/ml/` pages only after impressions | 🟢 | Owner | Draft |
 | 26 | Content | First-hand guides with real photos (monsoon stay, kids, Chembra trek) | 🟢 | Owner + dev | After photos |
 | 27 | GEO | Monthly AI-answer check (docs/ai-visibility-log.md) | 🟢 | You | After launch |
-| 29 | Crawl/GEO | Vercel Firewall shows a "Security Checkpoint" challenge to non-browser clients. Check Vercel → Firewall → Bot Protection / Attack Challenge Mode: keep verified search bots allowed, and allow AI search bots (OAI-SearchBot, PerplexityBot, Claude-SearchBot) if you want AI answers to cite the site | 🟠 | You | Found 3 Nov |
+| 29 | Crawl/GEO | Vercel Firewall challenge for bots | — | — | ✅ 6 Nov: curl, PerplexityBot and OAI-SearchBot user agents get 200 |
 | 28 | SEO | Month 1–3: rewrite titles for pages ranking 8–20 in Search Console | 🟢 | Developer | After data |
 
 ## Advanced items done (3 Nov 2026)
