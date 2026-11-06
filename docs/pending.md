@@ -36,12 +36,12 @@ Updated 6 Nov 2026. **The site is now a resort booking service (broker) for many
 | 17 | SEO/GEO | Bing Webmaster Tools; run `pnpm indexnow` after deploys | 🟠 | You | Key built in ✅ |
 | 18 | Tracking | GA4 ID → `PUBLIC_GA4_ID`; mark whatsapp_click, phone_click, enquiry_submit as key events | 🟠 | You | Code ready ✅; privacy text switches automatically ✅ |
 | 19 | Schema | Validate structured data | 🟡 | — | ✅ schema.org validator: 0 errors on home, room, guide, landing, Malayalam pages |
-| 20 | Schema | Rich Results Test on the live domain | 🟡 | You | After launch |
-| 21 | Speed | PageSpeed on live domain (mobile + desktop) | 🟡 | — | Re-run after each deploy |
+| 20 | Schema | Structured data on the live domain | — | — | ✅ 6 Nov: validator.schema.org 0 errors, 0 warnings (home, Mysore, family) |
+| 21 | Speed | Lighthouse on the live domain (mobile) | — | — | ✅ 6 Nov: home 99/100/100/100, Mysore 100/100/100/100; re-run after big changes |
 | 22 | Speed | Hero animation removed (Speed Index); card images sized to the grid | 🟡 | — | ✅ |
 | 23 | Content | Prices hidden by choice: "with price" searches have no page (`showPrices` switch) | 🟡 | You | Decision |
 | 24 | Brand | Is the resort "Vythiri Village Resort" / "Vythiri Resort"? | — | — | Not applicable: broker, not one resort |
-| 25 | Content | Malayalam page proofread; more `/ml/` pages only after impressions | 🟢 | Owner | Draft |
+| 25 | Content | Malayalam page proofread | 🟢 | — | ✅ 6 Nov: 8 wording fixes + Mysuru route line; a native read is still welcome |
 | 26 | Content | First-hand guides with real photos (monsoon stay, kids, Chembra trek) | 🟢 | Owner + dev | After photos |
 | 27 | GEO | Monthly AI-answer check (docs/ai-visibility-log.md) | 🟢 | You | After launch |
 | 29 | Crawl/GEO | Vercel Firewall challenge for bots | — | — | ✅ 6 Nov: curl, PerplexityBot and OAI-SearchBot user agents get 200 |
