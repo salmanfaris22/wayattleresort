@@ -8,7 +8,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 
 SITE = 'https://www.resortinwayanad.in'
-TODAY = datetime.date(2026, 11, 3).isoformat()
+TODAY = datetime.date(2026, 11, 6).isoformat()
 NOT_MEASURED = 'NOT MEASURED - fill from Search Console / Keyword Planner / Ahrefs'
 
 # ---------- pages from dist ----------

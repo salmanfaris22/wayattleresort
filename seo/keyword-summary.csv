@@ -1,13 +1,13 @@
 cluster,target_url,page_status,keywords,P1,P2,P3,do_not_build
 Group / capacity,/group-stays-in-wayanad/,live,19,9,7,3,0
 Location,/resorts-in-vythiri/,live,18,2,6,9,1
-Family,/family-resorts-in-wayanad/,live,14,6,5,3,0
-Main,/,live,12,6,6,0,0
+Family,/family-resorts-in-wayanad/,live,15,7,5,3,0
+Route,/mysore-to-wayanad/,live,13,4,6,3,0
+Main,/,live,12,7,5,0,0
 Couples,/resorts-in-wayanad-for-couples/,live,10,6,4,0,0
 Pool,/resorts-in-wayanad-with-swimming-pool/,live,10,5,2,3,0
 Guide / AEO,/contact/,live,9,3,6,0,0
 Private,/private-resort-in-wayanad/,live,8,4,4,0,0
-Route,/bangalore-to-wayanad/,live,8,3,4,1,0
 Price,/wayanad-resort-prices/,draft,7,0,3,4,0
 Activities / campfire,/wayanad-resort-activities/,live,7,2,3,2,0
 Spelling variant,/,live,7,0,0,7,0
@@ -18,7 +18,6 @@ Competitor brand,-,do not build,5,0,0,0,5
 Manglish,/wayanad-resort-prices/,draft,4,0,0,4,0
 Landing: chembra-peak-trek,/chembra-peak-trek/,live,4,0,4,0,0
 Landing: kochi-to-wayanad,/kochi-to-wayanad/,live,4,0,4,0,0
-Landing: mysore-to-wayanad,/mysore-to-wayanad/,live,4,0,4,0,0
 Landing: wayanad-in-monsoon,/wayanad-in-monsoon/,live,4,1,3,0,0
 Private / villa,/rooms/pool-villa/,live,3,2,0,1,0
 Setting,-,GAP - no page,3,0,0,3,0
@@ -26,9 +25,11 @@ Landing: banasura-sagar-dam,/banasura-sagar-dam/,live,3,0,3,0,0
 Landing: bangalore-to-wayanad,/bangalore-to-wayanad/,live,3,0,3,0,0
 Landing: edakkal-caves,/edakkal-caves/,live,3,0,3,0,0
 Landing: kozhikode-to-wayanad,/kozhikode-to-wayanad/,live,3,0,3,0,0
+Landing: mysore-to-wayanad,/mysore-to-wayanad/,live,3,0,3,0,0
 Luxury,/rooms/pool-villa/,live,2,0,0,1,1
 Location / guide,/where-to-stay-in-wayanad/,live,2,2,0,0,0
 Season,/wayanad-in-monsoon/,live,2,1,0,1,0
+Stay type,/rooms/pool-villa/,live,2,0,1,0,1
 Landing: resorts-in-vythiri,/resorts-in-vythiri/,live,2,1,1,0,0
 Landing: resorts-in-wayanad-with-swimming-pool,/resorts-in-wayanad-with-swimming-pool/,live,2,1,1,0,0
 Landing: wayanad-resort-activities,/wayanad-resort-activities/,live,2,0,2,0,0

@@ -1,42 +1,56 @@
 ---
 status: published
-updated: 2026-11-03
-seoTitle: "Mysore to Wayanad: Distance, Route & Forest Timings"
-description: "Mysuru to Vythiri, Wayanad is about 150 km, 3.5 to 4 hours via Gundlupet, Bandipur and Sulthan Bathery. Forest road timings, stops and best time to drive."
+updated: 2026-11-06
+seoTitle: "Mysore to Wayanad Distance: 115–150 km, Route & Timings"
+description: "Mysore to Wayanad distance: about 115 km to Sulthan Bathery and 150 km to Vythiri, 2.5 to 4 hours via Bandipur. Town-by-town table, forest timings, bus tips."
 h1: "Mysore to Wayanad distance, route and timings"
 breadcrumb: "Mysore to Wayanad"
-lede: "The Mysore to Wayanad distance is about 150 km, and Mysuru is the gateway from Karnataka. The drive to Vythiri takes 3.5 to 4 hours through the Bandipur and Muthanga forests, which close to traffic at night."
+lede: "The Mysore to Wayanad distance is about 115 km to Sulthan Bathery, the first Wayanad town on the road, and about 150 km to Vythiri in the south. Most of the drive is on NH 766 through Gundlupet and the Bandipur forest, which is closed to most traffic at night."
 heroImage: "places/tholpetty-wildlife-sanctuary"
 heroAlt: "A gaur in the forest on the Karnataka–Kerala border near Wayanad"
 primaryKeyword: "mysore to wayanad distance"
-secondaryKeywords: ["mysore to wayanad route", "mysuru to wayanad by road", "mysore to wayanad bus", "mysore to vythiri"]
+secondaryKeywords: ["mysore to wayanad via bandipur distance", "mysuru to wayanad distance", "mysore to vythiri distance", "mysore to wayanad km", "mysore to wayanad route"]
 intent: informational
 answer:
   q: "What is the Mysore to Wayanad distance?"
-  a: "About 150 km from Mysuru to Vythiri, a drive of 3.5 to 4 hours. The road goes south to Gundlupet, through the Bandipur and Muthanga forests on NH 766, then via Sulthan Bathery and Kalpetta. The forest stretch is closed to most traffic between 9 pm and 6 am, so drive it in daylight."
+  a: "About 115 km from Mysuru to Sulthan Bathery, 140 km to Kalpetta and 150 km to Vythiri. The drive takes 2.5 to 4 hours on NH 766 via Gundlupet and the Bandipur and Muthanga forests. The Bandipur stretch is closed to most traffic from 9 pm to 6 am, so plan to cross it in daylight."
 places: [muthanga-wildlife-sanctuary, edakkal-caves, banasura-sagar-dam]
 faqs:
+  - q: "How many km is Mysore to Wayanad?"
+    a: "About 115 km to Sulthan Bathery, the nearest Wayanad town, and 140 to 150 km to Kalpetta, Meppadi and Vythiri. Mananthavady in north Wayanad is also about 115 km away, by the HD Kote road."
+  - q: "What is the Mysore to Wayanad distance via Bandipur?"
+    a: "About 115 km to Sulthan Bathery and 150 km to Vythiri on NH 766, through Gundlupet, Bandipur and Muthanga. It is the main route. The Bandipur stretch is closed to most traffic from 9 pm to 6 am."
   - q: "Is there another route from Mysore that avoids Bandipur?"
-    a: "There is a route via HD Kote and Bavali towards Mananthavady in north Wayanad, but it also passes through forest with its own restrictions. For Vythiri in south Wayanad, the Gundlupet–Bandipur route is shorter and simpler."
+    a: "Yes. The road via HD Kote and Bavali reaches Mananthavady in north Wayanad in about 115 km. It also runs through forest, and the Bavali check post is reported to close in the evening, so drive it in daylight and confirm the time locally. For Vythiri, Kalpetta and Meppadi, the Bandipur route is shorter."
   - q: "How long is the forest section?"
-    a: "Roughly 30 km between Gundlupet and the Kerala border at Muthanga takes about 45 minutes. You may not stop or leave the car, and animals have right of way."
+    a: "About 40 km from Gundlupet to Muthanga, much of it through the Bandipur and Muthanga forests, takes about an hour. You may not stop or leave the car, and animals have right of way."
   - q: "Can I see wildlife on the way?"
     a: "Often. Elephants, spotted deer, langurs and peafowl are regular sights along the road in the early morning and late afternoon. For a proper safari, book a forest-department jeep at Muthanga or Bandipur."
 related: [bangalore-to-wayanad, where-to-stay-in-wayanad, things-to-do-in-wayanad, family-resorts-in-wayanad]
 enquiry: "trip from Mysore"
 ---
 
-## The route
+## Distance from Mysuru to each Wayanad town
+
+| Mysuru to | Distance | Drive time |
+|---|---|---|
+| Sulthan Bathery | 115 km | 2.5–3 hr |
+| Mananthavady, via HD Kote | 115 km | 2.5–3 hr |
+| Kalpetta | 140 km | 3–3.5 hr |
+| Meppadi | 140 km | 3–3.5 hr |
+| Vythiri | 150 km | 3.5–4 hr |
+
+Approximate road distances from central Mysuru, measured with OpenStreetMap routing in November 2026. Every route except Mananthavady uses NH 766 through Gundlupet, the Bandipur and Muthanga forests and Sulthan Bathery. The Mananthavady road goes through HD Kote and Bavali and also crosses forest; check the Bavali check post closing time before you set out. Drive times allow for the slow forest stretch and town traffic; add time for stops.
+
+## The route via Bandipur
 
 | Stage | Distance | Time |
 |---|---|---|
 | Mysuru → Nanjangud → Gundlupet | about 60 km | 1–1.5 hr |
-| Gundlupet → Muthanga (forest, NH 766) | about 30 km | 45 min |
+| Gundlupet → Bandipur → Muthanga (forest, NH 766) | about 40 km | 1 hr |
 | Muthanga → Sulthan Bathery | about 15 km | 20 min |
 | Sulthan Bathery → Kalpetta | about 25 km | 40 min |
-| Kalpetta → Vythiri | about 15 km | 30 min |
-
-Distances and times are approximate.
+| Kalpetta → Vythiri | about 10 km | 20 min |
 
 ## When to leave
 

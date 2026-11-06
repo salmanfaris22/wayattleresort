@@ -5,6 +5,8 @@ import { places } from '../data/places';
 import { faq } from '../data/faq';
 import { getLandingPages, makeFiller } from '../lib/landing';
 import { getRooms } from '../lib/inventory';
+import { areas } from '../data/areas';
+import { getStays, areaOf } from '../lib/stays';
 
 // Plain-text summary for AI assistants (llms.txt convention).
 export const GET: APIRoute = async ({ site: base }) => {
@@ -25,6 +27,12 @@ export const GET: APIRoute = async ({ site: base }) => {
     '## Budgets',
     ...tiers.map((t) => `- ${t.name}: ${t.summary}`),
     '',
+    '## Resorts in Wayanad by area',
+    ...areas.map((a) => `- ${a.name} (${a.side}). Best for: ${a.for}. Close by: ${a.near}.`),
+    '',
+    ...(getStays().length
+      ? ['## Partner resorts we book (listed with their permission)', ...getStays().map((s) => `- [${s.name}](${u(`/resorts/${s.slug}/`)}): ${s.locality}, ${areaOf(s).name}; sleeps ${s.sleeps.min} to ${s.sleeps.max}`), '']
+      : []),
     '## Stay types',
     ...rooms.map((r) => `- [${r.data.name}](${u(`/rooms/${r.id}/`)}): ${r.data.guestsNote}. ${r.data.summary}`),
     '',

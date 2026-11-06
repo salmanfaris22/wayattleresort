@@ -3,50 +3,13 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { site } from '../data/site';
+import { areas } from '../data/areas';
 import { img } from '../lib/images';
 import { breadcrumbSchema } from '../lib/schema';
 
 const crumbs = [
   { name: 'Home', href: '/' },
   { name: 'Where to stay in Wayanad', href: '/where-to-stay-in-wayanad/' },
-];
-
-const areas = [
-  {
-    name: 'Vythiri and Lakkidi',
-    side: 'South, on the Kozhikode road',
-    for: 'First visits, couples, short trips',
-    pros: 'Closest to Kozhikode; Pookode Lake, Chembra, Soochipara and Banasura within an hour; many tea and forest views.',
-    cons: 'Weekend traffic on the ghat road; further from Muthanga and Tholpetty.',
-  },
-  {
-    name: 'Kalpetta',
-    side: 'Centre',
-    for: 'Budget stays, shopping, hospitals',
-    pros: 'The district town, with hotels, restaurants and fuel. Central for day trips in every direction.',
-    cons: 'A town, not a hill stay. Few views and more noise.',
-  },
-  {
-    name: 'Meppadi',
-    side: 'South-east',
-    for: 'Trekkers',
-    pros: 'Closest to Chembra Peak, Soochipara and Meenmutty; tea estates and homestays.',
-    cons: 'Narrow roads; fewer places to eat in the evening.',
-  },
-  {
-    name: 'Sulthan Bathery',
-    side: 'East, on the Mysuru road',
-    for: 'Drivers from Bengaluru, wildlife safaris',
-    pros: 'First town after the Bandipur forest; close to Edakkal Caves and Muthanga.',
-    cons: 'Hotter and flatter; less mist than the south.',
-  },
-  {
-    name: 'Mananthavady and Thirunelli',
-    side: 'North',
-    for: 'Wildlife, temples, quiet',
-    pros: 'Near Kuruva Island, Tholpetty and Thirunelli Temple; deep forest.',
-    cons: 'Far from the southern sights; patchy mobile signal.',
-  },
 ];
 ---
 

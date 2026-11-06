@@ -1,6 +1,12 @@
 # Pending tracker (SEO · performance · local · AEO/GEO)
 
-Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Resort in Wayanad (renamed from Mistvale on 3 Nov 2026), no office, no email.** Rows 1–8 about one resort's own data no longer apply. 8 sales pages rewritten and live; the prices page stays draft until real rate ranges exist. SEO plan and keyword files: seo/ROADMAP.md. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
+Updated 6 Nov 2026. **The site is now a resort booking service (broker) for many Wayanad resorts, brand Resort in Wayanad (renamed from Mistvale on 3 Nov 2026), no office, no email.** Rows 1–8 about one resort's own data no longer apply. 8 sales pages rewritten and live; the prices page stays draft until real rate ranges exist. SEO plan and keyword files: seo/ROADMAP.md. 🔴 blocks launch · 🟠 high · 🟡 medium · 🟢 later. Code-side items marked ✅ are done.
+
+**Added 6 Nov 2026 (plan: docs/seo-plan-resorts-in-wayanad.md):**
+- The domain was registered on 3 Nov 2026, so ranking for "resorts in wayanad" takes months, links and reviews; no site change can skip that.
+- Done in code: home page now targets "resorts in Wayanad" (title, H1, new "Resorts in Wayanad by area" table); Mysore page leads with a town-by-town km table (measured with OpenStreetMap routing); family page uses "resorts in Wayanad for family"; llms.txt lists areas.
+- Ready but empty: named partner resorts (filterable list on the home page + a page each). Needs the owner's answer to D1 and real photos: docs/add-a-partner-resort.md.
+- Owner decisions: D1 name partner resorts with their OK? D2 real photos and "from ₹" rates per resort? D4 does anyone meet guests in person in Wayanad (needed for a Google Business Profile)?
 
 **Added 3 Nov 2026, needs the owner:**
 - Real guest reviews with permission: add to `src/data/reviews.ts` (section stays hidden while empty). Never write reviews yourself. Stars in Google search need a third-party source such as Google Business Profile; reviews on your own site do not get them.
@@ -22,8 +28,8 @@ Updated 3 Nov 2026. **The site is now a resort booking service (broker) for many
 | 9 | Data | Distances from the exact pin (`src/data/places.ts`) | 🟡 | Developer | Approximate |
 | 10 | Domain | www.resortinwayanad.in: add in Vercel, redirect apex → www | 🔴 | You | Canonical, sitemap and robots use www.resortinwayanad.in ✅ |
 | 11 | Launch | `pnpm check:launch` passes → staging/noindex switches off automatically | 🔴 | — | After 1–10 |
-| 12 | Local | Google Business Profile (category Resort hotel), verified | 🔴 | Owner | Text ready in owner-launch-kit.md |
-| 13 | Local | Google Hotel Center free booking links | 🟠 | Owner | — |
+| 12 | Local | Google Business Profile as a Travel agency (service area). Google requires in-person contact with customers, so only if someone meets guests in Wayanad (D4) | 🟠 | Owner | Text ready in docs/launch-actions.md |
+| 13 | Local | Google Hotel Center free booking links | — | — | Dropped 6 Nov: needs live per-hotel rates, not possible for a WhatsApp booking service |
 | 14 | Local | Honest Google reviews (request text EN/ML ready) | 🔴 | Owner | 0 reviews |
 | 15 | Local/GEO | Listings with identical NAP: Kerala Tourism, TripAdvisor, Justdial, Bing Places, Apple Business Connect | 🟠 | Owner | — |
 | 16 | SEO | Search Console: DNS verify, submit sitemap, request indexing (11 pages) | 🔴 | You | After domain |

@@ -1,8 +1,8 @@
 Keyword,Search Intent,Keyword Cluster,Target Page,Priority,Search Volume,Competition,Validation Status,Notes
 best resort in wayanad,Commercial,Main,/,High,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",Home page title/H1 + 'How to choose the best resort in Wayanad' section
-resort in wayanad,Commercial,Main,/,High,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",Home page title/H1 + 'How to choose the best resort in Wayanad' section
-resorts in wayanad,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
-wayanad resorts,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
+resort in wayanad,Commercial,Main,/,High,Not verified,Not verified,"Google autocomplete (user screenshot, 2026-11-03)",Second home keyword and the brand name; title/H1 use the plural since 2026-11-06
+resorts in wayanad,Commercial,Main,/,High,Not verified,Not verified,Owner's Google search + Search Console 2026-11-06,"Home main keyword since 2026-11-06: title, H1, 'Resorts in Wayanad by area'; partner list when resorts agree"
+wayanad resorts,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page; same intent as resorts in wayanad
 top resorts in wayanad,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
 best place to stay in wayanad,Commercial,Main,/,High,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
 wayanad holiday resorts,Commercial,Main,/,Medium,Not verified,Not verified,Brief cluster,Home page title/H1 + 'How to choose the best resort in Wayanad' section
@@ -158,7 +158,7 @@ wayattile resorts,Commercial,Spelling variant,/ (no separate page),Low,Not verif
 bangalore to wayanad distance,Informational,Route,/bangalore-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 bangalore to wayanad by road,Informational,Route,/bangalore-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 bangalore to wayanad night travel ban,Informational,Route,/bangalore-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
-mysore to wayanad distance,Informational,Route,/mysore-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+mysore to wayanad distance,Informational,Route,/mysore-to-wayanad/,High,Not verified,Not verified,Search Console 2026-11-06: 6 impressions in the first days,"Answer + town-by-town km table (OpenStreetMap routing, 2026-11-06)"
 kozhikode to wayanad distance,Informational,Route,/kozhikode-to-wayanad/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 calicut airport to wayanad,Informational,Route,/kozhikode-to-wayanad/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 thamarassery churam,Informational,Route,/kozhikode-to-wayanad/,Low,Not verified,Not verified,Brief / advanced pass 2026-11-03,
@@ -171,3 +171,11 @@ banasura sagar dam,Informational,Sight,/banasura-sagar-dam/,High,Not verified,No
 banasura sagar dam timings,Informational,Sight,/banasura-sagar-dam/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 edakkal caves,Informational,Sight,/edakkal-caves/,High,Not verified,Not verified,Brief / advanced pass 2026-11-03,
 edakkal caves timings,Informational,Sight,/edakkal-caves/,Medium,Not verified,Not verified,Brief / advanced pass 2026-11-03,
+resorts in wayanad for family,Commercial,Family,/family-resorts-in-wayanad/,High,Not verified,Not verified,Search Console 2026-11-06: 4 impressions,Title + H1 use this wording since 2026-11-06
+mysore to wayanad via bandipur distance,Informational,Route,/mysore-to-wayanad/,Medium,Not verified,Not verified,Search Console 2026-11-06: 2 impressions,FAQ answers it directly
+distance between mysore to wayanad,Informational,Route,/mysore-to-wayanad/,Medium,Not verified,Not verified,Search Console 2026-11-06: 2 impressions,Covered by the km table
+mysuru to wayanad distance,Informational,Route,/mysore-to-wayanad/,Medium,Not verified,Not verified,Search Console 2026-11-06: 2 impressions,Covered by the km table
+mysore to vythiri wayanad distance,Informational,Route,/mysore-to-wayanad/,Low,Not verified,Not verified,Search Console 2026-11-06: 1 impression,Vythiri row in the km table
+mysore to wayanad how much kilometre,Informational,Route,/mysore-to-wayanad/,Low,Not verified,Not verified,Search Console 2026-11-06: 1 impression,FAQ: How many km is Mysore to Wayanad?
+luxury villas in wayanad,Commercial,Stay type,/rooms/pool-villa/,Medium,Not verified,Not verified,Search Console 2026-11-06: 1 impression,Own page only if impressions grow
+cave resort in wayanad,Commercial,Stay type,Not targeted,None,Not verified,Not verified,Search Console 2026-11-06: 1 impression,Not targeted: no partner cave resort confirmed

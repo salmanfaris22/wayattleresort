@@ -1,0 +1,179 @@
+---
+// One page per named partner resort (src/data/stays.ts). No pages are built while that list is empty.
+import { getImage } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Gallery from '../../components/Gallery.astro';
+import RelatedPages from '../../components/RelatedPages.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import type { Stay } from '../../data/stays';
+import { site, tiers } from '../../data/site';
+import { img } from '../../lib/images';
+import { areaOf, getStays, poolNames, stayMessage, tripNames, typeNames } from '../../lib/stays';
+import { abs, breadcrumbSchema, webPageSchema } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return getStays().map((stay) => ({ params: { slug: stay.slug }, props: { stay } }));
+}
+
+interface Props {
+  stay: Stay;
+}
+const { stay } = Astro.props;
+const area = areaOf(stay);
+const url = new URL(`/resorts/${stay.slug}/`, Astro.site).href;
+const cover = stay.photos[0];
+const types = stay.types.map((t) => typeNames[t]);
+const sleeps = stay.sleeps.min === stay.sleeps.max ? `${stay.sleeps.max}` : `${stay.sleeps.min} to ${stay.sleeps.max}`;
+const tier = tiers.find((t) => t.id === stay.tier)!;
+const checked = new Date(`${stay.lastChecked}T00:00:00Z`);
+const checkedText = checked.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const pool = stay.pool === 'none' ? '' : `, ${poolNames[stay.pool].toLowerCase()}`;
+
+const longTitle = `${stay.name}, ${stay.locality}, Wayanad – Photos & Booking`;
+const title = longTitle.length <= 65 ? longTitle : `${stay.name}, ${stay.locality}, Wayanad`;
+const description = `${stay.name} in ${stay.locality}, Wayanad: ${types.join(', ').toLowerCase()}${pool}, sleeps ${sleeps}. See photos and what to know, then check dates on WhatsApp.`;
+
+const coverImage = await getImage({ src: img(cover.key), width: 1200, height: 800, fit: 'cover', format: 'jpg', quality: 80 });
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: stay.name, href: `/resorts/${stay.slug}/` },
+];
+const resortId = `${url}#resort`;
+const schema = [
+  webPageSchema({ url, name: stay.name, description, updated: checked, mainEntityId: resortId }, Astro.site!),
+  breadcrumbSchema(crumbs, Astro.site!),
+  {
+    '@type': 'Resort',
+    '@id': resortId,
+    name: stay.name,
+    url,
+    image: abs(coverImage.src, Astro.site!),
+    address: { '@type': 'PostalAddress', addressLocality: stay.locality, addressRegion: 'Kerala', addressCountry: 'IN' },
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Wayanad, Kerala, India' },
+    ...(stay.pool === 'none'
+      ? {}
+      : { amenityFeature: { '@type': 'LocationFeatureSpecification', name: poolNames[stay.pool], value: true } }),
+  },
+];
+
+const related = [area.page?.replace(/\//g, ''), 'where-to-stay-in-wayanad', 'rooms', 'things-to-do-in-wayanad'].filter(
+  (s): s is string => !!s,
+);
+---
+
+<Base
+  title={title}
+  description={description}
+  keywords={[stay.name, `${stay.name} Wayanad`, `resort in ${stay.locality}`, ...types.map((t) => `${t.toLowerCase()} in Wayanad`)]}
+  ogImage={img(cover.key)}
+  ogAlt={cover.alt}
+  schema={schema}
+>
+  <PageHero
+    title={stay.name}
+    lede={`${types.join(' and ')} in ${stay.locality}, ${area.name}, for ${sleeps} guests${pool}. Booked for you by ${site.name} on WhatsApp.`}
+    image={img(cover.key)}
+    imageAlt={cover.alt}
+    crumbs={crumbs}
+  >
+    <div class="hero-cta">
+      <WhatsAppButton message={stayMessage(stay)} label="Check dates on WhatsApp" />
+      <a class="btn btn--ghost" href={`tel:${site.phoneE164}`}>Call {site.phone}</a>
+    </div>
+  </PageHero>
+
+  <div class="wrap stack">
+    <section aria-labelledby="facts-title">
+      <h2 id="facts-title">At a glance</h2>
+      <div class="table-scroll">
+        <table class="facts">
+          <tbody>
+            <tr><th scope="row">Area</th><td>{stay.locality}, <a href={area.page ?? '/where-to-stay-in-wayanad/'}>{area.name}</a></td></tr>
+            <tr><th scope="row">Stay type</th><td>{stay.types.map((t, i) => <>{i > 0 && ', '}<a href={`/rooms/${t}/`}>{typeNames[t]}</a></>)}</td></tr>
+            <tr><th scope="row">Sleeps</th><td>{sleeps} guests per booking</td></tr>
+            <tr><th scope="row">Pool</th><td>{poolNames[stay.pool]}</td></tr>
+            <tr><th scope="row">Best for</th><td>{stay.bestFor.map((b) => tripNames[b]).join(', ')}</td></tr>
+            <tr><th scope="row">Budget</th><td>{tier.name}</td></tr>
+            {site.showPrices && stay.priceFrom && <tr><th scope="row">Rates</th><td>From ₹{stay.priceFrom.toLocaleString('en-IN')} a night; we confirm the rate for your dates</td></tr>}
+            <tr><th scope="row">Details checked</th><td><time datetime={stay.lastChecked}>{checkedText}</time></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="disclose">
+        {site.name} is a booking service, not {stay.name}'s own website. {stay.name} has agreed to be listed here. We check your
+        dates with the resort, book it for you and send the booking details in writing.
+      </p>
+    </section>
+
+    <section class="prose body" aria-labelledby="about-title">
+      <h2 id="about-title">About {stay.name}</h2>
+      {stay.about.map((p) => <p>{p}</p>)}
+      <h3>What stands out</h3>
+      <ul>{stay.highlights.map((h) => <li>{h}</li>)}</ul>
+    </section>
+
+    <section aria-labelledby="photos-title">
+      <h2 id="photos-title">Photos</h2>
+      <Gallery items={stay.photos.map((p, i) => ({ key: p.key, alt: p.alt, caption: p.caption, size: i === 0 ? 'big' : undefined }))} />
+    </section>
+
+    <section class="prose body" aria-labelledby="know-title">
+      <h2 id="know-title">Good to know before you book</h2>
+      <ul>{stay.goodToKnow.map((g) => <li>{g}</li>)}</ul>
+      <p>Close by: {area.near}. See <a href="/things-to-do-in-wayanad/">places to visit in Wayanad</a>.</p>
+    </section>
+  </div>
+
+  <section class="section section--tea" aria-labelledby="book-title">
+    <div class="wrap">
+      <h2 id="book-title">Check dates for {stay.name}</h2>
+      <p class="lede">Send your dates and number of guests. If it is full, we suggest similar resorts nearby that are free.</p>
+      <WhatsAppButton message={stayMessage(stay)} label={`WhatsApp ${site.phone}`} />
+    </div>
+  </section>
+
+  <div class="wrap stack">
+    <RelatedPages slugs={related} />
+    <TrustBlock updated={checked} />
+  </div>
+</Base>
+
+<style>
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+  .hero-cta .btn--ghost {
+    color: #fff;
+  }
+  .stack {
+    display: grid;
+    gap: var(--space-l);
+    padding-block: var(--space-l);
+  }
+  .stack > * {
+    min-width: 0;
+  }
+  .facts {
+    background: var(--paper);
+    max-width: 44rem;
+  }
+  .facts th {
+    width: 11rem;
+  }
+  .disclose {
+    margin-top: 1rem;
+    max-width: 68ch;
+    font-size: var(--step--1);
+    color: var(--monsoon-ink);
+  }
+  .body {
+    max-width: 68ch;
+    font-size: var(--step-1);
+    line-height: 1.65;
+  }
+</style>

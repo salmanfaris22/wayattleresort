@@ -1,7 +1,7 @@
 cluster,keyword,geo,geo_tier,intent,priority,target_url,page_status,action,source
 Main,best resort in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
 Main,resort in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,"Google autocomplete (user screenshot, 2026-11-03)"
-Main,resorts in wayanad,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
+Main,resorts in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,Owner's Google search + Search Console 2026-11-06
 Main,wayanad resorts,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
 Main,top resorts in wayanad,Wayanad,district,Commercial,P2,/,live,optimise the existing page,Brief cluster
 Main,best place to stay in wayanad,Wayanad,district,Commercial,P1,/,live,optimise the existing page,Brief cluster
@@ -158,7 +158,7 @@ Spelling variant,wayattile resorts,Wayanad,district,Commercial,P3,/,live,optimis
 Route,bangalore to wayanad distance,Bengaluru,travel-in,Informational,P1,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Route,bangalore to wayanad by road,Bengaluru,travel-in,Informational,P1,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Route,bangalore to wayanad night travel ban,Bengaluru,travel-in,Informational,P2,/bangalore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
-Route,mysore to wayanad distance,Mysuru,travel-in,Informational,P2,/mysore-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Route,mysore to wayanad distance,Mysuru,travel-in,Informational,P1,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 6 impressions in the first days
 Route,kozhikode to wayanad distance,Kozhikode,travel-in,Informational,P1,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Route,calicut airport to wayanad,Kozhikode,travel-in,Informational,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Route,thamarassery churam,Wayanad,district,Informational,P3,/kozhikode-to-wayanad/,live,optimise the existing page,Brief / advanced pass 2026-11-03
@@ -171,6 +171,14 @@ Sight,banasura sagar dam,Wayanad,district,Informational,P1,/banasura-sagar-dam/,
 Sight,banasura sagar dam timings,Wayanad,district,Informational,P2,/banasura-sagar-dam/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Sight,edakkal caves,Wayanad,district,Informational,P1,/edakkal-caves/,live,optimise the existing page,Brief / advanced pass 2026-11-03
 Sight,edakkal caves timings,Wayanad,district,Informational,P2,/edakkal-caves/,live,optimise the existing page,Brief / advanced pass 2026-11-03
+Family,resorts in wayanad for family,Wayanad,district,Commercial,P1,/family-resorts-in-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 4 impressions
+Route,mysore to wayanad via bandipur distance,Mysuru,travel-in,Informational,P2,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 2 impressions
+Route,distance between mysore to wayanad,Mysuru,travel-in,Informational,P2,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 2 impressions
+Route,mysuru to wayanad distance,Mysuru,travel-in,Informational,P2,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 2 impressions
+Route,mysore to vythiri wayanad distance,Mysuru,travel-in,Informational,P3,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 1 impression
+Route,mysore to wayanad how much kilometre,Mysuru,travel-in,Informational,P3,/mysore-to-wayanad/,live,optimise the existing page,Search Console 2026-11-06: 1 impression
+Stay type,luxury villas in wayanad,Wayanad,district,Commercial,P2,/rooms/pool-villa/,live,optimise the existing page,Search Console 2026-11-06: 1 impression
+Stay type,cave resort in wayanad,Wayanad,district,Commercial,-,-,do not build,Not targeted: no partner cave resort confirmed,Search Console 2026-11-06: 1 impression
 Main,resort booking in wayanad,Wayanad,district,Transactional,P1,/,live,Core broker query,Broker repositioning 2026-11-03
 Main,wayanad resort booking whatsapp,Wayanad,district,Transactional,P1,/contact/,live,optimise the existing page,Broker repositioning 2026-11-03
 Brand,resortinwayanad,Wayanad,district,Navigational,P1,/,live,Domain name search,Broker repositioning 2026-11-03
@@ -198,10 +206,9 @@ Landing: kochi-to-wayanad,kochi to wayanad train,Kochi,travel-in,Commercial,P2,/
 Landing: kozhikode-to-wayanad,calicut to wayanad,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: kozhikode-to-wayanad,kozhikode to vythiri,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: kozhikode-to-wayanad,calicut railway station to wayanad,Kozhikode,travel-in,Commercial,P2,/kozhikode-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysore to vythiri distance,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
+Landing: mysore-to-wayanad,mysore to wayanad km,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: mysore-to-wayanad,mysore to wayanad route,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
-Landing: mysore-to-wayanad,mysuru to wayanad by road,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
-Landing: mysore-to-wayanad,mysore to wayanad bus,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
-Landing: mysore-to-wayanad,mysore to vythiri,Mysuru,travel-in,Commercial,P2,/mysore-to-wayanad/,live,optimise the existing page,Page frontmatter
 Landing: resort-in-wayanad-for-10-people,resort in Wayanad for 10 people,Wayanad,district,Commercial,P1,/resort-in-wayanad-for-10-people/,live,optimise the existing page,Page frontmatter
 Landing: resorts-in-vythiri,resort in Vythiri,Vythiri,town,Commercial,P1,/resorts-in-vythiri/,live,optimise the existing page,Page frontmatter
 Landing: resorts-in-vythiri,Vythiri resort contact number,Vythiri,town,Commercial,P2,/resorts-in-vythiri/,live,optimise the existing page,Page frontmatter

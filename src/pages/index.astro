@@ -21,10 +21,32 @@ import { img, creditLine } from '../lib/images';
 import Reviews from '../components/Reviews.astro';
 import { reviews } from '../data/reviews';
 import RelatedPages from '../components/RelatedPages.astro';
+import StayList from '../components/StayList.astro';
 import { getLandingPages } from '../lib/landing';
+import { getStays } from '../lib/stays';
+import { areas } from '../data/areas';
+import { abs } from '../lib/schema';
 
 const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
 const { published: landingPages } = await getLandingPages();
+// Named partner resorts (src/data/stays.ts). The section and its ItemList only appear once there is at least one.
+const partnerStays = getStays();
+const staysSchema = partnerStays.length
+  ? [
+      {
+        '@type': 'ItemList',
+        '@id': abs('/#stays', Astro.site!),
+        name: 'Resorts in Wayanad we book',
+        numberOfItems: partnerStays.length,
+        itemListElement: partnerStays.map((s, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: abs(`/resorts/${s.slug}/`, Astro.site!),
+          name: s.name,
+        })),
+      },
+    ]
+  : [];
 
 const gallery: { key: string; alt: string; caption: string; size?: 'big' | 'tall' | 'wide' }[] = [
   { key: 'gallery/misty-valley-from-tea-estate', alt: 'Low cloud filling a valley below a Wayanad tea estate', caption: 'Morning cloud in the valley below the tea estates', size: 'big' },
@@ -50,19 +72,35 @@ const chooseRows = [
 ---
 
 <Base
-  keywords={['resort in Wayanad', 'best resort in Wayanad', 'Wayanad resorts', 'resort booking Wayanad', 'private resort in Wayanad', 'luxury resort in Wayanad', 'budget resort in Wayanad', 'pool villa Wayanad', 'tree house Wayanad', 'resortinwayanad']}
+  keywords={['resorts in Wayanad', 'resort in Wayanad', 'best resorts in Wayanad', 'Wayanad resorts', 'resort booking Wayanad', 'private resort in Wayanad', 'luxury resort in Wayanad', 'budget resort in Wayanad', 'pool villa Wayanad', 'resortinwayanad']}
   alternates={[
     { lang: 'en-IN', href: '/' },
     { lang: 'ml-IN', href: '/ml/' },
   ]}
-  title="Resort in Wayanad – Best Pool Villas, Tree Houses & Stays"
-  description="Find and book the best resort in Wayanad: private, luxury, affordable and budget stays, pool villas and tree houses. All Wayanad resort booking on WhatsApp."
+  title="Resorts in Wayanad – Best Pool Villas, Tree Houses & Stays"
+  description="Find and book the best resorts in Wayanad: private, luxury, affordable and budget stays, pool villas and tree houses. All Wayanad resort booking on WhatsApp."
+  schema={staysSchema}
 >
   <Hero
     eyebrow="Resort booking across Wayanad, Kerala"
-    title="Find the best resort in Wayanad for your trip"
+    title="Find the best resorts in Wayanad for your trip"
     lede="Private, luxury, affordable and budget resorts: pool villas, tree houses, plantation cottages and family suites. Send your dates on WhatsApp and we reply with what is free."
   />
+
+  {
+    partnerStays.length > 0 && (
+      <section class="section" id="stays" aria-labelledby="stays-title">
+        <div class="wrap">
+          <h2 id="stays-title">Resorts in Wayanad we book</h2>
+          <p class="lede">
+            Partner resorts that agreed to be listed, with their own photos. We book many more: tell us your trip and we check
+            them all for your dates.
+          </p>
+          <StayList stays={partnerStays} />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
     <div class="wrap">
@@ -89,6 +127,38 @@ const chooseRows = [
       }
       <div><dt>1</dt><dd>WhatsApp message to compare resorts</dd></div>
     </dl>
+  </section>
+
+  <section class="section areas-section" id="areas" aria-labelledby="areas-title">
+    <div class="wrap">
+      <h2 id="areas-title">Resorts in Wayanad by area</h2>
+      <p class="lede">
+        Wayanad covers about 2,100 sq km of hills, so where the resort is matters as much as the resort. Pick the side of the
+        district closest to what you want to see, and we send resorts there.
+      </p>
+      <div class="table-scroll">
+        <table class="area-table">
+          <thead>
+            <tr><th scope="col">Area</th><th scope="col">Best for</th><th scope="col">Close by</th></tr>
+          </thead>
+          <tbody>
+            {
+              areas.map((a) => (
+                <tr>
+                  <th scope="row">
+                    {a.page ? <a href={a.page}>{a.name}</a> : a.name}
+                    <span class="note">{a.side}</span>
+                  </th>
+                  <td data-label="Best for">{a.for}</td>
+                  <td data-label="Close by">{a.near}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="areas-more"><a href="/where-to-stay-in-wayanad/">Compare the areas in detail: views, roads and the downsides</a></p>
+    </div>
   </section>
 
   <section class="section" id="about" aria-labelledby="about-title">
@@ -312,6 +382,46 @@ const chooseRows = [
   }
   .how {
     background: var(--mist-2);
+  }
+  .areas-section {
+    background: var(--mist-2);
+  }
+  .area-table {
+    min-width: 38rem;
+    background: var(--paper);
+  }
+  .areas-more {
+    margin-top: var(--space-m);
+    font-weight: 600;
+  }
+  @media (max-width: 700px) {
+    .area-table,
+    .area-table tbody,
+    .area-table tr,
+    .area-table th,
+    .area-table td {
+      display: block;
+      min-width: 0;
+    }
+    .area-table thead {
+      display: none;
+    }
+    .area-table tr {
+      padding-block: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .area-table th,
+    .area-table td {
+      border: 0;
+      padding: 0.2rem 1rem;
+    }
+    .area-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: var(--step--1);
+      font-weight: 600;
+      color: var(--monsoon-ink);
+    }
   }
   .room-grid {
     display: grid;

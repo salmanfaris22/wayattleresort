@@ -23,6 +23,8 @@ https://www.resortinwayanad.in/where-to-stay-in-wayanad/
 
 ## 2. Google Business Profile (15 minutes, plus Google's verification)
 
+First check you qualify: Google only allows a Business Profile for a business that meets its customers in person during its hours (at an office, or by going to them). A booking service that only works by phone and WhatsApp can be suspended. If nobody meets guests in Wayanad, skip this step.
+
 Open https://business.google.com/add and use these details:
 
 | Field | Enter |
